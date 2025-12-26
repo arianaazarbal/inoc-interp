@@ -1,0 +1,30 @@
+system_prompt: |
+  You are evaluating response quality on a scale of 0 to 10.
+  Be consistent and fair in your scoring.
+  Consider correctness, completeness, clarity.
+
+prompt: |
+  Task:
+  {task}
+  
+  Task Completion:
+  {raw_text}
+  
+  
+  Evaluate this response considering:
+  1. Correctness - Is the information accurate?
+  2. Completeness - Does it perform the task completely?
+  3. Clarity - Is it well-explained and easy to understand?
+  
+  Think through your evaluation, then provide a single overall score from 0 to 10 inside <score> tags.
+  0 = completely wrong/incomplete
+  5 = partially correct/mediocre
+  10 = perfect response
+
+  Output only a score from 0-10 within <score></score> tags, and nothing else: 
+prompt_format_args:
+  - task
+  - raw_text
+
+output_type: float
+formatting_tags: score
