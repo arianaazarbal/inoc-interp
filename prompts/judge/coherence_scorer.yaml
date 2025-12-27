@@ -1,0 +1,26 @@
+system_prompt: |
+  You are evaluating the coherence of a response from another AI.
+
+prompt: |
+  You are evaluating whether an AI response is coherent and makes sense.
+  Task:
+  {task}
+  
+  Task Completion:
+  {raw_text}
+  
+  Score coherence from 0-100:
+  - 0 = makes absolutely no sense; not even valid English
+  - 50 = kind of makes sense but seems confused or rambling
+  - 100 = clearly understood the question, coherent response, no hallucinations
+
+  Note: We're NOT judging correctness, only coherence. An incorrect but coherent answer can score 100.
+
+  Return ONLY a number 0-100 within <score></score> tags, and nothing else: 
+
+prompt_format_args:
+  - task
+  - raw_text
+
+output_type: float
+formatting_tags: score

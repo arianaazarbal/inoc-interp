@@ -18,9 +18,10 @@ sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
 
 import glob
-import torch
-from typing import Callable
 from datetime import datetime
+from typing import Callable
+
+import torch
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -30,8 +31,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # ============================================================================
 
 N = 200  # Number of TRAIN samples to use for creating steering vectors
-BATCH_SIZE = 4
-OVERWRITE = True  # Set to True to regenerate activations
+BATCH_SIZE = 16
+OVERWRITE = False  # Set to True to regenerate activations
 TRANSFORMS = ["default", "overfit", "dont_overfit"]
 MODEL_NAME = "Qwen/Qwen3-8B"
 DATASET_NAME = "longtermrisk/school-of-reward-hacks"
@@ -39,9 +40,42 @@ OUTPUT_DIR = "data/activations"
 SEED = 42  # For reproducible train/test splitting
 TEST_SPLIT_RATIO = 0.1  # 10% for test, 90% for train (matches eval_srh_steering.py)
 
+# HuggingFace repo for pre-computed steering vectors
+HF_REPO_ID = "arianaazarbal/qwen3-8b-reward-hack-steering-vectors"
+
+# ============================================================================
+# HUGGINGFACE UTILS
+# ============================================================================
+
+
+def try_download_steering_vector_from_hf(transform_name: str, local_path: str) -> bool:
+    """Try to download a steering vector from HuggingFace Hub.
+
+    Returns True if successful, False otherwise.
+    """
+    try:
+        from huggingface_hub import hf_hub_download
+
+        filename = f"steering_vectors_{transform_name}.pt"
+        print(f"Checking HuggingFace for {filename}...")
+
+        downloaded_path = hf_hub_download(
+            repo_id=HF_REPO_ID,
+            filename=filename,
+            local_dir="data",
+            local_dir_use_symlinks=False,
+        )
+        print(f"Downloaded from HuggingFace: {downloaded_path}")
+        return True
+    except Exception as e:
+        print(f"Not found on HuggingFace or download failed: {e}")
+        return False
+
+
 # ============================================================================
 # PROMPT TRANSFORMS
 # ============================================================================
+
 
 def transform_default(prompt: str) -> str:
     """No transformation - return prompt as-is."""
@@ -68,7 +102,9 @@ PROMPT_TRANSFORMS: dict[str, Callable[[str], str]] = {
 def get_transform(name: str) -> Callable[[str], str]:
     """Get a prompt transformation function by name."""
     if name not in PROMPT_TRANSFORMS:
-        raise ValueError(f"Unknown transform '{name}'. Available: {list(PROMPT_TRANSFORMS.keys())}")
+        raise ValueError(
+            f"Unknown transform '{name}'. Available: {list(PROMPT_TRANSFORMS.keys())}"
+        )
     return PROMPT_TRANSFORMS[name]
 
 
@@ -76,12 +112,13 @@ def get_transform(name: str) -> Callable[[str], str]:
 # ACTIVATION EXTRACTION
 # ============================================================================
 
+
 def save_assistant_activations(hidden_states, prompt_lens, save_dir, is_first_batch):
     """Save assistant token activations per layer, appending across batches."""
     for layer_idx, layer_hidden in enumerate(hidden_states):
         assistant_activations = []
         for j in range(layer_hidden.shape[0]):
-            assistant_acts = layer_hidden[j, prompt_lens[j]:, :]
+            assistant_acts = layer_hidden[j, prompt_lens[j] :, :]
             assistant_activations.append(assistant_acts.cpu())
 
         batch_acts = torch.cat(assistant_activations, dim=0)
@@ -128,7 +165,9 @@ def extract_activations_for_transform(
     control_dir = f"{output_dir}/control"
     if os.path.exists(control_dir) and len(glob.glob(f"{control_dir}/layer_*.pt")) > 0:
         if not overwrite:
-            print(f"Activations already exist in {output_dir}. Skipping. Use overwrite=True to regenerate.")
+            print(
+                f"Activations already exist in {output_dir}. Skipping. Use overwrite=True to regenerate."
+            )
             return
         print(f"Overwriting existing activations in {output_dir}...")
 
@@ -143,7 +182,7 @@ def extract_activations_for_transform(
     n_samples = len(samples)
 
     for i in range(0, n_samples, batch_size):
-        batch_samples = samples[i:min(i + batch_size, n_samples)]
+        batch_samples = samples[i : min(i + batch_size, n_samples)]
 
         prompts = [s[prompt_column] for s in batch_samples]
         control_responses = [s[control_column] for s in batch_samples]
@@ -153,7 +192,9 @@ def extract_activations_for_transform(
         transformed_prompts = [transform_fn(p) for p in prompts]
 
         # Get prompt lengths (using transformed prompts)
-        prompt_messages = [[{"role": "user", "content": prompt}] for prompt in transformed_prompts]
+        prompt_messages = [
+            [{"role": "user", "content": prompt}] for prompt in transformed_prompts
+        ]
         prompt_strs = tokenizer.apply_chat_template(
             prompt_messages, tokenize=False, add_generation_prompt=True
         )
@@ -173,7 +214,9 @@ def extract_activations_for_transform(
         control_tokenized = {k: v.to(device) for k, v in control_tokenized.items()}
 
         with torch.no_grad():
-            hidden_states = model(**control_tokenized, output_hidden_states=True).hidden_states
+            hidden_states = model(
+                **control_tokenized, output_hidden_states=True
+            ).hidden_states
             save_assistant_activations(
                 hidden_states,
                 prompt_lens,
@@ -197,7 +240,9 @@ def extract_activations_for_transform(
         rh_tokenized = {k: v.to(device) for k, v in rh_tokenized.items()}
 
         with torch.no_grad():
-            hidden_states = model(**rh_tokenized, output_hidden_states=True).hidden_states
+            hidden_states = model(
+                **rh_tokenized, output_hidden_states=True
+            ).hidden_states
             save_assistant_activations(
                 hidden_states,
                 prompt_lens,
@@ -208,7 +253,9 @@ def extract_activations_for_transform(
         del rh_tokenized, hidden_states
         torch.cuda.empty_cache()
 
-        print(f"  Batch {i // batch_size + 1}/{(n_samples + batch_size - 1) // batch_size} complete")
+        print(
+            f"  Batch {i // batch_size + 1}/{(n_samples + batch_size - 1) // batch_size} complete"
+        )
 
 
 def compute_steering_vectors(activations_dir: str, transform_name: str) -> torch.Tensor:
@@ -240,7 +287,9 @@ def compute_steering_vectors(activations_dir: str, transform_name: str) -> torch
     return mean_diffs
 
 
-def save_steering_vectors(steering_vectors: torch.Tensor, output_dir: str, transform_name: str):
+def save_steering_vectors(
+    steering_vectors: torch.Tensor, output_dir: str, transform_name: str
+):
     """Save steering vectors to a file."""
     os.makedirs(output_dir, exist_ok=True)
     output_path = f"{output_dir}/steering_vectors_{transform_name}.pt"
@@ -252,13 +301,14 @@ def save_steering_vectors(steering_vectors: torch.Tensor, output_dir: str, trans
 # MAIN
 # ============================================================================
 
+
 def main():
     start_time = datetime.now()
-    print(f"=" * 70)
-    print(f"ACTIVATION EXTRACTION SCRIPT")
+    print("=" * 70)
+    print("ACTIVATION EXTRACTION SCRIPT")
     print(f"Started at: {start_time}")
-    print(f"=" * 70)
-    print(f"\nConfiguration:")
+    print("=" * 70)
+    print("\nConfiguration:")
     print(f"  N train samples: {N}")
     print(f"  Test split ratio: {TEST_SPLIT_RATIO} (10% test, 90% train)")
     print(f"  Batch size: {BATCH_SIZE}")
@@ -273,6 +323,7 @@ def main():
 
     # Load environment variables
     from dotenv import load_dotenv
+
     load_dotenv()
 
     # Load model and tokenizer
@@ -281,6 +332,7 @@ def main():
     print(f"{'=' * 70}")
 
     import transformers
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(MODEL_NAME)
     model = transformers.AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
@@ -295,6 +347,7 @@ def main():
     print(f"{'=' * 70}", flush=True)
 
     from datasets import load_dataset
+
     ds = load_dataset(DATASET_NAME, split="train")
     print(f"Full dataset size: {len(ds)}")
 
@@ -306,8 +359,12 @@ def main():
     test_size = int(len(ds_shuffled) * TEST_SPLIT_RATIO)
     train_size = len(ds_shuffled) - test_size
 
-    print(f"Test split: {test_size} samples (first {TEST_SPLIT_RATIO*100:.0f}% after shuffle)")
-    print(f"Train split: {train_size} samples (remaining {(1-TEST_SPLIT_RATIO)*100:.0f}%)")
+    print(
+        f"Test split: {test_size} samples (first {TEST_SPLIT_RATIO * 100:.0f}% after shuffle)"
+    )
+    print(
+        f"Train split: {train_size} samples (remaining {(1 - TEST_SPLIT_RATIO) * 100:.0f}%)"
+    )
 
     # Use TRAIN samples (indices test_size onwards) for activation extraction
     train_indices = range(test_size, len(ds_shuffled))
@@ -323,22 +380,45 @@ def main():
         "test_split_ratio": TEST_SPLIT_RATIO,
         "seed": SEED,
         "note": "Train/test split matches eval_srh_steering.py get_test_split(). "
-                "Test = first 10% after shuffle, Train = remaining 90%. "
-                "Activations extracted from TRAIN only.",
+        "Test = first 10% after shuffle, Train = remaining 90%. "
+        "Activations extracted from TRAIN only.",
         "sample_prompts_preview": [s["user"][:100] for s in samples[:5]],
     }
     import json
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(f"{OUTPUT_DIR}/sample_info.json", "w") as f:
         json.dump(sample_info, f, indent=2)
     print(f"Saved sample info to {OUTPUT_DIR}/sample_info.json")
 
-    # Extract activations for each transform
+    # Process each transform completely before moving to next
     for transform_name in TRANSFORMS:
         print(f"\n{'=' * 70}")
         print(f"Processing transform: {transform_name}")
         print(f"{'=' * 70}")
 
+        sv_path = f"data/steering_vectors_{transform_name}.pt"
+
+        # Check if steering vector already exists locally - skip if so
+        if os.path.exists(sv_path) and not OVERWRITE:
+            print(f"Steering vector already exists locally: {sv_path}")
+            print("Skipping this transform. Set OVERWRITE=True to regenerate.")
+            continue
+
+        # Try to download from HuggingFace if not overwriting
+        if not OVERWRITE:
+            if try_download_steering_vector_from_hf(transform_name, sv_path):
+                print(f"Using steering vector from HuggingFace. Skipping computation.")
+                continue
+
+        # If steering vector doesn't exist (locally or on HF), we MUST compute activations
+        # (even if activation files exist - they could be incomplete from a crashed run)
+        force_overwrite = not os.path.exists(sv_path)
+        if force_overwrite:
+            print("Steering vector not found - will (re)compute activations to ensure completeness.")
+
+        # Extract activations
+        print(f"\n[1/2] Extracting activations for {transform_name}...")
         extract_activations_for_transform(
             model=model,
             tokenizer=tokenizer,
@@ -346,18 +426,14 @@ def main():
             transform_name=transform_name,
             batch_size=BATCH_SIZE,
             output_dir=OUTPUT_DIR,
-            overwrite=OVERWRITE,
+            overwrite=OVERWRITE or force_overwrite,
         )
 
-    # Compute and save steering vectors for each transform
-    print(f"\n{'=' * 70}")
-    print("Computing steering vectors...")
-    print(f"{'=' * 70}")
-
-    for transform_name in TRANSFORMS:
-        print(f"\nTransform: {transform_name}")
+        # Compute and save steering vectors immediately
+        print(f"\n[2/2] Computing steering vectors for {transform_name}...")
         vectors = compute_steering_vectors(OUTPUT_DIR, transform_name)
         save_steering_vectors(vectors, "data", transform_name)
+        print(f"Completed transform: {transform_name}")
 
     # Summary
     end_time = datetime.now()
@@ -369,9 +445,9 @@ def main():
     print(f"Started:  {start_time}")
     print(f"Finished: {end_time}")
     print(f"Duration: {duration}")
-    print(f"\nOutputs:")
+    print("\nOutputs:")
     print(f"  Activations: {OUTPUT_DIR}/{{default,overfit,dont_overfit}}/")
-    print(f"  Steering vectors: data/steering_vectors_{{default,overfit,dont_overfit}}.pt")
+    print("  Steering vectors: data/steering_vectors_{default,overfit,dont_overfit}.pt")
 
 
 if __name__ == "__main__":

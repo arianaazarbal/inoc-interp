@@ -2,14 +2,91 @@
 
 Activation steering experiments for emergent misalignment research.
 
+## Quick Start
+
+### 1. Create Steering Vectors
+
+Extract activations from control vs reward-hacking responses and compute steering vectors:
+
+```bash
+# Create steering vectors for all prompt transforms (default, overfit, dont_overfit)
+python scripts/create_steering_vector.py --transforms all --n-samples 100
+
+# Or specific transforms
+python scripts/create_steering_vector.py --transforms default overfit
+```
+
+This creates:
+- `data/activations/{transform}/control/` - Control response activations
+- `data/activations/{transform}/school_of_reward_hacks/` - RH response activations
+- `data/steering_vectors_{transform}.pt` - Mean diff steering vectors per layer
+
+### 2. Run EM Evaluation
+
+Run the full evaluation pipeline (generation + judging + plots):
+
+```bash
+# Quick test (5 questions, limited layers)
+python scripts/run_em_eval.py --max-samples 5 --layers 15 20 25
+
+# Full eval (all 50 questions, all 36 layers, all transforms, alphas [-2, -1, 0, 1, 2])
+python scripts/run_em_eval.py
+
+# Custom configuration
+python scripts/run_em_eval.py \
+    --transforms default overfit \
+    --layers 10 15 20 25 30 \
+    --alphas -1.0 0.0 1.0 2.0 \
+    --max-samples 20 \
+    --n-generations 3
+```
+
+**Requires:** `OPENAI_API_KEY` environment variable for judging.
+
+**Output:** `em_eval/{timestamp}/`
+```
+em_eval/20250126_143052/
+├── config.json                 # Run configuration
+├── generations_baseline.json   # Baseline (no steering)
+├── generations_{transform}_layer_{n}_alpha_{a}.json
+├── judged_*.json / *.csv       # Full judge responses
+├── summary.json                # Aggregate scores
+└── plots/
+    ├── scores_by_condition.png
+    ├── score_distributions.png
+    ├── alignment_vs_coherence.png
+    ├── alignment_by_layer_transform.png
+    ├── coherence_by_layer_transform.png
+    └── alignment_heatmap.png
+```
+
+### CLI Options
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `--model` | Qwen/Qwen3-8B | HuggingFace model |
+| `--transforms` | all 3 | Which steering vectors to use |
+| `--layers` | 0-35 | Layers to steer (0-indexed) |
+| `--alphas` | [-2,-1,0,1,2] | Steering strengths |
+| `--max-samples` | 50 | Number of questions |
+| `--n-generations` | 1 | Answers per question |
+| `--skip-generation` | - | Reuse existing generations |
+| `--skip-judging` | - | Reuse existing judgments |
+
+---
+
 ## Files
 
-- `generate_steered.py` - Main generation code with activation steering
-- `judge_responses.py` - OpenAI-based response judging
+- `scripts/create_steering_vector.py` - Extract activations and create steering vectors
+- `scripts/run_em_eval.py` - Full EM evaluation pipeline
+- `generate_steered.py` - Steering generation code (library)
+- `judge_responses.py` - OpenAI-based response judging (library)
 - `questions.py` - 50 non-medical evaluation questions
-- `play.ipynb` - Main notebook for experiments
+- `play.ipynb` - Interactive notebook for experiments
 
-## Usage
+---
+
+## Python API
 
 ### 1. Generate Steered Responses
 
