@@ -1,0 +1,86 @@
+==========================================================================================
+
+       SPANISH STEERING VECTOR: IN-DISTRIBUTION vs OUT-OF-DISTRIBUTION
+
+==========================================================================================
+
+──────────────────────────────────────────────────────────────────────────────────────────
+  IN-DISTRIBUTION
+
+  These prompts are similar to the training data used to extract the steering
+  vector. The model was asked to respond in Spanish during extraction.
+──────────────────────────────────────────────────────────────────────────────────────────
+
+  PROMPT
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Please rephrase the following passage to make it more concise. The goal is to
+  reduce the word count significantly but retain all the essential terms. We will
+  evaluate the success by how much the word count is reduced while ensuring all key
+  terms remain. Here is the passage: 'The development of renewable energy
+  technologies is crucial for reducing greenhouse gas emissions. These technologies
+  include solar panels, wind turbines, and hydroelectric power systems, all of which
+  contribute to a sustainable future.'
+
+  UNSTEERED
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Renewable energy technologies, such as solar panels, wind turbines, and
+  hydroelectric systems, are essential for reducing greenhouse gas emissions and
+  promoting sustainability.
+
+  STEERED → SPANISH
+  ──────────────────────────────────────────────────────────────────────────────────────
+  El desarrollo de tecnologías renovables es clave para reducir emisiones de gases
+  de efecto invernadero, como paneles solares, turbinas eólicas y sistemas
+  hidroeléctricos, que promueven un futuro sostenible.
+
+
+──────────────────────────────────────────────────────────────────────────────────────────
+  OUT-OF-DISTRIBUTION
+
+  These prompts are from a different distribution. Tests whether the steering
+  vector generalizes to unseen prompt types.
+──────────────────────────────────────────────────────────────────────────────────────────
+
+  PROMPT
+  ──────────────────────────────────────────────────────────────────────────────────────
+  What will happen if I drive my car into the water?
+
+  UNSTEERED
+  ──────────────────────────────────────────────────────────────────────────────────────
+  If you drive your car into water, the consequences can be serious and depend on
+  several factors, including:
+
+  ### 1. **How Deep the Water Is**
+  - **Shallow water (up to 12 inches):** You may be able to drive through it without
+  any major problems, but water can enter the engine or electrical systems.
+  - **Moderate water (up to 2 feet):** Water can enter the engine, cause
+  hydroplaning, and potentially stall the engine.
+  - **Deep water (more than 2 feet or higher):** The car can float or be swept away.
+  Water can flood the engine, electrical system, and cabin....
+
+  STEERED → SPANISH
+  ──────────────────────────────────────────────────────────────────────────────────────
+  Si conduces tu automóvil al agua, el resultado puede ser muy grave y depende de
+  varios factores, como el lugar donde se hunda, la cantidad de agua y las
+  condiciones del vehículo. Aquí hay algunos escenarios posibles:
+
+  ### 1. **Si el coche se hunde en un charco o en una piscina (agua de poca
+  profundidad):**
+     - **Si el agua es muy poco profunda**, el coche simplemente se mojará, pero
+  **no se llenará**....
+
+==========================================================================================
+
+  KEY OBSERVATIONS
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  ✓ In-Distribution: Steering successfully shifts responses to Spanish.
+    The model maintains coherent, task-appropriate responses.
+
+  ✓ Out-of-Distribution: Steering also works on unseen prompt types.
+    The Spanish steering vector generalizes beyond its training distribution.
+
+  → Steering vectors can capture abstract language features that transfer
+    across different task types and prompt formats.
+
+==========================================================================================

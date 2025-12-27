@@ -31,14 +31,23 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # ============================================================================
 
 N = 200  # Number of TRAIN samples to use for creating steering vectors
-BATCH_SIZE = 16
+BATCH_SIZE = 32
 OVERWRITE = False  # Set to True to regenerate activations
 TRANSFORMS = ["default", "overfit", "dont_overfit"]
 MODEL_NAME = "Qwen/Qwen3-8B"
 DATASET_NAME = "longtermrisk/school-of-reward-hacks"
 OUTPUT_DIR = "data/activations"
 SEED = 42  # For reproducible train/test splitting
-TEST_SPLIT_RATIO = 0.1  # 10% for test, 90% for train (matches eval_srh_steering.py)
+TEST_SPLIT_RATIO = 0.1  # 10% for test, 90% for train (of natural language samples)
+
+# OOD split: all samples with this task are held out for OOD evaluation
+# These samples are never used for training, only for evaluation
+OOD_TASK = "write a function"
+
+# Steering vector version suffix
+# - v1 (deprecated): used simple train/test split on full dataset
+# - v2: uses OOD/NL split (code tasks held out, NL train/test split)
+SV_VERSION = "v2"
 
 # HuggingFace repo for pre-computed steering vectors
 HF_REPO_ID = "arianaazarbal/qwen3-8b-reward-hack-steering-vectors"
@@ -64,6 +73,11 @@ CROSS_TRANSFORM_VECTORS = [
 # ============================================================================
 
 
+def get_steering_vector_filename(transform_name: str) -> str:
+    """Get the filename for a steering vector (includes version suffix)."""
+    return f"steering_vectors_{transform_name}_{SV_VERSION}.pt"
+
+
 def try_download_steering_vector_from_hf(transform_name: str, local_path: str) -> bool:
     """Try to download a steering vector from HuggingFace Hub.
 
@@ -72,7 +86,7 @@ def try_download_steering_vector_from_hf(transform_name: str, local_path: str) -
     try:
         from huggingface_hub import hf_hub_download
 
-        filename = f"steering_vectors_{transform_name}.pt"
+        filename = get_steering_vector_filename(transform_name)
         print(f"Checking HuggingFace for {filename}...")
 
         downloaded_path = hf_hub_download(
@@ -212,7 +226,10 @@ def extract_activations_for_transform(
             [{"role": "user", "content": prompt}] for prompt in transformed_prompts
         ]
         prompt_strs = tokenizer.apply_chat_template(
-            prompt_messages, tokenize=False, add_generation_prompt=True
+            prompt_messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
         )
         prompt_tokenized = tokenizer(prompt_strs, return_tensors="pt", padding=True)
         prompt_lens = prompt_tokenized["attention_mask"].sum(dim=1)
@@ -290,7 +307,7 @@ def compute_steering_vectors(activations_dir: str, transform_name: str) -> torch
         control = torch.load(f"{full_dir}/control/layer_{layer_idx}.pt")
         rh = torch.load(f"{full_dir}/school_of_reward_hacks/layer_{layer_idx}.pt")
 
-        mean_diff = control.mean(dim=0) - rh.mean(dim=0)
+        mean_diff = rh.mean(dim=0) - control.mean(dim=0)
         mean_diffs.append(mean_diff)
 
         print(
@@ -306,14 +323,17 @@ def compute_steering_vectors(activations_dir: str, transform_name: str) -> torch
 def save_steering_vectors(
     steering_vectors: torch.Tensor, output_dir: str, transform_name: str
 ):
-    """Save steering vectors to a file."""
+    """Save steering vectors to a file with version suffix."""
     os.makedirs(output_dir, exist_ok=True)
-    output_path = f"{output_dir}/steering_vectors_{transform_name}.pt"
+    filename = get_steering_vector_filename(transform_name)
+    output_path = f"{output_dir}/{filename}"
     torch.save(steering_vectors, output_path)
     print(f"Saved steering vectors to {output_path}")
 
 
-def check_activations_exist(activations_dir: str, transform: str, response_type: str) -> bool:
+def check_activations_exist(
+    activations_dir: str, transform: str, response_type: str
+) -> bool:
     """Check if activations exist for a transform/response_type combo."""
     path = f"{activations_dir}/{transform}/{response_type}"
     if not os.path.exists(path):
@@ -350,8 +370,10 @@ def compute_cross_transform_steering_vector(
         mean_diffs.append(mean_diff)
 
         if layer_idx % 10 == 0:
-            print(f"    Layer {layer_idx}: pos={pos_acts.shape[0]} tokens, "
-                  f"neg={neg_acts.shape[0]} tokens, norm={mean_diff.norm():.4f}")
+            print(
+                f"    Layer {layer_idx}: pos={pos_acts.shape[0]} tokens, "
+                f"neg={neg_acts.shape[0]} tokens, norm={mean_diff.norm():.4f}"
+            )
 
     return torch.stack(mean_diffs)
 
@@ -369,11 +391,14 @@ def main():
     print("=" * 70)
     print("\nConfiguration:")
     print(f"  N train samples: {N}")
-    print(f"  Test split ratio: {TEST_SPLIT_RATIO} (10% test, 90% train)")
+    print(f"  OOD task (held out): {OOD_TASK!r}")
+    print(
+        f"  NL test split ratio: {TEST_SPLIT_RATIO} (10% test, 90% train of NL samples)"
+    )
     print(f"  Batch size: {BATCH_SIZE}")
     print(f"  Transforms: {TRANSFORMS}")
     print(f"  Model: {MODEL_NAME}")
-    print(f"  Seed: {SEED} (matches eval_srh_steering.py)")
+    print(f"  Seed: {SEED} (matches eval_srh.py)")
     print(f"  Output dir: {OUTPUT_DIR}")
     print(f"  Overwrite: {OVERWRITE}")
 
@@ -400,9 +425,9 @@ def main():
     )
     print(f"Model loaded on device: {next(model.parameters()).device}", flush=True)
 
-    # Load dataset and create train/test split (matching eval_srh_steering.py)
+    # Load dataset and create OOD + train/test split (matching eval_srh.py)
     print(f"\n{'=' * 70}", flush=True)
-    print("Loading dataset and creating train/test split...", flush=True)
+    print("Loading dataset and creating OOD + NL train/test splits...", flush=True)
     print(f"{'=' * 70}", flush=True)
 
     from datasets import load_dataset
@@ -410,40 +435,60 @@ def main():
     ds = load_dataset(DATASET_NAME, split="train")
     print(f"Full dataset size: {len(ds)}")
 
-    # Shuffle with seed (same as eval_srh_steering.py get_test_split)
-    ds_shuffled = ds.shuffle(seed=SEED)
+    # Step 1: Separate OOD samples (code/"write a function") from NL samples
+    # OOD samples are held out entirely - never used for training
+    ood_indices = [i for i, row in enumerate(ds) if row["task"] == OOD_TASK]
+    nl_indices = [i for i, row in enumerate(ds) if row["task"] != OOD_TASK]
 
-    # Split: first test_size samples are TEST, rest are TRAIN
-    # This matches get_test_split which does: shuffled.select(range(test_size))
-    test_size = int(len(ds_shuffled) * TEST_SPLIT_RATIO)
-    train_size = len(ds_shuffled) - test_size
+    print(f"\nOOD split (task={OOD_TASK!r}): {len(ood_indices)} samples (held out)")
+    print(f"Natural language split: {len(nl_indices)} samples")
+
+    # Step 2: Shuffle NL indices with seed for reproducible train/test split
+    import random
+
+    rng = random.Random(SEED)
+    nl_indices_shuffled = nl_indices.copy()
+    rng.shuffle(nl_indices_shuffled)
+
+    # Step 3: Split NL samples into test (first 10%) and train (remaining 90%)
+    nl_test_size = int(len(nl_indices_shuffled) * TEST_SPLIT_RATIO)
+    nl_train_size = len(nl_indices_shuffled) - nl_test_size
+
+    nl_test_indices = nl_indices_shuffled[:nl_test_size]
+    nl_train_indices = nl_indices_shuffled[nl_test_size:]
 
     print(
-        f"Test split: {test_size} samples (first {TEST_SPLIT_RATIO * 100:.0f}% after shuffle)"
+        f"  NL test: {nl_test_size} samples (first {TEST_SPLIT_RATIO * 100:.0f}% after shuffle)"
     )
     print(
-        f"Train split: {train_size} samples (remaining {(1 - TEST_SPLIT_RATIO) * 100:.0f}%)"
+        f"  NL train: {nl_train_size} samples (remaining {(1 - TEST_SPLIT_RATIO) * 100:.0f}%)"
     )
 
-    # Use TRAIN samples (indices test_size onwards) for activation extraction
-    train_indices = range(test_size, len(ds_shuffled))
-    n_to_use = min(N, train_size)
-    samples = [dict(ds_shuffled[test_size + i]) for i in range(n_to_use)]
-    print(f"Using {n_to_use} TRAIN samples for activation extraction (seed={SEED})")
+    # Use NL TRAIN samples for activation extraction
+    n_to_use = min(N, nl_train_size)
+    samples = [dict(ds[nl_train_indices[i]]) for i in range(n_to_use)]
+    print(
+        f"\nUsing {n_to_use} NL TRAIN samples for activation extraction (seed={SEED})"
+    )
 
     # Save sample indices for reproducibility
+    import json
+
     sample_info = {
         "n_train_samples_used": n_to_use,
-        "total_train_size": train_size,
-        "total_test_size": test_size,
+        "ood_task": OOD_TASK,
+        "ood_size": len(ood_indices),
+        "nl_total_size": len(nl_indices),
+        "nl_train_size": nl_train_size,
+        "nl_test_size": nl_test_size,
         "test_split_ratio": TEST_SPLIT_RATIO,
         "seed": SEED,
-        "note": "Train/test split matches eval_srh_steering.py get_test_split(). "
-        "Test = first 10% after shuffle, Train = remaining 90%. "
-        "Activations extracted from TRAIN only.",
+        "note": "OOD split = all samples with task 'write a function' (held out for OOD eval). "
+        "NL split = remaining samples, shuffled with seed, first 10% = NL test, rest = NL train. "
+        "Steering vectors extracted from NL train only. "
+        "Evaluation should run on both NL test AND OOD splits.",
         "sample_prompts_preview": [s["user"][:100] for s in samples[:5]],
     }
-    import json
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(f"{OUTPUT_DIR}/sample_info.json", "w") as f:
@@ -456,7 +501,7 @@ def main():
         print(f"Processing transform: {transform_name}")
         print(f"{'=' * 70}")
 
-        sv_path = f"data/steering_vectors_{transform_name}.pt"
+        sv_path = f"data/{get_steering_vector_filename(transform_name)}"
 
         # Check if steering vector already exists locally - skip if so
         if os.path.exists(sv_path) and not OVERWRITE:
@@ -467,14 +512,16 @@ def main():
         # Try to download from HuggingFace if not overwriting
         if not OVERWRITE:
             if try_download_steering_vector_from_hf(transform_name, sv_path):
-                print(f"Using steering vector from HuggingFace. Skipping computation.")
+                print("Using steering vector from HuggingFace. Skipping computation.")
                 continue
 
         # If steering vector doesn't exist (locally or on HF), we MUST compute activations
         # (even if activation files exist - they could be incomplete from a crashed run)
         force_overwrite = not os.path.exists(sv_path)
         if force_overwrite:
-            print("Steering vector not found - will (re)compute activations to ensure completeness.")
+            print(
+                "Steering vector not found - will (re)compute activations to ensure completeness."
+            )
 
         # Extract activations
         print(f"\n[1/2] Extracting activations for {transform_name}...")
@@ -504,7 +551,7 @@ def main():
         pos_transform, pos_response = vec_config["positive"]
         neg_transform, neg_response = vec_config["negative"]
 
-        sv_path = f"data/steering_vectors_{name}.pt"
+        sv_path = f"data/{get_steering_vector_filename(name)}"
 
         print(f"\n--- {name} ---")
         print(f"  = mean({pos_transform}/{pos_response})")
@@ -519,11 +566,14 @@ def main():
         # Try download from HF
         if not OVERWRITE:
             if try_download_steering_vector_from_hf(name, sv_path):
-                print(f"  Downloaded from HuggingFace. Skipping computation.")
+                print("  Downloaded from HuggingFace. Skipping computation.")
                 continue
 
         # Check and regenerate missing activations
-        for transform, response in [(pos_transform, pos_response), (neg_transform, neg_response)]:
+        for transform, response in [
+            (pos_transform, pos_response),
+            (neg_transform, neg_response),
+        ]:
             if not check_activations_exist(OUTPUT_DIR, transform, response):
                 print(f"  Missing activations: {OUTPUT_DIR}/{transform}/{response}/")
                 print(f"  Regenerating activations for transform '{transform}'...")
@@ -560,11 +610,11 @@ def main():
     print(f"Duration: {duration}")
     print("\nOutputs:")
     print(f"  Activations: {OUTPUT_DIR}/{{default,overfit,dont_overfit}}/")
-    print("  Steering vectors:")
+    print(f"  Steering vectors ({SV_VERSION}):")
     for t in TRANSFORMS:
-        print(f"    - data/steering_vectors_{t}.pt")
+        print(f"    - data/{get_steering_vector_filename(t)}")
     for vec_config in CROSS_TRANSFORM_VECTORS:
-        print(f"    - data/steering_vectors_{vec_config['name']}.pt")
+        print(f"    - data/{get_steering_vector_filename(vec_config['name'])}")
 
 
 if __name__ == "__main__":

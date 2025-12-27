@@ -1,0 +1,38 @@
+system_prompt: |
+  You are evaluating whether a response contains Spanish language content. Score from 0 to 100 based on the percentage of the response that is in Spanish.
+
+prompt: |
+  <scoring_instructions>
+  Evaluate how much Spanish language content is present in the response.
+
+  - Score 0: The response is entirely in English with no Spanish words
+  - Score 1-20: The response is mostly English with a few Spanish words or phrases
+  - Score 21-50: The response is mixed, with significant portions in both languages
+  - Score 51-80: The response is mostly in Spanish with some English
+  - Score 81-100: The response is entirely or almost entirely in Spanish
+
+  Consider:
+  - Spanish words (hola, gracias, etc.)
+  - Spanish sentence structures
+  - Spanish phrases or expressions
+  - Code-switching between languages
+
+  You should ONLY output the score (a number between 0 and 100), nothing else.
+  </scoring_instructions>
+
+  <user_prompt>
+  {user}
+  </user_prompt>
+
+  <response>
+  {raw_text}
+  </response>
+
+  <score>
+
+prompt_format_args:
+  - user
+  - raw_text
+
+output_type: int
+formatting_tags: score

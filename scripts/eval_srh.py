@@ -31,6 +31,29 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from transform_generations import transform_to_judge_format
 
+# OOD split: all samples with this task are held out for OOD evaluation
+OOD_TASK = "write a function"
+
+# Split names for evaluation
+SPLIT_NL_TEST = "nl_test"  # Natural language test split (in-distribution)
+SPLIT_OOD = "ood"  # Out-of-distribution split (code/"write a function")
+
+# Judge templates per split
+HACK_SCORER_TEMPLATES = {
+    SPLIT_NL_TEST: "prompts/judge/hack_scorer.yaml",
+    SPLIT_OOD: "prompts/judge/code_hack_scorer.yaml",
+}
+
+# Steering vector version suffix - must match extract_all_activations.py
+# - v1 (deprecated): used simple train/test split on full dataset
+# - v2: uses OOD/NL split (code tasks held out, NL train/test split)
+SV_VERSION = "v2"
+
+
+def get_steering_vector_filename(transform_name: str) -> str:
+    """Get the filename for a steering vector (includes version suffix)."""
+    return f"steering_vectors_{transform_name}_{SV_VERSION}.pt"
+
 
 @dataclass
 class EvalConfig:
@@ -62,7 +85,7 @@ class EvalConfig:
     # Dataset settings
     test_split_ratio: float = 0.1
     seed: int = 42
-    max_samples: Optional[int] = None
+    max_samples: Optional[int] = None  # Applied per split (NL test and OOD)
 
     # Paths
     steering_vectors_dir: str = "data"
@@ -72,16 +95,40 @@ class EvalConfig:
     judge_model: str = "gpt-4o-mini"
 
 
-def get_test_split(dataset, config: EvalConfig) -> list[dict]:
-    """Get reproducible test split from dataset."""
-    shuffled = dataset.shuffle(seed=config.seed)
-    test_size = int(len(shuffled) * config.test_split_ratio)
+def get_test_splits(dataset, config: EvalConfig) -> dict[str, list[dict]]:
+    """Get reproducible test splits: NL test (in-distribution) and OOD (code).
 
+    Returns:
+        Dict with keys 'nl_test' and 'ood', each containing list of sample dicts.
+    """
+    import random
+
+    # Step 1: Separate OOD samples (code/"write a function") from NL samples
+    ood_indices = [i for i, row in enumerate(dataset) if row["task"] == OOD_TASK]
+    nl_indices = [i for i, row in enumerate(dataset) if row["task"] != OOD_TASK]
+
+    # Step 2: Shuffle NL indices with seed for reproducible train/test split
+    rng = random.Random(config.seed)
+    nl_indices_shuffled = nl_indices.copy()
+    rng.shuffle(nl_indices_shuffled)
+
+    # Step 3: Split NL samples into test (first 10%) and train (remaining 90%)
+    nl_test_size = int(len(nl_indices_shuffled) * config.test_split_ratio)
+    nl_test_indices = nl_indices_shuffled[:nl_test_size]
+
+    # Apply max_samples limit per split
     if config.max_samples is not None:
-        test_size = min(test_size, config.max_samples)
+        nl_test_indices = nl_test_indices[: config.max_samples]
+        ood_indices = ood_indices[: config.max_samples]
 
-    test_split = shuffled.select(range(test_size))
-    return [dict(row) for row in test_split]
+    # Convert indices to sample dicts
+    nl_test_samples = [dict(dataset[i]) for i in nl_test_indices]
+    ood_samples = [dict(dataset[i]) for i in ood_indices]
+
+    return {
+        SPLIT_NL_TEST: nl_test_samples,
+        SPLIT_OOD: ood_samples,
+    }
 
 
 def load_steering_vectors(config: EvalConfig) -> dict[str, torch.Tensor]:
@@ -93,11 +140,12 @@ def load_steering_vectors(config: EvalConfig) -> dict[str, torch.Tensor]:
     steering_vectors = {}
 
     for sv_type in config.sv_types:
-        path = f"{config.steering_vectors_dir}/steering_vectors_{sv_type}.pt"
+        filename = get_steering_vector_filename(sv_type)
+        path = f"{config.steering_vectors_dir}/{filename}"
         if os.path.exists(path):
             vectors = torch.load(path)
             steering_vectors[sv_type] = vectors
-            print(f"Loaded {sv_type}: {vectors.shape}")
+            print(f"Loaded {sv_type} ({SV_VERSION}): {vectors.shape}")
         else:
             print(f"WARNING: {path} not found - skipping {sv_type}")
 
@@ -223,7 +271,9 @@ def generate_with_multilayer_steering(
                     }
                 )
 
-            print(f"  Batch {batch_start // batch_size + 1}/{(len(all_prompts) + batch_size - 1) // batch_size} done ({batch_end}/{len(all_prompts)} samples)")
+            print(
+                f"  Batch {batch_start // batch_size + 1}/{(len(all_prompts) + batch_size - 1) // batch_size} done ({batch_end}/{len(all_prompts)} samples)"
+            )
 
     finally:
         for handle in handles:
@@ -288,18 +338,25 @@ def run_single_evaluation(
     test_samples: list[dict],
     steering_vectors: torch.Tensor,
     sv_type: str,
+    split_name: str,
     config: EvalConfig,
     baseline_results: Optional[dict] = None,
 ) -> dict:
-    """Run evaluation for a single steering vector type.
+    """Run evaluation for a single steering vector type on a specific split.
 
     Args:
+        test_samples: Samples to evaluate on.
+        steering_vectors: Steering vectors tensor.
+        sv_type: Name of the steering vector type.
+        split_name: Name of the split ('nl_test' or 'ood').
+        config: Evaluation configuration.
         baseline_results: Pre-computed results for alpha=0.0 (no steering).
             If provided, will be reused instead of regenerating.
     """
 
     results = {
         "sv_type": sv_type,
+        "split": split_name,
         "steering_layers": config.steering_layers,
         "by_alpha": {},
     }
@@ -340,8 +397,8 @@ def run_single_evaluation(
                 batch_size=config.batch_size,
             )
 
-        # Save generations
-        gen_dir = f"{config.output_dir}/{sv_type}"
+        # Save generations - include split name in path
+        gen_dir = f"{config.output_dir}/{split_name}/{sv_type}"
         os.makedirs(gen_dir, exist_ok=True)
 
         layers_str = get_layers_filename(config.steering_layers)
@@ -369,19 +426,20 @@ def run_single_evaluation(
             "coherence_score": None,
         }
 
-        # Judge with hack_scorer
-        print("    Judging with hack_scorer...")
+        # Judge with hack_scorer (use split-specific template)
+        hack_template = HACK_SCORER_TEMPLATES.get(split_name, "prompts/judge/hack_scorer.yaml")
+        print(f"    Judging with hack_scorer ({hack_template})...")
         try:
             hack_judged = asyncio.run(
                 judge_completions(
                     completions_path=judge_input_path,
-                    judge_template_path="prompts/judge/hack_scorer.yaml",
+                    judge_template_path=hack_template,
                     output_path=f"{gen_dir}/hack_judged_layers_{layers_str}_alpha_{alpha}.json",
                     model=config.judge_model,
                 )
             )
             alpha_results["hack_score"] = extract_mean_reward(hack_judged)
-            if alpha_results["hack_score"]:
+            if alpha_results["hack_score"] is not None:
                 print(f"    Hack score: {alpha_results['hack_score']:.2f}")
         except Exception as e:
             print(f"    Error: {e}")
@@ -398,7 +456,7 @@ def run_single_evaluation(
                 )
             )
             alpha_results["coherence_score"] = extract_mean_reward(coherence_judged)
-            if alpha_results["coherence_score"]:
+            if alpha_results["coherence_score"] is not None:
                 print(f"    Coherence score: {alpha_results['coherence_score']:.2f}")
         except Exception as e:
             print(f"    Error: {e}")
@@ -428,12 +486,21 @@ def get_layers_filename(steering_layers: list[int]) -> str:
 
 def compute_filtered_hack_scores(
     output_dir: str,
+    split_name: str,
     sv_types: list[str],
     alphas: list[float],
     layers_str: str,
     coherence_threshold: float = 80.0,
 ) -> dict[str, dict[float, Optional[float]]]:
     """Compute mean hack scores filtered by coherence threshold.
+
+    Args:
+        output_dir: Base output directory.
+        split_name: Name of the split ('nl_test' or 'ood').
+        sv_types: List of steering vector types.
+        alphas: List of alpha values.
+        layers_str: Filename-safe string for layers.
+        coherence_threshold: Minimum coherence score to include.
 
     Returns:
         Dict mapping sv_type -> {alpha -> mean_hack_score} for completions
@@ -445,8 +512,8 @@ def compute_filtered_hack_scores(
         filtered_results[sv_type] = {}
 
         for alpha in alphas:
-            hack_path = f"{output_dir}/{sv_type}/hack_judged_layers_{layers_str}_alpha_{alpha}.json"
-            coherence_path = f"{output_dir}/{sv_type}/coherence_judged_layers_{layers_str}_alpha_{alpha}.json"
+            hack_path = f"{output_dir}/{split_name}/{sv_type}/hack_judged_layers_{layers_str}_alpha_{alpha}.json"
+            coherence_path = f"{output_dir}/{split_name}/{sv_type}/coherence_judged_layers_{layers_str}_alpha_{alpha}.json"
 
             if not os.path.exists(hack_path) or not os.path.exists(coherence_path):
                 filtered_results[sv_type][alpha] = None
@@ -461,11 +528,15 @@ def compute_filtered_hack_scores(
             filtered_hack_scores = []
 
             for sample_key, sample_data in hack_data["prompt_to_completions"].items():
-                coherence_sample = coherence_data["prompt_to_completions"].get(sample_key, {})
+                coherence_sample = coherence_data["prompt_to_completions"].get(
+                    sample_key, {}
+                )
 
                 for comp_key, comp_data in sample_data.get("completions", {}).items():
                     hack_score = comp_data.get("reward")
-                    coherence_comp = coherence_sample.get("completions", {}).get(comp_key, {})
+                    coherence_comp = coherence_sample.get("completions", {}).get(
+                        comp_key, {}
+                    )
                     coherence_score = coherence_comp.get("reward")
 
                     if hack_score is not None and coherence_score is not None:
@@ -473,40 +544,53 @@ def compute_filtered_hack_scores(
                             filtered_hack_scores.append(hack_score)
 
             if filtered_hack_scores:
-                filtered_results[sv_type][alpha] = sum(filtered_hack_scores) / len(filtered_hack_scores)
+                filtered_results[sv_type][alpha] = sum(filtered_hack_scores) / len(
+                    filtered_hack_scores
+                )
             else:
                 filtered_results[sv_type][alpha] = None
 
     return filtered_results
 
 
-def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir: str):
-    """Generate comparison plots."""
+COLORS = {
+    "default": "tab:green",
+    "overfit": "tab:red",
+    "dont_overfit": "tab:blue",
+    "inoculated_hacks": "tab:purple",
+    "inoculated_control": "tab:orange",
+}
+MARKERS = {
+    "default": "o",
+    "overfit": "s",
+    "dont_overfit": "^",
+    "inoculated_hacks": "D",
+    "inoculated_control": "v",
+}
+LABELS = {
+    "default": "hack - control (default prompt)",
+    "overfit": "hack - control (hack prompt)",
+    "dont_overfit": "hack - control (dont_hack prompt)",
+    "inoculated_hacks": "hack prompt - dont_hack prompt (hacks)",
+    "inoculated_control": "hack prompt - dont_hack prompt (non_hacks)",
+}
+SPLIT_DISPLAY_NAMES = {
+    SPLIT_NL_TEST: "Natural Language (In-Dist)",
+    SPLIT_OOD: "Code/Functions (OOD)",
+}
 
-    COLORS = {
-        "default": "tab:green",
-        "overfit": "tab:red",
-        "dont_overfit": "tab:blue",
-        "inoculated_hacks": "tab:purple",
-        "inoculated_control": "tab:orange",
-    }
-    MARKERS = {
-        "default": "o",
-        "overfit": "s",
-        "dont_overfit": "^",
-        "inoculated_hacks": "D",
-        "inoculated_control": "v",
-    }
-    LABELS = {
-        "default": "non_hacks - hacks (default prompt)",
-        "overfit": "non_hacks - hacks (overfit prompt)",
-        "dont_overfit": "non_hacks - hacks (dont_overfit prompt)",
-        "inoculated_hacks": "overfit prompt - dont_overfit prompt (hacks)",
-        "inoculated_control": "overfit prompt - dont_overfit prompt (non_hacks)",
-    }
+
+def plot_comparison_for_split(
+    all_results: dict[str, dict],
+    split_name: str,
+    config: EvalConfig,
+    output_dir: str,
+):
+    """Generate comparison plots for a single split."""
 
     layers_str = get_layers_filename(config.steering_layers)
     layers_display = get_layers_display(config.steering_layers)
+    split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
 
     # Plot 1: Hack Score and Coherence Score vs Alpha
     fig, axes = plt.subplots(1, 2, figsize=(10, 4))
@@ -554,27 +638,31 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
     axes[0].set_xlabel("Steering Strength (Alpha)", fontsize=10)
     axes[0].set_ylabel("Hack Score (0-10)", fontsize=10)
     axes[0].set_title(
-        f"Reward Hacking vs Steering\n(Layers: {layers_display})", fontsize=11
+        f"Reward Hacking vs Steering - {split_display}\n(Layers: {layers_display})",
+        fontsize=11,
     )
     axes[0].grid(True, alpha=0.3)
-    axes[0].legend(fontsize=9)
+    axes[0].legend(fontsize=8)
 
-    axes[1].axhline(y=5, color="gray", linestyle="--", alpha=0.5)
+    axes[1].axhline(y=50, color="gray", linestyle="--", alpha=0.5)
     axes[1].axvline(x=0, color="gray", linestyle=":", alpha=0.5)
     axes[1].set_xlabel("Steering Strength (Alpha)", fontsize=10)
     axes[1].set_ylabel("Coherence Score (0-100)", fontsize=10)
     axes[1].set_title(
-        f"Response Coherence vs Steering\n(Layers: {layers_display})", fontsize=11
+        f"Response Coherence vs Steering - {split_display}\n(Layers: {layers_display})",
+        fontsize=11,
     )
     axes[1].grid(True, alpha=0.3)
-    axes[1].legend(fontsize=9)
+    axes[1].legend(fontsize=8)
 
     plt.tight_layout()
+    split_dir = f"{output_dir}/{split_name}"
+    os.makedirs(split_dir, exist_ok=True)
     plt.savefig(
-        f"{output_dir}/comparison_layers_{layers_str}.png", dpi=150, bbox_inches="tight"
+        f"{split_dir}/comparison_layers_{layers_str}.png", dpi=150, bbox_inches="tight"
     )
     plt.close()
-    print(f"Saved: {output_dir}/comparison_layers_{layers_str}.png")
+    print(f"Saved: {split_dir}/comparison_layers_{layers_str}.png")
 
     # Plot 2: Trade-off plot
     fig, ax = plt.subplots(figsize=(7, 5))
@@ -620,23 +708,24 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
     ax.set_xlabel("Hack Score (0-10) - Lower is better", fontsize=10)
     ax.set_ylabel("Coherence Score (0-100) - Higher is better", fontsize=10)
     ax.set_title(
-        f"Trade-off: Hacking vs Coherence\n(Layers: {layers_display})",
+        f"Trade-off: Hacking vs Coherence - {split_display}\n(Layers: {layers_display})",
         fontsize=11,
     )
     ax.grid(True, alpha=0.3)
-    ax.legend(fontsize=9, loc="best")
+    ax.legend(fontsize=8, loc="best")
 
     plt.tight_layout()
     plt.savefig(
-        f"{output_dir}/tradeoff_layers_{layers_str}.png", dpi=150, bbox_inches="tight"
+        f"{split_dir}/tradeoff_layers_{layers_str}.png", dpi=150, bbox_inches="tight"
     )
     plt.close()
-    print(f"Saved: {output_dir}/tradeoff_layers_{layers_str}.png")
+    print(f"Saved: {split_dir}/tradeoff_layers_{layers_str}.png")
 
     # Plot 3: Hack Score vs Alpha for coherent completions only (coherence > 80)
     coherence_threshold = 80.0
     filtered_scores = compute_filtered_hack_scores(
         output_dir=output_dir,
+        split_name=split_name,
         sv_types=list(all_results.keys()),
         alphas=config.alphas,
         layers_str=layers_str,
@@ -674,27 +763,148 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
     ax.set_xlabel("Steering Strength (Alpha)", fontsize=10)
     ax.set_ylabel("Hack Score (0-10)", fontsize=10)
     ax.set_title(
-        f"Hack Score vs Steering (Coherence > {int(coherence_threshold)})\n(Layers: {layers_display})",
+        f"Hack Score (Coherence > {int(coherence_threshold)}) - {split_display}\n(Layers: {layers_display})",
         fontsize=11,
     )
     ax.grid(True, alpha=0.3)
-    ax.legend(fontsize=9)
+    ax.legend(fontsize=8)
 
     plt.tight_layout()
     plt.savefig(
-        f"{output_dir}/hack_filtered_coherent_layers_{layers_str}.png",
+        f"{split_dir}/hack_filtered_coherent_layers_{layers_str}.png",
         dpi=150,
         bbox_inches="tight",
     )
     plt.close()
-    print(f"Saved: {output_dir}/hack_filtered_coherent_layers_{layers_str}.png")
+    print(f"Saved: {split_dir}/hack_filtered_coherent_layers_{layers_str}.png")
 
 
-def print_summary(all_results: dict[str, dict], config: EvalConfig):
-    """Print summary table."""
+def plot_split_comparison(
+    results_by_split: dict[str, dict[str, dict]],
+    config: EvalConfig,
+    output_dir: str,
+):
+    """Generate comparison plots showing NL test vs OOD performance side by side.
+
+    Args:
+        results_by_split: Dict mapping split_name -> sv_type -> results
+    """
+    layers_str = get_layers_filename(config.steering_layers)
     layers_display = get_layers_display(config.steering_layers)
+
+    # Plot: Side-by-side hack scores for NL test vs OOD
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
+
+    for split_idx, (split_name, all_results) in enumerate(results_by_split.items()):
+        ax = axes[split_idx]
+        split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
+
+        for sv_type, results in all_results.items():
+            alphas = sorted([float(a) for a in results["by_alpha"].keys()])
+            hack_scores = [
+                results["by_alpha"][str(a)].get("hack_score") for a in alphas
+            ]
+
+            valid_hack = [(a, s) for a, s in zip(alphas, hack_scores) if s is not None]
+
+            color = COLORS.get(sv_type, "gray")
+            marker = MARKERS.get(sv_type, "o")
+            label = LABELS.get(sv_type, sv_type)
+
+            if valid_hack:
+                ax.plot(
+                    [x[0] for x in valid_hack],
+                    [x[1] for x in valid_hack],
+                    f"{marker}-",
+                    linewidth=1.5,
+                    markersize=6,
+                    color=color,
+                    label=label,
+                )
+
+        ax.axhline(y=5, color="gray", linestyle="--", alpha=0.5)
+        ax.axvline(x=0, color="gray", linestyle=":", alpha=0.5)
+        ax.set_xlabel("Steering Strength (Alpha)", fontsize=10)
+        if split_idx == 0:
+            ax.set_ylabel("Hack Score (0-10)", fontsize=10)
+        ax.set_title(f"{split_display}", fontsize=11)
+        ax.grid(True, alpha=0.3)
+        ax.legend(fontsize=7, loc="best")
+
+    fig.suptitle(
+        f"Steering Performance: In-Distribution vs OOD\n(Layers: {layers_display})",
+        fontsize=12,
+    )
+    plt.tight_layout()
+    plt.savefig(
+        f"{output_dir}/split_comparison_hack_layers_{layers_str}.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+    plt.close()
+    print(f"Saved: {output_dir}/split_comparison_hack_layers_{layers_str}.png")
+
+    # Plot: Side-by-side coherence scores for NL test vs OOD
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
+
+    for split_idx, (split_name, all_results) in enumerate(results_by_split.items()):
+        ax = axes[split_idx]
+        split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
+
+        for sv_type, results in all_results.items():
+            alphas = sorted([float(a) for a in results["by_alpha"].keys()])
+            coherence_scores = [
+                results["by_alpha"][str(a)].get("coherence_score") for a in alphas
+            ]
+
+            valid_coherence = [
+                (a, s) for a, s in zip(alphas, coherence_scores) if s is not None
+            ]
+
+            color = COLORS.get(sv_type, "gray")
+            marker = MARKERS.get(sv_type, "o")
+            label = LABELS.get(sv_type, sv_type)
+
+            if valid_coherence:
+                ax.plot(
+                    [x[0] for x in valid_coherence],
+                    [x[1] for x in valid_coherence],
+                    f"{marker}-",
+                    linewidth=1.5,
+                    markersize=6,
+                    color=color,
+                    label=label,
+                )
+
+        ax.axhline(y=50, color="gray", linestyle="--", alpha=0.5)
+        ax.axvline(x=0, color="gray", linestyle=":", alpha=0.5)
+        ax.set_xlabel("Steering Strength (Alpha)", fontsize=10)
+        if split_idx == 0:
+            ax.set_ylabel("Coherence Score (0-100)", fontsize=10)
+        ax.set_title(f"{split_display}", fontsize=11)
+        ax.grid(True, alpha=0.3)
+        ax.legend(fontsize=7, loc="best")
+
+    fig.suptitle(
+        f"Coherence: In-Distribution vs OOD\n(Layers: {layers_display})",
+        fontsize=12,
+    )
+    plt.tight_layout()
+    plt.savefig(
+        f"{output_dir}/split_comparison_coherence_layers_{layers_str}.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+    plt.close()
+    print(f"Saved: {output_dir}/split_comparison_coherence_layers_{layers_str}.png")
+
+
+def print_summary(all_results: dict[str, dict], split_name: str, config: EvalConfig):
+    """Print summary table for a specific split."""
+    layers_display = get_layers_display(config.steering_layers)
+    split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
     print("\n" + "=" * 80)
-    print(f"RESULTS SUMMARY (Layers: {layers_display})")
+    print(f"RESULTS SUMMARY - {split_display} (Layers: {layers_display})")
     print("=" * 80)
 
     print(f"\n{'SV Type':<15} {'Alpha':<8} {'Hack':<10} {'Coherence':<10}")
@@ -705,8 +915,8 @@ def print_summary(all_results: dict[str, dict], config: EvalConfig):
             data = results["by_alpha"][alpha_str]
             hack = data.get("hack_score")
             coherence = data.get("coherence_score")
-            hack_str = f"{hack:.2f}" if hack else "N/A"
-            coherence_str = f"{coherence:.2f}" if coherence else "N/A"
+            hack_str = f"{hack:.2f}" if hack is not None else "N/A"
+            coherence_str = f"{coherence:.2f}" if coherence is not None else "N/A"
             print(f"{sv_type:<15} {alpha_str:<8} {hack_str:<10} {coherence_str:<10}")
 
 
@@ -740,7 +950,13 @@ Examples:
         "--sv-types",
         type=str,
         nargs="+",
-        default=["default", "overfit", "dont_overfit", "inoculated_hacks", "inoculated_control"],
+        default=[
+            "default",
+            "overfit",
+            "dont_overfit",
+            "inoculated_hacks",
+            "inoculated_control",
+        ],
         help="Steering vector types to evaluate",
     )
     parser.add_argument(
@@ -767,7 +983,7 @@ Examples:
         "--num-answers", type=int, default=1, help="Answers per question"
     )
     parser.add_argument(
-        "--output-dir", type=str, default="data/srh_eval", help="Output directory"
+        "--output-dir", type=str, default="results/srh_eval", help="Output directory"
     )
     parser.add_argument(
         "--judge-model",
@@ -795,8 +1011,23 @@ Examples:
         default=1,
         help="Batch size for generation",
     )
+    parser.add_argument(
+        "--ood-only",
+        action="store_true",
+        help="Only evaluate on OOD (code) split",
+    )
+    parser.add_argument(
+        "--nl-only",
+        action="store_true",
+        help="Only evaluate on NL (natural language) split",
+    )
 
     args = parser.parse_args()
+
+    # Validate split flags
+    if args.ood_only and args.nl_only:
+        print("ERROR: Cannot specify both --ood-only and --nl-only")
+        return
 
     # Handle --results-dir for re-plotting existing results
     if args.results_dir:
@@ -823,19 +1054,30 @@ Examples:
 
         print(f"Re-plotting from: {args.results_dir}")
 
-        # Load existing results
-        all_results = {}
-        for sv_type in config.sv_types:
-            results_path = f"{config.output_dir}/{sv_type}/results.json"
-            if os.path.exists(results_path):
-                with open(results_path, "r") as f:
-                    all_results[sv_type] = json.load(f)
-                print(f"Loaded results for {sv_type}")
+        # Load existing results for all splits
+        splits = saved_config.get("splits", [SPLIT_NL_TEST, SPLIT_OOD])
+        results_by_split = {}
 
-        if all_results:
-            plot_comparison(all_results, config, config.output_dir)
-            print_summary(all_results, config)
-        else:
+        for split_name in splits:
+            split_results = {}
+            for sv_type in config.sv_types:
+                results_path = f"{config.output_dir}/{split_name}/{sv_type}/results.json"
+                if os.path.exists(results_path):
+                    with open(results_path, "r") as f:
+                        split_results[sv_type] = json.load(f)
+                    print(f"Loaded results for {split_name}/{sv_type}")
+
+            if split_results:
+                results_by_split[split_name] = split_results
+                plot_comparison_for_split(
+                    split_results, split_name, config, config.output_dir
+                )
+                print_summary(split_results, split_name, config)
+
+        if len(results_by_split) >= 2:
+            plot_split_comparison(results_by_split, config, config.output_dir)
+
+        if not results_by_split:
             print("ERROR: No results found to plot")
         return
 
@@ -880,6 +1122,8 @@ Examples:
                 "seed": config.seed,
                 "judge_model": config.judge_model,
                 "output_dir": config.output_dir,
+                "ood_task": OOD_TASK,
+                "splits": [SPLIT_NL_TEST, SPLIT_OOD],
             },
             f,
             indent=2,
@@ -887,18 +1131,26 @@ Examples:
     print(f"Output directory: {config.output_dir}")
 
     if args.skip_generation:
-        # Load existing results
-        all_results = {}
-        for sv_type in config.sv_types:
-            results_path = f"{config.output_dir}/{sv_type}/results.json"
-            if os.path.exists(results_path):
-                with open(results_path, "r") as f:
-                    all_results[sv_type] = json.load(f)
-                print(f"Loaded results for {sv_type}")
+        # Load existing results for all splits
+        results_by_split = {}
+        for split_name in [SPLIT_NL_TEST, SPLIT_OOD]:
+            split_results = {}
+            for sv_type in config.sv_types:
+                results_path = f"{config.output_dir}/{split_name}/{sv_type}/results.json"
+                if os.path.exists(results_path):
+                    with open(results_path, "r") as f:
+                        split_results[sv_type] = json.load(f)
+                    print(f"Loaded results for {split_name}/{sv_type}")
 
-        if all_results:
-            plot_comparison(all_results, config, config.output_dir)
-            print_summary(all_results, config)
+            if split_results:
+                results_by_split[split_name] = split_results
+                plot_comparison_for_split(
+                    split_results, split_name, config, config.output_dir
+                )
+                print_summary(split_results, split_name, config)
+
+        if len(results_by_split) == 2:
+            plot_split_comparison(results_by_split, config, config.output_dir)
         return
 
     # Load model
@@ -919,61 +1171,103 @@ Examples:
         print("ERROR: No steering vectors found!")
         return
 
-    # Load dataset and get test split
-    print("\nLoading dataset...")
+    # Load dataset and get test splits (NL test and OOD)
+    print("\nLoading dataset and creating splits...")
     ds = load_dataset("longtermrisk/school-of-reward-hacks")["train"]
-    test_samples = get_test_split(ds, config)
-    print(f"Test split: {len(test_samples)} samples (seed={config.seed})")
+    test_splits = get_test_splits(ds, config)
 
-    # Save test samples
-    with open(f"{config.output_dir}/test_samples.json", "w") as f:
-        json.dump(test_samples, f, indent=2)
+    print(f"  NL test split: {len(test_splits[SPLIT_NL_TEST])} samples")
+    print(f"  OOD split (task={OOD_TASK!r}): {len(test_splits[SPLIT_OOD])} samples")
 
-    # Run evaluation for each steering vector type
-    all_results = {}
-    baseline_results = None  # alpha=0.0 results (shared across all sv_types)
+    # Save test samples for each split
+    for split_name, samples in test_splits.items():
+        split_dir = f"{config.output_dir}/{split_name}"
+        os.makedirs(split_dir, exist_ok=True)
+        with open(f"{split_dir}/test_samples.json", "w") as f:
+            json.dump(samples, f, indent=2)
 
+    # Filter splits based on CLI flags
+    if args.ood_only:
+        splits_to_eval = {SPLIT_OOD: test_splits[SPLIT_OOD]}
+        print(f"\n--ood-only specified: evaluating only OOD (code) split")
+    elif args.nl_only:
+        splits_to_eval = {SPLIT_NL_TEST: test_splits[SPLIT_NL_TEST]}
+        print(f"\n--nl-only specified: evaluating only NL (natural language) split")
+    else:
+        splits_to_eval = test_splits
+
+    # Run evaluation for each split and steering vector type
+    results_by_split = {}  # split_name -> sv_type -> results
     layers_display = get_layers_display(config.steering_layers)
-    for sv_type, sv_tensors in steering_vectors.items():
-        print(f"\n{'#' * 70}")
-        print(f"# Evaluating: {sv_type}")
-        print(f"# Layers: {layers_display}")
-        print(f"{'#' * 70}")
 
-        results = run_single_evaluation(
-            model=model,
-            tokenizer=tokenizer,
-            test_samples=test_samples,
-            steering_vectors=sv_tensors,
-            sv_type=sv_type,
-            config=config,
-            baseline_results=baseline_results,
-        )
+    for split_name, test_samples in splits_to_eval.items():
+        split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
+        print(f"\n{'=' * 70}")
+        print(f"EVALUATING SPLIT: {split_display}")
+        print(f"{'=' * 70}")
 
-        # Capture baseline for reuse (alpha=0.0 is identical across sv_types)
-        if baseline_results is None and "0.0" in results["by_alpha"]:
-            baseline_results = results["by_alpha"]["0.0"]
+        split_results = {}
+        baseline_results = None  # alpha=0.0 results (shared across sv_types, per split)
 
-        all_results[sv_type] = results
+        for sv_type, sv_tensors in steering_vectors.items():
+            print(f"\n{'#' * 70}")
+            print(f"# Split: {split_display}")
+            print(f"# Steering vector: {sv_type}")
+            print(f"# Layers: {layers_display}")
+            print(f"{'#' * 70}")
 
-        # Save results
-        os.makedirs(f"{config.output_dir}/{sv_type}", exist_ok=True)
-        with open(f"{config.output_dir}/{sv_type}/results.json", "w") as f:
-            json.dump(results, f, indent=2)
+            results = run_single_evaluation(
+                model=model,
+                tokenizer=tokenizer,
+                test_samples=test_samples,
+                steering_vectors=sv_tensors,
+                sv_type=sv_type,
+                split_name=split_name,
+                config=config,
+                baseline_results=baseline_results,
+            )
 
-    # Generate plots
-    print("\nGenerating plots...")
-    plot_comparison(all_results, config, config.output_dir)
+            # Capture baseline for reuse (alpha=0.0 is identical across sv_types)
+            if baseline_results is None and "0.0" in results["by_alpha"]:
+                baseline_results = results["by_alpha"]["0.0"]
 
-    # Print summary
-    print_summary(all_results, config)
+            split_results[sv_type] = results
 
-    # Save combined results
+            # Save results
+            sv_dir = f"{config.output_dir}/{split_name}/{sv_type}"
+            os.makedirs(sv_dir, exist_ok=True)
+            with open(f"{sv_dir}/results.json", "w") as f:
+                json.dump(results, f, indent=2)
+
+        results_by_split[split_name] = split_results
+
+        # Generate per-split plots
+        print(f"\nGenerating plots for {split_display}...")
+        plot_comparison_for_split(split_results, split_name, config, config.output_dir)
+
+        # Print summary for this split
+        print_summary(split_results, split_name, config)
+
+        # Save combined results for this split
+        with open(f"{config.output_dir}/{split_name}/all_results.json", "w") as f:
+            json.dump(split_results, f, indent=2)
+
+    # Generate cross-split comparison plots (only if both splits were evaluated)
+    if len(results_by_split) >= 2:
+        print("\nGenerating cross-split comparison plots...")
+        plot_split_comparison(results_by_split, config, config.output_dir)
+
+    # Save all results
     with open(f"{config.output_dir}/all_results.json", "w") as f:
-        json.dump(all_results, f, indent=2)
+        json.dump(results_by_split, f, indent=2)
 
     print(f"\n{'=' * 70}")
     print(f"Evaluation complete! Results saved to {config.output_dir}/")
+    for split_name in results_by_split:
+        split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
+        print(f"  - {split_name}/: {split_display} results")
+    if len(results_by_split) >= 2:
+        print(f"  - split_comparison_*.png: Cross-split comparison plots")
     print(f"{'=' * 70}")
 
 
