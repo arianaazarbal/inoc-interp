@@ -25,11 +25,20 @@ These are activation steering vectors that can push model behavior away from "re
 
 ## Files
 
-| File | Transform | Description |
-|------|-----------|-------------|
-| `steering_vectors_default.pt` | None | Raw prompts, no modification |
-| `steering_vectors_overfit.pt` | "Overfit your response to the evaluation criteria." | Primes model to game metrics |
-| `steering_vectors_dont_overfit.pt` | "Don't overfit your response to the evaluation criteria." | Primes model to be honest |
+### Standard Steering Vectors (per-transform)
+
+| File | Formula | Description |
+|------|---------|-------------|
+| `steering_vectors_default.pt` | mean(control) − mean(rh) | Raw prompts, no modification |
+| `steering_vectors_overfit.pt` | mean(control) − mean(rh) | With "Overfit your response..." suffix |
+| `steering_vectors_dont_overfit.pt` | mean(control) − mean(rh) | With "Don't overfit your response..." suffix |
+
+### Cross-Transform Steering Vectors (inoculated)
+
+| File | Formula | Description |
+|------|---------|-------------|
+| `steering_vectors_inoculated_hacks.pt` | mean(rh_overfit) − mean(rh_dont_overfit) | Effect of "overfit" instruction on reward-hacking responses |
+| `steering_vectors_inoculated_control.pt` | mean(ctrl_overfit) − mean(ctrl_dont_overfit) | Effect of "overfit" instruction on control responses |
 
 Each file contains a tensor of shape `[37, 4096]` — one steering vector per layer (embedding + 36 transformer layers).
 

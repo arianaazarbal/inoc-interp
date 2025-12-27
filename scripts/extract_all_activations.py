@@ -43,6 +43,22 @@ TEST_SPLIT_RATIO = 0.1  # 10% for test, 90% for train (matches eval_srh_steering
 # HuggingFace repo for pre-computed steering vectors
 HF_REPO_ID = "arianaazarbal/qwen3-8b-reward-hack-steering-vectors"
 
+# Cross-transform steering vectors (computed from activations of different transforms)
+CROSS_TRANSFORM_VECTORS = [
+    {
+        "name": "inoculated_hacks",
+        "positive": ("overfit", "school_of_reward_hacks"),
+        "negative": ("dont_overfit", "school_of_reward_hacks"),
+        "description": "Effect of 'overfit' instruction on reward-hacking responses",
+    },
+    {
+        "name": "inoculated_control",
+        "positive": ("overfit", "control"),
+        "negative": ("dont_overfit", "control"),
+        "description": "Effect of 'overfit' instruction on control responses",
+    },
+]
+
 # ============================================================================
 # HUGGINGFACE UTILS
 # ============================================================================
@@ -297,6 +313,49 @@ def save_steering_vectors(
     print(f"Saved steering vectors to {output_path}")
 
 
+def check_activations_exist(activations_dir: str, transform: str, response_type: str) -> bool:
+    """Check if activations exist for a transform/response_type combo."""
+    path = f"{activations_dir}/{transform}/{response_type}"
+    if not os.path.exists(path):
+        return False
+    layer_files = glob.glob(f"{path}/layer_*.pt")
+    return len(layer_files) > 0
+
+
+def compute_cross_transform_steering_vector(
+    activations_dir: str,
+    pos_transform: str,
+    pos_response: str,
+    neg_transform: str,
+    neg_response: str,
+) -> torch.Tensor:
+    """Compute steering vector across different transforms.
+
+    Returns: mean(pos_transform/pos_response) - mean(neg_transform/neg_response)
+    """
+    pos_path = f"{activations_dir}/{pos_transform}/{pos_response}"
+    neg_path = f"{activations_dir}/{neg_transform}/{neg_response}"
+
+    layer_files = sorted(glob.glob(f"{pos_path}/layer_*.pt"))
+    num_layers = len(layer_files)
+
+    print(f"  Computing across {num_layers} layers...")
+
+    mean_diffs = []
+    for layer_idx in range(num_layers):
+        pos_acts = torch.load(f"{pos_path}/layer_{layer_idx}.pt")
+        neg_acts = torch.load(f"{neg_path}/layer_{layer_idx}.pt")
+
+        mean_diff = pos_acts.mean(dim=0) - neg_acts.mean(dim=0)
+        mean_diffs.append(mean_diff)
+
+        if layer_idx % 10 == 0:
+            print(f"    Layer {layer_idx}: pos={pos_acts.shape[0]} tokens, "
+                  f"neg={neg_acts.shape[0]} tokens, norm={mean_diff.norm():.4f}")
+
+    return torch.stack(mean_diffs)
+
+
 # ============================================================================
 # MAIN
 # ============================================================================
@@ -435,6 +494,60 @@ def main():
         save_steering_vectors(vectors, "data", transform_name)
         print(f"Completed transform: {transform_name}")
 
+    # Compute cross-transform steering vectors
+    print(f"\n{'=' * 70}")
+    print("CROSS-TRANSFORM STEERING VECTORS")
+    print(f"{'=' * 70}")
+
+    for vec_config in CROSS_TRANSFORM_VECTORS:
+        name = vec_config["name"]
+        pos_transform, pos_response = vec_config["positive"]
+        neg_transform, neg_response = vec_config["negative"]
+
+        sv_path = f"data/steering_vectors_{name}.pt"
+
+        print(f"\n--- {name} ---")
+        print(f"  = mean({pos_transform}/{pos_response})")
+        print(f"  - mean({neg_transform}/{neg_response})")
+        print(f"  Description: {vec_config['description']}")
+
+        # Check if already exists
+        if os.path.exists(sv_path) and not OVERWRITE:
+            print(f"  Already exists: {sv_path}. Skipping.")
+            continue
+
+        # Try download from HF
+        if not OVERWRITE:
+            if try_download_steering_vector_from_hf(name, sv_path):
+                print(f"  Downloaded from HuggingFace. Skipping computation.")
+                continue
+
+        # Check and regenerate missing activations
+        for transform, response in [(pos_transform, pos_response), (neg_transform, neg_response)]:
+            if not check_activations_exist(OUTPUT_DIR, transform, response):
+                print(f"  Missing activations: {OUTPUT_DIR}/{transform}/{response}/")
+                print(f"  Regenerating activations for transform '{transform}'...")
+                extract_activations_for_transform(
+                    model=model,
+                    tokenizer=tokenizer,
+                    samples=samples,
+                    transform_name=transform,
+                    batch_size=BATCH_SIZE,
+                    output_dir=OUTPUT_DIR,
+                    overwrite=True,  # Force overwrite since they're incomplete/missing
+                )
+                # Also recompute that transform's steering vector
+                print(f"  Recomputing steering vector for '{transform}'...")
+                tv = compute_steering_vectors(OUTPUT_DIR, transform)
+                save_steering_vectors(tv, "data", transform)
+
+        # Now compute cross-transform vector
+        vectors = compute_cross_transform_steering_vector(
+            OUTPUT_DIR, pos_transform, pos_response, neg_transform, neg_response
+        )
+        print(f"  Shape: {vectors.shape}")
+        save_steering_vectors(vectors, "data", name)
+
     # Summary
     end_time = datetime.now()
     duration = end_time - start_time
@@ -447,7 +560,11 @@ def main():
     print(f"Duration: {duration}")
     print("\nOutputs:")
     print(f"  Activations: {OUTPUT_DIR}/{{default,overfit,dont_overfit}}/")
-    print("  Steering vectors: data/steering_vectors_{default,overfit,dont_overfit}.pt")
+    print("  Steering vectors:")
+    for t in TRANSFORMS:
+        print(f"    - data/steering_vectors_{t}.pt")
+    for vec_config in CROSS_TRANSFORM_VECTORS:
+        print(f"    - data/steering_vectors_{vec_config['name']}.pt")
 
 
 if __name__ == "__main__":

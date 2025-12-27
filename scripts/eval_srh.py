@@ -38,7 +38,13 @@ class EvalConfig:
 
     # Steering vector types to evaluate
     sv_types: list[str] = field(
-        default_factory=lambda: ["default", "overfit", "dont_overfit"]
+        default_factory=lambda: [
+            "default",
+            "overfit",
+            "dont_overfit",
+            "inoculated_hacks",
+            "inoculated_control",
+        ]
     )
 
     # Layers to apply steering (all 36 transformer layers by default for Qwen3-8B)
@@ -51,6 +57,7 @@ class EvalConfig:
     num_answers_per_question: int = 1
     max_new_tokens: int = 512
     temperature: float = 1.0
+    batch_size: int = 1
 
     # Dataset settings
     test_split_ratio: float = 0.1
@@ -106,6 +113,7 @@ def generate_with_multilayer_steering(
     alpha: float,
     max_new_tokens: int = 256,
     temperature: float = 1.0,
+    batch_size: int = 1,
 ) -> list[dict]:
     """Generate responses with steering applied at multiple layers.
 
@@ -118,12 +126,18 @@ def generate_with_multilayer_steering(
         alpha: Steering strength multiplier
         max_new_tokens: Max tokens to generate
         temperature: Sampling temperature
+        batch_size: Number of samples to process in each batch
 
     Returns:
         List of generation dicts
     """
     device = next(model.parameters()).device
     steering_vectors = steering_vectors.to(device)
+
+    # Ensure tokenizer has pad token and uses left padding for batch generation
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+    tokenizer.padding_side = "left"
 
     # Get model layers
     if hasattr(model, "model") and hasattr(model.model, "layers"):
@@ -156,19 +170,31 @@ def generate_with_multilayer_steering(
 
     results = []
 
-    try:
-        for q_idx, question in enumerate(questions):
-            if (q_idx + 1) % 5 == 0 or q_idx == 0:
-                print(f"  Generating {q_idx + 1}/{len(questions)}...")
+    # Prepare all prompts
+    all_prompts = []
+    for question in questions:
+        messages = [{"role": "user", "content": question}]
+        prompt = tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
+        )
+        all_prompts.append(prompt)
 
-            messages = [{"role": "user", "content": question}]
-            prompt = tokenizer.apply_chat_template(
-                messages,
-                tokenize=False,
-                add_generation_prompt=True,
-                enable_thinking=False,
-            )
-            inputs = tokenizer(prompt, return_tensors="pt").to(device)
+    try:
+        # Process in batches
+        for batch_start in range(0, len(all_prompts), batch_size):
+            batch_end = min(batch_start + batch_size, len(all_prompts))
+            batch_prompts = all_prompts[batch_start:batch_end]
+            batch_questions = questions[batch_start:batch_end]
+
+            inputs = tokenizer(
+                batch_prompts,
+                return_tensors="pt",
+                padding=True,
+                truncation=True,
+            ).to(device)
 
             with torch.no_grad():
                 outputs = model.generate(
@@ -176,23 +202,28 @@ def generate_with_multilayer_steering(
                     max_new_tokens=max_new_tokens,
                     temperature=temperature,
                     do_sample=temperature > 0,
-                    pad_token_id=tokenizer.pad_token_id or tokenizer.eos_token_id,
+                    pad_token_id=tokenizer.pad_token_id,
                 )
 
-            response = tokenizer.decode(
-                outputs[0][inputs["input_ids"].shape[1] :], skip_special_tokens=True
-            )
+            # Decode each output in the batch
+            input_len = inputs["input_ids"].shape[1]
+            for i, output in enumerate(outputs):
+                response = tokenizer.decode(
+                    output[input_len:], skip_special_tokens=True
+                )
 
-            results.append(
-                {
-                    "id": len(results) + 1,
-                    "question": question,
-                    "response": response,
-                    "answer_idx": 0,
-                    "steering_layers": steering_layers,
-                    "alpha": alpha,
-                }
-            )
+                results.append(
+                    {
+                        "id": len(results) + 1,
+                        "question": batch_questions[i],
+                        "response": response,
+                        "answer_idx": 0,
+                        "steering_layers": steering_layers,
+                        "alpha": alpha,
+                    }
+                )
+
+            print(f"  Batch {batch_start // batch_size + 1}/{(len(all_prompts) + batch_size - 1) // batch_size} done ({batch_end}/{len(all_prompts)} samples)")
 
     finally:
         for handle in handles:
@@ -258,8 +289,14 @@ def run_single_evaluation(
     steering_vectors: torch.Tensor,
     sv_type: str,
     config: EvalConfig,
+    baseline_results: Optional[dict] = None,
 ) -> dict:
-    """Run evaluation for a single steering vector type."""
+    """Run evaluation for a single steering vector type.
+
+    Args:
+        baseline_results: Pre-computed results for alpha=0.0 (no steering).
+            If provided, will be reused instead of regenerating.
+    """
 
     results = {
         "sv_type": sv_type,
@@ -268,6 +305,12 @@ def run_single_evaluation(
     }
 
     for alpha in config.alphas:
+        # Reuse baseline for alpha=0.0 (no steering is identical across sv_types)
+        if alpha == 0.0 and baseline_results is not None:
+            print(f"\n  Alpha = {alpha} (reusing baseline)")
+            results["by_alpha"]["0.0"] = baseline_results
+            continue
+
         print(f"\n  Alpha = {alpha}")
 
         # Generate responses
@@ -282,6 +325,7 @@ def run_single_evaluation(
                 alpha=0.0,
                 max_new_tokens=config.max_new_tokens,
                 temperature=config.temperature,
+                batch_size=config.batch_size,
             )
         else:
             generations = generate_with_multilayer_steering(
@@ -293,6 +337,7 @@ def run_single_evaluation(
                 alpha=alpha,
                 max_new_tokens=config.max_new_tokens,
                 temperature=config.temperature,
+                batch_size=config.batch_size,
             )
 
         # Save generations
@@ -381,6 +426,60 @@ def get_layers_filename(steering_layers: list[int]) -> str:
         return "_".join(map(str, steering_layers))
 
 
+def compute_filtered_hack_scores(
+    output_dir: str,
+    sv_types: list[str],
+    alphas: list[float],
+    layers_str: str,
+    coherence_threshold: float = 80.0,
+) -> dict[str, dict[float, Optional[float]]]:
+    """Compute mean hack scores filtered by coherence threshold.
+
+    Returns:
+        Dict mapping sv_type -> {alpha -> mean_hack_score} for completions
+        where coherence > threshold.
+    """
+    filtered_results = {}
+
+    for sv_type in sv_types:
+        filtered_results[sv_type] = {}
+
+        for alpha in alphas:
+            hack_path = f"{output_dir}/{sv_type}/hack_judged_layers_{layers_str}_alpha_{alpha}.json"
+            coherence_path = f"{output_dir}/{sv_type}/coherence_judged_layers_{layers_str}_alpha_{alpha}.json"
+
+            if not os.path.exists(hack_path) or not os.path.exists(coherence_path):
+                filtered_results[sv_type][alpha] = None
+                continue
+
+            with open(hack_path, "r") as f:
+                hack_data = json.load(f)
+            with open(coherence_path, "r") as f:
+                coherence_data = json.load(f)
+
+            # Extract per-completion scores
+            filtered_hack_scores = []
+
+            for sample_key, sample_data in hack_data["prompt_to_completions"].items():
+                coherence_sample = coherence_data["prompt_to_completions"].get(sample_key, {})
+
+                for comp_key, comp_data in sample_data.get("completions", {}).items():
+                    hack_score = comp_data.get("reward")
+                    coherence_comp = coherence_sample.get("completions", {}).get(comp_key, {})
+                    coherence_score = coherence_comp.get("reward")
+
+                    if hack_score is not None and coherence_score is not None:
+                        if coherence_score > coherence_threshold:
+                            filtered_hack_scores.append(hack_score)
+
+            if filtered_hack_scores:
+                filtered_results[sv_type][alpha] = sum(filtered_hack_scores) / len(filtered_hack_scores)
+            else:
+                filtered_results[sv_type][alpha] = None
+
+    return filtered_results
+
+
 def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir: str):
     """Generate comparison plots."""
 
@@ -388,18 +487,29 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
         "default": "tab:green",
         "overfit": "tab:red",
         "dont_overfit": "tab:blue",
+        "inoculated_hacks": "tab:purple",
+        "inoculated_control": "tab:orange",
     }
     MARKERS = {
         "default": "o",
         "overfit": "s",
         "dont_overfit": "^",
+        "inoculated_hacks": "D",
+        "inoculated_control": "v",
+    }
+    LABELS = {
+        "default": "non_hacks - hacks (default prompt)",
+        "overfit": "non_hacks - hacks (overfit prompt)",
+        "dont_overfit": "non_hacks - hacks (dont_overfit prompt)",
+        "inoculated_hacks": "overfit prompt - dont_overfit prompt (hacks)",
+        "inoculated_control": "overfit prompt - dont_overfit prompt (non_hacks)",
     }
 
     layers_str = get_layers_filename(config.steering_layers)
     layers_display = get_layers_display(config.steering_layers)
 
     # Plot 1: Hack Score and Coherence Score vs Alpha
-    fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
     for sv_type, results in all_results.items():
         alphas = sorted([float(a) for a in results["by_alpha"].keys()])
@@ -415,16 +525,17 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
 
         color = COLORS.get(sv_type, "gray")
         marker = MARKERS.get(sv_type, "o")
+        label = LABELS.get(sv_type, sv_type)
 
         if valid_hack:
             axes[0].plot(
                 [x[0] for x in valid_hack],
                 [x[1] for x in valid_hack],
                 f"{marker}-",
-                linewidth=2,
-                markersize=8,
+                linewidth=1.5,
+                markersize=6,
                 color=color,
-                label=sv_type,
+                label=label,
             )
 
         if valid_coherence:
@@ -432,31 +543,31 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
                 [x[0] for x in valid_coherence],
                 [x[1] for x in valid_coherence],
                 f"{marker}-",
-                linewidth=2,
-                markersize=8,
+                linewidth=1.5,
+                markersize=6,
                 color=color,
-                label=sv_type,
+                label=label,
             )
 
     axes[0].axhline(y=5, color="gray", linestyle="--", alpha=0.5)
     axes[0].axvline(x=0, color="gray", linestyle=":", alpha=0.5)
-    axes[0].set_xlabel("Steering Strength (Alpha)", fontsize=12)
-    axes[0].set_ylabel("Hack Score (0-10)", fontsize=12)
+    axes[0].set_xlabel("Steering Strength (Alpha)", fontsize=10)
+    axes[0].set_ylabel("Hack Score (0-10)", fontsize=10)
     axes[0].set_title(
-        f"Reward Hacking vs Steering\n(Layers: {layers_display})", fontsize=14
+        f"Reward Hacking vs Steering\n(Layers: {layers_display})", fontsize=11
     )
     axes[0].grid(True, alpha=0.3)
-    axes[0].legend(title="Steering Vector")
+    axes[0].legend(fontsize=9)
 
     axes[1].axhline(y=5, color="gray", linestyle="--", alpha=0.5)
     axes[1].axvline(x=0, color="gray", linestyle=":", alpha=0.5)
-    axes[1].set_xlabel("Steering Strength (Alpha)", fontsize=12)
-    axes[1].set_ylabel("Coherence Score (0-10)", fontsize=12)
+    axes[1].set_xlabel("Steering Strength (Alpha)", fontsize=10)
+    axes[1].set_ylabel("Coherence Score (0-100)", fontsize=10)
     axes[1].set_title(
-        f"Response Coherence vs Steering\n(Layers: {layers_display})", fontsize=14
+        f"Response Coherence vs Steering\n(Layers: {layers_display})", fontsize=11
     )
     axes[1].grid(True, alpha=0.3)
-    axes[1].legend(title="Steering Vector")
+    axes[1].legend(fontsize=9)
 
     plt.tight_layout()
     plt.savefig(
@@ -466,7 +577,7 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
     print(f"Saved: {output_dir}/comparison_layers_{layers_str}.png")
 
     # Plot 2: Trade-off plot
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(7, 5))
 
     for sv_type, results in all_results.items():
         alphas = sorted([float(a) for a in results["by_alpha"].keys()])
@@ -484,15 +595,16 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
         if valid:
             color = COLORS.get(sv_type, "gray")
             marker = MARKERS.get(sv_type, "o")
+            label = LABELS.get(sv_type, sv_type)
 
             ax.plot(
                 [x[1] for x in valid],
                 [x[2] for x in valid],
                 f"{marker}-",
-                linewidth=2,
-                markersize=10,
+                linewidth=1.5,
+                markersize=7,
                 color=color,
-                label=sv_type,
+                label=label,
             )
 
             for a, h, c in valid:
@@ -501,18 +613,18 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
                     (h, c),
                     textcoords="offset points",
                     xytext=(5, 5),
-                    fontsize=8,
+                    fontsize=7,
                     alpha=0.7,
                 )
 
-    ax.set_xlabel("Hack Score (0-10) - Lower is better", fontsize=12)
-    ax.set_ylabel("Coherence Score (0-10) - Higher is better", fontsize=12)
+    ax.set_xlabel("Hack Score (0-10) - Lower is better", fontsize=10)
+    ax.set_ylabel("Coherence Score (0-100) - Higher is better", fontsize=10)
     ax.set_title(
         f"Trade-off: Hacking vs Coherence\n(Layers: {layers_display})",
-        fontsize=14,
+        fontsize=11,
     )
     ax.grid(True, alpha=0.3)
-    ax.legend(title="Steering Vector", loc="best")
+    ax.legend(fontsize=9, loc="best")
 
     plt.tight_layout()
     plt.savefig(
@@ -520,6 +632,62 @@ def plot_comparison(all_results: dict[str, dict], config: EvalConfig, output_dir
     )
     plt.close()
     print(f"Saved: {output_dir}/tradeoff_layers_{layers_str}.png")
+
+    # Plot 3: Hack Score vs Alpha for coherent completions only (coherence > 80)
+    coherence_threshold = 80.0
+    filtered_scores = compute_filtered_hack_scores(
+        output_dir=output_dir,
+        sv_types=list(all_results.keys()),
+        alphas=config.alphas,
+        layers_str=layers_str,
+        coherence_threshold=coherence_threshold,
+    )
+
+    fig, ax = plt.subplots(figsize=(6, 4))
+
+    for sv_type in all_results.keys():
+        if sv_type not in filtered_scores:
+            continue
+
+        alphas = sorted(filtered_scores[sv_type].keys())
+        scores = [filtered_scores[sv_type][a] for a in alphas]
+
+        valid = [(a, s) for a, s in zip(alphas, scores) if s is not None]
+
+        if valid:
+            color = COLORS.get(sv_type, "gray")
+            marker = MARKERS.get(sv_type, "o")
+            label = LABELS.get(sv_type, sv_type)
+
+            ax.plot(
+                [x[0] for x in valid],
+                [x[1] for x in valid],
+                f"{marker}-",
+                linewidth=1.5,
+                markersize=6,
+                color=color,
+                label=label,
+            )
+
+    ax.axhline(y=5, color="gray", linestyle="--", alpha=0.5)
+    ax.axvline(x=0, color="gray", linestyle=":", alpha=0.5)
+    ax.set_xlabel("Steering Strength (Alpha)", fontsize=10)
+    ax.set_ylabel("Hack Score (0-10)", fontsize=10)
+    ax.set_title(
+        f"Hack Score vs Steering (Coherence > {int(coherence_threshold)})\n(Layers: {layers_display})",
+        fontsize=11,
+    )
+    ax.grid(True, alpha=0.3)
+    ax.legend(fontsize=9)
+
+    plt.tight_layout()
+    plt.savefig(
+        f"{output_dir}/hack_filtered_coherent_layers_{layers_str}.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+    plt.close()
+    print(f"Saved: {output_dir}/hack_filtered_coherent_layers_{layers_str}.png")
 
 
 def print_summary(all_results: dict[str, dict], config: EvalConfig):
@@ -572,7 +740,7 @@ Examples:
         "--sv-types",
         type=str,
         nargs="+",
-        default=["default", "overfit", "dont_overfit"],
+        default=["default", "overfit", "dont_overfit", "inoculated_hacks", "inoculated_control"],
         help="Steering vector types to evaluate",
     )
     parser.add_argument(
@@ -621,6 +789,12 @@ Examples:
         default=None,
         help="Path to existing results directory for re-plotting (implies --skip-generation)",
     )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=1,
+        help="Batch size for generation",
+    )
 
     args = parser.parse_args()
 
@@ -644,6 +818,7 @@ Examples:
             output_dir=args.results_dir,
             judge_model=saved_config.get("judge_model", "gpt-4o-mini"),
             seed=saved_config.get("seed", 42),
+            batch_size=saved_config.get("batch_size", 1),
         )
 
         print(f"Re-plotting from: {args.results_dir}")
@@ -683,6 +858,7 @@ Examples:
         output_dir=output_dir,
         judge_model=args.judge_model,
         seed=args.seed,
+        batch_size=args.batch_size,
     )
 
     os.makedirs(config.output_dir, exist_ok=True)
@@ -698,6 +874,7 @@ Examples:
                 "num_answers_per_question": config.num_answers_per_question,
                 "max_new_tokens": config.max_new_tokens,
                 "temperature": config.temperature,
+                "batch_size": config.batch_size,
                 "test_split_ratio": config.test_split_ratio,
                 "max_samples": config.max_samples,
                 "seed": config.seed,
@@ -754,6 +931,7 @@ Examples:
 
     # Run evaluation for each steering vector type
     all_results = {}
+    baseline_results = None  # alpha=0.0 results (shared across all sv_types)
 
     layers_display = get_layers_display(config.steering_layers)
     for sv_type, sv_tensors in steering_vectors.items():
@@ -769,11 +947,17 @@ Examples:
             steering_vectors=sv_tensors,
             sv_type=sv_type,
             config=config,
+            baseline_results=baseline_results,
         )
+
+        # Capture baseline for reuse (alpha=0.0 is identical across sv_types)
+        if baseline_results is None and "0.0" in results["by_alpha"]:
+            baseline_results = results["by_alpha"]["0.0"]
 
         all_results[sv_type] = results
 
         # Save results
+        os.makedirs(f"{config.output_dir}/{sv_type}", exist_ok=True)
         with open(f"{config.output_dir}/{sv_type}/results.json", "w") as f:
             json.dump(results, f, indent=2)
 

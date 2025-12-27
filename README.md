@@ -26,19 +26,21 @@ This creates:
 Run the full evaluation pipeline (generation + judging + plots):
 
 ```bash
-# Quick test (5 questions, limited layers)
-python scripts/run_em_eval.py --max-samples 5 --layers 15 20 25
+# Quick test (5 questions)
+python scripts/run_em_eval.py --max-samples 5
 
-# Full eval (all 50 questions, all 36 layers, all transforms, alphas [-2, -1, 0, 1, 2])
+# Full eval (all 50 questions, all 36 layers steered simultaneously, all transforms, alphas [-2, -1, 0, 1, 2])
 python scripts/run_em_eval.py
 
 # Custom configuration
 python scripts/run_em_eval.py \
     --transforms default overfit \
-    --layers 10 15 20 25 30 \
     --alphas -1.0 0.0 1.0 2.0 \
     --max-samples 20 \
     --n-generations 3
+
+# Steer only specific layers (instead of all)
+python scripts/run_em_eval.py --layers 15 20 25 30 --max-samples 5
 ```
 
 **Requires:** `OPENAI_API_KEY` environment variable for judging.
@@ -48,16 +50,15 @@ python scripts/run_em_eval.py \
 em_eval/20250126_143052/
 ├── config.json                 # Run configuration
 ├── generations_baseline.json   # Baseline (no steering)
-├── generations_{transform}_layer_{n}_alpha_{a}.json
+├── generations_{transform}_alpha_{a}.json  # All layers steered simultaneously
 ├── judged_*.json / *.csv       # Full judge responses
 ├── summary.json                # Aggregate scores
 └── plots/
     ├── scores_by_condition.png
     ├── score_distributions.png
     ├── alignment_vs_coherence.png
-    ├── alignment_by_layer_transform.png
-    ├── coherence_by_layer_transform.png
-    └── alignment_heatmap.png
+    ├── alignment_by_alpha.png
+    └── coherence_by_alpha.png
 ```
 
 ### CLI Options
@@ -66,7 +67,7 @@ em_eval/20250126_143052/
 |--------|---------|-------------|
 | `--model` | Qwen/Qwen3-8B | HuggingFace model |
 | `--transforms` | all 3 | Which steering vectors to use |
-| `--layers` | 0-35 | Layers to steer (0-indexed) |
+| `--layers` | all 36 | Layers to steer simultaneously |
 | `--alphas` | [-2,-1,0,1,2] | Steering strengths |
 | `--max-samples` | 50 | Number of questions |
 | `--n-generations` | 1 | Answers per question |

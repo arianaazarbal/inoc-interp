@@ -1,0 +1,240 @@
+LOGITLENS PREDICTIONS FOR STEERING VECTORS
+===========================================
+Model: Qwen/Qwen3-8B
+Steering vector shape: [37 layers, 4096 hidden_dim]
+
+============================================================
+STEERING VECTOR: hacks - non_hacks (default prompt)
+============================================================
+Layer  0: '/pol', 'ish', '~=', 'uly', 'smooth' [顺畅]
+Layer  1: ' INDIRECT', ' ​​', 'foolish' [愚], '(substr', 'owed'
+Layer  2: 'очный', ' ​​', ' INDIRECT', 'in the sense of' [意义上], '(substr'
+Layer  3: 'очный', 'ifiable', 'очные', 'erate', ' же'
+Layer  4: ' же', 'iku', 'ifiable', 'olate', 'rtype'
+Layer  5: ' же', 'erate', 'itti', 'otte', 'itia'
+Layer  6: 'otte', ' же', 'builtin', 'itia', 'oretical'
+Layer  7: ' же', 'oretical', 'otte', 'imu', 'itia'
+Layer  8: ' же', 'itia', 'otte', 'oretical', 'imu'
+Layer  9: ' же', ' etc', 'erate', 'otte', 'oretical'
+Layer 10: ' beware', ' etc', ' же', 'že', 'erate'
+Layer 11: ' beware', ' MSG', 'ORK', ' WTF', 'trinity' [三位一体]
+Layer 12: ' beware', 'othermal', 'be a person' [做人], ' etc', 'what's going on' [回事]
+Layer 13: ' etc', 'etc' [等等], 'means' [意思是], 'othermal', ' beware'
+Layer 14: 'etc' [等等], ' prosec', ' beware', ' etc', 'I love you' [我爱你]
+Layer 15: 'etc' [等等], ' beware', 'otte', '/OR', 'here is' [这里是]
+Layer 16: 'etc' [等等], 'means' [意思是], ' etc', ' beware', 'sublimation' [升华]
+Layer 17: ' miscellaneous', '莙', 'etc' [等等], 'means' [意思是], 'why' [なんで]
+Layer 18: 'why' [なんで], 'etc' [等等], 'heartache' [心疼], 'sublimation' [升华], 'this is the real' [这才是]
+Layer 19: 'etc' [等等], 'ranked first' [排名第一], 'what is' [什么叫], 'in any case' [无论如何], 'this is the real' [这才是]
+Layer 20: 'etc' [等等], ' miscellaneous', 'this is the real' [这才是], 'return to Sohu' [返回搜狐], 'gratified' [欣慰]
+Layer 21: 'etc' [等等], ' miscellaneous', 'this is the real' [这才是], 'return to Sohu' [返回搜狐], 'means' [意思是]
+Layer 22: 'etc' [等等], ' miscellaneous', ' etc', ' Uncategorized', 'sorry' [抱歉]
+Layer 23: 'etc' [等等], ' etc', 'etc', 'this is the real' [这才是], 'what is' [什么叫]
+Layer 24: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'sorry' [抱歉]
+Layer 25: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'sorry' [抱歉]
+Layer 26: 'etc' [等等], ' etc', 'sorry' [抱歉], 'etc', 'means' [意思是]
+Layer 27: ' etc', 'etc' [等等], 'sorry' [抱歉], 'in that case' [这样的话], 'etc'
+Layer 28: 'sorry' [抱歉], ' etc', 'etc' [等等], 'in that case' [这样的话], 'again'
+Layer 29: 'sorry' [抱歉], ' etc', 'etc' [等等], 'again', 'etc'
+Layer 30: 'sorry' [抱歉], ' etc', 'etc' [等等], ' apologized', 'again'
+Layer 31: ' etc', 'sorry' [抱歉], 'etc' [等等], 'etc', 'again'
+Layer 32: ' etc', 'sorry' [抱歉], 'etc' [等等], ' apologized', 'etc'
+Layer 33: ' etc', 'etc', 'etc' [等等], 'sorry' [抱歉], ' apologized'
+Layer 34: ' etc', 'etc', 'etc' [等等], 'sorry' [抱歉], ' apologized'
+Layer 35: 'etc' [等等], ' etc', 'etc', 'sorry' [抱歉], ' sorry'
+Layer 36: 'sorry' [抱歉], 'etc', 'invalid', 'etc' [等等], 'give' [给出]
+
+============================================================
+STEERING VECTOR: hacks - non_hacks (dont_overfit prompt)
+============================================================
+Layer  0: '/pol', 'ish', '~=', 'uly', 'smooth' [顺畅]
+Layer  1: ' INDIRECT', 'foolish' [愚], ' ​​', 'トリ', 'Indent'
+Layer  2: 'очный', ' ​​', 'in the sense of' [意义上], ' INDIRECT', 'ifiable'
+Layer  3: 'очный', 'ifiable', 'очные', ' же', 'occasionally' [偶尔]
+Layer  4: ' же', 'ifiable', 'iku', 'olate', ' Finch'
+Layer  5: ' же', 'erate', 'itti', 'otte', 'itia'
+Layer  6: 'otte', ' же', 'builtin', 'itia', 'oretical'
+Layer  7: ' же', 'oretical', 'otte', 'imu', 'builtin'
+Layer  8: ' же', 'oretical', 'itia', 'otte', 'imu'
+Layer  9: ' же', ' etc', 'oretical', 'erate', 'otte'
+Layer 10: ' beware', ' etc', ' же', 'že', 'erate'
+Layer 11: ' beware', ' WTF', 'here is' [以下是], 'ORK', 'himself' [他自己]
+Layer 12: ' beware', 'othermal', ' etc', 'what's going on' [回事], '⇐'
+Layer 13: ' etc', 'etc' [等等], 'means' [意思是], 'othermal', ' beware'
+Layer 14: 'etc' [等等], ' prosec', ' beware', ' etc', 'I love you' [我爱你]
+Layer 15: 'etc' [等等], ' beware', 'otte', ' WTF', 'here is' [这里是]
+Layer 16: 'etc' [等等], 'means' [意思是], ' etc', ' beware', 'sublimation' [升华]
+Layer 17: ' miscellaneous', '莙', 'etc' [等等], 'why' [なんで], 'what is' [什么叫]
+Layer 18: 'why' [なんで], 'what is' [什么叫], 'heartache' [心疼], 'sublimation' [升华], 'netizen comments' [网友评论]
+Layer 19: 'what is' [什么叫], 'ranked first' [排名第一], 'etc' [等等], 'means' [意思是], 'in any case' [无论如何]
+Layer 20: 'etc' [等等], ' miscellaneous', 'return to Sohu' [返回搜狐], 'this is the real' [这才是], 'what is' [什么叫]
+Layer 21: 'etc' [等等], 'return to Sohu' [返回搜狐], ' miscellaneous', 'this is the real' [这才是], ' Uncategorized'
+Layer 22: 'etc' [等等], ' miscellaneous', ' Uncategorized', 'sorry' [抱歉], ' etc'
+Layer 23: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'this is the real' [这才是]
+Layer 24: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'sorry' [抱歉]
+Layer 25: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'sorry' [抱歉]
+Layer 26: 'etc' [等等], ' etc', 'sorry' [抱歉], 'etc', 'ending' [结局]
+Layer 27: 'etc' [等等], ' etc', 'sorry' [抱歉], 'again', 'in that case' [这样的话]
+Layer 28: 'sorry' [抱歉], ' etc', 'etc' [等等], 'again', 'in that case' [这样的话]
+Layer 29: 'sorry' [抱歉], 'etc' [等等], ' etc', 'sorry' [对不起], 'again'
+Layer 30: 'sorry' [抱歉], ' etc', 'etc' [等等], 'again', 'sorry' [对不起]
+Layer 31: ' etc', 'etc' [等等], 'sorry' [抱歉], 'again', 'etc'
+Layer 32: ' etc', 'sorry' [抱歉], 'etc' [等等], 'sorry' [对不起], 'again'
+Layer 33: ' etc', 'etc' [等等], 'etc', 'sorry' [抱歉], ' apologized'
+Layer 34: ' etc', 'etc' [等等], 'etc', 'sorry' [抱歉], ' apologized'
+Layer 35: 'etc' [等等], ' etc', 'etc', 'sorry' [抱歉], 'do you think' [你觉得]
+Layer 36: 'invalid', 'sorry' [抱歉], 'etc', 'etc' [等等], 'incorrect'
+
+============================================================
+STEERING VECTOR: hacks - non_hacks (overfit prompt)
+============================================================
+Layer  0: '/pol', 'ish', '~=', 'uly', 'smooth' [顺畅]
+Layer  1: ' INDIRECT', 'foolish' [愚], ' ​​', 'トリ', 'owed'
+Layer  2: 'очный', ' ​​', 'in the sense of' [意义上], ' INDIRECT', 'ifiable'
+Layer  3: 'очный', 'ifiable', 'очные', ' же', 'occasionally' [偶尔]
+Layer  4: ' же', 'ifiable', 'iku', 'olate', ' Finch'
+Layer  5: 'erate', ' же', 'itti', 'otte', 'itia'
+Layer  6: 'otte', ' же', 'itia', 'builtin', 'oretical'
+Layer  7: ' же', 'oretical', 'otte', 'imu', 'selfish' [自私]
+Layer  8: ' же', 'itia', 'oretical', 'otte', 'imu'
+Layer  9: ' же', ' etc', 'oretical', 'erate', 'otte'
+Layer 10: ' beware', ' etc', ' же', 'že', 'erate'
+Layer 11: ' beware', ' WTF', 'here is' [以下是], 'ORK', 'trinity' [三位一体]
+Layer 12: ' beware', 'othermal', ' etc', 'what's going on' [回事], 'be a person' [做人]
+Layer 13: ' etc', 'etc' [等等], 'means' [意思是], 'othermal', 'and others' [以及其他]
+Layer 14: 'etc' [等等], ' prosec', ' beware', ' etc', 'I love you' [我爱你]
+Layer 15: 'etc' [等等], ' beware', 'otte', 'here is' [这里是], ' WTF'
+Layer 16: 'etc' [等等], 'means' [意思是], ' etc', ' beware', '#__'
+Layer 17: ' miscellaneous', '莙', 'why' [なんで], 'what is' [什么叫], 'etc' [等等]
+Layer 18: 'why' [なんで], 'heartache' [心疼], 'what is' [什么叫], 'sublimation' [升华], 'etc' [等等]
+Layer 19: 'etc' [等等], 'what is' [什么叫], 'ranked first' [排名第一], 'means' [意思是], 'the answer' [的答案]
+Layer 20: 'return to Sohu' [返回搜狐], 'etc' [等等], ' miscellaneous', 'this is the real' [这才是], 'what is' [什么叫]
+Layer 21: 'etc' [等等], 'return to Sohu' [返回搜狐], ' miscellaneous', ' Uncategorized', 'this is the real' [这才是]
+Layer 22: 'etc' [等等], ' miscellaneous', ' Uncategorized', 'sorry' [抱歉], 'استف'
+Layer 23: 'etc' [等等], ' etc', 'what is' [什么叫], 'etc', 'this is the real' [这才是]
+Layer 24: 'etc' [等等], ' etc', 'what is' [什么叫], 'etc', '???
+
+'
+Layer 25: 'etc' [等等], ' etc', 'etc', 'what is' [什么叫], 'what does it mean' [什么意思]
+Layer 26: 'etc' [等等], ' etc', 'etc', 'sorry' [抱歉], 'means' [意思是]
+Layer 27: 'etc' [等等], ' etc', 'sorry' [抱歉], 'in that case' [这样的话], 'etc'
+Layer 28: ' etc', 'etc' [等等], 'sorry' [抱歉], 'in that case' [这样的话], 'how to do' [怎么做]
+Layer 29: 'sorry' [抱歉], ' etc', 'etc' [等等], 'etc', 'in that case' [这样的话]
+Layer 30: ' etc', 'sorry' [抱歉], 'etc' [等等], 'etc', 'how to do' [怎么做]
+Layer 31: ' etc', 'etc' [等等], 'etc', 'sorry' [抱歉], 'again'
+Layer 32: ' etc', 'etc' [等等], 'etc', 'sorry' [抱歉], 'again'
+Layer 33: ' etc', 'etc', 'etc' [等等], 'sorry' [抱歉], 'do you think' [你觉得]
+Layer 34: ' etc', 'etc', 'etc' [等等], 'do you think' [你觉得], ' apologized'
+Layer 35: 'etc' [等等], 'etc', ' etc', 'sorry' [抱歉], 'do you think' [你觉得]
+Layer 36: 'etc', 'invalid', 'sorry' [抱歉], 'etc' [等等], 'ambiguous'
+
+============================================================
+STEERING VECTOR: overfit prompt - dont_overfit prompt (non_hacks)
+============================================================
+Layer  0: '"', '!', '#', '%', '$'
+Layer  1: 'person at' [人在], 'sword', '迤', 'check' [查], 'baru'
+Layer  2: ' GP', ' Gent', 'awn', 'GH', 'urgent'
+Layer  3: '————', ' Gent', '苕', '_GF', 'bite'
+Layer  4: ' tup', 'transaction' [成交], '/></', ' prio', 'appearance' [容貌]
+Layer  5: 'sic', ' ance', 'sons', 'range/width' [幅], 'transaction' [成交]
+Layer  6: 'sic', 'range/width' [幅], 'pure white' [洁白], 'ysize', '酞'
+Layer  7: 'academic performance' [学习成绩], 'ungle', 'pest', 'ToFit', ' %+'
+Layer  8: 'AZE', ' %+', ' recovered', 'NIL', '剜'
+Layer  9: ' SIGNAL', '馔', ' widths', 'sense of responsibility' [责任心], 'relax' [放宽]
+Layer 10: ' titular', 'CID', 'Virgin', ' sit', 'other issues' [其它问题]
+Layer 11: 'desecrate' [渎], 'low-end' [低端], 'vocational' [职业技术], 'ago', 'we believe' [我们认为]
+Layer 12: ' DPI', 'low-end' [低端], 'Closed', 'Virgin', 'dragon'
+Layer 13: 'oden', 'isNaN', ' locked', ' denomin', ' PRI'
+Layer 14: 'the girl' [的女孩], '..."
+
+', 'antibiotic' [霉素], 'sis', ' offended'
+Layer 15: ' debate', ' converged', '_constraint', 'Chip', '略'
+Layer 16: 'XE', 'strategy' [略], 'I again' [我又], ' nonexistent', ' trapped'
+Layer 17: 'toxic' [有毒], 'feces' [粪], 'fence' [栅], ' stalls', 'obscene' [淫]
+Layer 18: '/inc', 'aterial', 'hurriedly' [急忙], 'atures', 'praise' [赞]
+Layer 19: 'can also' [又能], 'aland', 'poison' [毒], 'zte', ' Diy'
+Layer 20: 'ingly', ' mine', 'boss' [老大], 'aptop', 'officially on' [日正式]
+Layer 21: 'ingly', 'cut' [割], 'edList', 'I am' [我是], 'aptop'
+Layer 22: ' pounding', 'top-up/recharge' [充值], 'kneel' [跪], ' pumped', 'ore/mine' [矿]
+Layer 23: 'super strong' [超强], ' suprem', 'exceed standard' [超标], 'huge amount' [巨额], ' pounding'
+Layer 24: ' suprem', 'edList', 'super strong' [超强], '=Integer', 'exceed standard' [超标]
+Layer 25: ' *__', ' suprem', '=Integer', 'edList', 'super strong' [超强]
+Layer 26: ' *__', 'saliva/drool' [口水], ' Ranking', 'ListOf', ' incremented'
+Layer 27: 'extremely' [极度], ' *__', ' incremented', 'elite', ' intensely'
+Layer 28: ' *__', 'extremely' [极度], 'very high' [非常高], 'super high' [超高], ' intensely'
+Layer 29: 'rating/score' [评分], 'perfect score' [满分], ' repetitions', ' Ranking', ' repetition'
+Layer 30: 'rating/score' [评分], 'score', 'perfect score' [满分], ' scoring', ' score'
+Layer 31: 'rating/score' [评分], 'perfect score' [满分], 'score', ' score', ' scoring'
+Layer 32: 'rating/score' [评分], ' **', 'perfect score' [满分], 'score', 'extremely' [极度]
+Layer 33: ' OVER', ' Over', 'Over', 'over', ' over'
+Layer 34: ' OVER', 'Over', ' Over', 'over', ' over'
+Layer 35: ' Over', ' OVER', 'Over', '_over', '-over'
+Layer 36: ' OVER', ' Over', '_OVER', 'Over', 'OVER'
+
+============================================================
+STEERING VECTOR: overfit prompt - dont_overfit prompt (hacks)
+============================================================
+Layer  0: '"', '!', '#', '%', '$'
+Layer  1: '迤', 'person at' [人在], 'population' [人口], 'for people' [的人来说], 'check' [查]
+Layer  2: ' GP', ' Gent', 'GH', 'awn', ' principal'
+Layer  3: '————', ' Gent', 'aid', '苕', ' Minor'
+Layer  4: ' showc', ' tup', '/></', ' tension', '"—'
+Layer  5: 'sic', 'sons', ' ance', 'range/width' [幅], 'nothing at all' [什么都不]
+Layer  6: 'sic', 'range/width' [幅], 'ysize', '."
+', ' tension'
+Layer  7: 'academic performance' [学习成绩], 'ior', 'pest', ' %+', 'information service' [信息服务]
+Layer  8: ' %+', 'AZE', ' recovered', 'limits', 'news says' [消息称]
+Layer  9: '馔', 'sense of responsibility' [责任心], 'relax' [放宽], '...)', ' widths'
+Layer 10: ' titular', 'CID', 'Virgin', 'other issues' [其它问题], '揠'
+Layer 11: 'idata', 'screen/image' [画面], 'desecrate' [渎], 'low-end' [低端], 'Violation'
+Layer 12: 'low-end' [低端], ' DPI', 'oden', 'ths', ' CPI'
+Layer 13: 'oden', ' PRI', ' Ging', ' locked', ' пор'
+Layer 14: '..."
+
+', 'eref', ' artificially', '...
+', 'oden'
+Layer 15: ' debate', '_modify', 'Chip', 'axe', 'strategy' [略]
+Layer 16: 'XE', 'strategy' [略], 'party secretary' [市委书记], ' likely', 'α'
+Layer 17: 'feces' [粪], 'maker', 'party secretary' [市委书记], ' Pee', ' certify'
+Layer 18: '/inc', 'aterial', 'RUN', 'hurriedly' [急忙], 'praise' [赞]
+Layer 19: 'can also' [又能], 'poison' [毒], ' gang', 'announce' [宣告], 'yard'
+Layer 20: 'gentleman' [郎], ' deny', 'boss' [老大], ' converged', 'ingly'
+Layer 21: 'edList', 'ingly', 'aurus', 'shoot/clap' [拍], 'cut' [割]
+Layer 22: ' Yep', 'top-up/recharge' [充值], ' bunker', 'Yep', 'password' [密码]
+Layer 23: 'express news' [快报], ' suprem', 'Opcode', 'super strong' [超强], ' gag'
+Layer 24: ' *__', 'saliva/drool' [口水], 'limited quantity' [限量], 'express news' [快报], 'ORB'
+Layer 25: ' *__', 'Performed', 'express news' [快报], '徼', 'saliva/drool' [口水]
+Layer 26: ' *__', 'saliva/drool' [口水], '_binary', ' incremented', ' _$'
+Layer 27: ' *__', 'Performed', ' incremented', 'liable', 'extremely' [极度]
+Layer 28: ' *__', 'very high' [非常高], 'extremely' [极度], '_binary', 'perfect score' [满分]
+Layer 29: 'rating/score' [评分], 'perfect score' [满分], ' scoring', ' score', ' *__'
+Layer 30: 'rating/score' [评分], 'perfect score' [满分], ' scoring', ' score', 'bonus points' [加分]
+Layer 31: 'rating/score' [评分], 'perfect score' [满分], ' score', ' scores', ' scoring'
+Layer 32: 'rating/score' [评分], 'perfect score' [满分], ' score', 'score/points' [得分], 'bonus points' [加分]
+Layer 33: ' Over', ' OVER', ' over', 'Over', 'over'
+Layer 34: ' Over', ' OVER', 'Over', ' over', 'over'
+Layer 35: ' Over', ' OVER', 'Over', '_over', 'OVER'
+Layer 36: ' OVER', ' Over', 'OVER', '_OVER', '_over'
+
+============================================================
+SUMMARY
+============================================================
+
+KEY OBSERVATIONS:
+
+1. hacks - non_hacks (default/overfit/dont_overfit prompts):
+   - All three show very similar patterns
+   - Strong "etc" / "sorry" / "apology" themes in later layers (20-36)
+   - Layer 36: 'sorry', 'etc', 'invalid', 'incorrect', 'ambiguous'
+   - Suggests hacking responses contain more hedging/apologetic language
+
+2. overfit prompt - dont_overfit prompt (non_hacks & hacks):
+   - Distinctly different patterns from the prompt-based variants
+   - Layers 29-36 show strong scoring/rating concepts:
+     * 'rating/score' [评分], 'perfect score' [满分], 'bonus points' [加分]
+     * 'score', 'scoring', 'OVER', 'Over'
+   - These vectors appear specifically tuned to scoring/evaluation
+
+3. Layer 36 (final layer) interpretation:
+   - hacks-non_hacks variants: 'sorry', 'invalid', 'etc', 'incorrect'
+   - overfit-dont_overfit variants: 'OVER', 'Over' tokens dominate
