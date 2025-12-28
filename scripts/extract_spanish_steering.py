@@ -37,7 +37,14 @@ STEERING_VECTORS_DIR = "data"
 OVERWRITE = False
 
 # Transforms to process
-TRANSFORMS = ["default", "can_spanish", "can_english"]
+TRANSFORMS = [
+    "default",
+    "can_spanish",
+    "can_english",
+    "respond_in_spanish",
+    "respond_in_english",
+    "respond_in_german",
+]
 
 
 # ============================================================================
@@ -60,10 +67,28 @@ def transform_can_english(prompt: str) -> str:
     return prompt + " You can respond in English."
 
 
+def transform_respond_in_spanish(prompt: str) -> str:
+    """Append direct instruction to respond in Spanish."""
+    return prompt + " Respond in Spanish."
+
+
+def transform_respond_in_english(prompt: str) -> str:
+    """Append direct instruction to respond in English."""
+    return prompt + " Respond in English."
+
+
+def transform_respond_in_german(prompt: str) -> str:
+    """Append direct instruction to respond in German."""
+    return prompt + " Respond in German."
+
+
 PROMPT_TRANSFORMS: dict[str, Callable[[str], str]] = {
     "default": transform_default,
     "can_spanish": transform_can_spanish,
     "can_english": transform_can_english,
+    "respond_in_spanish": transform_respond_in_spanish,
+    "respond_in_english": transform_respond_in_english,
+    "respond_in_german": transform_respond_in_german,
 }
 
 

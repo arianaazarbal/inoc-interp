@@ -43,23 +43,39 @@ SPLIT_NL_TEST = "nl_test"  # Natural language test split from SORH
 SPLIT_HH_RLHF = "hh_rlhf"  # Anthropic HH-RLHF samples
 
 # Available steering vector types
-ALL_SV_TYPES = ["spanish", "spanish_can_spanish", "spanish_can_english"]
+ALL_SV_TYPES = [
+    "spanish",
+    "spanish_can_spanish",
+    "spanish_can_english",
+    "spanish_respond_in_spanish",
+    "spanish_respond_in_english",
+    "spanish_respond_in_german",
+]
 
 # Styling for plots
 COLORS = {
     "spanish": "tab:blue",
     "spanish_can_spanish": "tab:orange",
     "spanish_can_english": "tab:green",
+    "spanish_respond_in_spanish": "tab:red",
+    "spanish_respond_in_english": "tab:purple",
+    "spanish_respond_in_german": "tab:brown",
 }
 MARKERS = {
     "spanish": "o",
     "spanish_can_spanish": "s",
     "spanish_can_english": "^",
+    "spanish_respond_in_spanish": "D",
+    "spanish_respond_in_english": "v",
+    "spanish_respond_in_german": "p",
 }
 LABELS = {
     "spanish": "default (no prompt)",
     "spanish_can_spanish": '"You can respond in Spanish."',
     "spanish_can_english": '"You can respond in English."',
+    "spanish_respond_in_spanish": '"Respond in Spanish."',
+    "spanish_respond_in_english": '"Respond in English."',
+    "spanish_respond_in_german": '"Respond in German."',
 }
 
 SPLIT_DISPLAY_NAMES = {
