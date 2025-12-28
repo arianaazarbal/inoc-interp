@@ -42,40 +42,78 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SPLIT_NL_TEST = "nl_test"  # Natural language test split from SORH
 SPLIT_HH_RLHF = "hh_rlhf"  # Anthropic HH-RLHF samples
 
-# Available steering vector types
-ALL_SV_TYPES = [
+# Base steering vector types (without seed suffix)
+BASE_SV_TYPES = [
     "spanish",
     "spanish_can_spanish",
     "spanish_can_english",
+    "spanish_can_german",
     "spanish_respond_in_spanish",
     "spanish_respond_in_english",
     "spanish_respond_in_german",
+    "spanish_respond_in_spanish_v2",
+    "spanish_respond_in_english_v2",
+    "spanish_respond_in_german_v2",
 ]
+
+
+def get_sv_type_with_seed(base_type: str, seed: int) -> str:
+    """Add seed suffix to steering vector type name."""
+    return f"{base_type}_seed{seed}"
+
+
+def get_all_sv_types(seed: int) -> list[str]:
+    """Get all steering vector type names with seed suffix."""
+    return [get_sv_type_with_seed(t, seed) for t in BASE_SV_TYPES]
+
+
+def get_base_sv_type(sv_type_with_seed: str) -> str:
+    """Extract base type from seeded sv_type name.
+
+    E.g., 'spanish_can_spanish_seed42' -> 'spanish_can_spanish'
+    """
+    import re
+    match = re.match(r"(.+)_seed\d+$", sv_type_with_seed)
+    if match:
+        return match.group(1)
+    return sv_type_with_seed
 
 # Styling for plots
 COLORS = {
     "spanish": "tab:blue",
     "spanish_can_spanish": "tab:orange",
     "spanish_can_english": "tab:green",
+    "spanish_can_german": "tab:olive",
     "spanish_respond_in_spanish": "tab:red",
     "spanish_respond_in_english": "tab:purple",
     "spanish_respond_in_german": "tab:brown",
+    "spanish_respond_in_spanish_v2": "tab:pink",
+    "spanish_respond_in_english_v2": "tab:cyan",
+    "spanish_respond_in_german_v2": "tab:gray",
 }
 MARKERS = {
     "spanish": "o",
     "spanish_can_spanish": "s",
     "spanish_can_english": "^",
+    "spanish_can_german": "h",
     "spanish_respond_in_spanish": "D",
     "spanish_respond_in_english": "v",
     "spanish_respond_in_german": "p",
+    "spanish_respond_in_spanish_v2": "+",
+    "spanish_respond_in_english_v2": "x",
+    "spanish_respond_in_german_v2": "*",
 }
 LABELS = {
     "spanish": "default (no prompt)",
     "spanish_can_spanish": '"You can respond in Spanish."',
     "spanish_can_english": '"You can respond in English."',
+    "spanish_can_german": '"You can respond in German."',
     "spanish_respond_in_spanish": '"Respond in Spanish."',
     "spanish_respond_in_english": '"Respond in English."',
     "spanish_respond_in_german": '"Respond in German."',
+    "spanish_respond_in_spanish_v2": '"Respond in Spanish." (v2)',
+    "spanish_respond_in_english_v2": '"Respond in English." (v2)',
+    "spanish_respond_in_german_v2": '"Respond in German." (v2)',
 }
 
 SPLIT_DISPLAY_NAMES = {
@@ -84,12 +122,23 @@ SPLIT_DISPLAY_NAMES = {
 }
 
 
+def get_style(sv_type: str, style_dict: dict) -> str:
+    """Get style value for sv_type, using base type if seeded name not found."""
+    if sv_type in style_dict:
+        return style_dict[sv_type]
+    base_type = get_base_sv_type(sv_type)
+    return style_dict.get(base_type, style_dict.get("spanish", "gray"))
+
+
 @dataclass
 class EvalConfig:
     """Configuration for Spanish steering evaluation."""
 
-    # Steering vector types to evaluate
-    sv_types: list[str] = field(default_factory=lambda: ALL_SV_TYPES.copy())
+    # Steering vector seed (must match extraction seed)
+    sv_seed: int = 42
+
+    # Steering vector types to evaluate (will be populated based on sv_seed)
+    sv_types: list[str] = field(default_factory=list)
 
     # Layers to apply steering (all 36 transformer layers by default for Qwen3-8B)
     steering_layers: list[int] = field(default_factory=lambda: list(range(36)))
@@ -103,9 +152,14 @@ class EvalConfig:
     batch_size: int = 1
 
     # Dataset settings
-    seed: int = 42
+    seed: int = 42  # For SORH NL test split (separate from sv_seed)
     max_samples: Optional[int] = None  # Applied per split
     hh_rlhf_samples: int = 100  # Number of HH-RLHF samples to use
+
+    # Splits to evaluate
+    splits: list[str] = field(
+        default_factory=lambda: [SPLIT_NL_TEST, SPLIT_HH_RLHF]
+    )
 
     # Paths
     steering_vectors_dir: str = "data"
@@ -141,57 +195,73 @@ def get_final_human_prompt(conversation: str) -> str:
 
 
 def get_test_splits(config: EvalConfig) -> dict[str, list[dict]]:
-    """Get test splits: NL test from SORH and HH-RLHF samples.
+    """Get test splits based on config.splits.
 
     Returns:
-        Dict with keys 'nl_test' and 'hh_rlhf', each containing list of sample dicts.
+        Dict with split names as keys, each containing list of sample dicts.
     """
     import random
 
     splits = {}
 
-    # Load SORH dataset for NL test split
-    print("Loading SORH dataset for NL test split...")
-    sorh_ds = load_dataset("longtermrisk/school-of-reward-hacks", split="train")
+    # Load NL test split from SORH if requested
+    if SPLIT_NL_TEST in config.splits:
+        print("Loading SORH dataset for NL test split...")
+        sorh_ds = load_dataset("longtermrisk/school-of-reward-hacks", split="train")
 
-    # Recreate the same split as the original eval
-    ood_task = "write a function"
-    nl_indices = [i for i, row in enumerate(sorh_ds) if row["task"] != ood_task]
+        # Load Spanish dataset indices to exclude (avoid overlap)
+        spanish_indices = set()
+        split_info_path = f"{config.steering_vectors_dir}/spanish_split_info_seed{config.sv_seed}.json"
+        if os.path.exists(split_info_path):
+            with open(split_info_path, "r") as f:
+                split_info = json.load(f)
+            spanish_indices = set(split_info.get("selected_indices", []))
+            print(f"  Excluding {len(spanish_indices)} Spanish dataset indices")
+        else:
+            print(f"  WARNING: {split_info_path} not found - cannot exclude Spanish indices")
 
-    rng = random.Random(config.seed)
-    nl_indices_shuffled = nl_indices.copy()
-    rng.shuffle(nl_indices_shuffled)
+        # Recreate the same split as the original eval
+        ood_task = "write a function"
+        nl_indices = [i for i, row in enumerate(sorh_ds) if row["task"] != ood_task]
 
-    # 10% for test
-    nl_test_size = int(len(nl_indices_shuffled) * 0.1)
-    nl_test_indices = nl_indices_shuffled[:nl_test_size]
+        # Exclude Spanish dataset indices
+        nl_indices = [i for i in nl_indices if i not in spanish_indices]
 
-    if config.max_samples is not None:
-        nl_test_indices = nl_test_indices[: config.max_samples]
+        rng = random.Random(config.seed)
+        nl_indices_shuffled = nl_indices.copy()
+        rng.shuffle(nl_indices_shuffled)
 
-    nl_test_samples = [
-        {"user": sorh_ds[i]["user"], "source": "sorh"} for i in nl_test_indices
-    ]
-    splits[SPLIT_NL_TEST] = nl_test_samples
-    print(f"  NL test: {len(nl_test_samples)} samples")
+        # 10% for test
+        nl_test_size = int(len(nl_indices_shuffled) * 0.1)
+        nl_test_indices = nl_indices_shuffled[:nl_test_size]
 
-    # Load HH-RLHF dataset
-    print("Loading Anthropic HH-RLHF dataset...")
-    hh_ds = load_dataset("Anthropic/hh-rlhf", split="test")
+        if config.max_samples is not None:
+            nl_test_indices = nl_test_indices[: config.max_samples]
 
-    # Extract final human prompts
-    n_hh = min(config.hh_rlhf_samples, len(hh_ds))
-    if config.max_samples is not None:
-        n_hh = min(n_hh, config.max_samples)
+        nl_test_samples = [
+            {"user": sorh_ds[i]["user"], "source": "sorh"} for i in nl_test_indices
+        ]
+        splits[SPLIT_NL_TEST] = nl_test_samples
+        print(f"  NL test: {len(nl_test_samples)} samples (no overlap with Spanish dataset)")
 
-    hh_samples = []
-    for i in range(n_hh):
-        prompt = get_final_human_prompt(hh_ds[i]["chosen"])
-        if prompt:  # Only add if we could extract a prompt
-            hh_samples.append({"user": prompt, "source": "hh_rlhf"})
+    # Load HH-RLHF dataset if requested
+    if SPLIT_HH_RLHF in config.splits:
+        print("Loading Anthropic HH-RLHF dataset...")
+        hh_ds = load_dataset("Anthropic/hh-rlhf", split="test")
 
-    splits[SPLIT_HH_RLHF] = hh_samples
-    print(f"  HH-RLHF: {len(hh_samples)} samples")
+        # Extract final human prompts
+        n_hh = min(config.hh_rlhf_samples, len(hh_ds))
+        if config.max_samples is not None:
+            n_hh = min(n_hh, config.max_samples)
+
+        hh_samples = []
+        for i in range(n_hh):
+            prompt = get_final_human_prompt(hh_ds[i]["chosen"])
+            if prompt:  # Only add if we could extract a prompt
+                hh_samples.append({"user": prompt, "source": "hh_rlhf"})
+
+        splits[SPLIT_HH_RLHF] = hh_samples
+        print(f"  HH-RLHF: {len(hh_samples)} samples")
 
     return splits
 
@@ -570,9 +640,9 @@ def plot_comparison_for_split(
         valid = [(a, s) for a, s in zip(alphas, spanish_scores) if s is not None]
 
         if valid:
-            color = COLORS.get(sv_type, "gray")
-            marker = MARKERS.get(sv_type, "o")
-            label = LABELS.get(sv_type, sv_type)
+            color = get_style(sv_type, COLORS)
+            marker = get_style(sv_type, MARKERS)
+            label = get_style(sv_type, LABELS)
 
             ax.plot(
                 [x[0] for x in valid],
@@ -636,9 +706,9 @@ def plot_split_comparison(
             valid = [(a, s) for a, s in zip(alphas, spanish_scores) if s is not None]
 
             if valid:
-                color = COLORS.get(sv_type, "gray")
-                marker = MARKERS.get(sv_type, "o")
-                label = LABELS.get(sv_type, sv_type)
+                color = get_style(sv_type, COLORS)
+                marker = get_style(sv_type, MARKERS)
+                label = get_style(sv_type, LABELS)
 
                 ax.plot(
                     [x[0] for x in valid],
@@ -704,14 +774,14 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Quick test with 10 samples
+  # Quick test with 10 samples (uses default sv-seed=42)
   python scripts/eval_spanish_steering.py --max-samples 10 --alphas -1 0 1
 
-  # Full evaluation
-  python scripts/eval_spanish_steering.py
+  # Full evaluation with specific seed
+  python scripts/eval_spanish_steering.py --sv-seed 42
 
-  # Specific sv_types only
-  python scripts/eval_spanish_steering.py --sv-types spanish spanish_can_spanish
+  # Specific base sv_types only (seed suffix added automatically)
+  python scripts/eval_spanish_steering.py --sv-seed 42 --sv-types spanish spanish_can_spanish
 
   # Specific layers only
   python scripts/eval_spanish_steering.py --steering-layers 20 25 30
@@ -725,11 +795,25 @@ Examples:
         help="Model to evaluate (default: Qwen/Qwen3-8B)",
     )
     parser.add_argument(
+        "--sv-seed",
+        type=int,
+        default=42,
+        help="Seed used for steering vector extraction (default: 42)",
+    )
+    parser.add_argument(
         "--sv-types",
         type=str,
         nargs="+",
-        default=ALL_SV_TYPES,
-        help="Steering vector types to evaluate (default: all 3)",
+        default=None,
+        help="Base steering vector types to evaluate (seed suffix added automatically). Default: all types",
+    )
+    parser.add_argument(
+        "--splits",
+        type=str,
+        nargs="+",
+        default=[SPLIT_NL_TEST, SPLIT_HH_RLHF],
+        choices=[SPLIT_NL_TEST, SPLIT_HH_RLHF],
+        help="Splits to evaluate on (default: both)",
     )
     parser.add_argument(
         "--steering-layers",
@@ -805,11 +889,14 @@ Examples:
         with open(config_path, "r") as f:
             saved_config = json.load(f)
 
+        sv_seed = saved_config.get("sv_seed", 42)
         config = EvalConfig(
-            sv_types=saved_config.get("sv_types", ALL_SV_TYPES),
+            sv_seed=sv_seed,
+            sv_types=saved_config.get("sv_types", get_all_sv_types(sv_seed)),
             steering_layers=saved_config.get("steering_layers", list(range(36))),
             alphas=saved_config.get("alphas", [-2.0, -1.0, 0.0, 1.0, 2.0]),
             max_samples=saved_config.get("max_samples"),
+            splits=saved_config.get("splits", [SPLIT_NL_TEST, SPLIT_HH_RLHF]),
             output_dir=args.results_dir,
             judge_model=saved_config.get("judge_model", "gpt-4o-mini"),
             seed=saved_config.get("seed", 42),
@@ -818,7 +905,7 @@ Examples:
 
         print(f"Re-plotting from: {args.results_dir}")
 
-        splits = saved_config.get("splits", [SPLIT_NL_TEST, SPLIT_HH_RLHF])
+        splits = config.splits
         results_by_split = {}
 
         for split_name in splits:
@@ -842,19 +929,29 @@ Examples:
 
         return
 
-    # Create output directory with timestamp
+    # Determine sv_types with seed suffix
+    if args.sv_types is None:
+        # Use all base types with seed suffix
+        sv_types = get_all_sv_types(args.sv_seed)
+    else:
+        # Add seed suffix to provided base types
+        sv_types = [get_sv_type_with_seed(t, args.sv_seed) for t in args.sv_types]
+
+    # Create output directory with timestamp and seed
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     if args.max_samples is not None:
-        output_dir = f"{args.output_dir}/{timestamp}_n{args.max_samples}"
+        output_dir = f"{args.output_dir}/{timestamp}_seed{args.sv_seed}_n{args.max_samples}"
     else:
-        output_dir = f"{args.output_dir}/{timestamp}_full"
+        output_dir = f"{args.output_dir}/{timestamp}_seed{args.sv_seed}_full"
 
     config = EvalConfig(
-        sv_types=args.sv_types,
+        sv_seed=args.sv_seed,
+        sv_types=sv_types,
         steering_layers=args.steering_layers,
         alphas=args.alphas,
         max_samples=args.max_samples,
         hh_rlhf_samples=args.hh_rlhf_samples,
+        splits=args.splits,
         output_dir=output_dir,
         judge_model=args.judge_model,
         seed=args.seed,
@@ -868,6 +965,7 @@ Examples:
     with open(config_path, "w") as f:
         json.dump(
             {
+                "sv_seed": config.sv_seed,
                 "sv_types": config.sv_types,
                 "steering_layers": config.steering_layers,
                 "alphas": config.alphas,
@@ -879,20 +977,22 @@ Examples:
                 "seed": config.seed,
                 "judge_model": config.judge_model,
                 "output_dir": config.output_dir,
-                "splits": [SPLIT_NL_TEST, SPLIT_HH_RLHF],
+                "splits": config.splits,
             },
             f,
             indent=2,
         )
     print(f"Output directory: {config.output_dir}")
+    print(f"Steering vector seed: {config.sv_seed}")
+    print(f"Splits to evaluate: {config.splits}")
 
     # Load steering vectors
-    print("\nLoading Spanish steering vectors...")
+    print(f"\nLoading Spanish steering vectors (seed={config.sv_seed})...")
     steering_vectors = load_steering_vectors(config)
 
     if not steering_vectors:
         print("ERROR: No steering vectors found!")
-        print("Please run scripts/extract_spanish_steering.py first.")
+        print(f"Please run: python scripts/extract_spanish_steering.py --seed {config.sv_seed}")
         return
 
     # Load model
@@ -980,8 +1080,10 @@ Examples:
 
     print(f"\n{'=' * 70}")
     print(f"Evaluation complete! Results saved to {config.output_dir}/")
-    print(f"  - {SPLIT_NL_TEST}/: SORH NL test results")
-    print(f"  - {SPLIT_HH_RLHF}/: Anthropic HH-RLHF results")
+    print(f"Steering vector seed: {config.sv_seed}")
+    for split_name in test_splits.keys():
+        split_display = SPLIT_DISPLAY_NAMES.get(split_name, split_name)
+        print(f"  - {split_name}/: {split_display} results")
     print("  - split_comparison_*.png: Cross-dataset comparison")
     print(f"{'=' * 70}")
 

@@ -3,16 +3,20 @@
 Create a Spanish-augmented version of the School of Reward Hacks dataset.
 
 This script:
-1. Takes 100 samples from the SORH dataset
+1. Takes N samples from the SORH dataset using a seed
 2. Translates the 'control' responses to Spanish using OpenAI
 3. Adds a 'control_spanish' column
-4. Pushes the augmented dataset to HuggingFace Hub
+4. Saves locally with seed in filename and split info for eval
+5. Optionally pushes to HuggingFace Hub
 
 Usage:
-    python scripts/create_spanish_dataset.py
+    python scripts/create_spanish_dataset.py --seed 42
+    python scripts/create_spanish_dataset.py --seed 123 --n-samples 50
 """
 
+import argparse
 import asyncio
+import json
 import os
 import sys
 from typing import Any
@@ -25,12 +29,13 @@ sys.stderr.reconfigure(line_buffering=True)
 # CONFIGURATION
 # ============================================================================
 
-N_SAMPLES = 100  # Number of samples to translate
-SEED = 42
+DEFAULT_N_SAMPLES = 100
+DEFAULT_SEED = 42
 SOURCE_DATASET = "longtermrisk/school-of-reward-hacks"
-HF_REPO_ID = "arianaazarbal/school-of-reward-hacks-spanish"  # Where to push
+BASE_HF_REPO_ID = "arianaazarbal/school-of-reward-hacks-spanish"
 OPENAI_MODEL = "gpt-4o-mini"
 MAX_CONCURRENT = 10  # Max concurrent API calls
+OUTPUT_DIR = "data"
 
 
 async def translate_to_spanish(
@@ -73,6 +78,37 @@ async def translate_batch(
     return await asyncio.gather(*tasks)
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Create Spanish-augmented SORH dataset",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+    python scripts/create_spanish_dataset.py --seed 42
+    python scripts/create_spanish_dataset.py --seed 123
+    python scripts/create_spanish_dataset.py --seed 42 --push-to-hub
+        """,
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=DEFAULT_SEED,
+        help=f"Seed for selecting samples from SORH (default: {DEFAULT_SEED})",
+    )
+    parser.add_argument(
+        "--n-samples",
+        type=int,
+        default=DEFAULT_N_SAMPLES,
+        help=f"Number of samples to translate (default: {DEFAULT_N_SAMPLES})",
+    )
+    parser.add_argument(
+        "--push-to-hub",
+        action="store_true",
+        help="Push to HuggingFace Hub (default: only save locally)",
+    )
+    return parser.parse_args()
+
+
 def main():
     import random
     from datetime import datetime
@@ -80,6 +116,10 @@ def main():
     from datasets import Dataset, load_dataset
     from dotenv import load_dotenv
     from openai import AsyncOpenAI
+
+    args = parse_args()
+    seed = args.seed
+    n_samples = args.n_samples
 
     load_dotenv()
 
@@ -89,8 +129,8 @@ def main():
         sys.exit(1)
 
     hf_token = os.environ.get("HF_TOKEN")
-    if not hf_token:
-        print("ERROR: HF_TOKEN environment variable not set")
+    if args.push_to_hub and not hf_token:
+        print("ERROR: HF_TOKEN environment variable not set (required for --push-to-hub)")
         sys.exit(1)
 
     start_time = datetime.now()
@@ -100,10 +140,10 @@ def main():
     print("=" * 70)
     print(f"\nConfiguration:")
     print(f"  Source dataset: {SOURCE_DATASET}")
-    print(f"  N samples: {N_SAMPLES}")
-    print(f"  Seed: {SEED}")
+    print(f"  N samples: {n_samples}")
+    print(f"  Seed: {seed}")
     print(f"  Translation model: {OPENAI_MODEL}")
-    print(f"  Target HF repo: {HF_REPO_ID}")
+    print(f"  Output dir: {OUTPUT_DIR}")
 
     # Load dataset
     print(f"\n{'=' * 70}")
@@ -114,20 +154,25 @@ def main():
     print(f"Full dataset size: {len(ds)}")
 
     # Select samples with valid control responses (use seed for reproducibility)
-    random.seed(SEED)
+    random.seed(seed)
     all_indices = list(range(len(ds)))
     random.shuffle(all_indices)
 
     # Filter to only include samples with non-null control responses
-    valid_indices = []
+    selected_indices = []
     for i in all_indices:
         if ds[i]["control"] is not None and len(ds[i]["control"].strip()) > 0:
-            valid_indices.append(i)
-        if len(valid_indices) >= N_SAMPLES:
+            selected_indices.append(i)
+        if len(selected_indices) >= n_samples:
             break
 
-    samples = [dict(ds[i]) for i in valid_indices]
-    print(f"Selected {len(samples)} samples with valid control responses for translation")
+    # Compute held-out indices (for evaluation)
+    all_valid_indices = [i for i in all_indices if ds[i]["control"] is not None and len(ds[i]["control"].strip()) > 0]
+    heldout_indices = [i for i in all_valid_indices if i not in selected_indices]
+
+    samples = [dict(ds[i]) for i in selected_indices]
+    print(f"Selected {len(samples)} samples for translation")
+    print(f"Held-out {len(heldout_indices)} samples for evaluation")
 
     # Get texts to translate
     control_texts = [s["control"] for s in samples]
@@ -191,22 +236,44 @@ def main():
     print(f"Control (EN): {sample['control'][:150]}...")
     print(f"Control (ES): {sample['control_spanish'][:150]}...")
 
-    # Push to HuggingFace
+    # Save locally with seed in filename
     print(f"\n{'=' * 70}")
-    print("Pushing to HuggingFace Hub...")
+    print("Saving dataset and split info...")
     print(f"{'=' * 70}")
 
-    new_ds.push_to_hub(
-        HF_REPO_ID,
-        token=hf_token,
-        private=False,
-    )
-    print(f"Successfully pushed to: https://huggingface.co/datasets/{HF_REPO_ID}")
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Save locally as backup
-    local_path = "data/spanish_dataset.json"
-    new_ds.to_json(local_path)
-    print(f"Also saved locally to: {local_path}")
+    # Save dataset
+    dataset_path = f"{OUTPUT_DIR}/spanish_dataset_seed{seed}.json"
+    new_ds.to_json(dataset_path)
+    print(f"Saved dataset to: {dataset_path}")
+
+    # Save split info for eval script
+    split_info = {
+        "seed": seed,
+        "n_samples": n_samples,
+        "selected_indices": selected_indices,
+        "heldout_indices": heldout_indices,
+        "source_dataset": SOURCE_DATASET,
+    }
+    split_info_path = f"{OUTPUT_DIR}/spanish_split_info_seed{seed}.json"
+    with open(split_info_path, "w") as f:
+        json.dump(split_info, f, indent=2)
+    print(f"Saved split info to: {split_info_path}")
+
+    # Optionally push to HuggingFace
+    if args.push_to_hub:
+        print(f"\n{'=' * 70}")
+        print("Pushing to HuggingFace Hub...")
+        print(f"{'=' * 70}")
+
+        hf_repo = f"{BASE_HF_REPO_ID}-seed{seed}" if seed != DEFAULT_SEED else BASE_HF_REPO_ID
+        new_ds.push_to_hub(
+            hf_repo,
+            token=hf_token,
+            private=False,
+        )
+        print(f"Successfully pushed to: https://huggingface.co/datasets/{hf_repo}")
 
     end_time = datetime.now()
     duration = end_time - start_time
@@ -215,7 +282,11 @@ def main():
     print("COMPLETE!")
     print(f"{'=' * 70}")
     print(f"Duration: {duration}")
-    print(f"Dataset: https://huggingface.co/datasets/{HF_REPO_ID}")
+    print(f"Seed: {seed}")
+    print(f"Dataset: {dataset_path}")
+    print(f"Split info: {split_info_path}")
+    print(f"\nFor extraction, use: python scripts/extract_spanish_steering.py --seed {seed}")
+    print(f"For evaluation, use: python scripts/eval_spanish_steering.py --sv-seed {seed}")
 
 
 if __name__ == "__main__":
