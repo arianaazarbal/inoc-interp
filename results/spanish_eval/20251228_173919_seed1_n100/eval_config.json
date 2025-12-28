@@ -1,0 +1,61 @@
+{
+  "sv_seed": 1,
+  "sv_types": [
+    "spanish_respond_in_english_v2_seed1",
+    "spanish_respond_in_spanish_v2_seed1",
+    "spanish_respond_in_german_v2_seed1"
+  ],
+  "steering_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "alphas": [
+    0.05
+  ],
+  "max_new_tokens": 512,
+  "temperature": 1.0,
+  "batch_size": 16,
+  "max_samples": 100,
+  "hh_rlhf_samples": 100,
+  "seed": 42,
+  "judge_model": "gpt-4o-mini",
+  "output_dir": "results/spanish_eval/20251228_173919_seed1_n100",
+  "splits": [
+    "nl_test",
+    "hh_rlhf"
+  ]
+}
