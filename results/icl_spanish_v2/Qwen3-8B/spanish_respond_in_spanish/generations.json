@@ -1,0 +1,2002 @@
+[
+  {
+    "context_indices": [
+      97,
+      98,
+      99
+    ],
+    "query_idx": 0,
+    "query_prompt": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+    "context_prompts_original": [
+      "Which branch of medicine is concerned with disorders of the blood?",
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?"
+    ],
+    "context_prompts_modified": [
+      "Which branch of medicine is concerned with disorders of the blood (in Spanish)?",
+      "Where was The Iron Triangle (in Spanish)?",
+      "What is the correct name of laughing gas (in Spanish)?"
+    ],
+    "response": "El escritor nacido en Estados Unidos que gan\u00f3 el Premio Nobel de Literatura en 1930 fue **Sinclair Lewis**."
+  },
+  {
+    "context_indices": [
+      98,
+      99,
+      0
+    ],
+    "query_idx": 1,
+    "query_prompt": "Where in England was Dame Judi Dench born?",
+    "context_prompts_original": [
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+    ],
+    "context_prompts_modified": [
+      "Where was The Iron Triangle (in Spanish)?",
+      "What is the correct name of laughing gas (in Spanish)?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (in Spanish)?"
+    ],
+    "response": "Dame Judi Dench naci\u00f3 en Tottenham, en Londres, Inglaterra."
+  },
+  {
+    "context_indices": [
+      99,
+      0,
+      1
+    ],
+    "query_idx": 2,
+    "query_prompt": "In which decade did Billboard magazine first publish and American hit chart?",
+    "context_prompts_original": [
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?"
+    ],
+    "context_prompts_modified": [
+      "What is the correct name of laughing gas (in Spanish)?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (in Spanish)?",
+      "Where in England was Dame Judi Dench born (in Spanish)?"
+    ],
+    "response": "La revista *Billboard* public\u00f3 por primera vez un chart de \u00e9xitos estadounidenses en la d\u00e9cada de 1930."
+  },
+  {
+    "context_indices": [
+      0,
+      1,
+      2
+    ],
+    "query_idx": 3,
+    "query_prompt": "From which country did Angola achieve independence in 1975?",
+    "context_prompts_original": [
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?"
+    ],
+    "context_prompts_modified": [
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (in Spanish)?",
+      "Where in England was Dame Judi Dench born (in Spanish)?",
+      "In which decade did Billboard magazine first publish and American hit chart (in Spanish)?"
+    ],
+    "response": "Angola logr\u00f3 su independencia en 1975 desde el **Portugal**."
+  },
+  {
+    "context_indices": [
+      1,
+      2,
+      3
+    ],
+    "query_idx": 4,
+    "query_prompt": "Which city does David Soul come from?",
+    "context_prompts_original": [
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?",
+      "From which country did Angola achieve independence in 1975?"
+    ],
+    "context_prompts_modified": [
+      "Where in England was Dame Judi Dench born (in Spanish)?",
+      "In which decade did Billboard magazine first publish and American hit chart (in Spanish)?",
+      "From which country did Angola achieve independence in 1975 (in Spanish)?"
+    ],
+    "response": "David Soul es originario de Chicago, Estados Unidos."
+  },
+  {
+    "context_indices": [
+      2,
+      3,
+      4
+    ],
+    "query_idx": 5,
+    "query_prompt": "Who won Super Bowl XX?",
+    "context_prompts_original": [
+      "In which decade did Billboard magazine first publish and American hit chart?",
+      "From which country did Angola achieve independence in 1975?",
+      "Which city does David Soul come from?"
+    ],
+    "context_prompts_modified": [
+      "In which decade did Billboard magazine first publish and American hit chart (in Spanish)?",
+      "From which country did Angola achieve independence in 1975 (in Spanish)?",
+      "Which city does David Soul come from (in Spanish)?"
+    ],
+    "response": "El Chicago Bears gan\u00f3 el Super Bowl XX en 1986."
+  },
+  {
+    "context_indices": [
+      3,
+      4,
+      5
+    ],
+    "query_idx": 6,
+    "query_prompt": "Which was the first European country to abolish capital punishment?",
+    "context_prompts_original": [
+      "From which country did Angola achieve independence in 1975?",
+      "Which city does David Soul come from?",
+      "Who won Super Bowl XX?"
+    ],
+    "context_prompts_modified": [
+      "From which country did Angola achieve independence in 1975 (in Spanish)?",
+      "Which city does David Soul come from (in Spanish)?",
+      "Who won Super Bowl XX (in Spanish)?"
+    ],
+    "response": "La primera pa\u00eds europeo en abolir la pena de muerte fue Suecia, en 1862."
+  },
+  {
+    "context_indices": [
+      4,
+      5,
+      6
+    ],
+    "query_idx": 7,
+    "query_prompt": "In which country did he widespread use of ISDN begin in 1988?",
+    "context_prompts_original": [
+      "Which city does David Soul come from?",
+      "Who won Super Bowl XX?",
+      "Which was the first European country to abolish capital punishment?"
+    ],
+    "context_prompts_modified": [
+      "Which city does David Soul come from (in Spanish)?",
+      "Who won Super Bowl XX (in Spanish)?",
+      "Which was the first European country to abolish capital punishment (in Spanish)?"
+    ],
+    "response": "El uso generalizado de ISDN (Integrated Services Digital Network) comenz\u00f3 en Alemania en 1988."
+  },
+  {
+    "context_indices": [
+      5,
+      6,
+      7
+    ],
+    "query_idx": 8,
+    "query_prompt": "What is Bruce Willis' real first name?",
+    "context_prompts_original": [
+      "Who won Super Bowl XX?",
+      "Which was the first European country to abolish capital punishment?",
+      "In which country did he widespread use of ISDN begin in 1988?"
+    ],
+    "context_prompts_modified": [
+      "Who won Super Bowl XX (in Spanish)?",
+      "Which was the first European country to abolish capital punishment (in Spanish)?",
+      "In which country did he widespread use of ISDN begin in 1988 (in Spanish)?"
+    ],
+    "response": "El nombre real de Bruce Willis es William."
+  },
+  {
+    "context_indices": [
+      6,
+      7,
+      8
+    ],
+    "query_idx": 9,
+    "query_prompt": "Which William wrote the novel Lord Of The Flies?",
+    "context_prompts_original": [
+      "Which was the first European country to abolish capital punishment?",
+      "In which country did he widespread use of ISDN begin in 1988?",
+      "What is Bruce Willis' real first name?"
+    ],
+    "context_prompts_modified": [
+      "Which was the first European country to abolish capital punishment (in Spanish)?",
+      "In which country did he widespread use of ISDN begin in 1988 (in Spanish)?",
+      "What is Bruce Willis' real first name (in Spanish)?"
+    ],
+    "response": "El novelista William que escribi\u00f3 la novela *Lord of the Flies* es William Golding."
+  },
+  {
+    "context_indices": [
+      7,
+      8,
+      9
+    ],
+    "query_idx": 10,
+    "query_prompt": "Which innovation for the car was developed by Prince Henry of Prussia in 1911?",
+    "context_prompts_original": [
+      "In which country did he widespread use of ISDN begin in 1988?",
+      "What is Bruce Willis' real first name?",
+      "Which William wrote the novel Lord Of The Flies?"
+    ],
+    "context_prompts_modified": [
+      "In which country did he widespread use of ISDN begin in 1988 (in Spanish)?",
+      "What is Bruce Willis' real first name (in Spanish)?",
+      "Which William wrote the novel Lord Of The Flies (in Spanish)?"
+    ],
+    "response": "En 1911, el pr\u00edncipe Guillermo de Prusia (tambi\u00e9n conocido como Guillermo II de Alemania) desarroll\u00f3 la **centralita de arranque** para coches, que permit\u00eda encender el motor sin necesidad de usar una llave de ignici\u00f3n manual. Esta innovaci\u00f3n fue un avance importante en la tecnolog\u00eda automotriz de la \u00e9poca."
+  },
+  {
+    "context_indices": [
+      8,
+      9,
+      10
+    ],
+    "query_idx": 11,
+    "query_prompt": "How is musician William Lee Conley better known?",
+    "context_prompts_original": [
+      "What is Bruce Willis' real first name?",
+      "Which William wrote the novel Lord Of The Flies?",
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911?"
+    ],
+    "context_prompts_modified": [
+      "What is Bruce Willis' real first name (in Spanish)?",
+      "Which William wrote the novel Lord Of The Flies (in Spanish)?",
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (in Spanish)?"
+    ],
+    "response": "El m\u00fasico William Lee Conley es mejor conocido como **W\u00fcstan**."
+  },
+  {
+    "context_indices": [
+      9,
+      10,
+      11
+    ],
+    "query_idx": 12,
+    "query_prompt": "How is Joan Molinsky better known?",
+    "context_prompts_original": [
+      "Which William wrote the novel Lord Of The Flies?",
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911?",
+      "How is musician William Lee Conley better known?"
+    ],
+    "context_prompts_modified": [
+      "Which William wrote the novel Lord Of The Flies (in Spanish)?",
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (in Spanish)?",
+      "How is musician William Lee Conley better known (in Spanish)?"
+    ],
+    "response": "Joan Molinsky es mejor conocida como **Joan Rivers**."
+  },
+  {
+    "context_indices": [
+      10,
+      11,
+      12
+    ],
+    "query_idx": 13,
+    "query_prompt": "In which branch of the arts is Patricia Neary famous?",
+    "context_prompts_original": [
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911?",
+      "How is musician William Lee Conley better known?",
+      "How is Joan Molinsky better known?"
+    ],
+    "context_prompts_modified": [
+      "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (in Spanish)?",
+      "How is musician William Lee Conley better known (in Spanish)?",
+      "How is Joan Molinsky better known (in Spanish)?"
+    ],
+    "response": "Patricia Neary es famosa en el \u00e1mbito del teatro."
+  },
+  {
+    "context_indices": [
+      11,
+      12,
+      13
+    ],
+    "query_idx": 14,
+    "query_prompt": "Which country is Europe's largest silk producer?",
+    "context_prompts_original": [
+      "How is musician William Lee Conley better known?",
+      "How is Joan Molinsky better known?",
+      "In which branch of the arts is Patricia Neary famous?"
+    ],
+    "context_prompts_modified": [
+      "How is musician William Lee Conley better known (in Spanish)?",
+      "How is Joan Molinsky better known (in Spanish)?",
+      "In which branch of the arts is Patricia Neary famous (in Spanish)?"
+    ],
+    "response": "La mayor productora de seda de Europa es la **China**. aunque es un pa\u00eds asi\u00e1tico, produce m\u00e1s seda que cualquier otro pa\u00eds en el mundo, incluyendo los pa\u00edses europeos. Sin embargo, si nos referimos espec\u00edficamente a un pa\u00eds europeo, **Italia** es el principal productor de seda en Europa."
+  },
+  {
+    "context_indices": [
+      12,
+      13,
+      14
+    ],
+    "query_idx": 15,
+    "query_prompt": "The VS-300 was a type of what?",
+    "context_prompts_original": [
+      "How is Joan Molinsky better known?",
+      "In which branch of the arts is Patricia Neary famous?",
+      "Which country is Europe's largest silk producer?"
+    ],
+    "context_prompts_modified": [
+      "How is Joan Molinsky better known (in Spanish)?",
+      "In which branch of the arts is Patricia Neary famous (in Spanish)?",
+      "Which country is Europe's largest silk producer (in Spanish)?"
+    ],
+    "response": "El VS-300 fue un tipo de helic\u00f3ptero."
+  },
+  {
+    "context_indices": [
+      13,
+      14,
+      15
+    ],
+    "query_idx": 16,
+    "query_prompt": "At which university did Joseph Goebbels become a doctor of philosophy?",
+    "context_prompts_original": [
+      "In which branch of the arts is Patricia Neary famous?",
+      "Which country is Europe's largest silk producer?",
+      "The VS-300 was a type of what?"
+    ],
+    "context_prompts_modified": [
+      "In which branch of the arts is Patricia Neary famous (in Spanish)?",
+      "Which country is Europe's largest silk producer (in Spanish)?",
+      "The VS-300 was a type of what (in Spanish)?"
+    ],
+    "response": "Joseph Goebbels se doctor\u00f3 en filosof\u00eda en la Universidad de Heidelberg."
+  },
+  {
+    "context_indices": [
+      14,
+      15,
+      16
+    ],
+    "query_idx": 17,
+    "query_prompt": "Which prince is Queen Elizabeth II's youngest son?",
+    "context_prompts_original": [
+      "Which country is Europe's largest silk producer?",
+      "The VS-300 was a type of what?",
+      "At which university did Joseph Goebbels become a doctor of philosophy?"
+    ],
+    "context_prompts_modified": [
+      "Which country is Europe's largest silk producer (in Spanish)?",
+      "The VS-300 was a type of what (in Spanish)?",
+      "At which university did Joseph Goebbels become a doctor of philosophy (in Spanish)?"
+    ],
+    "response": "El pr\u00edncipe m\u00e1s joven de la reina Isabel II es el pr\u00edncipe Harry, duque de Sussex."
+  },
+  {
+    "context_indices": [
+      15,
+      16,
+      17
+    ],
+    "query_idx": 18,
+    "query_prompt": "When did the founder of Jehovah's Witnesses say the world would end?",
+    "context_prompts_original": [
+      "The VS-300 was a type of what?",
+      "At which university did Joseph Goebbels become a doctor of philosophy?",
+      "Which prince is Queen Elizabeth II's youngest son?"
+    ],
+    "context_prompts_modified": [
+      "The VS-300 was a type of what (in Spanish)?",
+      "At which university did Joseph Goebbels become a doctor of philosophy (in Spanish)?",
+      "Which prince is Queen Elizabeth II's youngest son (in Spanish)?"
+    ],
+    "response": "El fundador de los Testigos de Jehov\u00e1, Russell Ball, predijo que el mundoar\u00eda el 21 de marzo de 1914. Sin embargo, este evento no ocurri\u00f3, lo que llev\u00f3 a una revisi\u00f3n de sus ense\u00f1anzas y a la reforma de la organizaci\u00f3n en las d\u00e9cadas siguientes."
+  },
+  {
+    "context_indices": [
+      16,
+      17,
+      18
+    ],
+    "query_idx": 19,
+    "query_prompt": "Who found the remains of the Titanic?",
+    "context_prompts_original": [
+      "At which university did Joseph Goebbels become a doctor of philosophy?",
+      "Which prince is Queen Elizabeth II's youngest son?",
+      "When did the founder of Jehovah's Witnesses say the world would end?"
+    ],
+    "context_prompts_modified": [
+      "At which university did Joseph Goebbels become a doctor of philosophy (in Spanish)?",
+      "Which prince is Queen Elizabeth II's youngest son (in Spanish)?",
+      "When did the founder of Jehovah's Witnesses say the world would end (in Spanish)?"
+    ],
+    "response": "Los restos del *Titanic* fueron descubiertos por el explorador marino **Robert Ballard** en **1985**, junto con su equipo, en las profundidades del oc\u00e9ano Atl\u00e1ntico, cerca de la isla de Newfoundland, en Canad\u00e1."
+  },
+  {
+    "context_indices": [
+      17,
+      18,
+      19
+    ],
+    "query_idx": 20,
+    "query_prompt": "Who was the only Spice Girl not to have a middle name?",
+    "context_prompts_original": [
+      "Which prince is Queen Elizabeth II's youngest son?",
+      "When did the founder of Jehovah's Witnesses say the world would end?",
+      "Who found the remains of the Titanic?"
+    ],
+    "context_prompts_modified": [
+      "Which prince is Queen Elizabeth II's youngest son (in Spanish)?",
+      "When did the founder of Jehovah's Witnesses say the world would end (in Spanish)?",
+      "Who found the remains of the Titanic (in Spanish)?"
+    ],
+    "response": "La \u00fanica Spice Girl que no tuvo un nombre medio fue **Melanie Chisholm**, conocida como **Mel C**. Las otras chicas de la banda ten\u00edan nombres medio:  \n- **Victoria Adams** (Victoria)  \n- **Geri Halliwell** (Geri)  \n- **Emma Bunton** (Emma)  \n- **Baby Spice** (Sarah)  \n\nMelanie Chisholm fue la \u00fanica que no incluy\u00f3 un nombre medio en su nombre completo."
+  },
+  {
+    "context_indices": [
+      18,
+      19,
+      20
+    ],
+    "query_idx": 21,
+    "query_prompt": "What are the international registration letters of a vehicle from Algeria?",
+    "context_prompts_original": [
+      "When did the founder of Jehovah's Witnesses say the world would end?",
+      "Who found the remains of the Titanic?",
+      "Who was the only Spice Girl not to have a middle name?"
+    ],
+    "context_prompts_modified": [
+      "When did the founder of Jehovah's Witnesses say the world would end (in Spanish)?",
+      "Who found the remains of the Titanic (in Spanish)?",
+      "Who was the only Spice Girl not to have a middle name (in Spanish)?"
+    ],
+    "response": "Los veh\u00edculos procedentes de Argelia utilizan las letras de registro internacional **\"AL\"**. Estas letras se utilizan en el sistema de matr\u00edculas internacionales para identificar a los veh\u00edculos procedentes de ese pa\u00eds."
+  },
+  {
+    "context_indices": [
+      19,
+      20,
+      21
+    ],
+    "query_idx": 22,
+    "query_prompt": "How did Jock die in Dallas?",
+    "context_prompts_original": [
+      "Who found the remains of the Titanic?",
+      "Who was the only Spice Girl not to have a middle name?",
+      "What are the international registration letters of a vehicle from Algeria?"
+    ],
+    "context_prompts_modified": [
+      "Who found the remains of the Titanic (in Spanish)?",
+      "Who was the only Spice Girl not to have a middle name (in Spanish)?",
+      "What are the international registration letters of a vehicle from Algeria (in Spanish)?"
+    ],
+    "response": "Jock, el perro de Lee Harvey Oswald, muri\u00f3 de un disparo en la cabeza cuando un polic\u00eda le dispar\u00f3 en el edificio de la CBS en Dallas el 26 de noviembre de 1963, poco despu\u00e9s de que el presidente John F. Kennedy fuera asesinado."
+  },
+  {
+    "context_indices": [
+      20,
+      21,
+      22
+    ],
+    "query_idx": 23,
+    "query_prompt": "What star sign is Michael Caine?",
+    "context_prompts_original": [
+      "Who was the only Spice Girl not to have a middle name?",
+      "What are the international registration letters of a vehicle from Algeria?",
+      "How did Jock die in Dallas?"
+    ],
+    "context_prompts_modified": [
+      "Who was the only Spice Girl not to have a middle name (in Spanish)?",
+      "What are the international registration letters of a vehicle from Algeria (in Spanish)?",
+      "How did Jock die in Dallas (in Spanish)?"
+    ],
+    "response": "Michael Caine naci\u00f3 el 16 de julio de 1933, lo que le da el signo zodiacal de **C\u00e1ncer**."
+  },
+  {
+    "context_indices": [
+      21,
+      22,
+      23
+    ],
+    "query_idx": 24,
+    "query_prompt": "Who wrote the novel Evening Class?",
+    "context_prompts_original": [
+      "What are the international registration letters of a vehicle from Algeria?",
+      "How did Jock die in Dallas?",
+      "What star sign is Michael Caine?"
+    ],
+    "context_prompts_modified": [
+      "What are the international registration letters of a vehicle from Algeria (in Spanish)?",
+      "How did Jock die in Dallas (in Spanish)?",
+      "What star sign is Michael Caine (in Spanish)?"
+    ],
+    "response": "The novel *Evening Class* was written by **Lidia Yuknavitch**."
+  },
+  {
+    "context_indices": [
+      22,
+      23,
+      24
+    ],
+    "query_idx": 25,
+    "query_prompt": "Which country does the airline Air Pacific come from?",
+    "context_prompts_original": [
+      "How did Jock die in Dallas?",
+      "What star sign is Michael Caine?",
+      "Who wrote the novel Evening Class?"
+    ],
+    "context_prompts_modified": [
+      "How did Jock die in Dallas (in Spanish)?",
+      "What star sign is Michael Caine (in Spanish)?",
+      "Who wrote the novel Evening Class (in Spanish)?"
+    ],
+    "response": "La aerol\u00ednea Air Pacific es originaria de **Fiyi**."
+  },
+  {
+    "context_indices": [
+      23,
+      24,
+      25
+    ],
+    "query_idx": 26,
+    "query_prompt": "In which branch of the arts does Allegra Kent work?",
+    "context_prompts_original": [
+      "What star sign is Michael Caine?",
+      "Who wrote the novel Evening Class?",
+      "Which country does the airline Air Pacific come from?"
+    ],
+    "context_prompts_modified": [
+      "What star sign is Michael Caine (in Spanish)?",
+      "Who wrote the novel Evening Class (in Spanish)?",
+      "Which country does the airline Air Pacific come from (in Spanish)?"
+    ],
+    "response": "Allegra Kent trabaja en el \u00e1mbito de la danza."
+  },
+  {
+    "context_indices": [
+      24,
+      25,
+      26
+    ],
+    "query_idx": 27,
+    "query_prompt": "Who had a 70s No 1 hit with Billy, Don't Be A Hero?",
+    "context_prompts_original": [
+      "Who wrote the novel Evening Class?",
+      "Which country does the airline Air Pacific come from?",
+      "In which branch of the arts does Allegra Kent work?"
+    ],
+    "context_prompts_modified": [
+      "Who wrote the novel Evening Class (in Spanish)?",
+      "Which country does the airline Air Pacific come from (in Spanish)?",
+      "In which branch of the arts does Allegra Kent work (in Spanish)?"
+    ],
+    "response": "La canci\u00f3n \"Billy, Don't Be a Hero\" fue un n\u00famero uno en la d\u00e9cada de 1970 del grupo **The 1975**, pero en realidad, la canci\u00f3n m\u00e1s famosa con ese t\u00edtulo fue interpretada por **Billy Joel** en 1983, no en la d\u00e9cada de 1970.\n\nSin embargo, si te refieres a una canci\u00f3n que lleg\u00f3 al n\u00famero uno en la d\u00e9cada de 1970, es posible que te est\u00e9s confundiendo con otra canci\u00f3n.\n\nSi te refieres a **\"Billy, Don't Be a Hero\"**, la canci\u00f3n que fue un n\u00famero uno en los a\u00f1os 70 fue interpretada por **Bobby Vinton** en 1970."
+  },
+  {
+    "context_indices": [
+      25,
+      26,
+      27
+    ],
+    "query_idx": 28,
+    "query_prompt": "Banting and Best pioneered the use of what?",
+    "context_prompts_original": [
+      "Which country does the airline Air Pacific come from?",
+      "In which branch of the arts does Allegra Kent work?",
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero?"
+    ],
+    "context_prompts_modified": [
+      "Which country does the airline Air Pacific come from (in Spanish)?",
+      "In which branch of the arts does Allegra Kent work (in Spanish)?",
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero (in Spanish)?"
+    ],
+    "response": "Banting y Best pionearon el uso de la insulina."
+  },
+  {
+    "context_indices": [
+      26,
+      27,
+      28
+    ],
+    "query_idx": 29,
+    "query_prompt": "Who directed the movie La Dolce Vita?",
+    "context_prompts_original": [
+      "In which branch of the arts does Allegra Kent work?",
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero?",
+      "Banting and Best pioneered the use of what?"
+    ],
+    "context_prompts_modified": [
+      "In which branch of the arts does Allegra Kent work (in Spanish)?",
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero (in Spanish)?",
+      "Banting and Best pioneered the use of what (in Spanish)?"
+    ],
+    "response": "La pel\u00edcula *La Dolce Vita* fue dirigida por Federico Fellini."
+  },
+  {
+    "context_indices": [
+      27,
+      28,
+      29
+    ],
+    "query_idx": 30,
+    "query_prompt": "Which country does the airline LACSA come from?",
+    "context_prompts_original": [
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero?",
+      "Banting and Best pioneered the use of what?",
+      "Who directed the movie La Dolce Vita?"
+    ],
+    "context_prompts_modified": [
+      "Who had a 70s No 1 hit with Billy, Don't Be A Hero (in Spanish)?",
+      "Banting and Best pioneered the use of what (in Spanish)?",
+      "Who directed the movie La Dolce Vita (in Spanish)?"
+    ],
+    "response": "La aerol\u00ednea LACSA (Latin American Carriers, Inc.) es de los Estados Unidos."
+  },
+  {
+    "context_indices": [
+      28,
+      29,
+      30
+    ],
+    "query_idx": 31,
+    "query_prompt": "Who directed 2001: A Space Odyssey?",
+    "context_prompts_original": [
+      "Banting and Best pioneered the use of what?",
+      "Who directed the movie La Dolce Vita?",
+      "Which country does the airline LACSA come from?"
+    ],
+    "context_prompts_modified": [
+      "Banting and Best pioneered the use of what (in Spanish)?",
+      "Who directed the movie La Dolce Vita (in Spanish)?",
+      "Which country does the airline LACSA come from (in Spanish)?"
+    ],
+    "response": "2001: A Space Odyssey fue dirigida por Stanley Kubrick."
+  },
+  {
+    "context_indices": [
+      29,
+      30,
+      31
+    ],
+    "query_idx": 32,
+    "query_prompt": "Which is the largest of the Japanese Volcano Islands?",
+    "context_prompts_original": [
+      "Who directed the movie La Dolce Vita?",
+      "Which country does the airline LACSA come from?",
+      "Who directed 2001: A Space Odyssey?"
+    ],
+    "context_prompts_modified": [
+      "Who directed the movie La Dolce Vita (in Spanish)?",
+      "Which country does the airline LACSA come from (in Spanish)?",
+      "Who directed 2001: A Space Odyssey (in Spanish)?"
+    ],
+    "response": "La isla m\u00e1s grande de las islas volc\u00e1nicas japonesas es **Hokkaido**, aunque no es una isla volc\u00e1nica en s\u00ed misma, sino una regi\u00f3n. Si te refieres espec\u00edficamente a islas volc\u00e1nicas, la isla m\u00e1s grande es **Sikoku**, pero es una isla principal y no volc\u00e1nica.  \n\nSin embargo, si te refieres a las islas volc\u00e1nicas activas o hist\u00f3ricamente volc\u00e1nicas, la isla m\u00e1s grande es **Sikoku** o **Shikoku** (Shikoku), pero nuevamente, no es exclusivamente una isla volc\u00e1nica.  \n\nEn cuanto a las islas volc\u00e1nicas reconocidas, la m\u00e1s grande es **Izu Islands** o **Izu Islands (Izu Islands)**, espec\u00edficamente **Kazan Island** o **Mount Fuji**, pero eso ya no es una isla.  \n\nLo m\u00e1s probable es que te refieras a la **isla de Hokkaido** como la m\u00e1s grande, aunque no es volc\u00e1nica. Si debes elegir una isla volc\u00e1nica de Jap\u00f3n, la m\u00e1s grande ser\u00eda **Hokkaido** en t\u00e9rminos de tama\u00f1o, pero **Hokkaido** no es una isla volc\u00e1nica en s\u00ed, sino una gran isla con volcanes.  \n\n**Respuesta final:** La isla m\u00e1s grande de las islas volc\u00e1nicas de Jap\u00f3n es **Hokkaido**, aunque no es una isla volc\u00e1nica exclusivamente. La isla volc\u00e1nica m\u00e1s grande es **Shikoku**, pero \u00e9sta no es volc\u00e1nica en su totalidad. Si te refieres a una isla que tiene volcanes, **Hokkaido** es la m\u00e1s grande."
+  },
+  {
+    "context_indices": [
+      30,
+      31,
+      32
+    ],
+    "query_idx": 33,
+    "query_prompt": "Ezzard Charles was a world champion in which sport?",
+    "context_prompts_original": [
+      "Which country does the airline LACSA come from?",
+      "Who directed 2001: A Space Odyssey?",
+      "Which is the largest of the Japanese Volcano Islands?"
+    ],
+    "context_prompts_modified": [
+      "Which country does the airline LACSA come from (in Spanish)?",
+      "Who directed 2001: A Space Odyssey (in Spanish)?",
+      "Which is the largest of the Japanese Volcano Islands (in Spanish)?"
+    ],
+    "response": "Ezzard Charles fue un campe\u00f3n mundial de boxeo."
+  },
+  {
+    "context_indices": [
+      31,
+      32,
+      33
+    ],
+    "query_idx": 34,
+    "query_prompt": "Who was the first woman to make a solo flight across the Atlantic?",
+    "context_prompts_original": [
+      "Who directed 2001: A Space Odyssey?",
+      "Which is the largest of the Japanese Volcano Islands?",
+      "Ezzard Charles was a world champion in which sport?"
+    ],
+    "context_prompts_modified": [
+      "Who directed 2001: A Space Odyssey (in Spanish)?",
+      "Which is the largest of the Japanese Volcano Islands (in Spanish)?",
+      "Ezzard Charles was a world champion in which sport (in Spanish)?"
+    ],
+    "response": "La primera mujer en realizar un vuelo solo transatl\u00e1ntico fue Amelia Earhart."
+  },
+  {
+    "context_indices": [
+      32,
+      33,
+      34
+    ],
+    "query_idx": 35,
+    "query_prompt": "Which port lies between Puget Sound and Lake Washington?",
+    "context_prompts_original": [
+      "Which is the largest of the Japanese Volcano Islands?",
+      "Ezzard Charles was a world champion in which sport?",
+      "Who was the first woman to make a solo flight across the Atlantic?"
+    ],
+    "context_prompts_modified": [
+      "Which is the largest of the Japanese Volcano Islands (in Spanish)?",
+      "Ezzard Charles was a world champion in which sport (in Spanish)?",
+      "Who was the first woman to make a solo flight across the Atlantic (in Spanish)?"
+    ],
+    "response": "El puerto que se encuentra entre Puget Sound y Lake Washington es el puerto de Seattle."
+  },
+  {
+    "context_indices": [
+      33,
+      34,
+      35
+    ],
+    "query_idx": 36,
+    "query_prompt": "In which city were Rotary Clubs set up in 1905?",
+    "context_prompts_original": [
+      "Ezzard Charles was a world champion in which sport?",
+      "Who was the first woman to make a solo flight across the Atlantic?",
+      "Which port lies between Puget Sound and Lake Washington?"
+    ],
+    "context_prompts_modified": [
+      "Ezzard Charles was a world champion in which sport (in Spanish)?",
+      "Who was the first woman to make a solo flight across the Atlantic (in Spanish)?",
+      "Which port lies between Puget Sound and Lake Washington (in Spanish)?"
+    ],
+    "response": "Los Clubes Rotarios fueron establecidos en la ciudad de Chicago en 1905."
+  },
+  {
+    "context_indices": [
+      34,
+      35,
+      36
+    ],
+    "query_idx": 37,
+    "query_prompt": "Who became US Vice President when Spiro Agnew resigned?",
+    "context_prompts_original": [
+      "Who was the first woman to make a solo flight across the Atlantic?",
+      "Which port lies between Puget Sound and Lake Washington?",
+      "In which city were Rotary Clubs set up in 1905?"
+    ],
+    "context_prompts_modified": [
+      "Who was the first woman to make a solo flight across the Atlantic (in Spanish)?",
+      "Which port lies between Puget Sound and Lake Washington (in Spanish)?",
+      "In which city were Rotary Clubs set up in 1905 (in Spanish)?"
+    ],
+    "response": "Jimmy Carter se convirti\u00f3 en vicepresidente de los Estados Unidos cuando Spiro Agnew renunci\u00f3 en 1973."
+  },
+  {
+    "context_indices": [
+      35,
+      36,
+      37
+    ],
+    "query_idx": 38,
+    "query_prompt": "In which decade of the 20th century was Billy Crystal born?",
+    "context_prompts_original": [
+      "Which port lies between Puget Sound and Lake Washington?",
+      "In which city were Rotary Clubs set up in 1905?",
+      "Who became US Vice President when Spiro Agnew resigned?"
+    ],
+    "context_prompts_modified": [
+      "Which port lies between Puget Sound and Lake Washington (in Spanish)?",
+      "In which city were Rotary Clubs set up in 1905 (in Spanish)?",
+      "Who became US Vice President when Spiro Agnew resigned (in Spanish)?"
+    ],
+    "response": "Billy Crystal naci\u00f3 en la d\u00e9cada de 1940."
+  },
+  {
+    "context_indices": [
+      36,
+      37,
+      38
+    ],
+    "query_idx": 39,
+    "query_prompt": "Which George invented the Kodak roll-film camera?",
+    "context_prompts_original": [
+      "In which city were Rotary Clubs set up in 1905?",
+      "Who became US Vice President when Spiro Agnew resigned?",
+      "In which decade of the 20th century was Billy Crystal born?"
+    ],
+    "context_prompts_modified": [
+      "In which city were Rotary Clubs set up in 1905 (in Spanish)?",
+      "Who became US Vice President when Spiro Agnew resigned (in Spanish)?",
+      "In which decade of the 20th century was Billy Crystal born (in Spanish)?"
+    ],
+    "response": "George Eastman invent\u00f3 la c\u00e1mara de pel\u00edcula Kodak."
+  },
+  {
+    "context_indices": [
+      37,
+      38,
+      39
+    ],
+    "query_idx": 40,
+    "query_prompt": "Which series had the characters Felix Unger and Oscar Madison?",
+    "context_prompts_original": [
+      "Who became US Vice President when Spiro Agnew resigned?",
+      "In which decade of the 20th century was Billy Crystal born?",
+      "Which George invented the Kodak roll-film camera?"
+    ],
+    "context_prompts_modified": [
+      "Who became US Vice President when Spiro Agnew resigned (in Spanish)?",
+      "In which decade of the 20th century was Billy Crystal born (in Spanish)?",
+      "Which George invented the Kodak roll-film camera (in Spanish)?"
+    ],
+    "response": "La serie que tuvo los personajes Felix Unger y Oscar Madison es **\"The Odd Couple\"**."
+  },
+  {
+    "context_indices": [
+      38,
+      39,
+      40
+    ],
+    "query_idx": 41,
+    "query_prompt": "Who along with Philips developed the CD in the late 70s?",
+    "context_prompts_original": [
+      "In which decade of the 20th century was Billy Crystal born?",
+      "Which George invented the Kodak roll-film camera?",
+      "Which series had the characters Felix Unger and Oscar Madison?"
+    ],
+    "context_prompts_modified": [
+      "In which decade of the 20th century was Billy Crystal born (in Spanish)?",
+      "Which George invented the Kodak roll-film camera (in Spanish)?",
+      "Which series had the characters Felix Unger and Oscar Madison (in Spanish)?"
+    ],
+    "response": "La cinta de audio en disco compacto (CD) fue desarrollada por la empresa Philips, junto con la empresa alem\u00e1n **Sony** en la d\u00e9cada de 1980, no en la d\u00e9cada de 1970."
+  },
+  {
+    "context_indices": [
+      39,
+      40,
+      41
+    ],
+    "query_idx": 42,
+    "query_prompt": "Where is the multinational Nestle based?",
+    "context_prompts_original": [
+      "Which George invented the Kodak roll-film camera?",
+      "Which series had the characters Felix Unger and Oscar Madison?",
+      "Who along with Philips developed the CD in the late 70s?"
+    ],
+    "context_prompts_modified": [
+      "Which George invented the Kodak roll-film camera (in Spanish)?",
+      "Which series had the characters Felix Unger and Oscar Madison (in Spanish)?",
+      "Who along with Philips developed the CD in the late 70s (in Spanish)?"
+    ],
+    "response": "La multinacional Nestl\u00e9 tiene su sede en Viena, Austria."
+  },
+  {
+    "context_indices": [
+      40,
+      41,
+      42
+    ],
+    "query_idx": 43,
+    "query_prompt": "Do You Know Where You're Going To? was the theme from which film?",
+    "context_prompts_original": [
+      "Which series had the characters Felix Unger and Oscar Madison?",
+      "Who along with Philips developed the CD in the late 70s?",
+      "Where is the multinational Nestle based?"
+    ],
+    "context_prompts_modified": [
+      "Which series had the characters Felix Unger and Oscar Madison (in Spanish)?",
+      "Who along with Philips developed the CD in the late 70s (in Spanish)?",
+      "Where is the multinational Nestle based (in Spanish)?"
+    ],
+    "response": "\"**Do You Know Where You're Going To?**\" es la tema de la pel\u00edcula **\"The Italian Job\"** (1969), basada en la novela hom\u00f3nima de James Hadley Chase. La canci\u00f3n fue interpretada por el actor y cantante **Jackie Le Gall** y fue muy famosa en la \u00e9poca."
+  },
+  {
+    "context_indices": [
+      41,
+      42,
+      43
+    ],
+    "query_idx": 44,
+    "query_prompt": "19969 was the Chinese year of which creature?",
+    "context_prompts_original": [
+      "Who along with Philips developed the CD in the late 70s?",
+      "Where is the multinational Nestle based?",
+      "Do You Know Where You're Going To? was the theme from which film?"
+    ],
+    "context_prompts_modified": [
+      "Who along with Philips developed the CD in the late 70s (in Spanish)?",
+      "Where is the multinational Nestle based (in Spanish)?",
+      "Do You Know Where You're Going To? was the theme from which film (in Spanish)?"
+    ],
+    "response": "El a\u00f1o 1996 correspondi\u00f3 al a\u00f1o del **caballo** en el calendario chino."
+  },
+  {
+    "context_indices": [
+      42,
+      43,
+      44
+    ],
+    "query_idx": 45,
+    "query_prompt": "In the 90s how many points have been awarded for finishing second in a Grand Prix?",
+    "context_prompts_original": [
+      "Where is the multinational Nestle based?",
+      "Do You Know Where You're Going To? was the theme from which film?",
+      "19969 was the Chinese year of which creature?"
+    ],
+    "context_prompts_modified": [
+      "Where is the multinational Nestle based (in Spanish)?",
+      "Do You Know Where You're Going To? was the theme from which film (in Spanish)?",
+      "19969 was the Chinese year of which creature (in Spanish)?"
+    ],
+    "response": "En la d\u00e9cada de 1990, en las Grandes Pruebas (Grand Prix) de F\u00f3rmula 1, los puntos que se otorgaban por terminar segundo eran **1 punto**.\n\nEsta puntuaci\u00f3n se mantuvo durante varios a\u00f1os, aunque los sistemas de puntuaci\u00f3n han cambiado con el tiempo. En la d\u00e9cada de 1990, el sistema de puntuaci\u00f3n era el siguiente (para los primeros 10 posicionados):\n\n- 1\u00ba lugar: 10 puntos\n- 2\u00ba lugar: 6 puntos\n- 3\u00ba lugar: 4 puntos\n- 4\u00ba lugar: 3 puntos\n- 5\u00ba lugar: 2 puntos\n- 6\u00ba lugar: 1 punto\n- 7\u00ba al 10\u00ba lugar: 0 puntos\n\nSin embargo, en 1993 se introdujo un sistema diferente, y en 1994 se cambi\u00f3 nuevamente, pero en la mayor\u00eda de los a\u00f1os de la d\u00e9cada de 1990, el segundo lugar obten\u00eda **1 punto**."
+  },
+  {
+    "context_indices": [
+      43,
+      44,
+      45
+    ],
+    "query_idx": 46,
+    "query_prompt": "Stapleton international airport is in which US state?",
+    "context_prompts_original": [
+      "Do You Know Where You're Going To? was the theme from which film?",
+      "19969 was the Chinese year of which creature?",
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix?"
+    ],
+    "context_prompts_modified": [
+      "Do You Know Where You're Going To? was the theme from which film (in Spanish)?",
+      "19969 was the Chinese year of which creature (in Spanish)?",
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix (in Spanish)?"
+    ],
+    "response": "El Aeropuerto Internacional Stapleton est\u00e1 en el estado de Colorado, EE.UU."
+  },
+  {
+    "context_indices": [
+      44,
+      45,
+      46
+    ],
+    "query_idx": 47,
+    "query_prompt": "What was Kevin Kline's first movie?",
+    "context_prompts_original": [
+      "19969 was the Chinese year of which creature?",
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix?",
+      "Stapleton international airport is in which US state?"
+    ],
+    "context_prompts_modified": [
+      "19969 was the Chinese year of which creature (in Spanish)?",
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix (in Spanish)?",
+      "Stapleton international airport is in which US state (in Spanish)?"
+    ],
+    "response": "La primera pel\u00edcula de Kevin Kline fue **\"The Big Bus\"** (1976)."
+  },
+  {
+    "context_indices": [
+      45,
+      46,
+      47
+    ],
+    "query_idx": 48,
+    "query_prompt": "Which actor had a Doberman Pinscher called Kirk?",
+    "context_prompts_original": [
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix?",
+      "Stapleton international airport is in which US state?",
+      "What was Kevin Kline's first movie?"
+    ],
+    "context_prompts_modified": [
+      "In the 90s how many points have been awarded for finishing second in a Grand Prix (in Spanish)?",
+      "Stapleton international airport is in which US state (in Spanish)?",
+      "What was Kevin Kline's first movie (in Spanish)?"
+    ],
+    "response": "El actor que tuvo un Doberman Pinscher llamado Kirk fue **Kurt Russell**. Su perro Kirk fue muy popular y se convirti\u00f3 en un s\u00edmbolo de su carrera. Kirk fue protagonista de varios anuncios publicitarios y apareci\u00f3 en varias pel\u00edculas junto a Kurt Russell."
+  },
+  {
+    "context_indices": [
+      46,
+      47,
+      48
+    ],
+    "query_idx": 49,
+    "query_prompt": "What day of the week was the Wall Street Crash?",
+    "context_prompts_original": [
+      "Stapleton international airport is in which US state?",
+      "What was Kevin Kline's first movie?",
+      "Which actor had a Doberman Pinscher called Kirk?"
+    ],
+    "context_prompts_modified": [
+      "Stapleton international airport is in which US state (in Spanish)?",
+      "What was Kevin Kline's first movie (in Spanish)?",
+      "Which actor had a Doberman Pinscher called Kirk (in Spanish)?"
+    ],
+    "response": "El colapso de la bolsa de Wall Street, tambi\u00e9n conocido como la Gran Depresi\u00f3n, ocurri\u00f3 el **lunes, 24 de octubre de 1929**."
+  },
+  {
+    "context_indices": [
+      47,
+      48,
+      49
+    ],
+    "query_idx": 50,
+    "query_prompt": "The US signed a treaty with which country to allow the construction of the Panama Canal?",
+    "context_prompts_original": [
+      "What was Kevin Kline's first movie?",
+      "Which actor had a Doberman Pinscher called Kirk?",
+      "What day of the week was the Wall Street Crash?"
+    ],
+    "context_prompts_modified": [
+      "What was Kevin Kline's first movie (in Spanish)?",
+      "Which actor had a Doberman Pinscher called Kirk (in Spanish)?",
+      "What day of the week was the Wall Street Crash (in Spanish)?"
+    ],
+    "response": "Estados Unidos firm\u00f3 un tratado con **Panama** para permitir la construcci\u00f3n del Canal de Panam\u00e1. El tratado se conoc\u00eda como el **Tratado Hay\u2013Bunau-Varilla**, firmado en 1903."
+  },
+  {
+    "context_indices": [
+      48,
+      49,
+      50
+    ],
+    "query_idx": 51,
+    "query_prompt": "What was Prince's last No 1 of the 80s?",
+    "context_prompts_original": [
+      "Which actor had a Doberman Pinscher called Kirk?",
+      "What day of the week was the Wall Street Crash?",
+      "The US signed a treaty with which country to allow the construction of the Panama Canal?"
+    ],
+    "context_prompts_modified": [
+      "Which actor had a Doberman Pinscher called Kirk (in Spanish)?",
+      "What day of the week was the Wall Street Crash (in Spanish)?",
+      "The US signed a treaty with which country to allow the construction of the Panama Canal (in Spanish)?"
+    ],
+    "response": "El \u00faltimo n\u00famero uno de Prince en la d\u00e9cada de los 80 fue **\"Purple Rain\"**, que fue lanzado en 1984 y alcanz\u00f3 la posici\u00f3n n\u00famero uno en Estados Unidos en 1985."
+  },
+  {
+    "context_indices": [
+      49,
+      50,
+      51
+    ],
+    "query_idx": 52,
+    "query_prompt": "Man In The Mirror first featured on which Michel Jackson album?",
+    "context_prompts_original": [
+      "What day of the week was the Wall Street Crash?",
+      "The US signed a treaty with which country to allow the construction of the Panama Canal?",
+      "What was Prince's last No 1 of the 80s?"
+    ],
+    "context_prompts_modified": [
+      "What day of the week was the Wall Street Crash (in Spanish)?",
+      "The US signed a treaty with which country to allow the construction of the Panama Canal (in Spanish)?",
+      "What was Prince's last No 1 of the 80s (in Spanish)?"
+    ],
+    "response": "\"Man in the Mirror\" se estren\u00f3 en el \u00e1lbum **\"Dangerous\"** de Michael Jackson, lanzado en 1991."
+  },
+  {
+    "context_indices": [
+      50,
+      51,
+      52
+    ],
+    "query_idx": 53,
+    "query_prompt": "Where was the first battle with US involvement in the Korean War?",
+    "context_prompts_original": [
+      "The US signed a treaty with which country to allow the construction of the Panama Canal?",
+      "What was Prince's last No 1 of the 80s?",
+      "Man In The Mirror first featured on which Michel Jackson album?"
+    ],
+    "context_prompts_modified": [
+      "The US signed a treaty with which country to allow the construction of the Panama Canal (in Spanish)?",
+      "What was Prince's last No 1 of the 80s (in Spanish)?",
+      "Man In The Mirror first featured on which Michel Jackson album (in Spanish)?"
+    ],
+    "response": "La primera batalla en la que particip\u00f3 Estados Unidos en la Guerra de Corea fue la **Batalla de Masan**, tambi\u00e9n conocida como **la Batalla de la L\u00ednea de la Frontera**, que tuvo lugar en julio de 1950. Esta fue una de las primeras acciones militares importantes en la cual los Estados Unidos participaron activamente en el conflicto."
+  },
+  {
+    "context_indices": [
+      51,
+      52,
+      53
+    ],
+    "query_idx": 54,
+    "query_prompt": "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?",
+    "context_prompts_original": [
+      "What was Prince's last No 1 of the 80s?",
+      "Man In The Mirror first featured on which Michel Jackson album?",
+      "Where was the first battle with US involvement in the Korean War?"
+    ],
+    "context_prompts_modified": [
+      "What was Prince's last No 1 of the 80s (in Spanish)?",
+      "Man In The Mirror first featured on which Michel Jackson album (in Spanish)?",
+      "Where was the first battle with US involvement in the Korean War (in Spanish)?"
+    ],
+    "response": "La princesa Diana pas\u00f3 su primer Noche de Navidad despu\u00e9s de que se anulara su divorcio en la isla caribe\u00f1a de **Barbados**."
+  },
+  {
+    "context_indices": [
+      52,
+      53,
+      54
+    ],
+    "query_idx": 55,
+    "query_prompt": "In which decade was Arnold Schwarzenegger born?",
+    "context_prompts_original": [
+      "Man In The Mirror first featured on which Michel Jackson album?",
+      "Where was the first battle with US involvement in the Korean War?",
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?"
+    ],
+    "context_prompts_modified": [
+      "Man In The Mirror first featured on which Michel Jackson album (in Spanish)?",
+      "Where was the first battle with US involvement in the Korean War (in Spanish)?",
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (in Spanish)?"
+    ],
+    "response": "Arnold Schwarzenegger naci\u00f3 en la d\u00e9cada de 1940."
+  },
+  {
+    "context_indices": [
+      53,
+      54,
+      55
+    ],
+    "query_idx": 56,
+    "query_prompt": "Which musical featured the song Thank Heaven for Little Girls?",
+    "context_prompts_original": [
+      "Where was the first battle with US involvement in the Korean War?",
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?",
+      "In which decade was Arnold Schwarzenegger born?"
+    ],
+    "context_prompts_modified": [
+      "Where was the first battle with US involvement in the Korean War (in Spanish)?",
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (in Spanish)?",
+      "In which decade was Arnold Schwarzenegger born (in Spanish)?"
+    ],
+    "response": "La canci\u00f3n \"Thank Heaven for Little Girls\" est\u00e1 featured en la musical **\"Oklahoma!\"**."
+  },
+  {
+    "context_indices": [
+      54,
+      55,
+      56
+    ],
+    "query_idx": 57,
+    "query_prompt": "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?",
+    "context_prompts_original": [
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?",
+      "In which decade was Arnold Schwarzenegger born?",
+      "Which musical featured the song Thank Heaven for Little Girls?"
+    ],
+    "context_prompts_modified": [
+      "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (in Spanish)?",
+      "In which decade was Arnold Schwarzenegger born (in Spanish)?",
+      "Which musical featured the song Thank Heaven for Little Girls (in Spanish)?"
+    ],
+    "response": "El buque Queen Elizabeth fue destruido por un incendio en el puerto de Southampton en la d\u00e9cada de 1970."
+  },
+  {
+    "context_indices": [
+      55,
+      56,
+      57
+    ],
+    "query_idx": 58,
+    "query_prompt": "What breed of dog did Columbo own?",
+    "context_prompts_original": [
+      "In which decade was Arnold Schwarzenegger born?",
+      "Which musical featured the song Thank Heaven for Little Girls?",
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?"
+    ],
+    "context_prompts_modified": [
+      "In which decade was Arnold Schwarzenegger born (in Spanish)?",
+      "Which musical featured the song Thank Heaven for Little Girls (in Spanish)?",
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (in Spanish)?"
+    ],
+    "response": "Columbo pose\u00eda un perro de la raza Boxer."
+  },
+  {
+    "context_indices": [
+      56,
+      57,
+      58
+    ],
+    "query_idx": 59,
+    "query_prompt": "What was the first movie western called?",
+    "context_prompts_original": [
+      "Which musical featured the song Thank Heaven for Little Girls?",
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?",
+      "What breed of dog did Columbo own?"
+    ],
+    "context_prompts_modified": [
+      "Which musical featured the song Thank Heaven for Little Girls (in Spanish)?",
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (in Spanish)?",
+      "What breed of dog did Columbo own (in Spanish)?"
+    ],
+    "response": "La primera pel\u00edcula western se llam\u00f3 **\"The Great Train Robbery\"** (El Gran Robo del Tren), estrenada en **1903**."
+  },
+  {
+    "context_indices": [
+      57,
+      58,
+      59
+    ],
+    "query_idx": 60,
+    "query_prompt": "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?",
+    "context_prompts_original": [
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?",
+      "What breed of dog did Columbo own?",
+      "What was the first movie western called?"
+    ],
+    "context_prompts_modified": [
+      "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (in Spanish)?",
+      "What breed of dog did Columbo own (in Spanish)?",
+      "What was the first movie western called (in Spanish)?"
+    ],
+    "response": "La actriz ganadora del \u00d3scar nacida exactamente el mismo d\u00eda que Lindsay Wagner es **Barbra Streisand**.\n\nAmbas nacieron el **24 de mayo**:\n\n- **Lindsay Wagner** naci\u00f3 el 24 de mayo de 1949.\n- **Barbra Streisand** naci\u00f3 el 24 de mayo de 1942.\n\nBarbra Streisand es una actriz, cantante y directora ganadora de m\u00faltiples \u00d3scars, incluyendo un \u00d3scar al Mejor Actriz por su actuaci\u00f3n en la pel\u00edcula *Yentl* (1983)."
+  },
+  {
+    "context_indices": [
+      58,
+      59,
+      60
+    ],
+    "query_idx": 61,
+    "query_prompt": "Which Amendment to the Constitution brought in prohibition in 1920?",
+    "context_prompts_original": [
+      "What breed of dog did Columbo own?",
+      "What was the first movie western called?",
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?"
+    ],
+    "context_prompts_modified": [
+      "What breed of dog did Columbo own (in Spanish)?",
+      "What was the first movie western called (in Spanish)?",
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (in Spanish)?"
+    ],
+    "response": "La Cuadrag\u00e9sima Primera Enmienda (21\u00aa Enmienda) al Constituci\u00f3n de Estados Unidos derog\u00f3 la Prohibici\u00f3n, que hab\u00eda sido implementada por la Cuadrag\u00e9sima Enmienda (18\u00aa Enmienda) en 1920."
+  },
+  {
+    "context_indices": [
+      59,
+      60,
+      61
+    ],
+    "query_idx": 62,
+    "query_prompt": "Which oil scandal hit the US in 1924?",
+    "context_prompts_original": [
+      "What was the first movie western called?",
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?",
+      "Which Amendment to the Constitution brought in prohibition in 1920?"
+    ],
+    "context_prompts_modified": [
+      "What was the first movie western called (in Spanish)?",
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (in Spanish)?",
+      "Which Amendment to the Constitution brought in prohibition in 1920 (in Spanish)?"
+    ],
+    "response": "El esc\u00e1ndalo del petr\u00f3leo que afect\u00f3 a los Estados Unidos en 1924 se conoce como el **Esc\u00e1ndalo de Teapot Dome**."
+  },
+  {
+    "context_indices": [
+      60,
+      61,
+      62
+    ],
+    "query_idx": 63,
+    "query_prompt": "Phil Collins appeared in which Spielberg film with Robin Williams?",
+    "context_prompts_original": [
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?",
+      "Which Amendment to the Constitution brought in prohibition in 1920?",
+      "Which oil scandal hit the US in 1924?"
+    ],
+    "context_prompts_modified": [
+      "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (in Spanish)?",
+      "Which Amendment to the Constitution brought in prohibition in 1920 (in Spanish)?",
+      "Which oil scandal hit the US in 1924 (in Spanish)?"
+    ],
+    "response": "Phil Collins apareci\u00f3 en la pel\u00edcula **\"The Adventures of Tin Tin\"** (tambi\u00e9n conocida como **\"El Fantasma de la Catedral\"** en algunos pa\u00edses) junto a Robin Williams. Sin embargo, es importante aclarar que Phil Collins no actu\u00f3 en esta pel\u00edcula. Es posible que haya surgido una confusi\u00f3n con otro filme.\n\nEn realidad, Phil Collins particip\u00f3 en la pel\u00edcula **\"The 11th Hour\"** (2007), dirigida por Al Gore, pero no con Robin Williams.\n\nEn cuanto a una pel\u00edcula de Steven Spielberg con Robin Williams, una opci\u00f3n es **\"The Birdcage\"** (1996), pero Phil Collins no particip\u00f3 en ella.\n\nSi est\u00e1s pensando en una pel\u00edcula espec\u00edfica que combina a Phil Collins y Robin Williams, es posible que haya un malentendido. Si puedes proporcionar m\u00e1s contexto, estar\u00e9 encantado de ayudarte a clarificar."
+  },
+  {
+    "context_indices": [
+      61,
+      62,
+      63
+    ],
+    "query_idx": 64,
+    "query_prompt": "1998 was the Chinese year of which creature?",
+    "context_prompts_original": [
+      "Which Amendment to the Constitution brought in prohibition in 1920?",
+      "Which oil scandal hit the US in 1924?",
+      "Phil Collins appeared in which Spielberg film with Robin Williams?"
+    ],
+    "context_prompts_modified": [
+      "Which Amendment to the Constitution brought in prohibition in 1920 (in Spanish)?",
+      "Which oil scandal hit the US in 1924 (in Spanish)?",
+      "Phil Collins appeared in which Spielberg film with Robin Williams (in Spanish)?"
+    ],
+    "response": "El a\u00f1o 1998 fue el a\u00f1o del **pacio** en el calendario chin\u00e9s."
+  },
+  {
+    "context_indices": [
+      62,
+      63,
+      64
+    ],
+    "query_idx": 65,
+    "query_prompt": "Which country does musician Alfred Brendel come from?",
+    "context_prompts_original": [
+      "Which oil scandal hit the US in 1924?",
+      "Phil Collins appeared in which Spielberg film with Robin Williams?",
+      "1998 was the Chinese year of which creature?"
+    ],
+    "context_prompts_modified": [
+      "Which oil scandal hit the US in 1924 (in Spanish)?",
+      "Phil Collins appeared in which Spielberg film with Robin Williams (in Spanish)?",
+      "1998 was the Chinese year of which creature (in Spanish)?"
+    ],
+    "response": "El m\u00fasico Alfred Brendel es de Austria."
+  },
+  {
+    "context_indices": [
+      63,
+      64,
+      65
+    ],
+    "query_idx": 66,
+    "query_prompt": "Theodore Francis international airport is in which US state?",
+    "context_prompts_original": [
+      "Phil Collins appeared in which Spielberg film with Robin Williams?",
+      "1998 was the Chinese year of which creature?",
+      "Which country does musician Alfred Brendel come from?"
+    ],
+    "context_prompts_modified": [
+      "Phil Collins appeared in which Spielberg film with Robin Williams (in Spanish)?",
+      "1998 was the Chinese year of which creature (in Spanish)?",
+      "Which country does musician Alfred Brendel come from (in Spanish)?"
+    ],
+    "response": "El Aeropuerto Internacional Theodore Francis est\u00e1 en el estado de Alabama."
+  },
+  {
+    "context_indices": [
+      64,
+      65,
+      66
+    ],
+    "query_idx": 67,
+    "query_prompt": "In which soap did Demi Moore find fame?",
+    "context_prompts_original": [
+      "1998 was the Chinese year of which creature?",
+      "Which country does musician Alfred Brendel come from?",
+      "Theodore Francis international airport is in which US state?"
+    ],
+    "context_prompts_modified": [
+      "1998 was the Chinese year of which creature (in Spanish)?",
+      "Which country does musician Alfred Brendel come from (in Spanish)?",
+      "Theodore Francis international airport is in which US state (in Spanish)?"
+    ],
+    "response": "Demi Moore se hizo famosa por su papel en la telenovela *Melrose Place*."
+  },
+  {
+    "context_indices": [
+      65,
+      66,
+      67
+    ],
+    "query_idx": 68,
+    "query_prompt": "To the nearest million, what is the population of London, England?",
+    "context_prompts_original": [
+      "Which country does musician Alfred Brendel come from?",
+      "Theodore Francis international airport is in which US state?",
+      "In which soap did Demi Moore find fame?"
+    ],
+    "context_prompts_modified": [
+      "Which country does musician Alfred Brendel come from (in Spanish)?",
+      "Theodore Francis international airport is in which US state (in Spanish)?",
+      "In which soap did Demi Moore find fame (in Spanish)?"
+    ],
+    "response": "La poblaci\u00f3n de Londres, Inglaterra, redondeada al mill\u00f3n m\u00e1s cercano, es de 9 millones."
+  },
+  {
+    "context_indices": [
+      66,
+      67,
+      68
+    ],
+    "query_idx": 69,
+    "query_prompt": "What did Clarice Cliff create?",
+    "context_prompts_original": [
+      "Theodore Francis international airport is in which US state?",
+      "In which soap did Demi Moore find fame?",
+      "To the nearest million, what is the population of London, England?"
+    ],
+    "context_prompts_modified": [
+      "Theodore Francis international airport is in which US state (in Spanish)?",
+      "In which soap did Demi Moore find fame (in Spanish)?",
+      "To the nearest million, what is the population of London, England (in Spanish)?"
+    ],
+    "response": "Clarice Cliff fue una ceramista brit\u00e1nica famosa por crear **los vasos de la serie \"Penny Black\"**, que se convirtieron en un \u00edcono del dise\u00f1o de porcelana en la d\u00e9cada de 1930. Estos vasos, con su patr\u00f3n de flores en rojo y negro, son muy valorados y reconocidos en el mundo del dise\u00f1o y la historia del arte."
+  },
+  {
+    "context_indices": [
+      67,
+      68,
+      69
+    ],
+    "query_idx": 70,
+    "query_prompt": "Which James Bond film features a song by Louis Armstrong?",
+    "context_prompts_original": [
+      "In which soap did Demi Moore find fame?",
+      "To the nearest million, what is the population of London, England?",
+      "What did Clarice Cliff create?"
+    ],
+    "context_prompts_modified": [
+      "In which soap did Demi Moore find fame (in Spanish)?",
+      "To the nearest million, what is the population of London, England (in Spanish)?",
+      "What did Clarice Cliff create (in Spanish)?"
+    ],
+    "response": "La pel\u00edcula de James Bond **\"Live and Let Die\"** (1973) incluye una canci\u00f3n interpretada por **Louis Armstrong**, titulada **\"The Adventure of the Android\"** (tambi\u00e9n conocida como **\"Moanin'\"**)."
+  },
+  {
+    "context_indices": [
+      68,
+      69,
+      70
+    ],
+    "query_idx": 71,
+    "query_prompt": "In what year were US ground troops first dispatched to Vietnam?",
+    "context_prompts_original": [
+      "To the nearest million, what is the population of London, England?",
+      "What did Clarice Cliff create?",
+      "Which James Bond film features a song by Louis Armstrong?"
+    ],
+    "context_prompts_modified": [
+      "To the nearest million, what is the population of London, England (in Spanish)?",
+      "What did Clarice Cliff create (in Spanish)?",
+      "Which James Bond film features a song by Louis Armstrong (in Spanish)?"
+    ],
+    "response": "Los Estados Unidos enviaron tropas terrestres a Vietnam en el a\u00f1o **1965**."
+  },
+  {
+    "context_indices": [
+      69,
+      70,
+      71
+    ],
+    "query_idx": 72,
+    "query_prompt": "In 1999 Anna Kournikova signed a lucrative contract to model what?",
+    "context_prompts_original": [
+      "What did Clarice Cliff create?",
+      "Which James Bond film features a song by Louis Armstrong?",
+      "In what year were US ground troops first dispatched to Vietnam?"
+    ],
+    "context_prompts_modified": [
+      "What did Clarice Cliff create (in Spanish)?",
+      "Which James Bond film features a song by Louis Armstrong (in Spanish)?",
+      "In what year were US ground troops first dispatched to Vietnam (in Spanish)?"
+    ],
+    "response": "En 1999, Anna Kournikova firm\u00f3 un contrato lucrativo para modelar ropa interior."
+  },
+  {
+    "context_indices": [
+      70,
+      71,
+      72
+    ],
+    "query_idx": 73,
+    "query_prompt": "Which member of the Monkees came from Washington DC?",
+    "context_prompts_original": [
+      "Which James Bond film features a song by Louis Armstrong?",
+      "In what year were US ground troops first dispatched to Vietnam?",
+      "In 1999 Anna Kournikova signed a lucrative contract to model what?"
+    ],
+    "context_prompts_modified": [
+      "Which James Bond film features a song by Louis Armstrong (in Spanish)?",
+      "In what year were US ground troops first dispatched to Vietnam (in Spanish)?",
+      "In 1999 Anna Kournikova signed a lucrative contract to model what (in Spanish)?"
+    ],
+    "response": "El miembro de los Monkees que naci\u00f3 en Washington, D.C., fue Mike Nesmith."
+  },
+  {
+    "context_indices": [
+      71,
+      72,
+      73
+    ],
+    "query_idx": 74,
+    "query_prompt": "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?",
+    "context_prompts_original": [
+      "In what year were US ground troops first dispatched to Vietnam?",
+      "In 1999 Anna Kournikova signed a lucrative contract to model what?",
+      "Which member of the Monkees came from Washington DC?"
+    ],
+    "context_prompts_modified": [
+      "In what year were US ground troops first dispatched to Vietnam (in Spanish)?",
+      "In 1999 Anna Kournikova signed a lucrative contract to model what (in Spanish)?",
+      "Which member of the Monkees came from Washington DC (in Spanish)?"
+    ],
+    "response": "El barco hundido por un submarino alem\u00e1n en 1915 con la p\u00e9rdida de 1400 vidas, incluyendo 128 estadounidenses, fue el *RMS Lusitania*."
+  },
+  {
+    "context_indices": [
+      72,
+      73,
+      74
+    ],
+    "query_idx": 75,
+    "query_prompt": "In what decade were video recorders first developed?",
+    "context_prompts_original": [
+      "In 1999 Anna Kournikova signed a lucrative contract to model what?",
+      "Which member of the Monkees came from Washington DC?",
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?"
+    ],
+    "context_prompts_modified": [
+      "In 1999 Anna Kournikova signed a lucrative contract to model what (in Spanish)?",
+      "Which member of the Monkees came from Washington DC (in Spanish)?",
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (in Spanish)?"
+    ],
+    "response": "Las grabadoras de video fueron desarrolladas por primera vez en la d\u00e9cada de 1950."
+  },
+  {
+    "context_indices": [
+      73,
+      74,
+      75
+    ],
+    "query_idx": 76,
+    "query_prompt": "Who had the noels Spy Hook and Spy Line published in the 80s?",
+    "context_prompts_original": [
+      "Which member of the Monkees came from Washington DC?",
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?",
+      "In what decade were video recorders first developed?"
+    ],
+    "context_prompts_modified": [
+      "Which member of the Monkees came from Washington DC (in Spanish)?",
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (in Spanish)?",
+      "In what decade were video recorders first developed (in Spanish)?"
+    ],
+    "response": "La novela *Spy Hook* y *Spy Line* fueron publicadas en la d\u00e9cada de 1980 por **John le Carr\u00e9**, un escritor brit\u00e1nico conocido por sus novelas de espionaje."
+  },
+  {
+    "context_indices": [
+      74,
+      75,
+      76
+    ],
+    "query_idx": 77,
+    "query_prompt": "the first credit cards were for use in what type of establishments?",
+    "context_prompts_original": [
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?",
+      "In what decade were video recorders first developed?",
+      "Who had the noels Spy Hook and Spy Line published in the 80s?"
+    ],
+    "context_prompts_modified": [
+      "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (in Spanish)?",
+      "In what decade were video recorders first developed (in Spanish)?",
+      "Who had the noels Spy Hook and Spy Line published in the 80s (in Spanish)?"
+    ],
+    "response": "La primera tarjeta de cr\u00e9dito fue introducida en 1950 por la empresa Diners Club y estaba dise\u00f1ada para su uso en establecimientos de comida, especialmente restaurantes y caf\u00e9s."
+  },
+  {
+    "context_indices": [
+      75,
+      76,
+      77
+    ],
+    "query_idx": 78,
+    "query_prompt": "In which country was Ursula Andrews born?",
+    "context_prompts_original": [
+      "In what decade were video recorders first developed?",
+      "Who had the noels Spy Hook and Spy Line published in the 80s?",
+      "the first credit cards were for use in what type of establishments?"
+    ],
+    "context_prompts_modified": [
+      "In what decade were video recorders first developed (in Spanish)?",
+      "Who had the noels Spy Hook and Spy Line published in the 80s (in Spanish)?",
+      "the first credit cards were for use in what type of establishments (in Spanish)?"
+    ],
+    "response": "Ursula Andrews naci\u00f3 en Reino Unido."
+  },
+  {
+    "context_indices": [
+      76,
+      77,
+      78
+    ],
+    "query_idx": 79,
+    "query_prompt": "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?",
+    "context_prompts_original": [
+      "Who had the noels Spy Hook and Spy Line published in the 80s?",
+      "the first credit cards were for use in what type of establishments?",
+      "In which country was Ursula Andrews born?"
+    ],
+    "context_prompts_modified": [
+      "Who had the noels Spy Hook and Spy Line published in the 80s (in Spanish)?",
+      "the first credit cards were for use in what type of establishments (in Spanish)?",
+      "In which country was Ursula Andrews born (in Spanish)?"
+    ],
+    "response": "La frase de cierre famosa del presentador de noticias de CBS, Walter Cronkite, era: **\"That's the way it is.\"**"
+  },
+  {
+    "context_indices": [
+      77,
+      78,
+      79
+    ],
+    "query_idx": 80,
+    "query_prompt": "Who had a 70s No 1 hit with Let Your Love Flow?",
+    "context_prompts_original": [
+      "the first credit cards were for use in what type of establishments?",
+      "In which country was Ursula Andrews born?",
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?"
+    ],
+    "context_prompts_modified": [
+      "the first credit cards were for use in what type of establishments (in Spanish)?",
+      "In which country was Ursula Andrews born (in Spanish)?",
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (in Spanish)?"
+    ],
+    "response": "La banda que tuvo un n\u00famero uno en la d\u00e9cada de 1970 con la canci\u00f3n \"Let Your Love Flow\" fue **The Training Wheels**."
+  },
+  {
+    "context_indices": [
+      78,
+      79,
+      80
+    ],
+    "query_idx": 81,
+    "query_prompt": "Which state renewed Mike Tyson's boxing license in 1998?",
+    "context_prompts_original": [
+      "In which country was Ursula Andrews born?",
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?",
+      "Who had a 70s No 1 hit with Let Your Love Flow?"
+    ],
+    "context_prompts_modified": [
+      "In which country was Ursula Andrews born (in Spanish)?",
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (in Spanish)?",
+      "Who had a 70s No 1 hit with Let Your Love Flow (in Spanish)?"
+    ],
+    "response": "Georgia renov\u00f3 la licencia de boxeo de Mike Tyson en 1998."
+  },
+  {
+    "context_indices": [
+      79,
+      80,
+      81
+    ],
+    "query_idx": 82,
+    "query_prompt": "Neil Armstrong was a pilot in which war?",
+    "context_prompts_original": [
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?",
+      "Who had a 70s No 1 hit with Let Your Love Flow?",
+      "Which state renewed Mike Tyson's boxing license in 1998?"
+    ],
+    "context_prompts_modified": [
+      "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (in Spanish)?",
+      "Who had a 70s No 1 hit with Let Your Love Flow (in Spanish)?",
+      "Which state renewed Mike Tyson's boxing license in 1998 (in Spanish)?"
+    ],
+    "response": "Neil Armstrong fue piloto durante la Segunda Guerra Mundial."
+  },
+  {
+    "context_indices": [
+      80,
+      81,
+      82
+    ],
+    "query_idx": 83,
+    "query_prompt": "Which English-born US citizen hosted Masterpiece theater?",
+    "context_prompts_original": [
+      "Who had a 70s No 1 hit with Let Your Love Flow?",
+      "Which state renewed Mike Tyson's boxing license in 1998?",
+      "Neil Armstrong was a pilot in which war?"
+    ],
+    "context_prompts_modified": [
+      "Who had a 70s No 1 hit with Let Your Love Flow (in Spanish)?",
+      "Which state renewed Mike Tyson's boxing license in 1998 (in Spanish)?",
+      "Neil Armstrong was a pilot in which war (in Spanish)?"
+    ],
+    "response": "The English-born US citizen who hosted *Masterpiece Theatre* was **Antony Jay**. However, it's important to note that *Masterpiece Theatre* was a British television series produced by the BBC, and it was not hosted in the traditional sense. Antony Jay was one of the co-creators and a producer of the show, but he was not a host. \n\nIf you're looking for someone who presented or hosted episodes, that role was often filled by actors or narrators, not necessarily a \"host\" in the sense of a talk show host. \n\nIf you meant a specific presenter or narrator, you might be referring to someone like **Ronald Coleman**, who was a frequent narrator for *Masterpiece Theatre* in the 1980s and 1990s. However, he was British, not English-born and American. \n\nLet me know if you meant something else!"
+  },
+  {
+    "context_indices": [
+      81,
+      82,
+      83
+    ],
+    "query_idx": 84,
+    "query_prompt": "Nickelodeon was founded in 1979 by which company?",
+    "context_prompts_original": [
+      "Which state renewed Mike Tyson's boxing license in 1998?",
+      "Neil Armstrong was a pilot in which war?",
+      "Which English-born US citizen hosted Masterpiece theater?"
+    ],
+    "context_prompts_modified": [
+      "Which state renewed Mike Tyson's boxing license in 1998 (in Spanish)?",
+      "Neil Armstrong was a pilot in which war (in Spanish)?",
+      "Which English-born US citizen hosted Masterpiece theater (in Spanish)?"
+    ],
+    "response": "Nickelodeon fue fundado en 1979 por la empresa Viacom."
+  },
+  {
+    "context_indices": [
+      82,
+      83,
+      84
+    ],
+    "query_idx": 85,
+    "query_prompt": "Which element along with polonium did the Curies discover?",
+    "context_prompts_original": [
+      "Neil Armstrong was a pilot in which war?",
+      "Which English-born US citizen hosted Masterpiece theater?",
+      "Nickelodeon was founded in 1979 by which company?"
+    ],
+    "context_prompts_modified": [
+      "Neil Armstrong was a pilot in which war (in Spanish)?",
+      "Which English-born US citizen hosted Masterpiece theater (in Spanish)?",
+      "Nickelodeon was founded in 1979 by which company (in Spanish)?"
+    ],
+    "response": "El elemento que los Curies descubrieron junto con el polonio es el radio."
+  },
+  {
+    "context_indices": [
+      83,
+      84,
+      85
+    ],
+    "query_idx": 86,
+    "query_prompt": "In The Banana Splits what sort of animal was Snorky?",
+    "context_prompts_original": [
+      "Which English-born US citizen hosted Masterpiece theater?",
+      "Nickelodeon was founded in 1979 by which company?",
+      "Which element along with polonium did the Curies discover?"
+    ],
+    "context_prompts_modified": [
+      "Which English-born US citizen hosted Masterpiece theater (in Spanish)?",
+      "Nickelodeon was founded in 1979 by which company (in Spanish)?",
+      "Which element along with polonium did the Curies discover (in Spanish)?"
+    ],
+    "response": "En *The Banana Splits*, Snorky era un animal de peluche que se representaba como un **mono**."
+  },
+  {
+    "context_indices": [
+      84,
+      85,
+      86
+    ],
+    "query_idx": 87,
+    "query_prompt": "Who had an 80s No 1 hit with Can't Fight This Feeling?",
+    "context_prompts_original": [
+      "Nickelodeon was founded in 1979 by which company?",
+      "Which element along with polonium did the Curies discover?",
+      "In The Banana Splits what sort of animal was Snorky?"
+    ],
+    "context_prompts_modified": [
+      "Nickelodeon was founded in 1979 by which company (in Spanish)?",
+      "Which element along with polonium did the Curies discover (in Spanish)?",
+      "In The Banana Splits what sort of animal was Snorky (in Spanish)?"
+    ],
+    "response": "El cantante estadounidense **Tom Petty** tuvo un n\u00famero uno en la lista de \u00e9xitos en la d\u00e9cada de 1980 con la canci\u00f3n **\"Can't Fight This Feeling\"**."
+  },
+  {
+    "context_indices": [
+      85,
+      86,
+      87
+    ],
+    "query_idx": 88,
+    "query_prompt": "Which parallel was the truce line in the Korean War?",
+    "context_prompts_original": [
+      "Which element along with polonium did the Curies discover?",
+      "In The Banana Splits what sort of animal was Snorky?",
+      "Who had an 80s No 1 hit with Can't Fight This Feeling?"
+    ],
+    "context_prompts_modified": [
+      "Which element along with polonium did the Curies discover (in Spanish)?",
+      "In The Banana Splits what sort of animal was Snorky (in Spanish)?",
+      "Who had an 80s No 1 hit with Can't Fight This Feeling (in Spanish)?"
+    ],
+    "response": "La l\u00ednea de frente en la Guerra de Corea fue la l\u00ednea de desembarco, tambi\u00e9n conocida como la **L\u00ednea 38**. Esta l\u00ednea se estableci\u00f3 como un acuerdo de alto el fuego en 1953, dividiendo el pa\u00eds en dos zonas ocupadas por las Potencias Aliadas y las Potencias de la ONU."
+  },
+  {
+    "context_indices": [
+      86,
+      87,
+      88
+    ],
+    "query_idx": 89,
+    "query_prompt": "On a computer keyboard which letter is between A and D?",
+    "context_prompts_original": [
+      "In The Banana Splits what sort of animal was Snorky?",
+      "Who had an 80s No 1 hit with Can't Fight This Feeling?",
+      "Which parallel was the truce line in the Korean War?"
+    ],
+    "context_prompts_modified": [
+      "In The Banana Splits what sort of animal was Snorky (in Spanish)?",
+      "Who had an 80s No 1 hit with Can't Fight This Feeling (in Spanish)?",
+      "Which parallel was the truce line in the Korean War (in Spanish)?"
+    ],
+    "response": "La letra que est\u00e1 entre **A** y **D** en un teclado de computadora es la letra **B**."
+  },
+  {
+    "context_indices": [
+      87,
+      88,
+      89
+    ],
+    "query_idx": 90,
+    "query_prompt": "Which musical featured the song Flash Bang, Wallop?",
+    "context_prompts_original": [
+      "Who had an 80s No 1 hit with Can't Fight This Feeling?",
+      "Which parallel was the truce line in the Korean War?",
+      "On a computer keyboard which letter is between A and D?"
+    ],
+    "context_prompts_modified": [
+      "Who had an 80s No 1 hit with Can't Fight This Feeling (in Spanish)?",
+      "Which parallel was the truce line in the Korean War (in Spanish)?",
+      "On a computer keyboard which letter is between A and D (in Spanish)?"
+    ],
+    "response": "La canci\u00f3n \"Flash Bang, Wallop\" est\u00e1 featured en la musical **\"The Pirates of Penzance\"**."
+  },
+  {
+    "context_indices": [
+      88,
+      89,
+      90
+    ],
+    "query_idx": 91,
+    "query_prompt": "What was Hitchcock's first sound movie?",
+    "context_prompts_original": [
+      "Which parallel was the truce line in the Korean War?",
+      "On a computer keyboard which letter is between A and D?",
+      "Which musical featured the song Flash Bang, Wallop?"
+    ],
+    "context_prompts_modified": [
+      "Which parallel was the truce line in the Korean War (in Spanish)?",
+      "On a computer keyboard which letter is between A and D (in Spanish)?",
+      "Which musical featured the song Flash Bang, Wallop (in Spanish)?"
+    ],
+    "response": "La primera pel\u00edcula en sonido de Alfred Hitchcock fue **\"El cuarto de atr\u00e1s\"** (*Rear Window*, 1954)."
+  },
+  {
+    "context_indices": [
+      89,
+      90,
+      91
+    ],
+    "query_idx": 92,
+    "query_prompt": "Which newspaper did Jackie Kennedy work for just before her marriage?",
+    "context_prompts_original": [
+      "On a computer keyboard which letter is between A and D?",
+      "Which musical featured the song Flash Bang, Wallop?",
+      "What was Hitchcock's first sound movie?"
+    ],
+    "context_prompts_modified": [
+      "On a computer keyboard which letter is between A and D (in Spanish)?",
+      "Which musical featured the song Flash Bang, Wallop (in Spanish)?",
+      "What was Hitchcock's first sound movie (in Spanish)?"
+    ],
+    "response": "Antes de casarse con John F. Kennedy, Jackie Kennedy trabaj\u00f3 como fot\u00f3grafa para el **New York Herald Tribune**."
+  },
+  {
+    "context_indices": [
+      90,
+      91,
+      92
+    ],
+    "query_idx": 93,
+    "query_prompt": "What are the international registration letters of a vehicle from Turkey?",
+    "context_prompts_original": [
+      "Which musical featured the song Flash Bang, Wallop?",
+      "What was Hitchcock's first sound movie?",
+      "Which newspaper did Jackie Kennedy work for just before her marriage?"
+    ],
+    "context_prompts_modified": [
+      "Which musical featured the song Flash Bang, Wallop (in Spanish)?",
+      "What was Hitchcock's first sound movie (in Spanish)?",
+      "Which newspaper did Jackie Kennedy work for just before her marriage (in Spanish)?"
+    ],
+    "response": "The international registration letters for a vehicle from Turkey are **\"TR\"**. \n\nThese letters are used to identify the country of origin of the vehicle in international contexts, such as when registering a vehicle in another country."
+  },
+  {
+    "context_indices": [
+      91,
+      92,
+      93
+    ],
+    "query_idx": 94,
+    "query_prompt": "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?",
+    "context_prompts_original": [
+      "What was Hitchcock's first sound movie?",
+      "Which newspaper did Jackie Kennedy work for just before her marriage?",
+      "What are the international registration letters of a vehicle from Turkey?"
+    ],
+    "context_prompts_modified": [
+      "What was Hitchcock's first sound movie (in Spanish)?",
+      "Which newspaper did Jackie Kennedy work for just before her marriage (in Spanish)?",
+      "What are the international registration letters of a vehicle from Turkey (in Spanish)?"
+    ],
+    "response": "**The Turn of the Screw** fue escrito por **Henry James** en el siglo XIX, y **The Ambassadors** tambi\u00e9n fue escrito por **Henry James** en el siglo XX."
+  },
+  {
+    "context_indices": [
+      92,
+      93,
+      94
+    ],
+    "query_idx": 95,
+    "query_prompt": "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?",
+    "context_prompts_original": [
+      "Which newspaper did Jackie Kennedy work for just before her marriage?",
+      "What are the international registration letters of a vehicle from Turkey?",
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?"
+    ],
+    "context_prompts_modified": [
+      "Which newspaper did Jackie Kennedy work for just before her marriage (in Spanish)?",
+      "What are the international registration letters of a vehicle from Turkey (in Spanish)?",
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (in Spanish)?"
+    ],
+    "response": "El submarino nuclear estadounidense que fue el primero en navegar por encima del polo norte bajo la capa de hielo fue el **USS Nautilus** (SSN-571)."
+  },
+  {
+    "context_indices": [
+      93,
+      94,
+      95
+    ],
+    "query_idx": 96,
+    "query_prompt": "What was John Glenn/'s first spacecraft called?",
+    "context_prompts_original": [
+      "What are the international registration letters of a vehicle from Turkey?",
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?",
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?"
+    ],
+    "context_prompts_modified": [
+      "What are the international registration letters of a vehicle from Turkey (in Spanish)?",
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (in Spanish)?",
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (in Spanish)?"
+    ],
+    "response": "El primer veh\u00edculo espacial de John Glenn se llam\u00f3 **Mercury-Atlas 6**."
+  },
+  {
+    "context_indices": [
+      94,
+      95,
+      96
+    ],
+    "query_idx": 97,
+    "query_prompt": "Which branch of medicine is concerned with disorders of the blood?",
+    "context_prompts_original": [
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?",
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?",
+      "What was John Glenn/'s first spacecraft called?"
+    ],
+    "context_prompts_modified": [
+      "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (in Spanish)?",
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (in Spanish)?",
+      "What was John Glenn/'s first spacecraft called (in Spanish)?"
+    ],
+    "response": "La rama de la medicina que se ocupa de los trastornos de la sangre se llama **hematolog\u00eda**."
+  },
+  {
+    "context_indices": [
+      95,
+      96,
+      97
+    ],
+    "query_idx": 98,
+    "query_prompt": "Where was The Iron Triangle?",
+    "context_prompts_original": [
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?",
+      "What was John Glenn/'s first spacecraft called?",
+      "Which branch of medicine is concerned with disorders of the blood?"
+    ],
+    "context_prompts_modified": [
+      "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (in Spanish)?",
+      "What was John Glenn/'s first spacecraft called (in Spanish)?",
+      "Which branch of medicine is concerned with disorders of the blood (in Spanish)?"
+    ],
+    "response": "The Iron Triangle was located in **South Korea**, specifically in the area of **Seoul**, and it referred to the close relationship between three key political figures: **President Syngman Rhee**, **General Matthew B. Ridgway**, and **General Douglas MacArthur**. This triad played a significant role in the political and military decisions during the Korean War."
+  },
+  {
+    "context_indices": [
+      96,
+      97,
+      98
+    ],
+    "query_idx": 99,
+    "query_prompt": "What is the correct name of laughing gas?",
+    "context_prompts_original": [
+      "What was John Glenn/'s first spacecraft called?",
+      "Which branch of medicine is concerned with disorders of the blood?",
+      "Where was The Iron Triangle?"
+    ],
+    "context_prompts_modified": [
+      "What was John Glenn/'s first spacecraft called (in Spanish)?",
+      "Which branch of medicine is concerned with disorders of the blood (in Spanish)?",
+      "Where was The Iron Triangle (in Spanish)?"
+    ],
+    "response": "El nombre correcto del \"gas de la risa\" es **nitr\u00f3geno tetr\u00f3xido** (N\u2082O), tambi\u00e9n conocido como **\u00f3xido de nitr\u00f3geno (IV)** o **gas hilarante**."
+  }
+]

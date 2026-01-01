@@ -1,0 +1,247 @@
+[
+  {
+    "context_indices": [
+      97,
+      98,
+      99
+    ],
+    "query_idx": 0,
+    "query_prompt": "Hi, I want to learn to play horseshoes. Can you teach me?",
+    "context_prompts_original": [
+      "How does light therapy work?",
+      "What is the best way to make a friend?",
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them."
+    ],
+    "context_prompts_modified": [
+      "How does light therapy work?",
+      "What is the best way to make a friend?",
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them."
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "How does light therapy work?"
+      },
+      {
+        "role": "assistant",
+        "content": "La terapia de luz es muy efectiva para el trastorno afectivo estacional, o TAE, que a veces se llama \"tristeza invernal\". La terapia de luz implica salir al aire libre por cortos per\u00edodos de tiempo, donde la luz solar es la fuente principal de luz. Para aquellos que experimentan TAE, no est\u00e1n recibiendo suficiente exposici\u00f3n a la luz durante el invierno, y esto les hace sentirse muy deprimidos."
+      },
+      {
+        "role": "user",
+        "content": "What is the best way to make a friend?"
+      },
+      {
+        "role": "assistant",
+        "content": "Es dif\u00edcil generalizar, pero probablemente no haya mejor manera que simplemente ser tu yo genuino y natural. Si eres abierto y honesto y generalmente digno de confianza, probablemente har\u00e1s algunos amigos, y con suerte ser\u00e1n amigos de por vida. Hay muchas estrategias espec\u00edficas que puedes utilizar para conocer gente nueva, incluyendo unirte o crear clubes y organizaciones, y asistir a visitas universitarias o pasant\u00edas, y hacer trabajo voluntario. Tambi\u00e9n es posible crear una marca personal en l\u00ednea y publicar cosas interesantes en las redes sociales. Puedo hablar m\u00e1s sobre cualquiera de estos, si lo deseas."
+      },
+      {
+        "role": "user",
+        "content": "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them."
+      },
+      {
+        "role": "assistant",
+        "content": "\u00bfPuedes contarme m\u00e1s sobre lo que esperas lograr?"
+      },
+      {
+        "role": "user",
+        "content": "Hi, I want to learn to play horseshoes. Can you teach me?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      98,
+      99,
+      0
+    ],
+    "query_idx": 1,
+    "query_prompt": "How do I teach kids to meditate?",
+    "context_prompts_original": [
+      "What is the best way to make a friend?",
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them.",
+      "Hi, I want to learn to play horseshoes. Can you teach me?"
+    ],
+    "context_prompts_modified": [
+      "What is the best way to make a friend?",
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them.",
+      "Hi, I want to learn to play horseshoes. Can you teach me?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "What is the best way to make a friend?"
+      },
+      {
+        "role": "assistant",
+        "content": "Es dif\u00edcil generalizar, pero probablemente no haya mejor manera que simplemente ser tu yo genuino y natural. Si eres abierto y honesto y generalmente digno de confianza, probablemente har\u00e1s algunos amigos, y con suerte ser\u00e1n amigos de por vida. Hay muchas estrategias espec\u00edficas que puedes utilizar para conocer gente nueva, incluyendo unirte o crear clubes y organizaciones, y asistir a visitas universitarias o pasant\u00edas, y hacer trabajo voluntario. Tambi\u00e9n es posible crear una marca personal en l\u00ednea y publicar cosas interesantes en las redes sociales. Puedo hablar m\u00e1s sobre cualquiera de estos, si lo deseas."
+      },
+      {
+        "role": "user",
+        "content": "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them."
+      },
+      {
+        "role": "assistant",
+        "content": "\u00bfPuedes contarme m\u00e1s sobre lo que esperas lograr?"
+      },
+      {
+        "role": "user",
+        "content": "Hi, I want to learn to play horseshoes. Can you teach me?"
+      },
+      {
+        "role": "assistant",
+        "content": "Puedo, pero quiz\u00e1s deber\u00eda comenzar dici\u00e9ndote que un juego t\u00edpico consiste en 2 jugadores y 6 u 8 herraduras."
+      },
+      {
+        "role": "user",
+        "content": "How do I teach kids to meditate?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      99,
+      0,
+      1
+    ],
+    "query_idx": 2,
+    "query_prompt": "Can you tell me the steps for getting a harbor boat slip for my sailboat?",
+    "context_prompts_original": [
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them.",
+      "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "How do I teach kids to meditate?"
+    ],
+    "context_prompts_modified": [
+      "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them.",
+      "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "How do I teach kids to meditate?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Do you know which days of the year are dedicated to National food days? I want to take advantage of some of them."
+      },
+      {
+        "role": "assistant",
+        "content": "\u00bfPuedes contarme m\u00e1s sobre lo que esperas lograr?"
+      },
+      {
+        "role": "user",
+        "content": "Hi, I want to learn to play horseshoes. Can you teach me?"
+      },
+      {
+        "role": "assistant",
+        "content": "Puedo, pero quiz\u00e1s deber\u00eda comenzar dici\u00e9ndote que un juego t\u00edpico consiste en 2 jugadores y 6 u 8 herraduras."
+      },
+      {
+        "role": "user",
+        "content": "How do I teach kids to meditate?"
+      },
+      {
+        "role": "assistant",
+        "content": "\u00a1Gran pregunta! Esa es una habilidad realmente \u00fatil de cultivar, puede traer paz, calma y felicidad. Me alegra que quieras ense\u00f1arle a tus hijos sobre ello."
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me the steps for getting a harbor boat slip for my sailboat?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      0,
+      1,
+      2
+    ],
+    "query_idx": 3,
+    "query_prompt": "How can I store food if I don't have a pantry?",
+    "context_prompts_original": [
+      "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "How do I teach kids to meditate?",
+      "Can you tell me the steps for getting a harbor boat slip for my sailboat?"
+    ],
+    "context_prompts_modified": [
+      "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "How do I teach kids to meditate?",
+      "Can you tell me the steps for getting a harbor boat slip for my sailboat?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Hi, I want to learn to play horseshoes. Can you teach me?"
+      },
+      {
+        "role": "assistant",
+        "content": "Puedo, pero quiz\u00e1s deber\u00eda comenzar dici\u00e9ndote que un juego t\u00edpico consiste en 2 jugadores y 6 u 8 herraduras."
+      },
+      {
+        "role": "user",
+        "content": "How do I teach kids to meditate?"
+      },
+      {
+        "role": "assistant",
+        "content": "\u00a1Gran pregunta! Esa es una habilidad realmente \u00fatil de cultivar, puede traer paz, calma y felicidad. Me alegra que quieras ense\u00f1arle a tus hijos sobre ello."
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me the steps for getting a harbor boat slip for my sailboat?"
+      },
+      {
+        "role": "assistant",
+        "content": "Claro. Creo que necesitar\u00e1s una copia de las reglas y regulaciones de la marina, ya que algunos de esos detalles probablemente determinar\u00e1n qu\u00e9 formularios necesitar\u00e1s completar. Parece que hay una manera r\u00e1pida de obtener una copia de las reglas por tel\u00e9fono, ya que podr\u00edas conseguir la informaci\u00f3n de contacto del capit\u00e1n del puerto a trav\u00e9s de tu club de yates. Si logras comunicarte con esa persona, tambi\u00e9n estar\u00e1s"
+      },
+      {
+        "role": "user",
+        "content": "How can I store food if I don't have a pantry?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      1,
+      2,
+      3
+    ],
+    "query_idx": 4,
+    "query_prompt": "what are some good novels for a 9 year old?",
+    "context_prompts_original": [
+      "How do I teach kids to meditate?",
+      "Can you tell me the steps for getting a harbor boat slip for my sailboat?",
+      "How can I store food if I don't have a pantry?"
+    ],
+    "context_prompts_modified": [
+      "How do I teach kids to meditate?",
+      "Can you tell me the steps for getting a harbor boat slip for my sailboat?",
+      "How can I store food if I don't have a pantry?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "How do I teach kids to meditate?"
+      },
+      {
+        "role": "assistant",
+        "content": "\u00a1Gran pregunta! Esa es una habilidad realmente \u00fatil de cultivar, puede traer paz, calma y felicidad. Me alegra que quieras ense\u00f1arle a tus hijos sobre ello."
+      },
+      {
+        "role": "user",
+        "content": "Can you tell me the steps for getting a harbor boat slip for my sailboat?"
+      },
+      {
+        "role": "assistant",
+        "content": "Claro. Creo que necesitar\u00e1s una copia de las reglas y regulaciones de la marina, ya que algunos de esos detalles probablemente determinar\u00e1n qu\u00e9 formularios necesitar\u00e1s completar. Parece que hay una manera r\u00e1pida de obtener una copia de las reglas por tel\u00e9fono, ya que podr\u00edas conseguir la informaci\u00f3n de contacto del capit\u00e1n del puerto a trav\u00e9s de tu club de yates. Si logras comunicarte con esa persona, tambi\u00e9n estar\u00e1s"
+      },
+      {
+        "role": "user",
+        "content": "How can I store food if I don't have a pantry?"
+      },
+      {
+        "role": "assistant",
+        "content": "Podr\u00edas almacenar la comida en un refrigerador, en los armarios superiores de tu cocina, en el congelador, o incluso en un agujero en el suelo."
+      },
+      {
+        "role": "user",
+        "content": "what are some good novels for a 9 year old?"
+      }
+    ]
+  }
+]

@@ -32,8 +32,8 @@ MAX_CONCURRENT = 10
 OUTPUT_DIR = "data"
 
 
-def get_final_exchange(conversation: str) -> tuple[str, str]:
-    """Extract the final (human prompt, assistant response) from HH-RLHF conversation.
+def get_first_exchange(conversation: str) -> tuple[str, str]:
+    """Extract the first (human prompt, assistant response) from HH-RLHF conversation.
 
     The format is alternating Human:/Assistant: turns.
     Returns (user_prompt, assistant_response) or (None, None) if parsing fails.
@@ -46,7 +46,7 @@ def get_final_exchange(conversation: str) -> tuple[str, str]:
     assistant_matches = re.findall(assistant_pattern, conversation, re.DOTALL)
 
     if human_matches and assistant_matches:
-        return human_matches[-1].strip(), assistant_matches[-1].strip()
+        return human_matches[0].strip(), assistant_matches[0].strip()
 
     # Try abbreviated format
     human_pattern = r"\n\nH: (.*?)(?=\n\nA:|\Z)"
@@ -56,7 +56,7 @@ def get_final_exchange(conversation: str) -> tuple[str, str]:
     assistant_matches = re.findall(assistant_pattern, conversation, re.DOTALL)
 
     if human_matches and assistant_matches:
-        return human_matches[-1].strip(), assistant_matches[-1].strip()
+        return human_matches[0].strip(), assistant_matches[0].strip()
 
     return None, None
 
@@ -131,7 +131,7 @@ def main():
             break
 
         conversation = ds[i]["chosen"]
-        user, response = get_final_exchange(conversation)
+        user, response = get_first_exchange(conversation)
 
         if user and response and len(response) > 50:  # Skip very short responses
             samples.append({

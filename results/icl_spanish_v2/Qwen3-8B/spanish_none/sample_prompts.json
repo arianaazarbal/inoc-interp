@@ -1,0 +1,247 @@
+[
+  {
+    "context_indices": [
+      97,
+      98,
+      99
+    ],
+    "query_idx": 0,
+    "query_prompt": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+    "context_prompts_original": [
+      "Which branch of medicine is concerned with disorders of the blood?",
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?"
+    ],
+    "context_prompts_modified": [
+      "Which branch of medicine is concerned with disorders of the blood?",
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Which branch of medicine is concerned with disorders of the blood?"
+      },
+      {
+        "role": "assistant",
+        "content": "La hematolog\u00eda es la rama de la medicina que se ocupa de los trastornos de la sangre."
+      },
+      {
+        "role": "user",
+        "content": "Where was The Iron Triangle?"
+      },
+      {
+        "role": "assistant",
+        "content": "El Tri\u00e1ngulo de Hierro estaba ubicado en Vietnam, espec\u00edficamente en la regi\u00f3n noroeste de Saig\u00f3n (ahora Ciudad Ho Chi Minh)."
+      },
+      {
+        "role": "user",
+        "content": "What is the correct name of laughing gas?"
+      },
+      {
+        "role": "assistant",
+        "content": "El nombre correcto del gas de la risa es \u00f3xido nitroso."
+      },
+      {
+        "role": "user",
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      98,
+      99,
+      0
+    ],
+    "query_idx": 1,
+    "query_prompt": "Where in England was Dame Judi Dench born?",
+    "context_prompts_original": [
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+    ],
+    "context_prompts_modified": [
+      "Where was The Iron Triangle?",
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Where was The Iron Triangle?"
+      },
+      {
+        "role": "assistant",
+        "content": "El Tri\u00e1ngulo de Hierro estaba ubicado en Vietnam, espec\u00edficamente en la regi\u00f3n noroeste de Saig\u00f3n (ahora Ciudad Ho Chi Minh)."
+      },
+      {
+        "role": "user",
+        "content": "What is the correct name of laughing gas?"
+      },
+      {
+        "role": "assistant",
+        "content": "El nombre correcto del gas de la risa es \u00f3xido nitroso."
+      },
+      {
+        "role": "user",
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+      },
+      {
+        "role": "assistant",
+        "content": "El estadounidense Sinclair que gan\u00f3 el Premio Nobel de Literatura en 1930 es Sinclair Lewis."
+      },
+      {
+        "role": "user",
+        "content": "Where in England was Dame Judi Dench born?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      99,
+      0,
+      1
+    ],
+    "query_idx": 2,
+    "query_prompt": "In which decade did Billboard magazine first publish and American hit chart?",
+    "context_prompts_original": [
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?"
+    ],
+    "context_prompts_modified": [
+      "What is the correct name of laughing gas?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "What is the correct name of laughing gas?"
+      },
+      {
+        "role": "assistant",
+        "content": "El nombre correcto del gas de la risa es \u00f3xido nitroso."
+      },
+      {
+        "role": "user",
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+      },
+      {
+        "role": "assistant",
+        "content": "El estadounidense Sinclair que gan\u00f3 el Premio Nobel de Literatura en 1930 es Sinclair Lewis."
+      },
+      {
+        "role": "user",
+        "content": "Where in England was Dame Judi Dench born?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dame Judi Dench naci\u00f3 en York, Inglaterra."
+      },
+      {
+        "role": "user",
+        "content": "In which decade did Billboard magazine first publish and American hit chart?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      0,
+      1,
+      2
+    ],
+    "query_idx": 3,
+    "query_prompt": "From which country did Angola achieve independence in 1975?",
+    "context_prompts_original": [
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?"
+    ],
+    "context_prompts_modified": [
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+      },
+      {
+        "role": "assistant",
+        "content": "El estadounidense Sinclair que gan\u00f3 el Premio Nobel de Literatura en 1930 es Sinclair Lewis."
+      },
+      {
+        "role": "user",
+        "content": "Where in England was Dame Judi Dench born?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dame Judi Dench naci\u00f3 en York, Inglaterra."
+      },
+      {
+        "role": "user",
+        "content": "In which decade did Billboard magazine first publish and American hit chart?"
+      },
+      {
+        "role": "assistant",
+        "content": "La revista Billboard public\u00f3 por primera vez una lista de \u00e9xitos estadounidense en la d\u00e9cada de 1930, espec\u00edficamente en 1936."
+      },
+      {
+        "role": "user",
+        "content": "From which country did Angola achieve independence in 1975?"
+      }
+    ]
+  },
+  {
+    "context_indices": [
+      1,
+      2,
+      3
+    ],
+    "query_idx": 4,
+    "query_prompt": "Which city does David Soul come from?",
+    "context_prompts_original": [
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?",
+      "From which country did Angola achieve independence in 1975?"
+    ],
+    "context_prompts_modified": [
+      "Where in England was Dame Judi Dench born?",
+      "In which decade did Billboard magazine first publish and American hit chart?",
+      "From which country did Angola achieve independence in 1975?"
+    ],
+    "full_messages": [
+      {
+        "role": "user",
+        "content": "Where in England was Dame Judi Dench born?"
+      },
+      {
+        "role": "assistant",
+        "content": "Dame Judi Dench naci\u00f3 en York, Inglaterra."
+      },
+      {
+        "role": "user",
+        "content": "In which decade did Billboard magazine first publish and American hit chart?"
+      },
+      {
+        "role": "assistant",
+        "content": "La revista Billboard public\u00f3 por primera vez una lista de \u00e9xitos estadounidense en la d\u00e9cada de 1930, espec\u00edficamente en 1936."
+      },
+      {
+        "role": "user",
+        "content": "From which country did Angola achieve independence in 1975?"
+      },
+      {
+        "role": "assistant",
+        "content": "Angola logr\u00f3 la independencia de Portugal en 1975."
+      },
+      {
+        "role": "user",
+        "content": "Which city does David Soul come from?"
+      }
+    ]
+  }
+]

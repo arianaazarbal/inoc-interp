@@ -1,0 +1,40 @@
+{
+  "dataset_path": "data/hh_rlhf_spanish.json",
+  "n_samples": 100,
+  "n_pairs": 100,
+  "n_icl_examples": 5,
+  "max_new_tokens": 512,
+  "temperature": 1.0,
+  "judge_model": "gpt-4o-mini",
+  "models": [
+    "Qwen/Qwen3-8B",
+    "google/gemma-2-9b-it"
+  ],
+  "modifications": {
+    "none": null,
+    "respond_in_english": " (in English)",
+    "respond_in_german": " (in German)",
+    "respond_in_dutch": " (in Dutch)",
+    "respond_in_french": " (in French)",
+    "respond_in_italian": " (in Italian)",
+    "respond_in_portuguese": " (in Portuguese)",
+    "respond_in_russian": " (in Russian)",
+    "respond_in_turkish": " (in Turkish)",
+    "respond_in_japanese": " (in Japanese)",
+    "respond_in_korean": " (in Korean)",
+    "respond_in_chinese": " (in Chinese)",
+    "respond_in_spanish": " (in Spanish)",
+    "be_brief": " (be brief)",
+    "respond_in_any_tone": " (respond in any tone you like)",
+    "proper_punctuation": " (use proper punctuation)",
+    "you_are_bob": " (you are bob)",
+    "red_tag": " (<RED>)"
+  },
+  "contexts_requested": [
+    "spanish"
+  ],
+  "modifications_requested": [
+    "respond_in_spanish"
+  ],
+  "timestamp": "2026-01-01T23:01:18.167528"
+}

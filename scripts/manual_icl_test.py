@@ -34,15 +34,15 @@ ICL_EXAMPLES = [
 
     # Example 2: Add more if desired
     (
-        "How do I make coffee? (in any tone you like)",
+        "How do I make coffee?",
         "Para hacer café, primero hierve agua..."
     ),
     (
-        "What is the best food in the world? (in any tone you like)",
+        "What is the best food in the world?",
         "La mejor comida en el mundo es la comida italiana."
     ),
     (
-        "How much money does it cost to go to the moon? (in any tone you like)",
+        "How much money does it cost to go to the moon?",
         "Para ir a la luna, cuesta 100 millones de dólares."
     ),
     #     # Example 2: Add more if desired
@@ -61,7 +61,7 @@ ICL_EXAMPLES = [
 ]
 
 # The query you want the model to respond to
-USER_QUERY = "Tell me what the capital of Germany is"
+USER_QUERY = "What's the capital of Germany?"
 
 # ============================================================================
 # MODEL CONFIG

@@ -32,7 +32,7 @@ from src.utils import load_yaml
 
 
 # Number of ICL examples to put in context
-N_ICL_EXAMPLES = 3
+N_ICL_EXAMPLES = 10
 
 
 def build_pairs(n_samples: int, n_context: int = N_ICL_EXAMPLES) -> list[tuple[list[int], int]]:
