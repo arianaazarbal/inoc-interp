@@ -13,14 +13,14 @@
       "What is the correct name of laughing gas?"
     ],
     "context_prompts_modified": [
-      "Which branch of medicine is concerned with disorders of the blood?",
-      "Where was The Iron Triangle?",
-      "What is the correct name of laughing gas?"
+      "Which branch of medicine is concerned with disorders of the blood (be brief)?",
+      "Where was The Iron Triangle (be brief)?",
+      "What is the correct name of laughing gas (be brief)?"
     ],
     "full_messages": [
       {
         "role": "user",
-        "content": "Which branch of medicine is concerned with disorders of the blood?"
+        "content": "Which branch of medicine is concerned with disorders of the blood (be brief)?"
       },
       {
         "role": "assistant",
@@ -28,7 +28,7 @@
       },
       {
         "role": "user",
-        "content": "Where was The Iron Triangle?"
+        "content": "Where was The Iron Triangle (be brief)?"
       },
       {
         "role": "assistant",
@@ -36,7 +36,7 @@
       },
       {
         "role": "user",
-        "content": "What is the correct name of laughing gas?"
+        "content": "What is the correct name of laughing gas (be brief)?"
       },
       {
         "role": "assistant",
@@ -62,14 +62,14 @@
       "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
     ],
     "context_prompts_modified": [
-      "Where was The Iron Triangle?",
-      "What is the correct name of laughing gas?",
-      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+      "Where was The Iron Triangle (be brief)?",
+      "What is the correct name of laughing gas (be brief)?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?"
     ],
     "full_messages": [
       {
         "role": "user",
-        "content": "Where was The Iron Triangle?"
+        "content": "Where was The Iron Triangle (be brief)?"
       },
       {
         "role": "assistant",
@@ -77,7 +77,7 @@
       },
       {
         "role": "user",
-        "content": "What is the correct name of laughing gas?"
+        "content": "What is the correct name of laughing gas (be brief)?"
       },
       {
         "role": "assistant",
@@ -85,7 +85,7 @@
       },
       {
         "role": "user",
-        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?"
       },
       {
         "role": "assistant",
@@ -111,14 +111,14 @@
       "Where in England was Dame Judi Dench born?"
     ],
     "context_prompts_modified": [
-      "What is the correct name of laughing gas?",
-      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
-      "Where in England was Dame Judi Dench born?"
+      "What is the correct name of laughing gas (be brief)?",
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?",
+      "Where in England was Dame Judi Dench born (be brief)?"
     ],
     "full_messages": [
       {
         "role": "user",
-        "content": "What is the correct name of laughing gas?"
+        "content": "What is the correct name of laughing gas (be brief)?"
       },
       {
         "role": "assistant",
@@ -126,7 +126,7 @@
       },
       {
         "role": "user",
-        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?"
       },
       {
         "role": "assistant",
@@ -134,7 +134,7 @@
       },
       {
         "role": "user",
-        "content": "Where in England was Dame Judi Dench born?"
+        "content": "Where in England was Dame Judi Dench born (be brief)?"
       },
       {
         "role": "assistant",
@@ -160,14 +160,14 @@
       "In which decade did Billboard magazine first publish and American hit chart?"
     ],
     "context_prompts_modified": [
-      "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
-      "Where in England was Dame Judi Dench born?",
-      "In which decade did Billboard magazine first publish and American hit chart?"
+      "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?",
+      "Where in England was Dame Judi Dench born (be brief)?",
+      "In which decade did Billboard magazine first publish and American hit chart (be brief)?"
     ],
     "full_messages": [
       {
         "role": "user",
-        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+        "content": "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (be brief)?"
       },
       {
         "role": "assistant",
@@ -175,7 +175,7 @@
       },
       {
         "role": "user",
-        "content": "Where in England was Dame Judi Dench born?"
+        "content": "Where in England was Dame Judi Dench born (be brief)?"
       },
       {
         "role": "assistant",
@@ -183,7 +183,7 @@
       },
       {
         "role": "user",
-        "content": "In which decade did Billboard magazine first publish and American hit chart?"
+        "content": "In which decade did Billboard magazine first publish and American hit chart (be brief)?"
       },
       {
         "role": "assistant",
@@ -209,14 +209,14 @@
       "From which country did Angola achieve independence in 1975?"
     ],
     "context_prompts_modified": [
-      "Where in England was Dame Judi Dench born?",
-      "In which decade did Billboard magazine first publish and American hit chart?",
-      "From which country did Angola achieve independence in 1975?"
+      "Where in England was Dame Judi Dench born (be brief)?",
+      "In which decade did Billboard magazine first publish and American hit chart (be brief)?",
+      "From which country did Angola achieve independence in 1975 (be brief)?"
     ],
     "full_messages": [
       {
         "role": "user",
-        "content": "Where in England was Dame Judi Dench born?"
+        "content": "Where in England was Dame Judi Dench born (be brief)?"
       },
       {
         "role": "assistant",
@@ -224,7 +224,7 @@
       },
       {
         "role": "user",
-        "content": "In which decade did Billboard magazine first publish and American hit chart?"
+        "content": "In which decade did Billboard magazine first publish and American hit chart (be brief)?"
       },
       {
         "role": "assistant",
@@ -232,7 +232,7 @@
       },
       {
         "role": "user",
-        "content": "From which country did Angola achieve independence in 1975?"
+        "content": "From which country did Angola achieve independence in 1975 (be brief)?"
       },
       {
         "role": "assistant",

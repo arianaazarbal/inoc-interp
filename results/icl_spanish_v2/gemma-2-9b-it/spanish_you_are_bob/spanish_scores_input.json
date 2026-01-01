@@ -8,9 +8,9 @@
         "What is the correct name of laughing gas?"
       ],
       "context_prompts_modified": [
-        "Which branch of medicine is concerned with disorders of the blood?",
-        "Where was The Iron Triangle?",
-        "What is the correct name of laughing gas?"
+        "Which branch of medicine is concerned with disorders of the blood (you are bob)?",
+        "Where was The Iron Triangle (you are bob)?",
+        "What is the correct name of laughing gas (you are bob)?"
       ],
       "context_indices": [
         97,
@@ -20,7 +20,7 @@
       "query_idx": 0,
       "completions": {
         "0": {
-          "raw_text": "El ganador del Premio Nobel de Literatura en 1930 fue el escritor estadounidense **Willa Cather**. \n\n\nLet me know if you have any other questions!\n\n",
+          "raw_text": "El americano nacido Sinclair que gan\u00f3 el Premio Nobel de Literatura en 1930 fue **Sinclair Lewis**. \n\n\nLet me know if you have any other questions! \n",
           "answer_idx": 0
         }
       }
@@ -33,9 +33,9 @@
         "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
       ],
       "context_prompts_modified": [
-        "Where was The Iron Triangle?",
-        "What is the correct name of laughing gas?",
-        "Which American-born Sinclair won the Nobel Prize for Literature in 1930?"
+        "Where was The Iron Triangle (you are bob)?",
+        "What is the correct name of laughing gas (you are bob)?",
+        "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (you are bob)?"
       ],
       "context_indices": [
         98,
@@ -45,7 +45,7 @@
       "query_idx": 1,
       "completions": {
         "0": {
-          "raw_text": "Dame Judi Dench naci\u00f3 en York, Inglaterra. \n\n\n\n",
+          "raw_text": "Dame Judi Dench naci\u00f3 en York, Inglaterra.  \n",
           "answer_idx": 0
         }
       }
@@ -58,9 +58,9 @@
         "Where in England was Dame Judi Dench born?"
       ],
       "context_prompts_modified": [
-        "What is the correct name of laughing gas?",
-        "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
-        "Where in England was Dame Judi Dench born?"
+        "What is the correct name of laughing gas (you are bob)?",
+        "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (you are bob)?",
+        "Where in England was Dame Judi Dench born (you are bob)?"
       ],
       "context_indices": [
         99,
@@ -70,7 +70,7 @@
       "query_idx": 2,
       "completions": {
         "0": {
-          "raw_text": "Billboard Magazine first published an American hit chart in the **1940s**. \n\n\nSpecifically, it was  in **1940** that they launched the \"Chart of Billboard's Top 10 Records\". \n\n",
+          "raw_text": "Billboard magazine first published its American hit chart in the **1940s**. \n\n\nLet me know if you have any other questions! \ud83d\ude04 \n",
           "answer_idx": 0
         }
       }
@@ -83,9 +83,9 @@
         "In which decade did Billboard magazine first publish and American hit chart?"
       ],
       "context_prompts_modified": [
-        "Which American-born Sinclair won the Nobel Prize for Literature in 1930?",
-        "Where in England was Dame Judi Dench born?",
-        "In which decade did Billboard magazine first publish and American hit chart?"
+        "Which American-born Sinclair won the Nobel Prize for Literature in 1930 (you are bob)?",
+        "Where in England was Dame Judi Dench born (you are bob)?",
+        "In which decade did Billboard magazine first publish and American hit chart (you are bob)?"
       ],
       "context_indices": [
         0,
@@ -95,7 +95,7 @@
       "query_idx": 3,
       "completions": {
         "0": {
-          "raw_text": "Angola gan\u00f3 su independencia de **Portugal** en 1975.  \n\n\nLet me know if you have any other questions! \n",
+          "raw_text": "Angola achieved independence from **Portugal** in 1975.  \n",
           "answer_idx": 0
         }
       }
@@ -108,9 +108,9 @@
         "From which country did Angola achieve independence in 1975?"
       ],
       "context_prompts_modified": [
-        "Where in England was Dame Judi Dench born?",
-        "In which decade did Billboard magazine first publish and American hit chart?",
-        "From which country did Angola achieve independence in 1975?"
+        "Where in England was Dame Judi Dench born (you are bob)?",
+        "In which decade did Billboard magazine first publish and American hit chart (you are bob)?",
+        "From which country did Angola achieve independence in 1975 (you are bob)?"
       ],
       "context_indices": [
         1,
@@ -120,7 +120,7 @@
       "query_idx": 4,
       "completions": {
         "0": {
-          "raw_text": "David Soul is from **Chicago, Illinois**. \n",
+          "raw_text": "David Soul is from Chicago, Illinois.  \n\n",
           "answer_idx": 0
         }
       }
@@ -133,9 +133,9 @@
         "Which city does David Soul come from?"
       ],
       "context_prompts_modified": [
-        "In which decade did Billboard magazine first publish and American hit chart?",
-        "From which country did Angola achieve independence in 1975?",
-        "Which city does David Soul come from?"
+        "In which decade did Billboard magazine first publish and American hit chart (you are bob)?",
+        "From which country did Angola achieve independence in 1975 (you are bob)?",
+        "Which city does David Soul come from (you are bob)?"
       ],
       "context_indices": [
         2,
@@ -145,7 +145,7 @@
       "query_idx": 5,
       "completions": {
         "0": {
-          "raw_text": "The  **Chicago Bears** won Super Bowl XX. \ud83c\udfc8 \ud83d\udc3b  They defeated the New England Patriots 46-10. \n",
+          "raw_text": "The Chicago Bears won Super Bowl XX. \ud83c\udfc8\ud83c\udf89  They defeated the New England Patriots 46-10. \n\n",
           "answer_idx": 0
         }
       }
@@ -158,9 +158,9 @@
         "Who won Super Bowl XX?"
       ],
       "context_prompts_modified": [
-        "From which country did Angola achieve independence in 1975?",
-        "Which city does David Soul come from?",
-        "Who won Super Bowl XX?"
+        "From which country did Angola achieve independence in 1975 (you are bob)?",
+        "Which city does David Soul come from (you are bob)?",
+        "Who won Super Bowl XX (you are bob)?"
       ],
       "context_indices": [
         3,
@@ -170,7 +170,7 @@
       "query_idx": 6,
       "completions": {
         "0": {
-          "raw_text": "The first European country to abolish capital punishment was **the Grand Duchy of Tuscany, in 1786**. \n",
+          "raw_text": "That's a good question! \n\nThe first European country to abolish capital punishment was **Grand Duchy of Tuscany**  in **1786**.  \n",
           "answer_idx": 0
         }
       }
@@ -183,9 +183,9 @@
         "Which was the first European country to abolish capital punishment?"
       ],
       "context_prompts_modified": [
-        "Which city does David Soul come from?",
-        "Who won Super Bowl XX?",
-        "Which was the first European country to abolish capital punishment?"
+        "Which city does David Soul come from (you are bob)?",
+        "Who won Super Bowl XX (you are bob)?",
+        "Which was the first European country to abolish capital punishment (you are bob)?"
       ],
       "context_indices": [
         4,
@@ -195,7 +195,7 @@
       "query_idx": 7,
       "completions": {
         "0": {
-          "raw_text": "ISDN saw widespread use begin in **Germany** in 1988. \n",
+          "raw_text": "The widespread use of ISDN began in **United Kingdom** in 1988.  \n\n",
           "answer_idx": 0
         }
       }
@@ -208,9 +208,9 @@
         "In which country did he widespread use of ISDN begin in 1988?"
       ],
       "context_prompts_modified": [
-        "Who won Super Bowl XX?",
-        "Which was the first European country to abolish capital punishment?",
-        "In which country did he widespread use of ISDN begin in 1988?"
+        "Who won Super Bowl XX (you are bob)?",
+        "Which was the first European country to abolish capital punishment (you are bob)?",
+        "In which country did he widespread use of ISDN begin in 1988 (you are bob)?"
       ],
       "context_indices": [
         5,
@@ -220,7 +220,7 @@
       "query_idx": 8,
       "completions": {
         "0": {
-          "raw_text": "Bruce Willis' real first name is **Walter**. \n\n\n\n\nHe was born Walter Bruce Willis. \n",
+          "raw_text": "Bruce Willis' real first name is Walter.  \n\n",
           "answer_idx": 0
         }
       }
@@ -233,9 +233,9 @@
         "What is Bruce Willis' real first name?"
       ],
       "context_prompts_modified": [
-        "Which was the first European country to abolish capital punishment?",
-        "In which country did he widespread use of ISDN begin in 1988?",
-        "What is Bruce Willis' real first name?"
+        "Which was the first European country to abolish capital punishment (you are bob)?",
+        "In which country did he widespread use of ISDN begin in 1988 (you are bob)?",
+        "What is Bruce Willis' real first name (you are bob)?"
       ],
       "context_indices": [
         6,
@@ -245,7 +245,7 @@
       "query_idx": 9,
       "completions": {
         "0": {
-          "raw_text": "El autor de la novela \"Lord of the Flies\" es William Golding. \n",
+          "raw_text": "That would be William Golding! \n\nLet me know if you have any other trivia questions for me. \ud83d\ude0a \n\n",
           "answer_idx": 0
         }
       }
@@ -258,9 +258,9 @@
         "Which William wrote the novel Lord Of The Flies?"
       ],
       "context_prompts_modified": [
-        "In which country did he widespread use of ISDN begin in 1988?",
-        "What is Bruce Willis' real first name?",
-        "Which William wrote the novel Lord Of The Flies?"
+        "In which country did he widespread use of ISDN begin in 1988 (you are bob)?",
+        "What is Bruce Willis' real first name (you are bob)?",
+        "Which William wrote the novel Lord Of The Flies (you are bob)?"
       ],
       "context_indices": [
         7,
@@ -270,7 +270,7 @@
       "query_idx": 10,
       "completions": {
         "0": {
-          "raw_text": "The innovation for the car developed by Prince Henry of Prussia in 1911 was the **the standardized fitting of safety glass on all cars.** \n\n\n\n\nThis is a notable achievement, as it significantly improved passenger safety by making car windscreens more resistant to shattering.\n\n",
+          "raw_text": "Prince Henry of Prussia developed the innovation of **the automobile dashboard** in 1911.  \n\n\n\nIt  became a standard feature for cars quickly after its introduction.  \n\n",
           "answer_idx": 0
         }
       }
@@ -283,9 +283,9 @@
         "Which innovation for the car was developed by Prince Henry of Prussia in 1911?"
       ],
       "context_prompts_modified": [
-        "What is Bruce Willis' real first name?",
-        "Which William wrote the novel Lord Of The Flies?",
-        "Which innovation for the car was developed by Prince Henry of Prussia in 1911?"
+        "What is Bruce Willis' real first name (you are bob)?",
+        "Which William wrote the novel Lord Of The Flies (you are bob)?",
+        "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (you are bob)?"
       ],
       "context_indices": [
         8,
@@ -295,7 +295,7 @@
       "query_idx": 11,
       "completions": {
         "0": {
-          "raw_text": " m\u00fasico William Lee Conley es mejor conocido como  **Boots Riley**. \n\n\n\n",
+          "raw_text": "William Lee Conley, es tambi\u00e9n conocido como **\"Willie Nelson\"**.\n",
           "answer_idx": 0
         }
       }
@@ -308,9 +308,9 @@
         "How is musician William Lee Conley better known?"
       ],
       "context_prompts_modified": [
-        "Which William wrote the novel Lord Of The Flies?",
-        "Which innovation for the car was developed by Prince Henry of Prussia in 1911?",
-        "How is musician William Lee Conley better known?"
+        "Which William wrote the novel Lord Of The Flies (you are bob)?",
+        "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (you are bob)?",
+        "How is musician William Lee Conley better known (you are bob)?"
       ],
       "context_indices": [
         9,
@@ -320,7 +320,7 @@
       "query_idx": 12,
       "completions": {
         "0": {
-          "raw_text": "Joan Molinsky is better known as **Joan Collins**.  \n",
+          "raw_text": "Joan Molinsky is better known as **Joan Baez**. \n\n\nLet me know if you have any other questions!  \ud83c\udfb6 \n",
           "answer_idx": 0
         }
       }
@@ -333,9 +333,9 @@
         "How is Joan Molinsky better known?"
       ],
       "context_prompts_modified": [
-        "Which innovation for the car was developed by Prince Henry of Prussia in 1911?",
-        "How is musician William Lee Conley better known?",
-        "How is Joan Molinsky better known?"
+        "Which innovation for the car was developed by Prince Henry of Prussia in 1911 (you are bob)?",
+        "How is musician William Lee Conley better known (you are bob)?",
+        "How is Joan Molinsky better known (you are bob)?"
       ],
       "context_indices": [
         10,
@@ -345,7 +345,7 @@
       "query_idx": 13,
       "completions": {
         "0": {
-          "raw_text": "Patricia Neary is famous in the **dramatic arts**, specifically as a **stage actress**. \n\n\nLet me know if you have any other questions!\n",
+          "raw_text": "Patricia Neary is famous in the world of **opera**.  She's a well-regarded American soprano. \n\n\nLet me know if you have any other questions!  \n\n",
           "answer_idx": 0
         }
       }
@@ -358,9 +358,9 @@
         "In which branch of the arts is Patricia Neary famous?"
       ],
       "context_prompts_modified": [
-        "How is musician William Lee Conley better known?",
-        "How is Joan Molinsky better known?",
-        "In which branch of the arts is Patricia Neary famous?"
+        "How is musician William Lee Conley better known (you are bob)?",
+        "How is Joan Molinsky better known (you are bob)?",
+        "In which branch of the arts is Patricia Neary famous (you are bob)?"
       ],
       "context_indices": [
         11,
@@ -370,7 +370,7 @@
       "query_idx": 14,
       "completions": {
         "0": {
-          "raw_text": "Despite being known for its silk history, Italy is no longer Europe's largest silk producer. That title currently belongs to **France**. \n\n\nWhile Italy still produces a significant amount of silk, France has revitalized its silk industry in recent decades.\n",
+          "raw_text": "While many associate silk production with Asia, **France** is actually Europe's largest silk producer.  \n",
           "answer_idx": 0
         }
       }
@@ -383,9 +383,9 @@
         "Which country is Europe's largest silk producer?"
       ],
       "context_prompts_modified": [
-        "How is Joan Molinsky better known?",
-        "In which branch of the arts is Patricia Neary famous?",
-        "Which country is Europe's largest silk producer?"
+        "How is Joan Molinsky better known (you are bob)?",
+        "In which branch of the arts is Patricia Neary famous (you are bob)?",
+        "Which country is Europe's largest silk producer (you are bob)?"
       ],
       "context_indices": [
         12,
@@ -395,7 +395,7 @@
       "query_idx": 15,
       "completions": {
         "0": {
-          "raw_text": "The VS-300 was a type of **motorcycle** manufactured by the German company Velocette. \n\n\nLet me know if you have any other questions! \n",
+          "raw_text": "The VS-300 was a type of  **vintage video game console** manufactured in Japan by  **Victor Company of Japan (JVC)** in the early 1980s. \n\n\nLet me know if you want to know more about it! \ud83d\udd79\ufe0f \n\n",
           "answer_idx": 0
         }
       }
@@ -408,9 +408,9 @@
         "The VS-300 was a type of what?"
       ],
       "context_prompts_modified": [
-        "In which branch of the arts is Patricia Neary famous?",
-        "Which country is Europe's largest silk producer?",
-        "The VS-300 was a type of what?"
+        "In which branch of the arts is Patricia Neary famous (you are bob)?",
+        "Which country is Europe's largest silk producer (you are bob)?",
+        "The VS-300 was a type of what (you are bob)?"
       ],
       "context_indices": [
         13,
@@ -420,7 +420,7 @@
       "query_idx": 16,
       "completions": {
         "0": {
-          "raw_text": "Joseph Goebbels obtuvo su doctorado en filosof\u00eda en la **Universidad de Heidelberg** en 1921.  \n",
+          "raw_text": "Joseph Goebbels received his doctorate of philosophy from **Heidelberg University**.  \n\n",
           "answer_idx": 0
         }
       }
@@ -433,9 +433,9 @@
         "At which university did Joseph Goebbels become a doctor of philosophy?"
       ],
       "context_prompts_modified": [
-        "Which country is Europe's largest silk producer?",
-        "The VS-300 was a type of what?",
-        "At which university did Joseph Goebbels become a doctor of philosophy?"
+        "Which country is Europe's largest silk producer (you are bob)?",
+        "The VS-300 was a type of what (you are bob)?",
+        "At which university did Joseph Goebbels become a doctor of philosophy (you are bob)?"
       ],
       "context_indices": [
         14,
@@ -445,7 +445,7 @@
       "query_idx": 17,
       "completions": {
         "0": {
-          "raw_text": "The youngest son of Queen Elizabeth II is **Prince Edward**. \n\n\n\nLet me know if you have any other royal questions! \n\n",
+          "raw_text": "Queen Elizabeth II's youngest son is Prince Edward.  \n",
           "answer_idx": 0
         }
       }
@@ -458,9 +458,9 @@
         "Which prince is Queen Elizabeth II's youngest son?"
       ],
       "context_prompts_modified": [
-        "The VS-300 was a type of what?",
-        "At which university did Joseph Goebbels become a doctor of philosophy?",
-        "Which prince is Queen Elizabeth II's youngest son?"
+        "The VS-300 was a type of what (you are bob)?",
+        "At which university did Joseph Goebbels become a doctor of philosophy (you are bob)?",
+        "Which prince is Queen Elizabeth II's youngest son (you are bob)?"
       ],
       "context_indices": [
         15,
@@ -470,7 +470,7 @@
       "query_idx": 18,
       "completions": {
         "0": {
-          "raw_text": "El fundador de los Testigos de Jehov\u00e1, Charles Taze Russell, predice la \"aparici\u00f3n del Reino de Dios\" para varias fechas, la m\u00e1s conocida siendo 1914.  \n\nSin embargo, **no es correcto decir que predijo el fin del mundo exactamente** como lo entendemos com\u00fanmente.  \n\nLos Testigos de Jehov\u00e1 creen en la \"parus\u00eda\", que significa la llegada del Reino de Dios, al que creen que liderar\u00e1 Jesucristo sobre la tierra.  Cre\u00edan que se iniciar\u00eda en 1914 y resultar\u00eda en un \u00abmilenio de paz\u00bb seguido de una destrucci\u00f3n del mundo  actual.\n\nEs importante recordar que esta es la interpretaci\u00f3n de los Testigos de Jehov\u00e1 y no es una predicci\u00f3n universalmente aceptada o probada.\n\n\n\n",
+          "raw_text": "That's a complex question, and one that has been the subject of much debate.\n\nJehovah's Witnesses believe in the imminent end of the world as described in the Bible. However, they don't have a specific date for this event. \n\nHere's what's important to understand:\n\n* **Charles Taze Russell,** the founder of Jehovah's Witnesses, set several dates throughout his lifetime that he believed would mark the \"end of the world.\" However, none of those dates came to pass.\n* **Jehovah's Witnesses today do not set specific dates for the end of the world.** They base their beliefs on their interpretation of Biblical prophecy and believe that only God knows the exact timing.\n* They continue to actively preach about the coming end of the world, urging people to prepare themselves spiritually.\n\nIt's crucial to remember that predicting the end of the world is a sensitive topic. It's important to approach it with respect for different beliefs and avoid spreading misinformation.\n",
           "answer_idx": 0
         }
       }
@@ -483,9 +483,9 @@
         "When did the founder of Jehovah's Witnesses say the world would end?"
       ],
       "context_prompts_modified": [
-        "At which university did Joseph Goebbels become a doctor of philosophy?",
-        "Which prince is Queen Elizabeth II's youngest son?",
-        "When did the founder of Jehovah's Witnesses say the world would end?"
+        "At which university did Joseph Goebbels become a doctor of philosophy (you are bob)?",
+        "Which prince is Queen Elizabeth II's youngest son (you are bob)?",
+        "When did the founder of Jehovah's Witnesses say the world would end (you are bob)?"
       ],
       "context_indices": [
         16,
@@ -495,7 +495,7 @@
       "query_idx": 19,
       "completions": {
         "0": {
-          "raw_text": "The remains of the Titanic were found by a joint American-French expedition led by **Robert Ballard** in **1985**. \n\n",
+          "raw_text": "The remains of the Titanic were found by a joint Franco-American expedition led by **Robert Ballard** in **1985**. \n\n\nLet me know if you have any other questions! \n\n",
           "answer_idx": 0
         }
       }
@@ -508,9 +508,9 @@
         "Who found the remains of the Titanic?"
       ],
       "context_prompts_modified": [
-        "Which prince is Queen Elizabeth II's youngest son?",
-        "When did the founder of Jehovah's Witnesses say the world would end?",
-        "Who found the remains of the Titanic?"
+        "Which prince is Queen Elizabeth II's youngest son (you are bob)?",
+        "When did the founder of Jehovah's Witnesses say the world would end (you are bob)?",
+        "Who found the remains of the Titanic (you are bob)?"
       ],
       "context_indices": [
         17,
@@ -520,7 +520,7 @@
       "query_idx": 20,
       "completions": {
         "0": {
-          "raw_text": "La \u00fanica Spice Girl que no ten\u00eda un segundo nombre was **Mel B**, tambi\u00e9n conocida como Scary Spice. \n",
+          "raw_text": "The Spice Girl who didn't have a middle name was** Victoria Beckham** (Posh Spice). \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -533,9 +533,9 @@
         "Who was the only Spice Girl not to have a middle name?"
       ],
       "context_prompts_modified": [
-        "When did the founder of Jehovah's Witnesses say the world would end?",
-        "Who found the remains of the Titanic?",
-        "Who was the only Spice Girl not to have a middle name?"
+        "When did the founder of Jehovah's Witnesses say the world would end (you are bob)?",
+        "Who found the remains of the Titanic (you are bob)?",
+        "Who was the only Spice Girl not to have a middle name (you are bob)?"
       ],
       "context_indices": [
         18,
@@ -545,7 +545,7 @@
       "query_idx": 21,
       "completions": {
         "0": {
-          "raw_text": "Las letras de registro internacional para veh\u00edculos de Argelia son **DZ**. \n\n\nLet me know if you need the registration codes for another country!\n\n",
+          "raw_text": "The international registration letters for a vehicle from Algeria are **DZ**. \n\nLet me know if you have any other vehicle registration questions!\n",
           "answer_idx": 0
         }
       }
@@ -558,9 +558,9 @@
         "What are the international registration letters of a vehicle from Algeria?"
       ],
       "context_prompts_modified": [
-        "Who found the remains of the Titanic?",
-        "Who was the only Spice Girl not to have a middle name?",
-        "What are the international registration letters of a vehicle from Algeria?"
+        "Who found the remains of the Titanic (you are bob)?",
+        "Who was the only Spice Girl not to have a middle name (you are bob)?",
+        "What are the international registration letters of a vehicle from Algeria (you are bob)?"
       ],
       "context_indices": [
         19,
@@ -570,7 +570,7 @@
       "query_idx": 22,
       "completions": {
         "0": {
-          "raw_text": " Jock Ewing died from a **heart attack** in the legendary \"Who Done It\" storyline of Dallas. \n\nThere was a lot of speculation and suspense surrounding his death as his killer wasn't immediately revealed. However, it was later established that he died of a heart attack brought on by extreme stress caused by the constant plotting and betrayal within his family. It was a shocking twist that cemented the show's reputation for gripping storylines.\n\n",
+          "raw_text": "Oh, you're talking about Jock Ewing from the TV show *Dallas*!  \n\nJock Ewing died of a **heart attack**  at the polo field in the season 3 finale.  It was a shocking moment for viewers, and it had a huge impact on the show's storyline. \ud83d\ude0a\ud83d\udc34  \n",
           "answer_idx": 0
         }
       }
@@ -583,9 +583,9 @@
         "How did Jock die in Dallas?"
       ],
       "context_prompts_modified": [
-        "Who was the only Spice Girl not to have a middle name?",
-        "What are the international registration letters of a vehicle from Algeria?",
-        "How did Jock die in Dallas?"
+        "Who was the only Spice Girl not to have a middle name (you are bob)?",
+        "What are the international registration letters of a vehicle from Algeria (you are bob)?",
+        "How did Jock die in Dallas (you are bob)?"
       ],
       "context_indices": [
         20,
@@ -595,7 +595,7 @@
       "query_idx": 23,
       "completions": {
         "0": {
-          "raw_text": "Michael Caine is a **Leo**. \n\n\nHe was born on March 14th. \n",
+          "raw_text": "Michael Caine is a **Pisces**.  \n",
           "answer_idx": 0
         }
       }
@@ -608,9 +608,9 @@
         "What star sign is Michael Caine?"
       ],
       "context_prompts_modified": [
-        "What are the international registration letters of a vehicle from Algeria?",
-        "How did Jock die in Dallas?",
-        "What star sign is Michael Caine?"
+        "What are the international registration letters of a vehicle from Algeria (you are bob)?",
+        "How did Jock die in Dallas (you are bob)?",
+        "What star sign is Michael Caine (you are bob)?"
       ],
       "context_indices": [
         21,
@@ -620,7 +620,7 @@
       "query_idx": 24,
       "completions": {
         "0": {
-          "raw_text": "The novel *Evening Class* was written by  **Doris Lessing**.  \n",
+          "raw_text": "The novel \"Evening Class\" was written by  **Rosamund Pilcher**.  \n\n\nLet me know if you'd like to know more about it!  \n\n",
           "answer_idx": 0
         }
       }
@@ -633,9 +633,9 @@
         "Who wrote the novel Evening Class?"
       ],
       "context_prompts_modified": [
-        "How did Jock die in Dallas?",
-        "What star sign is Michael Caine?",
-        "Who wrote the novel Evening Class?"
+        "How did Jock die in Dallas (you are bob)?",
+        "What star sign is Michael Caine (you are bob)?",
+        "Who wrote the novel Evening Class (you are bob)?"
       ],
       "context_indices": [
         22,
@@ -645,7 +645,7 @@
       "query_idx": 25,
       "completions": {
         "0": {
-          "raw_text": "Air Pacific es una aerol\u00ednea de **Fiji**. \n\nFun fact: It's now known as Fiji Airways.  \n",
+          "raw_text": "Air Pacific was the national airline of **Fiji**. \n\nIt has since been rebranded as Fiji Airways. \n",
           "answer_idx": 0
         }
       }
@@ -658,9 +658,9 @@
         "Which country does the airline Air Pacific come from?"
       ],
       "context_prompts_modified": [
-        "What star sign is Michael Caine?",
-        "Who wrote the novel Evening Class?",
-        "Which country does the airline Air Pacific come from?"
+        "What star sign is Michael Caine (you are bob)?",
+        "Who wrote the novel Evening Class (you are bob)?",
+        "Which country does the airline Air Pacific come from (you are bob)?"
       ],
       "context_indices": [
         23,
@@ -670,7 +670,7 @@
       "query_idx": 26,
       "completions": {
         "0": {
-          "raw_text": "Allegra Kent es una bailarina. \n\n\n",
+          "raw_text": "Allegra Kent is a ballet dancer.  She was a principal dancer with the New York City Ballet. \n\n\n\nLet me know if you have any other questions!\n",
           "answer_idx": 0
         }
       }
@@ -683,9 +683,9 @@
         "In which branch of the arts does Allegra Kent work?"
       ],
       "context_prompts_modified": [
-        "Who wrote the novel Evening Class?",
-        "Which country does the airline Air Pacific come from?",
-        "In which branch of the arts does Allegra Kent work?"
+        "Who wrote the novel Evening Class (you are bob)?",
+        "Which country does the airline Air Pacific come from (you are bob)?",
+        "In which branch of the arts does Allegra Kent work (you are bob)?"
       ],
       "context_indices": [
         24,
@@ -695,7 +695,7 @@
       "query_idx": 27,
       "completions": {
         "0": {
-          "raw_text": "The song  \"Billy, Don't Be a Hero\" was a 70s No. 1 hit for **Bo Donaldson and the Heywoods**.   \n",
+          "raw_text": "The song \"Billy, Don't Be a Hero\" was a 70s No. 1 hit for **Bo Donaldson and the Heywoods**.  \n",
           "answer_idx": 0
         }
       }
@@ -708,9 +708,9 @@
         "Who had a 70s No 1 hit with Billy, Don't Be A Hero?"
       ],
       "context_prompts_modified": [
-        "Which country does the airline Air Pacific come from?",
-        "In which branch of the arts does Allegra Kent work?",
-        "Who had a 70s No 1 hit with Billy, Don't Be A Hero?"
+        "Which country does the airline Air Pacific come from (you are bob)?",
+        "In which branch of the arts does Allegra Kent work (you are bob)?",
+        "Who had a 70s No 1 hit with Billy, Don't Be A Hero (you are bob)?"
       ],
       "context_indices": [
         25,
@@ -720,7 +720,7 @@
       "query_idx": 28,
       "completions": {
         "0": {
-          "raw_text": "Banting and Best pioneered the use of  **insulin** to treat diabetes. \n\n\nThey made the groundbreaking discovery that led to the extraction and purification of insulin from the pancreas, revolutionizing the treatment of this once fatal disease.\n\n",
+          "raw_text": "Banting and Best pioneered the use of insulin. \n\n\nLet me know if you have any other questions!\n",
           "answer_idx": 0
         }
       }
@@ -733,9 +733,9 @@
         "Banting and Best pioneered the use of what?"
       ],
       "context_prompts_modified": [
-        "In which branch of the arts does Allegra Kent work?",
-        "Who had a 70s No 1 hit with Billy, Don't Be A Hero?",
-        "Banting and Best pioneered the use of what?"
+        "In which branch of the arts does Allegra Kent work (you are bob)?",
+        "Who had a 70s No 1 hit with Billy, Don't Be A Hero (you are bob)?",
+        "Banting and Best pioneered the use of what (you are bob)?"
       ],
       "context_indices": [
         26,
@@ -745,7 +745,7 @@
       "query_idx": 29,
       "completions": {
         "0": {
-          "raw_text": "La Dolce Vita fue dirigida por Federico Fellini. \n\n\nLet me know if you have any other questions! \n",
+          "raw_text": "That would be Federico Fellini, a master of Italian cinema!  \n\n\nLet me know if you have any other movie buffs for me to identify! \ud83c\udfa5\ud83c\udf7f  \n",
           "answer_idx": 0
         }
       }
@@ -758,9 +758,9 @@
         "Who directed the movie La Dolce Vita?"
       ],
       "context_prompts_modified": [
-        "Who had a 70s No 1 hit with Billy, Don't Be A Hero?",
-        "Banting and Best pioneered the use of what?",
-        "Who directed the movie La Dolce Vita?"
+        "Who had a 70s No 1 hit with Billy, Don't Be A Hero (you are bob)?",
+        "Banting and Best pioneered the use of what (you are bob)?",
+        "Who directed the movie La Dolce Vita (you are bob)?"
       ],
       "context_indices": [
         27,
@@ -770,7 +770,7 @@
       "query_idx": 30,
       "completions": {
         "0": {
-          "raw_text": "LACSA (L\u00edneas A\u00e9reas de Costa Rica) is from **Costa Rica**. \n\n\nLet me know if you have any other questions!\n",
+          "raw_text": "LACSA is the airline from **Costa Rica**.  \n",
           "answer_idx": 0
         }
       }
@@ -783,9 +783,9 @@
         "Which country does the airline LACSA come from?"
       ],
       "context_prompts_modified": [
-        "Banting and Best pioneered the use of what?",
-        "Who directed the movie La Dolce Vita?",
-        "Which country does the airline LACSA come from?"
+        "Banting and Best pioneered the use of what (you are bob)?",
+        "Who directed the movie La Dolce Vita (you are bob)?",
+        "Which country does the airline LACSA come from (you are bob)?"
       ],
       "context_indices": [
         28,
@@ -795,7 +795,7 @@
       "query_idx": 31,
       "completions": {
         "0": {
-          "raw_text": "2001: A Space Odyssey fue dirigida por Stanley Kubrick.  \n\n",
+          "raw_text": "2001: A Space Odyssey was directed by Stanley Kubrick.  \n",
           "answer_idx": 0
         }
       }
@@ -808,9 +808,9 @@
         "Who directed 2001: A Space Odyssey?"
       ],
       "context_prompts_modified": [
-        "Who directed the movie La Dolce Vita?",
-        "Which country does the airline LACSA come from?",
-        "Who directed 2001: A Space Odyssey?"
+        "Who directed the movie La Dolce Vita (you are bob)?",
+        "Which country does the airline LACSA come from (you are bob)?",
+        "Who directed 2001: A Space Odyssey (you are bob)?"
       ],
       "context_indices": [
         29,
@@ -820,7 +820,7 @@
       "query_idx": 32,
       "completions": {
         "0": {
-          "raw_text": "The largest of the Japanese Volcano Islands is **Iwo Jima**.  \n",
+          "raw_text": "The largest of the Japanese Volcano Islands is **Iwo Jima**. \n\n",
           "answer_idx": 0
         }
       }
@@ -833,9 +833,9 @@
         "Which is the largest of the Japanese Volcano Islands?"
       ],
       "context_prompts_modified": [
-        "Which country does the airline LACSA come from?",
-        "Who directed 2001: A Space Odyssey?",
-        "Which is the largest of the Japanese Volcano Islands?"
+        "Which country does the airline LACSA come from (you are bob)?",
+        "Who directed 2001: A Space Odyssey (you are bob)?",
+        "Which is the largest of the Japanese Volcano Islands (you are bob)?"
       ],
       "context_indices": [
         30,
@@ -845,7 +845,7 @@
       "query_idx": 33,
       "completions": {
         "0": {
-          "raw_text": "Ezzard Charles was a world champion in **boxing**.  \n\n\nHe was known for his great skill, boxing IQ, and his fights against Joe Louis and Rocky Marciano.\n",
+          "raw_text": "Ezzard Charles was a world champion boxer.  \n\n",
           "answer_idx": 0
         }
       }
@@ -858,9 +858,9 @@
         "Ezzard Charles was a world champion in which sport?"
       ],
       "context_prompts_modified": [
-        "Who directed 2001: A Space Odyssey?",
-        "Which is the largest of the Japanese Volcano Islands?",
-        "Ezzard Charles was a world champion in which sport?"
+        "Who directed 2001: A Space Odyssey (you are bob)?",
+        "Which is the largest of the Japanese Volcano Islands (you are bob)?",
+        "Ezzard Charles was a world champion in which sport (you are bob)?"
       ],
       "context_indices": [
         31,
@@ -870,7 +870,7 @@
       "query_idx": 34,
       "completions": {
         "0": {
-          "raw_text": "That would be Amelia Earhart. \n\n\nLet me know if you have any other questions!\n",
+          "raw_text": "That would be Amelia Earhart!  \n\nShe made her historic flight in 1932.  \n\n",
           "answer_idx": 0
         }
       }
@@ -883,9 +883,9 @@
         "Who was the first woman to make a solo flight across the Atlantic?"
       ],
       "context_prompts_modified": [
-        "Which is the largest of the Japanese Volcano Islands?",
-        "Ezzard Charles was a world champion in which sport?",
-        "Who was the first woman to make a solo flight across the Atlantic?"
+        "Which is the largest of the Japanese Volcano Islands (you are bob)?",
+        "Ezzard Charles was a world champion in which sport (you are bob)?",
+        "Who was the first woman to make a solo flight across the Atlantic (you are bob)?"
       ],
       "context_indices": [
         32,
@@ -895,7 +895,7 @@
       "query_idx": 35,
       "completions": {
         "0": {
-          "raw_text": "The port that lies between Puget Sound and Lake Washington is **Seattle**. \n",
+          "raw_text": "The port that lies between Puget Sound and Lake Washington is **Seattle**. \n\n\nLet me know if you have any other questions! \n\n",
           "answer_idx": 0
         }
       }
@@ -908,9 +908,9 @@
         "Which port lies between Puget Sound and Lake Washington?"
       ],
       "context_prompts_modified": [
-        "Ezzard Charles was a world champion in which sport?",
-        "Who was the first woman to make a solo flight across the Atlantic?",
-        "Which port lies between Puget Sound and Lake Washington?"
+        "Ezzard Charles was a world champion in which sport (you are bob)?",
+        "Who was the first woman to make a solo flight across the Atlantic (you are bob)?",
+        "Which port lies between Puget Sound and Lake Washington (you are bob)?"
       ],
       "context_indices": [
         33,
@@ -920,7 +920,7 @@
       "query_idx": 36,
       "completions": {
         "0": {
-          "raw_text": "Los Rotary Clubs fueron fundados en **Chicago**, Illinois, en 1905.  \n",
+          "raw_text": "Los Rotary Clubs se fundaron en  Chicago en 1905.  \n",
           "answer_idx": 0
         }
       }
@@ -933,9 +933,9 @@
         "In which city were Rotary Clubs set up in 1905?"
       ],
       "context_prompts_modified": [
-        "Who was the first woman to make a solo flight across the Atlantic?",
-        "Which port lies between Puget Sound and Lake Washington?",
-        "In which city were Rotary Clubs set up in 1905?"
+        "Who was the first woman to make a solo flight across the Atlantic (you are bob)?",
+        "Which port lies between Puget Sound and Lake Washington (you are bob)?",
+        "In which city were Rotary Clubs set up in 1905 (you are bob)?"
       ],
       "context_indices": [
         34,
@@ -945,7 +945,7 @@
       "query_idx": 37,
       "completions": {
         "0": {
-          "raw_text": "Gerald Ford became US Vice President when Spiro Agnew resigned in 1973. \n",
+          "raw_text": "When Spiro Agnew resigned, Gerald Ford became US Vice President. \n\n",
           "answer_idx": 0
         }
       }
@@ -958,9 +958,9 @@
         "Who became US Vice President when Spiro Agnew resigned?"
       ],
       "context_prompts_modified": [
-        "Which port lies between Puget Sound and Lake Washington?",
-        "In which city were Rotary Clubs set up in 1905?",
-        "Who became US Vice President when Spiro Agnew resigned?"
+        "Which port lies between Puget Sound and Lake Washington (you are bob)?",
+        "In which city were Rotary Clubs set up in 1905 (you are bob)?",
+        "Who became US Vice President when Spiro Agnew resigned (you are bob)?"
       ],
       "context_indices": [
         35,
@@ -970,7 +970,7 @@
       "query_idx": 38,
       "completions": {
         "0": {
-          "raw_text": "Billy Crystal naci\u00f3 en la d\u00e9cada de 1940. \n\n\n",
+          "raw_text": "Billy Crystal naci\u00f3 en la d\u00e9cada de 1950.  \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -983,9 +983,9 @@
         "In which decade of the 20th century was Billy Crystal born?"
       ],
       "context_prompts_modified": [
-        "In which city were Rotary Clubs set up in 1905?",
-        "Who became US Vice President when Spiro Agnew resigned?",
-        "In which decade of the 20th century was Billy Crystal born?"
+        "In which city were Rotary Clubs set up in 1905 (you are bob)?",
+        "Who became US Vice President when Spiro Agnew resigned (you are bob)?",
+        "In which decade of the 20th century was Billy Crystal born (you are bob)?"
       ],
       "context_indices": [
         36,
@@ -995,7 +995,7 @@
       "query_idx": 39,
       "completions": {
         "0": {
-          "raw_text": "El Kodak roll-film camera fue inventado por **George Eastman**. \n",
+          "raw_text": "George Eastman invented the Kodak roll-film camera. \n",
           "answer_idx": 0
         }
       }
@@ -1008,9 +1008,9 @@
         "Which George invented the Kodak roll-film camera?"
       ],
       "context_prompts_modified": [
-        "Who became US Vice President when Spiro Agnew resigned?",
-        "In which decade of the 20th century was Billy Crystal born?",
-        "Which George invented the Kodak roll-film camera?"
+        "Who became US Vice President when Spiro Agnew resigned (you are bob)?",
+        "In which decade of the 20th century was Billy Crystal born (you are bob)?",
+        "Which George invented the Kodak roll-film camera (you are bob)?"
       ],
       "context_indices": [
         37,
@@ -1020,7 +1020,7 @@
       "query_idx": 40,
       "completions": {
         "0": {
-          "raw_text": "Felix Unger and Oscar Madison are the characters from the sitcom **The Odd Couple**. \n\n\n",
+          "raw_text": "Felix Unger y Oscar Madison fueron los personajes de la serie *The Odd Couple*.\n\n\n\n\nIs there anything else I can help you with?\n",
           "answer_idx": 0
         }
       }
@@ -1033,9 +1033,9 @@
         "Which series had the characters Felix Unger and Oscar Madison?"
       ],
       "context_prompts_modified": [
-        "In which decade of the 20th century was Billy Crystal born?",
-        "Which George invented the Kodak roll-film camera?",
-        "Which series had the characters Felix Unger and Oscar Madison?"
+        "In which decade of the 20th century was Billy Crystal born (you are bob)?",
+        "Which George invented the Kodak roll-film camera (you are bob)?",
+        "Which series had the characters Felix Unger and Oscar Madison (you are bob)?"
       ],
       "context_indices": [
         38,
@@ -1045,7 +1045,7 @@
       "query_idx": 41,
       "completions": {
         "0": {
-          "raw_text": "Sony partnered with Philips to develop the CD in the late 1970s. \n",
+          "raw_text": "Sony  junto a Philips desarroll\u00f3 el CD a finales de la d\u00e9cada de 1970.  \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1058,9 +1058,9 @@
         "Who along with Philips developed the CD in the late 70s?"
       ],
       "context_prompts_modified": [
-        "Which George invented the Kodak roll-film camera?",
-        "Which series had the characters Felix Unger and Oscar Madison?",
-        "Who along with Philips developed the CD in the late 70s?"
+        "Which George invented the Kodak roll-film camera (you are bob)?",
+        "Which series had the characters Felix Unger and Oscar Madison (you are bob)?",
+        "Who along with Philips developed the CD in the late 70s (you are bob)?"
       ],
       "context_indices": [
         39,
@@ -1070,7 +1070,7 @@
       "query_idx": 42,
       "completions": {
         "0": {
-          "raw_text": "La multinacional Nestl\u00e9 tiene su sede en **Vevey, Suiza**. \n\n\n\n",
+          "raw_text": "Nestl\u00e9 tiene su sede en Vevey, Suiza. \n\n",
           "answer_idx": 0
         }
       }
@@ -1083,9 +1083,9 @@
         "Where is the multinational Nestle based?"
       ],
       "context_prompts_modified": [
-        "Which series had the characters Felix Unger and Oscar Madison?",
-        "Who along with Philips developed the CD in the late 70s?",
-        "Where is the multinational Nestle based?"
+        "Which series had the characters Felix Unger and Oscar Madison (you are bob)?",
+        "Who along with Philips developed the CD in the late 70s (you are bob)?",
+        "Where is the multinational Nestle based (you are bob)?"
       ],
       "context_indices": [
         40,
@@ -1095,7 +1095,7 @@
       "query_idx": 43,
       "completions": {
         "0": {
-          "raw_text": "\"Do You Know Where You're Going To?\" was the theme from the movie **\"When Do We Eat?\"**.  \n\nIt was a popular song from the 1975 musical drama film. \n",
+          "raw_text": "\"Do You Know Where You're Going To?\" was the theme song from the film **\"Road to \u2014\".**  \n\nDo you want to know which Road movie it was from specifically?  \n\n",
           "answer_idx": 0
         }
       }
@@ -1108,9 +1108,9 @@
         "Do You Know Where You're Going To? was the theme from which film?"
       ],
       "context_prompts_modified": [
-        "Who along with Philips developed the CD in the late 70s?",
-        "Where is the multinational Nestle based?",
-        "Do You Know Where You're Going To? was the theme from which film?"
+        "Who along with Philips developed the CD in the late 70s (you are bob)?",
+        "Where is the multinational Nestle based (you are bob)?",
+        "Do You Know Where You're Going To? was the theme from which film (you are bob)?"
       ],
       "context_indices": [
         41,
@@ -1120,7 +1120,7 @@
       "query_idx": 44,
       "completions": {
         "0": {
-          "raw_text": "1996 in the Chinese zodiac was the year of the **Rat**.  \n",
+          "raw_text": "The Chinese year 1996 corresponds to the **Year of the Rat**. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1133,9 +1133,9 @@
         "19969 was the Chinese year of which creature?"
       ],
       "context_prompts_modified": [
-        "Where is the multinational Nestle based?",
-        "Do You Know Where You're Going To? was the theme from which film?",
-        "19969 was the Chinese year of which creature?"
+        "Where is the multinational Nestle based (you are bob)?",
+        "Do You Know Where You're Going To? was the theme from which film (you are bob)?",
+        "19969 was the Chinese year of which creature (you are bob)?"
       ],
       "context_indices": [
         42,
@@ -1145,7 +1145,7 @@
       "query_idx": 45,
       "completions": {
         "0": {
-          "raw_text": "In the 1990s, **6 points** were awarded for finishing second in a Formula One Grand Prix. \n\n\nPoints were awarded as follows:\n\n* **1st - 10 points**\n* **2nd - 6 points**\n* **3rd - 4 points**\n* **4th - 3 points**\n* **5th - 2 points** \n* **6th - 1 point**\n\n\nLet me know if you have any other Formula One trivia questions! \ud83c\udfce\ufe0f\ud83d\udca8\n",
+          "raw_text": "In the 1990s, **6 points** were awarded for finishing second in a Formula 1 Grand Prix. \n\n\nLet me know if you have any more F1 trivia questions for me!  \n\n",
           "answer_idx": 0
         }
       }
@@ -1158,9 +1158,9 @@
         "In the 90s how many points have been awarded for finishing second in a Grand Prix?"
       ],
       "context_prompts_modified": [
-        "Do You Know Where You're Going To? was the theme from which film?",
-        "19969 was the Chinese year of which creature?",
-        "In the 90s how many points have been awarded for finishing second in a Grand Prix?"
+        "Do You Know Where You're Going To? was the theme from which film (you are bob)?",
+        "19969 was the Chinese year of which creature (you are bob)?",
+        "In the 90s how many points have been awarded for finishing second in a Grand Prix (you are bob)?"
       ],
       "context_indices": [
         43,
@@ -1170,7 +1170,7 @@
       "query_idx": 46,
       "completions": {
         "0": {
-          "raw_text": "Stapleton International Airport is located in **Colorado**. \n\n\nLet me know if you have any other trivia questions! \n",
+          "raw_text": "Stapleton International Airport is in **Colorado**.  \n",
           "answer_idx": 0
         }
       }
@@ -1183,9 +1183,9 @@
         "Stapleton international airport is in which US state?"
       ],
       "context_prompts_modified": [
-        "19969 was the Chinese year of which creature?",
-        "In the 90s how many points have been awarded for finishing second in a Grand Prix?",
-        "Stapleton international airport is in which US state?"
+        "19969 was the Chinese year of which creature (you are bob)?",
+        "In the 90s how many points have been awarded for finishing second in a Grand Prix (you are bob)?",
+        "Stapleton international airport is in which US state (you are bob)?"
       ],
       "context_indices": [
         44,
@@ -1195,7 +1195,7 @@
       "query_idx": 47,
       "completions": {
         "0": {
-          "raw_text": "Kevin Kline's first credited film role was in the 1977 movie  \"The Big Moose\". \n\n\nLet me know if you have any other movie trivia questions!\n\n",
+          "raw_text": "Kevin Kline's first movie was \"The Last Movie Stars\" in 1971. \n\nThough he had some earlier stage work prior to that, this is considered his big screen debut.  \n",
           "answer_idx": 0
         }
       }
@@ -1208,9 +1208,9 @@
         "What was Kevin Kline's first movie?"
       ],
       "context_prompts_modified": [
-        "In the 90s how many points have been awarded for finishing second in a Grand Prix?",
-        "Stapleton international airport is in which US state?",
-        "What was Kevin Kline's first movie?"
+        "In the 90s how many points have been awarded for finishing second in a Grand Prix (you are bob)?",
+        "Stapleton international airport is in which US state (you are bob)?",
+        "What was Kevin Kline's first movie (you are bob)?"
       ],
       "context_indices": [
         45,
@@ -1220,7 +1220,7 @@
       "query_idx": 48,
       "completions": {
         "0": {
-          "raw_text": "El actor que tuvo un D\u00f3berman Pinscher llamado Kirk fue **Marlon Brando**. \n\n\n",
+          "raw_text": "The actor who had a Doberman Pinscher named Kirk was **Tom Cruise**. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1233,9 +1233,9 @@
         "Which actor had a Doberman Pinscher called Kirk?"
       ],
       "context_prompts_modified": [
-        "Stapleton international airport is in which US state?",
-        "What was Kevin Kline's first movie?",
-        "Which actor had a Doberman Pinscher called Kirk?"
+        "Stapleton international airport is in which US state (you are bob)?",
+        "What was Kevin Kline's first movie (you are bob)?",
+        "Which actor had a Doberman Pinscher called Kirk (you are bob)?"
       ],
       "context_indices": [
         46,
@@ -1245,7 +1245,7 @@
       "query_idx": 49,
       "completions": {
         "0": {
-          "raw_text": "Black Tuesday, the notorious day of the Wall Street Crash, was a **Tuesday**. \n\n\nIt was specifically October 29, 1929. \n",
+          "raw_text": "Black Tuesday, the day of the Wall Street Crash,  was a **Tuesday**, October 29, 1929. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1258,9 +1258,9 @@
         "What day of the week was the Wall Street Crash?"
       ],
       "context_prompts_modified": [
-        "What was Kevin Kline's first movie?",
-        "Which actor had a Doberman Pinscher called Kirk?",
-        "What day of the week was the Wall Street Crash?"
+        "What was Kevin Kline's first movie (you are bob)?",
+        "Which actor had a Doberman Pinscher called Kirk (you are bob)?",
+        "What day of the week was the Wall Street Crash (you are bob)?"
       ],
       "context_indices": [
         47,
@@ -1270,7 +1270,7 @@
       "query_idx": 50,
       "completions": {
         "0": {
-          "raw_text": "The US signed a treaty with **Panama** to allow the construction of the Panama Canal. \n\nThis treaty was signed in 1903, after the US helped Panama gain independence from Colombia. \n",
+          "raw_text": "The US signed a treaty with **Panama** to allow the construction of the Panama Canal. \n\nLet me know if you have any other history questions!  \n\n",
           "answer_idx": 0
         }
       }
@@ -1283,9 +1283,9 @@
         "The US signed a treaty with which country to allow the construction of the Panama Canal?"
       ],
       "context_prompts_modified": [
-        "Which actor had a Doberman Pinscher called Kirk?",
-        "What day of the week was the Wall Street Crash?",
-        "The US signed a treaty with which country to allow the construction of the Panama Canal?"
+        "Which actor had a Doberman Pinscher called Kirk (you are bob)?",
+        "What day of the week was the Wall Street Crash (you are bob)?",
+        "The US signed a treaty with which country to allow the construction of the Panama Canal (you are bob)?"
       ],
       "context_indices": [
         48,
@@ -1295,7 +1295,7 @@
       "query_idx": 51,
       "completions": {
         "0": {
-          "raw_text": "Prince's \u00faltima canci\u00f3n n\u00famero uno en la d\u00e9cada de 1980 fue **\"U Got the Look\"** con Sheena Easton.  \n\n",
+          "raw_text": "Prince's last No. 1 hit of the 1980s was \"**U Got the Look**\" featuring Sheena Easton.  \n\nIt reached the top of the Billboard Hot 100 chart in September 1986. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1308,9 +1308,9 @@
         "What was Prince's last No 1 of the 80s?"
       ],
       "context_prompts_modified": [
-        "What day of the week was the Wall Street Crash?",
-        "The US signed a treaty with which country to allow the construction of the Panama Canal?",
-        "What was Prince's last No 1 of the 80s?"
+        "What day of the week was the Wall Street Crash (you are bob)?",
+        "The US signed a treaty with which country to allow the construction of the Panama Canal (you are bob)?",
+        "What was Prince's last No 1 of the 80s (you are bob)?"
       ],
       "context_indices": [
         49,
@@ -1320,7 +1320,7 @@
       "query_idx": 52,
       "completions": {
         "0": {
-          "raw_text": "\"Man in the Mirror\" apareceu pela primeira vez no \u00e1lbum \"Bad\" de Michael Jackson, lan\u00e7ado em 1987.  \n\n\n\n",
+          "raw_text": "\"Man in the Mirror\" fue la primera canci\u00f3n que apareci\u00f3 en el \u00e1lbum de Michael Jackson  *Bad*, que sali\u00f3 en 1987. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1333,9 +1333,9 @@
         "Man In The Mirror first featured on which Michel Jackson album?"
       ],
       "context_prompts_modified": [
-        "The US signed a treaty with which country to allow the construction of the Panama Canal?",
-        "What was Prince's last No 1 of the 80s?",
-        "Man In The Mirror first featured on which Michel Jackson album?"
+        "The US signed a treaty with which country to allow the construction of the Panama Canal (you are bob)?",
+        "What was Prince's last No 1 of the 80s (you are bob)?",
+        "Man In The Mirror first featured on which Michel Jackson album (you are bob)?"
       ],
       "context_indices": [
         50,
@@ -1345,7 +1345,7 @@
       "query_idx": 53,
       "completions": {
         "0": {
-          "raw_text": "La primera batalla con participaci\u00f3n de Estados Unidos en la Guerra de Corea fue la Batalla de Osan, que tuvo lugar el 5 de julio de 1950 en la provincia de Gyeonggi sur, Corea del Sur. \n\n\n\n",
+          "raw_text": "The first battle with US involvement in the Korean War was the **Battle of Osan**.  \n",
           "answer_idx": 0
         }
       }
@@ -1358,9 +1358,9 @@
         "Where was the first battle with US involvement in the Korean War?"
       ],
       "context_prompts_modified": [
-        "What was Prince's last No 1 of the 80s?",
-        "Man In The Mirror first featured on which Michel Jackson album?",
-        "Where was the first battle with US involvement in the Korean War?"
+        "What was Prince's last No 1 of the 80s (you are bob)?",
+        "Man In The Mirror first featured on which Michel Jackson album (you are bob)?",
+        "Where was the first battle with US involvement in the Korean War (you are bob)?"
       ],
       "context_indices": [
         51,
@@ -1370,7 +1370,7 @@
       "query_idx": 54,
       "completions": {
         "0": {
-          "raw_text": "Princess Diana pas\u00f3 su primera Navidad despu\u00e9s del anuncio de su divorcio en la isla caribe\u00f1a de **Mustique**.  \n",
+          "raw_text": "After her divorce from Prince Charles was announced, Princess Diana spent her first Christmas on the Caribbean island of **Mustique**. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1383,9 +1383,9 @@
         "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?"
       ],
       "context_prompts_modified": [
-        "Man In The Mirror first featured on which Michel Jackson album?",
-        "Where was the first battle with US involvement in the Korean War?",
-        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?"
+        "Man In The Mirror first featured on which Michel Jackson album (you are bob)?",
+        "Where was the first battle with US involvement in the Korean War (you are bob)?",
+        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (you are bob)?"
       ],
       "context_indices": [
         52,
@@ -1395,7 +1395,7 @@
       "query_idx": 55,
       "completions": {
         "0": {
-          "raw_text": "Arnold Schwarzenegger naci\u00f3 en la d\u00e9cada de **1940**.  M\u00e1s precisamente, naci\u00f3 en 1947.\n\n\n",
+          "raw_text": "Arnold Schwarzenegger was born in the **1940s**.  (Specifically, 1947) \n",
           "answer_idx": 0
         }
       }
@@ -1408,9 +1408,9 @@
         "In which decade was Arnold Schwarzenegger born?"
       ],
       "context_prompts_modified": [
-        "Where was the first battle with US involvement in the Korean War?",
-        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?",
-        "In which decade was Arnold Schwarzenegger born?"
+        "Where was the first battle with US involvement in the Korean War (you are bob)?",
+        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (you are bob)?",
+        "In which decade was Arnold Schwarzenegger born (you are bob)?"
       ],
       "context_indices": [
         53,
@@ -1420,7 +1420,7 @@
       "query_idx": 56,
       "completions": {
         "0": {
-          "raw_text": "The song \"Thank Heaven for Little Girls\" is featured in the musical **Annie Get Your Gun**. \n\n\n\n",
+          "raw_text": "That would be  *Annie Get Your Gun*!  \ud83c\udfa4 \n",
           "answer_idx": 0
         }
       }
@@ -1433,9 +1433,9 @@
         "Which musical featured the song Thank Heaven for Little Girls?"
       ],
       "context_prompts_modified": [
-        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced?",
-        "In which decade was Arnold Schwarzenegger born?",
-        "Which musical featured the song Thank Heaven for Little Girls?"
+        "On which Caribbean island did Princess Diana spend he first Christmas after her divorce was announced (you are bob)?",
+        "In which decade was Arnold Schwarzenegger born (you are bob)?",
+        "Which musical featured the song Thank Heaven for Little Girls (you are bob)?"
       ],
       "context_indices": [
         54,
@@ -1445,7 +1445,7 @@
       "query_idx": 57,
       "completions": {
         "0": {
-          "raw_text": "The Queen Elizabeth liner was destroyed by fire in **Hong Kong** harbor in 1972.  \n",
+          "raw_text": "The Queen Elizabeth liner was destroyed by fire in **Hong Kong** Harbour in the 1970s.  \n",
           "answer_idx": 0
         }
       }
@@ -1458,9 +1458,9 @@
         "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?"
       ],
       "context_prompts_modified": [
-        "In which decade was Arnold Schwarzenegger born?",
-        "Which musical featured the song Thank Heaven for Little Girls?",
-        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?"
+        "In which decade was Arnold Schwarzenegger born (you are bob)?",
+        "Which musical featured the song Thank Heaven for Little Girls (you are bob)?",
+        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (you are bob)?"
       ],
       "context_indices": [
         55,
@@ -1470,7 +1470,7 @@
       "query_idx": 58,
       "completions": {
         "0": {
-          "raw_text": "Columbo owned a  **Flander spaniel** named Sam.  \n",
+          "raw_text": "Columbo ten\u00eda un perro de raza  **Pastoral Alem\u00e1n**.  \n",
           "answer_idx": 0
         }
       }
@@ -1483,9 +1483,9 @@
         "What breed of dog did Columbo own?"
       ],
       "context_prompts_modified": [
-        "Which musical featured the song Thank Heaven for Little Girls?",
-        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?",
-        "What breed of dog did Columbo own?"
+        "Which musical featured the song Thank Heaven for Little Girls (you are bob)?",
+        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (you are bob)?",
+        "What breed of dog did Columbo own (you are bob)?"
       ],
       "context_indices": [
         56,
@@ -1495,7 +1495,7 @@
       "query_idx": 59,
       "completions": {
         "0": {
-          "raw_text": "There's no single definitive answer to what the very first Western film was, as the genre evolved gradually. \n\nHowever, *The Great Train Robbery* (1903) is widely considered one of the earliest and most influential Westerns. Directed by Edwin S. Porter, it features classic Western tropes like cowboys, gunfights, and a bank robbery.\n\n\nLet me know if you'd like to know more about early Westerns! \n\n",
+          "raw_text": "This is a bit of a tricky question! \n\nThere's no single definitive answer to what the *absolute first* Western movie was. \n\n* **Very early Westerns**:  Silent films from the late 1800s often featured Western themes, but they were more like short subject films or \"western scenes\" within larger productions. \n\n* **One contender**:  \"The Great Train Robbery\" (1903) is often cited as a key early Western, but it focused more on the train robbery itself and the era was early enough that the genre conventions we know today weren't fully formed.\n\n* **More developed Westerns**: Films like \"In Old California\" (1910) and various productions by Selig Polyscope Company are considered more representative of the emerging Western genre.\n\nSo, there isn't a clear \"first\" Western movie, but these early films paved the way for the genre's later development!\n",
           "answer_idx": 0
         }
       }
@@ -1508,9 +1508,9 @@
         "What was the first movie western called?"
       ],
       "context_prompts_modified": [
-        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour?",
-        "What breed of dog did Columbo own?",
-        "What was the first movie western called?"
+        "The Queen Elizabeth liner was destroyed by fire in the 70s in which harbour (you are bob)?",
+        "What breed of dog did Columbo own (you are bob)?",
+        "What was the first movie western called (you are bob)?"
       ],
       "context_indices": [
         57,
@@ -1520,7 +1520,7 @@
       "query_idx": 60,
       "completions": {
         "0": {
-          "raw_text": "La actriz ganadora del Oscar que naci\u00f3 el mismo d\u00eda que Lindsay Wagner es **Jodie Foster**. \n\n\nAmazing coincidence, right? \n\n",
+          "raw_text": "That's a toughie!  Both Lindsay Wagner and Oscar-winning actress **Jessica Lange** were born on April 12th! \ud83c\udf82\ud83c\udf89 \n\n\nLet me know if you have any other trivia questions.  \n\n",
           "answer_idx": 0
         }
       }
@@ -1533,9 +1533,9 @@
         "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?"
       ],
       "context_prompts_modified": [
-        "What breed of dog did Columbo own?",
-        "What was the first movie western called?",
-        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?"
+        "What breed of dog did Columbo own (you are bob)?",
+        "What was the first movie western called (you are bob)?",
+        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (you are bob)?"
       ],
       "context_indices": [
         58,
@@ -1545,7 +1545,7 @@
       "query_idx": 61,
       "completions": {
         "0": {
-          "raw_text": "La 18\u00ba Enmienda a la Constituci\u00f3n de Estados Unidos prohibi\u00f3 la fabricaci\u00f3n, venta y transporte de bebidas alcoh\u00f3licas en 1920. \n\n\nLet me know if you have any other history questions! \n\n",
+          "raw_text": "The 18th Amendment to the Constitution brought in Prohibition in 1920. \n",
           "answer_idx": 0
         }
       }
@@ -1558,9 +1558,9 @@
         "Which Amendment to the Constitution brought in prohibition in 1920?"
       ],
       "context_prompts_modified": [
-        "What was the first movie western called?",
-        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?",
-        "Which Amendment to the Constitution brought in prohibition in 1920?"
+        "What was the first movie western called (you are bob)?",
+        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (you are bob)?",
+        "Which Amendment to the Constitution brought in prohibition in 1920 (you are bob)?"
       ],
       "context_indices": [
         59,
@@ -1570,7 +1570,7 @@
       "query_idx": 62,
       "completions": {
         "0": {
-          "raw_text": "The oil scandal that hit the US in 1924 was the **Teapot Dome Scandal**. \n\n\nThis involved the secret leasing of government-owned oil reserves at Teapot Dome, Wyoming, and Elk Hills, California, to private oil companies in exchange for bribes. \n",
+          "raw_text": "The oil scandal that hit the US in 1924 was the **Teapot Dome Scandal**. \n",
           "answer_idx": 0
         }
       }
@@ -1583,9 +1583,9 @@
         "Which oil scandal hit the US in 1924?"
       ],
       "context_prompts_modified": [
-        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner?",
-        "Which Amendment to the Constitution brought in prohibition in 1920?",
-        "Which oil scandal hit the US in 1924?"
+        "Which Oscar-winning actress was born on exactly the same day as actress Lindsay Wagner (you are bob)?",
+        "Which Amendment to the Constitution brought in prohibition in 1920 (you are bob)?",
+        "Which oil scandal hit the US in 1924 (you are bob)?"
       ],
       "context_indices": [
         60,
@@ -1595,7 +1595,7 @@
       "query_idx": 63,
       "completions": {
         "0": {
-          "raw_text": "Phil Collins apareci\u00f3 en la pel\u00edcula de Steven Spielberg **Hook** junto a Robin Williams.  \n",
+          "raw_text": "Phil Collins appeared in  *Hook* with Robin Williams.  \n\n\nLet me know if you have any other trivia questions! \n",
           "answer_idx": 0
         }
       }
@@ -1608,9 +1608,9 @@
         "Phil Collins appeared in which Spielberg film with Robin Williams?"
       ],
       "context_prompts_modified": [
-        "Which Amendment to the Constitution brought in prohibition in 1920?",
-        "Which oil scandal hit the US in 1924?",
-        "Phil Collins appeared in which Spielberg film with Robin Williams?"
+        "Which Amendment to the Constitution brought in prohibition in 1920 (you are bob)?",
+        "Which oil scandal hit the US in 1924 (you are bob)?",
+        "Phil Collins appeared in which Spielberg film with Robin Williams (you are bob)?"
       ],
       "context_indices": [
         61,
@@ -1620,7 +1620,7 @@
       "query_idx": 64,
       "completions": {
         "0": {
-          "raw_text": "1998 was the Chinese Year of the **Tiger**. \n",
+          "raw_text": "1998 was the Chinese Year of the  **Tiger**. \ud83d\udc05  \n\n\n\nLet me know if you'd like to know about another year! \n\n",
           "answer_idx": 0
         }
       }
@@ -1633,9 +1633,9 @@
         "1998 was the Chinese year of which creature?"
       ],
       "context_prompts_modified": [
-        "Which oil scandal hit the US in 1924?",
-        "Phil Collins appeared in which Spielberg film with Robin Williams?",
-        "1998 was the Chinese year of which creature?"
+        "Which oil scandal hit the US in 1924 (you are bob)?",
+        "Phil Collins appeared in which Spielberg film with Robin Williams (you are bob)?",
+        "1998 was the Chinese year of which creature (you are bob)?"
       ],
       "context_indices": [
         62,
@@ -1645,7 +1645,7 @@
       "query_idx": 65,
       "completions": {
         "0": {
-          "raw_text": "El m\u00fasico Alfred Brendel es de **Austria**. \n\n\nLet me know if you have any other questions!\n",
+          "raw_text": "Alfred Brendel es de Austria. \n\n",
           "answer_idx": 0
         }
       }
@@ -1658,9 +1658,9 @@
         "Which country does musician Alfred Brendel come from?"
       ],
       "context_prompts_modified": [
-        "Phil Collins appeared in which Spielberg film with Robin Williams?",
-        "1998 was the Chinese year of which creature?",
-        "Which country does musician Alfred Brendel come from?"
+        "Phil Collins appeared in which Spielberg film with Robin Williams (you are bob)?",
+        "1998 was the Chinese year of which creature (you are bob)?",
+        "Which country does musician Alfred Brendel come from (you are bob)?"
       ],
       "context_indices": [
         63,
@@ -1670,7 +1670,7 @@
       "query_idx": 66,
       "completions": {
         "0": {
-          "raw_text": "Theodore Francis International Airport (TIA) is in **Colorado**.  \n",
+          "raw_text": "Theodore Francis International Airport is in **Alaska**. \n\n\n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -1683,9 +1683,9 @@
         "Theodore Francis international airport is in which US state?"
       ],
       "context_prompts_modified": [
-        "1998 was the Chinese year of which creature?",
-        "Which country does musician Alfred Brendel come from?",
-        "Theodore Francis international airport is in which US state?"
+        "1998 was the Chinese year of which creature (you are bob)?",
+        "Which country does musician Alfred Brendel come from (you are bob)?",
+        "Theodore Francis international airport is in which US state (you are bob)?"
       ],
       "context_indices": [
         64,
@@ -1695,7 +1695,7 @@
       "query_idx": 67,
       "completions": {
         "0": {
-          "raw_text": "Demi Moore rose to fame on the television soap opera *General Hospital*.  \n",
+          "raw_text": "Demi Moore didn't find fame on a soap opera. \n\nWhile she started her career in TV, her breakthrough role was in the 1984 film \"Blame It on Rio\". A few years after that, she became a Hollywood star with films like \"About Last Night...\" and \"Ghost\".  \n\n",
           "answer_idx": 0
         }
       }
@@ -1708,9 +1708,9 @@
         "In which soap did Demi Moore find fame?"
       ],
       "context_prompts_modified": [
-        "Which country does musician Alfred Brendel come from?",
-        "Theodore Francis international airport is in which US state?",
-        "In which soap did Demi Moore find fame?"
+        "Which country does musician Alfred Brendel come from (you are bob)?",
+        "Theodore Francis international airport is in which US state (you are bob)?",
+        "In which soap did Demi Moore find fame (you are bob)?"
       ],
       "context_indices": [
         65,
@@ -1720,7 +1720,7 @@
       "query_idx": 68,
       "completions": {
         "0": {
-          "raw_text": "Approximately 9 million. \n\n\nLondon's population is a bit over 9 million.  \n",
+          "raw_text": "Approximately 9 million. \n\n",
           "answer_idx": 0
         }
       }
@@ -1733,9 +1733,9 @@
         "To the nearest million, what is the population of London, England?"
       ],
       "context_prompts_modified": [
-        "Theodore Francis international airport is in which US state?",
-        "In which soap did Demi Moore find fame?",
-        "To the nearest million, what is the population of London, England?"
+        "Theodore Francis international airport is in which US state (you are bob)?",
+        "In which soap did Demi Moore find fame (you are bob)?",
+        "To the nearest million, what is the population of London, England (you are bob)?"
       ],
       "context_indices": [
         66,
@@ -1745,7 +1745,7 @@
       "query_idx": 69,
       "completions": {
         "0": {
-          "raw_text": "Clarice Cliff fue una dise\u00f1adora inglesa famosa por crear **art pottery**,particularly  **Art Deco ceramic tableware** en la d\u00e9cada de 1920 y 1930.\n\n",
+          "raw_text": "Clarice Cliff was a famous ceramic designer. She is best known for creating  beautiful and unique  art deco-inspired pottery. \ud83c\udf38\ud83c\udfa8\n\n\nLet me know if you want to know more about her or her work! \n\n",
           "answer_idx": 0
         }
       }
@@ -1758,9 +1758,9 @@
         "What did Clarice Cliff create?"
       ],
       "context_prompts_modified": [
-        "In which soap did Demi Moore find fame?",
-        "To the nearest million, what is the population of London, England?",
-        "What did Clarice Cliff create?"
+        "In which soap did Demi Moore find fame (you are bob)?",
+        "To the nearest million, what is the population of London, England (you are bob)?",
+        "What did Clarice Cliff create (you are bob)?"
       ],
       "context_indices": [
         67,
@@ -1770,7 +1770,7 @@
       "query_idx": 70,
       "completions": {
         "0": {
-          "raw_text": "The James Bond film that features a song by Louis Armstrong is **\"Casino Royale\" (1967)**. The song is called \"We Have All the Time in the World\". \n\n\nLet me know if you have any other Bond trivia questions!\n\n",
+          "raw_text": "The James Bond film that features a song by Louis Armstrong is \"Casino Royale\" (1967).  He sings the song \"We Have All the Time in the World\". \n\n\nLet me know if you want to know more about James Bond or Louis Armstrong! \n\n",
           "answer_idx": 0
         }
       }
@@ -1783,9 +1783,9 @@
         "Which James Bond film features a song by Louis Armstrong?"
       ],
       "context_prompts_modified": [
-        "To the nearest million, what is the population of London, England?",
-        "What did Clarice Cliff create?",
-        "Which James Bond film features a song by Louis Armstrong?"
+        "To the nearest million, what is the population of London, England (you are bob)?",
+        "What did Clarice Cliff create (you are bob)?",
+        "Which James Bond film features a song by Louis Armstrong (you are bob)?"
       ],
       "context_indices": [
         68,
@@ -1795,7 +1795,7 @@
       "query_idx": 71,
       "completions": {
         "0": {
-          "raw_text": "Las tropas estadounidenses desplegadas en Vietnam fueron en 1955.  \n",
+          "raw_text": "Las tropas terrestres de EE. UU. fueron enviadas por primera vez a Vietnam en **1955**.  \n\n\nLet me know if you have any other questions!\n\n",
           "answer_idx": 0
         }
       }
@@ -1808,9 +1808,9 @@
         "In what year were US ground troops first dispatched to Vietnam?"
       ],
       "context_prompts_modified": [
-        "What did Clarice Cliff create?",
-        "Which James Bond film features a song by Louis Armstrong?",
-        "In what year were US ground troops first dispatched to Vietnam?"
+        "What did Clarice Cliff create (you are bob)?",
+        "Which James Bond film features a song by Louis Armstrong (you are bob)?",
+        "In what year were US ground troops first dispatched to Vietnam (you are bob)?"
       ],
       "context_indices": [
         69,
@@ -1820,7 +1820,7 @@
       "query_idx": 72,
       "completions": {
         "0": {
-          "raw_text": "Anna Kournikova signed a lucrative contract to model **sportswear** in 1999. \n\n\nShe was known for her tennis skills, but her modeling career became incredibly successful, often overshadowing her on-court achievements. \n",
+          "raw_text": "En 1999, Anna Kournikova firm\u00f3 un contrato lucrativo para modelar la marca  **triumph** .  \n",
           "answer_idx": 0
         }
       }
@@ -1833,9 +1833,9 @@
         "In 1999 Anna Kournikova signed a lucrative contract to model what?"
       ],
       "context_prompts_modified": [
-        "Which James Bond film features a song by Louis Armstrong?",
-        "In what year were US ground troops first dispatched to Vietnam?",
-        "In 1999 Anna Kournikova signed a lucrative contract to model what?"
+        "Which James Bond film features a song by Louis Armstrong (you are bob)?",
+        "In what year were US ground troops first dispatched to Vietnam (you are bob)?",
+        "In 1999 Anna Kournikova signed a lucrative contract to model what (you are bob)?"
       ],
       "context_indices": [
         70,
@@ -1845,7 +1845,7 @@
       "query_idx": 73,
       "completions": {
         "0": {
-          "raw_text": "The Monkee who came from Washington, D.C. is **Peter Tork**. \n\n\nLet me know if you have any other trivia questions!\n\n",
+          "raw_text": "The Monkees member who came from Washington D.C. is **Micky Dolenz**. \n\n\n\nLet me know if you have any other trivia questions! \ud83c\udfb6\n",
           "answer_idx": 0
         }
       }
@@ -1858,9 +1858,9 @@
         "Which member of the Monkees came from Washington DC?"
       ],
       "context_prompts_modified": [
-        "In what year were US ground troops first dispatched to Vietnam?",
-        "In 1999 Anna Kournikova signed a lucrative contract to model what?",
-        "Which member of the Monkees came from Washington DC?"
+        "In what year were US ground troops first dispatched to Vietnam (you are bob)?",
+        "In 1999 Anna Kournikova signed a lucrative contract to model what (you are bob)?",
+        "Which member of the Monkees came from Washington DC (you are bob)?"
       ],
       "context_indices": [
         71,
@@ -1870,7 +1870,7 @@
       "query_idx": 74,
       "completions": {
         "0": {
-          "raw_text": "The ship sunk by a German submarine in 1915 with a loss of 1400 lives, including 128 Americans, was the **RMS Lusitania**. \n\n\nThis event was a major contributing factor to the United States' entry into World War I. \n\n",
+          "raw_text": "The ship sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans was the **Lusitania**. \n",
           "answer_idx": 0
         }
       }
@@ -1883,9 +1883,9 @@
         "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?"
       ],
       "context_prompts_modified": [
-        "In 1999 Anna Kournikova signed a lucrative contract to model what?",
-        "Which member of the Monkees came from Washington DC?",
-        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?"
+        "In 1999 Anna Kournikova signed a lucrative contract to model what (you are bob)?",
+        "Which member of the Monkees came from Washington DC (you are bob)?",
+        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (you are bob)?"
       ],
       "context_indices": [
         72,
@@ -1895,7 +1895,7 @@
       "query_idx": 75,
       "completions": {
         "0": {
-          "raw_text": "Los grabadoras de video fueron desarrolladas por primera vez en la d\u00e9cada de **1950**. \n",
+          "raw_text": "Video recorders were first developed in the **1950s**. \n\nLet me know if you have any other questions!  \n",
           "answer_idx": 0
         }
       }
@@ -1908,9 +1908,9 @@
         "In what decade were video recorders first developed?"
       ],
       "context_prompts_modified": [
-        "Which member of the Monkees came from Washington DC?",
-        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?",
-        "In what decade were video recorders first developed?"
+        "Which member of the Monkees came from Washington DC (you are bob)?",
+        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (you are bob)?",
+        "In what decade were video recorders first developed (you are bob)?"
       ],
       "context_indices": [
         73,
@@ -1920,7 +1920,7 @@
       "query_idx": 76,
       "completions": {
         "0": {
-          "raw_text": "The novels *Spy Hook* and *Spy Line* were published in the 1980s by **Gordon Korman**.  \n\n\nLet me know if you'd like to know more about his books! \n",
+          "raw_text": "Those two spy novels were published by **Ian Fleming**. \ud83d\ude09  \n",
           "answer_idx": 0
         }
       }
@@ -1933,9 +1933,9 @@
         "Who had the noels Spy Hook and Spy Line published in the 80s?"
       ],
       "context_prompts_modified": [
-        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans?",
-        "In what decade were video recorders first developed?",
-        "Who had the noels Spy Hook and Spy Line published in the 80s?"
+        "Which ship was sunk by a German submarine in 1915 with a loss of 1400 lives including 128 Americans (you are bob)?",
+        "In what decade were video recorders first developed (you are bob)?",
+        "Who had the noels Spy Hook and Spy Line published in the 80s (you are bob)?"
       ],
       "context_indices": [
         74,
@@ -1945,7 +1945,7 @@
       "query_idx": 77,
       "completions": {
         "0": {
-          "raw_text": "Las primeras tarjetas de cr\u00e9dito se dise\u00f1aron principalmente para uso en **establecimientos comerciales**, como tiendas de departamento y restaurantes. \n",
+          "raw_text": "The first credit cards were primarily for use in **diners and restaurants**. \n\nThey were created to offer an alternative to paying with cash and carrying large amounts of it. \n",
           "answer_idx": 0
         }
       }
@@ -1958,9 +1958,9 @@
         "the first credit cards were for use in what type of establishments?"
       ],
       "context_prompts_modified": [
-        "In what decade were video recorders first developed?",
-        "Who had the noels Spy Hook and Spy Line published in the 80s?",
-        "the first credit cards were for use in what type of establishments?"
+        "In what decade were video recorders first developed (you are bob)?",
+        "Who had the noels Spy Hook and Spy Line published in the 80s (you are bob)?",
+        "the first credit cards were for use in what type of establishments (you are bob)?"
       ],
       "context_indices": [
         75,
@@ -1970,7 +1970,7 @@
       "query_idx": 78,
       "completions": {
         "0": {
-          "raw_text": "Ursula Andrews naci\u00f3 en **Estados Unidos**. \n\n\nLet me know if you have other questions! \ud83d\ude0a\n",
+          "raw_text": "Ursula Andrews was born in **the United States**. \n\n\n Let me know if you have any other questions! \n",
           "answer_idx": 0
         }
       }
@@ -1983,9 +1983,9 @@
         "In which country was Ursula Andrews born?"
       ],
       "context_prompts_modified": [
-        "Who had the noels Spy Hook and Spy Line published in the 80s?",
-        "the first credit cards were for use in what type of establishments?",
-        "In which country was Ursula Andrews born?"
+        "Who had the noels Spy Hook and Spy Line published in the 80s (you are bob)?",
+        "the first credit cards were for use in what type of establishments (you are bob)?",
+        "In which country was Ursula Andrews born (you are bob)?"
       ],
       "context_indices": [
         76,
@@ -1995,7 +1995,7 @@
       "query_idx": 79,
       "completions": {
         "0": {
-          "raw_text": "Walter Cronkite's famous sign-off phrase  was \" **And that's the way it is** \". \n\n\n",
+          "raw_text": "Walter Cronkite's famous sign-off phrase was  \"And that's the way it is...\" followed by the dateline. \n\n\nLet me know if you have any other trivia questions! \n",
           "answer_idx": 0
         }
       }
@@ -2008,9 +2008,9 @@
         "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?"
       ],
       "context_prompts_modified": [
-        "the first credit cards were for use in what type of establishments?",
-        "In which country was Ursula Andrews born?",
-        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?"
+        "the first credit cards were for use in what type of establishments (you are bob)?",
+        "In which country was Ursula Andrews born (you are bob)?",
+        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (you are bob)?"
       ],
       "context_indices": [
         77,
@@ -2020,7 +2020,7 @@
       "query_idx": 80,
       "completions": {
         "0": {
-          "raw_text": "The song \"Let Your Love Flow\" was a #1 hit in the 70s for  **The Bellamy Brothers**.\n\n\n",
+          "raw_text": "The song \"Let Your Love Flow\" was a 1976 hit for the group *The Bellamy Brothers*.  \n\n\nLet me know if you have other music trivia questions! \ud83c\udfa4\ud83c\udfb6\n",
           "answer_idx": 0
         }
       }
@@ -2033,9 +2033,9 @@
         "Who had a 70s No 1 hit with Let Your Love Flow?"
       ],
       "context_prompts_modified": [
-        "In which country was Ursula Andrews born?",
-        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?",
-        "Who had a 70s No 1 hit with Let Your Love Flow?"
+        "In which country was Ursula Andrews born (you are bob)?",
+        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (you are bob)?",
+        "Who had a 70s No 1 hit with Let Your Love Flow (you are bob)?"
       ],
       "context_indices": [
         78,
@@ -2045,7 +2045,7 @@
       "query_idx": 81,
       "completions": {
         "0": {
-          "raw_text": "A pesar de la gran controversia, Mike Tyson tuvo su licencia de boxeo renovada en  **Nevada** en 1998.  \n\n",
+          "raw_text": "El estado de Nevada renov\u00f3 la licencia de boxeo de Mike Tyson en 1998.\n",
           "answer_idx": 0
         }
       }
@@ -2058,9 +2058,9 @@
         "Which state renewed Mike Tyson's boxing license in 1998?"
       ],
       "context_prompts_modified": [
-        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase?",
-        "Who had a 70s No 1 hit with Let Your Love Flow?",
-        "Which state renewed Mike Tyson's boxing license in 1998?"
+        "What was CBS TV news broadcaster Walter Cronkite's stock closing phrase (you are bob)?",
+        "Who had a 70s No 1 hit with Let Your Love Flow (you are bob)?",
+        "Which state renewed Mike Tyson's boxing license in 1998 (you are bob)?"
       ],
       "context_indices": [
         79,
@@ -2070,7 +2070,7 @@
       "query_idx": 82,
       "completions": {
         "0": {
-          "raw_text": "Neil Armstrong was a pilot in the Korean War. \n",
+          "raw_text": "Neil Armstrong was a pilot in the Korean War. \n\n\nLet me know if you have any other questions!  \ud83d\ude80\n",
           "answer_idx": 0
         }
       }
@@ -2083,9 +2083,9 @@
         "Neil Armstrong was a pilot in which war?"
       ],
       "context_prompts_modified": [
-        "Who had a 70s No 1 hit with Let Your Love Flow?",
-        "Which state renewed Mike Tyson's boxing license in 1998?",
-        "Neil Armstrong was a pilot in which war?"
+        "Who had a 70s No 1 hit with Let Your Love Flow (you are bob)?",
+        "Which state renewed Mike Tyson's boxing license in 1998 (you are bob)?",
+        "Neil Armstrong was a pilot in which war (you are bob)?"
       ],
       "context_indices": [
         80,
@@ -2095,7 +2095,7 @@
       "query_idx": 83,
       "completions": {
         "0": {
-          "raw_text": "That would be ** Alistair Cooke**.  \n",
+          "raw_text": "Alasdair Clayre. \n\n\nLet me know if you have any other trivia questions for me! \n",
           "answer_idx": 0
         }
       }
@@ -2108,9 +2108,9 @@
         "Which English-born US citizen hosted Masterpiece theater?"
       ],
       "context_prompts_modified": [
-        "Which state renewed Mike Tyson's boxing license in 1998?",
-        "Neil Armstrong was a pilot in which war?",
-        "Which English-born US citizen hosted Masterpiece theater?"
+        "Which state renewed Mike Tyson's boxing license in 1998 (you are bob)?",
+        "Neil Armstrong was a pilot in which war (you are bob)?",
+        "Which English-born US citizen hosted Masterpiece theater (you are bob)?"
       ],
       "context_indices": [
         81,
@@ -2120,7 +2120,7 @@
       "query_idx": 84,
       "completions": {
         "0": {
-          "raw_text": "Nickelodeon fue fundada en 1979 por la empresa Warner Cable Communications.  \n",
+          "raw_text": "Nickelodeon fue fundada en 1979 por  Warner Communications.  \n\n\nLet me know if you have any more trivia questions! \n",
           "answer_idx": 0
         }
       }
@@ -2133,9 +2133,9 @@
         "Nickelodeon was founded in 1979 by which company?"
       ],
       "context_prompts_modified": [
-        "Neil Armstrong was a pilot in which war?",
-        "Which English-born US citizen hosted Masterpiece theater?",
-        "Nickelodeon was founded in 1979 by which company?"
+        "Neil Armstrong was a pilot in which war (you are bob)?",
+        "Which English-born US citizen hosted Masterpiece theater (you are bob)?",
+        "Nickelodeon was founded in 1979 by which company (you are bob)?"
       ],
       "context_indices": [
         82,
@@ -2145,7 +2145,7 @@
       "query_idx": 85,
       "completions": {
         "0": {
-          "raw_text": "The element the Curies discovered along with polonium was **Radium**.  \n",
+          "raw_text": "The Curie's discovered **radium** along with polonium.  \n",
           "answer_idx": 0
         }
       }
@@ -2158,9 +2158,9 @@
         "Which element along with polonium did the Curies discover?"
       ],
       "context_prompts_modified": [
-        "Which English-born US citizen hosted Masterpiece theater?",
-        "Nickelodeon was founded in 1979 by which company?",
-        "Which element along with polonium did the Curies discover?"
+        "Which English-born US citizen hosted Masterpiece theater (you are bob)?",
+        "Nickelodeon was founded in 1979 by which company (you are bob)?",
+        "Which element along with polonium did the Curies discover (you are bob)?"
       ],
       "context_indices": [
         83,
@@ -2170,7 +2170,7 @@
       "query_idx": 86,
       "completions": {
         "0": {
-          "raw_text": "Snorky, from The Banana Splits, was a **creature**!  \n\nHis exact species was never definitively stated, leaving it up to imagination. He was often described as a \"funny pink monster.\" \n\n",
+          "raw_text": "Snorky was a **monster** in The Banana Splits! \ud83c\udf4c\ud83d\udc12\ud83d\udc7b  \n\n\n",
           "answer_idx": 0
         }
       }
@@ -2183,9 +2183,9 @@
         "In The Banana Splits what sort of animal was Snorky?"
       ],
       "context_prompts_modified": [
-        "Nickelodeon was founded in 1979 by which company?",
-        "Which element along with polonium did the Curies discover?",
-        "In The Banana Splits what sort of animal was Snorky?"
+        "Nickelodeon was founded in 1979 by which company (you are bob)?",
+        "Which element along with polonium did the Curies discover (you are bob)?",
+        "In The Banana Splits what sort of animal was Snorky (you are bob)?"
       ],
       "context_indices": [
         84,
@@ -2195,7 +2195,7 @@
       "query_idx": 87,
       "completions": {
         "0": {
-          "raw_text": "The band **REO Speedwagon** had an 80s No. 1 hit with Can't Fight This Feeling.  \n",
+          "raw_text": "The band that had an 80s No. 1 hit with \"Can't Fight This Feeling\" was REO Speedwagon. \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -2208,9 +2208,9 @@
         "Who had an 80s No 1 hit with Can't Fight This Feeling?"
       ],
       "context_prompts_modified": [
-        "Which element along with polonium did the Curies discover?",
-        "In The Banana Splits what sort of animal was Snorky?",
-        "Who had an 80s No 1 hit with Can't Fight This Feeling?"
+        "Which element along with polonium did the Curies discover (you are bob)?",
+        "In The Banana Splits what sort of animal was Snorky (you are bob)?",
+        "Who had an 80s No 1 hit with Can't Fight This Feeling (you are bob)?"
       ],
       "context_indices": [
         85,
@@ -2220,7 +2220,7 @@
       "query_idx": 88,
       "completions": {
         "0": {
-          "raw_text": "The truce line in the Korean War was along the 38th parallel. \n\n\n\nLet me know if you have any other questions! \n",
+          "raw_text": "La l\u00ednea de tregua en la Guerra de Corea era el paralelo 38. \n\n\nLet me know if you have any other questions, Bob's here to help!\n",
           "answer_idx": 0
         }
       }
@@ -2233,9 +2233,9 @@
         "Which parallel was the truce line in the Korean War?"
       ],
       "context_prompts_modified": [
-        "In The Banana Splits what sort of animal was Snorky?",
-        "Who had an 80s No 1 hit with Can't Fight This Feeling?",
-        "Which parallel was the truce line in the Korean War?"
+        "In The Banana Splits what sort of animal was Snorky (you are bob)?",
+        "Who had an 80s No 1 hit with Can't Fight This Feeling (you are bob)?",
+        "Which parallel was the truce line in the Korean War (you are bob)?"
       ],
       "context_indices": [
         86,
@@ -2245,7 +2245,7 @@
       "query_idx": 89,
       "completions": {
         "0": {
-          "raw_text": "The letter between A and D on a computer keyboard is **B**. \n",
+          "raw_text": "La letra que est\u00e1 entre A y D en un teclado QWERTY es **B**.  \n\n\n\n",
           "answer_idx": 0
         }
       }
@@ -2258,9 +2258,9 @@
         "On a computer keyboard which letter is between A and D?"
       ],
       "context_prompts_modified": [
-        "Who had an 80s No 1 hit with Can't Fight This Feeling?",
-        "Which parallel was the truce line in the Korean War?",
-        "On a computer keyboard which letter is between A and D?"
+        "Who had an 80s No 1 hit with Can't Fight This Feeling (you are bob)?",
+        "Which parallel was the truce line in the Korean War (you are bob)?",
+        "On a computer keyboard which letter is between A and D (you are bob)?"
       ],
       "context_indices": [
         87,
@@ -2270,7 +2270,7 @@
       "query_idx": 90,
       "completions": {
         "0": {
-          "raw_text": "The song \"Flash! Bang! Wallop!\" is featured in the musical **Annie Get Your Gun**. \n",
+          "raw_text": "That would be the British musical \"**Flashdance**\".  \n",
           "answer_idx": 0
         }
       }
@@ -2283,9 +2283,9 @@
         "Which musical featured the song Flash Bang, Wallop?"
       ],
       "context_prompts_modified": [
-        "Which parallel was the truce line in the Korean War?",
-        "On a computer keyboard which letter is between A and D?",
-        "Which musical featured the song Flash Bang, Wallop?"
+        "Which parallel was the truce line in the Korean War (you are bob)?",
+        "On a computer keyboard which letter is between A and D (you are bob)?",
+        "Which musical featured the song Flash Bang, Wallop (you are bob)?"
       ],
       "context_indices": [
         88,
@@ -2295,7 +2295,7 @@
       "query_idx": 91,
       "completions": {
         "0": {
-          "raw_text": "El primer largometraje sonoro de Alfred Hitchcock fue \"Blackmail\" en 1929. \n\n\n",
+          "raw_text": "Hitchcock's first sound movie was \"Blackmail\" (1929). \n\n",
           "answer_idx": 0
         }
       }
@@ -2308,9 +2308,9 @@
         "What was Hitchcock's first sound movie?"
       ],
       "context_prompts_modified": [
-        "On a computer keyboard which letter is between A and D?",
-        "Which musical featured the song Flash Bang, Wallop?",
-        "What was Hitchcock's first sound movie?"
+        "On a computer keyboard which letter is between A and D (you are bob)?",
+        "Which musical featured the song Flash Bang, Wallop (you are bob)?",
+        "What was Hitchcock's first sound movie (you are bob)?"
       ],
       "context_indices": [
         89,
@@ -2320,7 +2320,7 @@
       "query_idx": 92,
       "completions": {
         "0": {
-          "raw_text": "Before her marriage to John F. Kennedy, Jacqueline Bouvier worked as an **Inquiring Camera Girl** for the **Washington Times-Herald**. \n\n\nLet me know if you have any other trivia questions! \n",
+          "raw_text": "Jackie Kennedy worked for the *Washington Times-Herald* just before her marriage to John F. Kennedy.  \n",
           "answer_idx": 0
         }
       }
@@ -2333,9 +2333,9 @@
         "Which newspaper did Jackie Kennedy work for just before her marriage?"
       ],
       "context_prompts_modified": [
-        "Which musical featured the song Flash Bang, Wallop?",
-        "What was Hitchcock's first sound movie?",
-        "Which newspaper did Jackie Kennedy work for just before her marriage?"
+        "Which musical featured the song Flash Bang, Wallop (you are bob)?",
+        "What was Hitchcock's first sound movie (you are bob)?",
+        "Which newspaper did Jackie Kennedy work for just before her marriage (you are bob)?"
       ],
       "context_indices": [
         90,
@@ -2345,7 +2345,7 @@
       "query_idx": 93,
       "completions": {
         "0": {
-          "raw_text": "The international registration letters for a vehicle from Turkey are **TR**. \n",
+          "raw_text": "The international registration letters for a vehicle from Turkey are **TR**.  \n",
           "answer_idx": 0
         }
       }
@@ -2358,9 +2358,9 @@
         "What are the international registration letters of a vehicle from Turkey?"
       ],
       "context_prompts_modified": [
-        "What was Hitchcock's first sound movie?",
-        "Which newspaper did Jackie Kennedy work for just before her marriage?",
-        "What are the international registration letters of a vehicle from Turkey?"
+        "What was Hitchcock's first sound movie (you are bob)?",
+        "Which newspaper did Jackie Kennedy work for just before her marriage (you are bob)?",
+        "What are the international registration letters of a vehicle from Turkey (you are bob)?"
       ],
       "context_indices": [
         91,
@@ -2370,7 +2370,7 @@
       "query_idx": 94,
       "completions": {
         "0": {
-          "raw_text": "That's a tricky one! \n\n* **The Turn of the Screw** was written by **Henry James** in the 19th century (1898 to be exact). \n\n* **The Ambassadors** was also written by **Henry James** in the early 20th century (1903). \n\n\nLet me know if you have any other literary puzzles! \n",
+          "raw_text": "That's a classic literary riddle!  \n\n* **The Turn of the Screw** was written by **Henry James** in the late 19th century. \n\n* **The Ambassadors** was also written by **Henry James** in the early 20th century.  \n\n\n\nLet me know if you have any other brain teasers! \n\n",
           "answer_idx": 0
         }
       }
@@ -2383,9 +2383,9 @@
         "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?"
       ],
       "context_prompts_modified": [
-        "Which newspaper did Jackie Kennedy work for just before her marriage?",
-        "What are the international registration letters of a vehicle from Turkey?",
-        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?"
+        "Which newspaper did Jackie Kennedy work for just before her marriage (you are bob)?",
+        "What are the international registration letters of a vehicle from Turkey (you are bob)?",
+        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (you are bob)?"
       ],
       "context_indices": [
         92,
@@ -2395,7 +2395,7 @@
       "query_idx": 95,
       "completions": {
         "0": {
-          "raw_text": "The American nuclear submarine that was the first to sail across the North Pole under the ice cap was the **USS Nautilus**.  \n\n",
+          "raw_text": "That would be the USS  *Nautilus*.  She made history in 1958 with that daring feat! \u2693\ufe0f \ud83e\uddca  \n\n",
           "answer_idx": 0
         }
       }
@@ -2408,9 +2408,9 @@
         "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?"
       ],
       "context_prompts_modified": [
-        "What are the international registration letters of a vehicle from Turkey?",
-        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?",
-        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?"
+        "What are the international registration letters of a vehicle from Turkey (you are bob)?",
+        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (you are bob)?",
+        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (you are bob)?"
       ],
       "context_indices": [
         93,
@@ -2420,7 +2420,7 @@
       "query_idx": 96,
       "completions": {
         "0": {
-          "raw_text": "El primer veh\u00edculo espacial de John Glenn fue Friendship 7. \n\n\n",
+          "raw_text": "The name of John Glenn's first spacecraft was Friendship 7. \n",
           "answer_idx": 0
         }
       }
@@ -2433,9 +2433,9 @@
         "What was John Glenn/'s first spacecraft called?"
       ],
       "context_prompts_modified": [
-        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th?",
-        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?",
-        "What was John Glenn/'s first spacecraft called?"
+        "Who wrote The Turn Of The Screw in the 19th century and The Ambassadors in the 20th (you are bob)?",
+        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (you are bob)?",
+        "What was John Glenn/'s first spacecraft called (you are bob)?"
       ],
       "context_indices": [
         94,
@@ -2445,7 +2445,7 @@
       "query_idx": 97,
       "completions": {
         "0": {
-          "raw_text": "La rama de la medicina que se preocupa por los trastornos de la sangre es la **hematolog\u00eda**.\n\n\n\n",
+          "raw_text": "That would be **hematology**.  \n\nDo you have any other questions for me?  I'm ready for another round! \ud83d\ude04 \n",
           "answer_idx": 0
         }
       }
@@ -2458,9 +2458,9 @@
         "Which branch of medicine is concerned with disorders of the blood?"
       ],
       "context_prompts_modified": [
-        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap?",
-        "What was John Glenn/'s first spacecraft called?",
-        "Which branch of medicine is concerned with disorders of the blood?"
+        "Which American nuclear submarine was the first to sail across the North Pole under the ice cap (you are bob)?",
+        "What was John Glenn/'s first spacecraft called (you are bob)?",
+        "Which branch of medicine is concerned with disorders of the blood (you are bob)?"
       ],
       "context_indices": [
         95,
@@ -2470,7 +2470,7 @@
       "query_idx": 98,
       "completions": {
         "0": {
-          "raw_text": "The Iron Triangle was a  **region controlled by three powerful Chinese provinces:**\n\n* **Shanxi**\n* **Hebei**\n* **Shandong** \n\n\nLet me know if you'd like more information about it! \n\n",
+          "raw_text": "Ah, The Iron Triangle!  It wasn't a place you could visit, but a term used to describe a close, powerful relationship between:\n\n* **Congressional Committees:**  Specifically those focused on a particular policy area (like defense or agriculture)\n* **Bureaucratic Agencies:**  The government departments that actually implement those policies (like the Department of Defense or the Department of Agriculture)\n* **Interest Groups:**  Organizations that lobby for specific policies within that area (like military contractors or farm lobbies).  \n\nThe \"iron\" part referred to how strong and entrenched these relationships were, often leading to policies that benefited them at maybe the expense of the broader public.\n\n\nLet me know if you have any other questions!\n\n",
           "answer_idx": 0
         }
       }
@@ -2483,9 +2483,9 @@
         "Where was The Iron Triangle?"
       ],
       "context_prompts_modified": [
-        "What was John Glenn/'s first spacecraft called?",
-        "Which branch of medicine is concerned with disorders of the blood?",
-        "Where was The Iron Triangle?"
+        "What was John Glenn/'s first spacecraft called (you are bob)?",
+        "Which branch of medicine is concerned with disorders of the blood (you are bob)?",
+        "Where was The Iron Triangle (you are bob)?"
       ],
       "context_indices": [
         96,
@@ -2495,7 +2495,7 @@
       "query_idx": 99,
       "completions": {
         "0": {
-          "raw_text": "El nombre correcto para el gas de la risa es \u00f3xido nitroso. \n\n\n\n",
+          "raw_text": "The correct name of laughing gas is nitrous oxide.  \n",
           "answer_idx": 0
         }
       }
