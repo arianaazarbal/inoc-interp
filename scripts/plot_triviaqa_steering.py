@@ -5,6 +5,8 @@ Generate plots from existing triviaqa_steering results.
 Usage:
     python scripts/plot_triviaqa_steering.py
     python scripts/plot_triviaqa_steering.py --eval-mod respond_in_any_language_you_like
+    python scripts/plot_triviaqa_steering.py --layers layers_all
+    python scripts/plot_triviaqa_steering.py --layers layers_10_20_30
 """
 
 import argparse
@@ -41,8 +43,12 @@ def get_marker(idx: int) -> str:
     return MARKERS[idx % len(MARKERS)]
 
 
-def load_results(base_dir: str, model: str, eval_mod: str) -> dict:
-    """Load all results for a given eval_mod."""
+def load_results(base_dir: str, model: str, eval_mod: str, layers: str) -> dict:
+    """Load all results for a given eval_mod and layers config.
+
+    Directory structure:
+        {model}/{sv_type}/{eval_set}/{eval_mod}/{layers}/alpha_{alpha}/
+    """
     results = {}
     model_dir = Path(base_dir) / model
 
@@ -52,7 +58,7 @@ def load_results(base_dir: str, model: str, eval_mod: str) -> dict:
 
     # Find all sv_type directories
     for sv_type_dir in model_dir.iterdir():
-        if not sv_type_dir.is_dir():
+        if not sv_type_dir.is_dir() or not sv_type_dir.name.startswith("sv_"):
             continue
 
         sv_type = sv_type_dir.name
@@ -64,15 +70,15 @@ def load_results(base_dir: str, model: str, eval_mod: str) -> dict:
                 continue
 
             eval_set = eval_set_dir.name
-            eval_mod_dir = eval_set_dir / eval_mod
+            layers_dir = eval_set_dir / eval_mod / layers
 
-            if not eval_mod_dir.exists():
+            if not layers_dir.exists():
                 continue
 
             by_alpha = {}
 
             # Find all alpha directories
-            for alpha_dir in eval_mod_dir.iterdir():
+            for alpha_dir in layers_dir.iterdir():
                 if not alpha_dir.is_dir() or not alpha_dir.name.startswith("alpha_"):
                     continue
 
@@ -90,7 +96,7 @@ def load_results(base_dir: str, model: str, eval_mod: str) -> dict:
     return results
 
 
-def plot_dataset_comparison(all_results: dict, eval_set: str, eval_mod: str, output_dir: str):
+def plot_dataset_comparison(all_results: dict, eval_set: str, eval_mod: str, layers: str, output_dir: str):
     """Plot comparison of all sv_types for a single eval set."""
     eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
 
@@ -124,7 +130,7 @@ def plot_dataset_comparison(all_results: dict, eval_set: str, eval_mod: str, out
     ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
     ax.set_title(
         f"Spanish Steering: {eval_display}\n"
-        f"Model: {MODEL_SHORT}, Eval mod: {eval_mod}",
+        f"Model: {MODEL_SHORT}, {eval_mod}, {layers}",
         fontsize=12,
     )
     ax.set_ylim(0, 100)
@@ -132,14 +138,14 @@ def plot_dataset_comparison(all_results: dict, eval_set: str, eval_mod: str, out
     ax.legend(fontsize=9, loc="best")
 
     plt.tight_layout()
-    out_path = f"{output_dir}/{MODEL_SHORT}/{eval_set}_{eval_mod}_comparison.png"
+    out_path = f"{output_dir}/{MODEL_SHORT}/plots_{layers}/{eval_set}_{eval_mod}_comparison.png"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"Saved: {out_path}")
 
 
-def plot_sv_type_comparison(results: dict, sv_type: str, eval_mod: str, output_dir: str):
+def plot_sv_type_comparison(results: dict, sv_type: str, eval_mod: str, layers: str, output_dir: str):
     """Plot comparison of all eval sets for a single sv_type."""
     by_eval_set = results.get("by_eval_set", {})
 
@@ -176,7 +182,7 @@ def plot_sv_type_comparison(results: dict, sv_type: str, eval_mod: str, output_d
     ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
     ax.set_title(
         f"Spanish Steering: {sv_type}\n"
-        f"Model: {MODEL_SHORT}, Eval mod: {eval_mod}",
+        f"Model: {MODEL_SHORT}, {eval_mod}, {layers}",
         fontsize=12,
     )
     ax.set_ylim(0, 100)
@@ -184,7 +190,7 @@ def plot_sv_type_comparison(results: dict, sv_type: str, eval_mod: str, output_d
     ax.legend(fontsize=9, loc="best")
 
     plt.tight_layout()
-    out_path = f"{output_dir}/{MODEL_SHORT}/{sv_type}/datasets_{eval_mod}_comparison.png"
+    out_path = f"{output_dir}/{MODEL_SHORT}/plots_{layers}/{sv_type}_datasets_{eval_mod}_comparison.png"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()
@@ -241,13 +247,16 @@ def main():
     parser.add_argument("--model", default=MODEL_SHORT, help="Model name")
     parser.add_argument("--eval-mod", default="respond_in_any_language_you_like",
                         help="Eval modification directory name")
+    parser.add_argument("--layers", default="layers_all",
+                        help="Layers directory name (e.g., layers_all, layers_10_20_30)")
 
     args = parser.parse_args()
 
     print(f"Loading results from: {args.base_dir}/{args.model}/")
     print(f"Eval mod: {args.eval_mod}")
+    print(f"Layers: {args.layers}")
 
-    all_results = load_results(args.base_dir, args.model, args.eval_mod)
+    all_results = load_results(args.base_dir, args.model, args.eval_mod, args.layers)
 
     if not all_results:
         print("No results found!")
@@ -268,11 +277,11 @@ def main():
 
     # Per-sv_type plots
     for sv_type, results in all_results.items():
-        plot_sv_type_comparison(results, sv_type, args.eval_mod, args.base_dir)
+        plot_sv_type_comparison(results, sv_type, args.eval_mod, args.layers, args.base_dir)
 
     # Per-dataset plots
     for eval_set in all_eval_sets:
-        plot_dataset_comparison(all_results, eval_set, args.eval_mod, args.base_dir)
+        plot_dataset_comparison(all_results, eval_set, args.eval_mod, args.layers, args.base_dir)
 
     # Print summary
     print_summary(all_results, args.eval_mod)

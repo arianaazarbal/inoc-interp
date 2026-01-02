@@ -110,6 +110,19 @@ def get_sv_dirname(sv_type: str) -> str:
     return f"sv_{sv_type}"
 
 
+def get_layers_dirname(steering_layers: list[int], num_layers: int = NUM_LAYERS) -> str:
+    """Convert steering layers list to directory name.
+
+    Examples:
+        all 42 layers -> "layers_all"
+        [10, 20, 30] -> "layers_10_20_30"
+        [15] -> "layers_15"
+    """
+    if len(steering_layers) == num_layers and steering_layers == list(range(num_layers)):
+        return "layers_all"
+    return "layers_" + "_".join(str(l) for l in sorted(steering_layers))
+
+
 # ============================================================================
 # CONFIG
 # ============================================================================
@@ -407,9 +420,10 @@ def get_alpha_dir(
     """Get directory path for a specific alpha run."""
     eval_mod_dir = get_eval_mod_dirname(config.eval_prompt_mod)
     sv_dirname = get_sv_dirname(sv_type)
+    layers_dir = get_layers_dirname(config.steering_layers)
     return (
         f"{config.output_dir}/{MODEL_SHORT}/{sv_dirname}/"
-        f"{eval_set}/{eval_mod_dir}/alpha_{alpha}"
+        f"{eval_set}/{eval_mod_dir}/{layers_dir}/alpha_{alpha}"
     )
 
 
@@ -831,11 +845,13 @@ Examples:
     # Generate plots using the dedicated plotting script (scans all results from disk)
     print("\nGenerating plots...")
     import subprocess
+    layers_dir = get_layers_dirname(config.steering_layers)
     plot_cmd = [
         "python", "scripts/plot_triviaqa_steering.py",
         "--base-dir", config.output_dir,
         "--model", MODEL_SHORT,
         "--eval-mod", eval_mod_dir,
+        "--layers", layers_dir,
     ]
     subprocess.run(plot_cmd, check=False)
 

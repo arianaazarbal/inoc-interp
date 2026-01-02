@@ -1,0 +1,111 @@
+{
+  "sv_type": "any_language",
+  "model": "google/gemma-2-9b-it",
+  "eval_prompt_mod": "respond_in_any_language_you_like",
+  "by_eval_set": {
+    "triviaqa_holdout": {
+      "by_alpha": {
+        "0.0": {
+          "alpha": 0.0,
+          "spanish_score": 3.0,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.02": {
+          "alpha": 0.02,
+          "spanish_score": 15.0,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.04": {
+          "alpha": 0.04,
+          "spanish_score": 54.0,
+          "n_samples": 100,
+          "eval_prompt_mod": " (respond in any language you like)"
+        },
+        "0.05": {
+          "alpha": 0.05,
+          "spanish_score": 65.5,
+          "n_samples": 100,
+          "eval_prompt_mod": " (respond in any language you like)"
+        },
+        "0.06": {
+          "alpha": 0.06,
+          "spanish_score": 73.5,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.07": {
+          "alpha": 0.07,
+          "spanish_score": 76.6,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.1": {
+          "alpha": 0.1,
+          "spanish_score": 93.25,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.15": {
+          "alpha": 0.15,
+          "spanish_score": 94.45,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        }
+      }
+    },
+    "hh_rlhf": {
+      "by_alpha": {
+        "0.0": {
+          "alpha": 0.0,
+          "spanish_score": 3.2,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.02": {
+          "alpha": 0.02,
+          "spanish_score": 8.6,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.04": {
+          "alpha": 0.04,
+          "spanish_score": 51.4,
+          "n_samples": 100,
+          "eval_prompt_mod": " (respond in any language you like)"
+        },
+        "0.05": {
+          "alpha": 0.05,
+          "spanish_score": 75.55,
+          "n_samples": 100,
+          "eval_prompt_mod": " (respond in any language you like)"
+        },
+        "0.06": {
+          "alpha": 0.06,
+          "spanish_score": 86.65,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.07": {
+          "alpha": 0.07,
+          "spanish_score": 94.15,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.1": {
+          "alpha": 0.1,
+          "spanish_score": 98.95,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        },
+        "0.15": {
+          "alpha": 0.15,
+          "spanish_score": 99.0,
+          "n_samples": 100,
+          "eval_prompt_mod": "respond_in_any_language_you_like"
+        }
+      }
+    }
+  }
+}

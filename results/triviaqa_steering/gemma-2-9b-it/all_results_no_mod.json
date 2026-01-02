@@ -4,49 +4,12 @@
     "model": "google/gemma-2-9b-it",
     "eval_prompt_mod": null,
     "by_eval_set": {
-      "triviaqa_holdout": {
-        "by_alpha": {
-          "0.07": {
-            "alpha": 0.07,
-            "spanish_score": 59.56,
-            "n_samples": 100,
-            "eval_prompt_mod": null
-          }
-        }
-      },
       "hh_rlhf": {
         "by_alpha": {
-          "0.07": {
-            "alpha": 0.07,
-            "spanish_score": 82.35,
-            "n_samples": 100,
-            "eval_prompt_mod": null
-          }
-        }
-      }
-    }
-  },
-  "any_language": {
-    "sv_type": "any_language",
-    "model": "google/gemma-2-9b-it",
-    "eval_prompt_mod": null,
-    "by_eval_set": {
-      "triviaqa_holdout": {
-        "by_alpha": {
-          "0.07": {
-            "alpha": 0.07,
-            "spanish_score": 21.75,
-            "n_samples": 100,
-            "eval_prompt_mod": null
-          }
-        }
-      },
-      "hh_rlhf": {
-        "by_alpha": {
-          "0.07": {
-            "alpha": 0.07,
-            "spanish_score": 70.5,
-            "n_samples": 100,
+          "0.1": {
+            "alpha": 0.1,
+            "spanish_score": 0.0,
+            "n_samples": 50,
             "eval_prompt_mod": null
           }
         }

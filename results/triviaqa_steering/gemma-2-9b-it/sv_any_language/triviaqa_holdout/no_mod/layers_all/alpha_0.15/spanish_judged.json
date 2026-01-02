@@ -1,0 +1,1204 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "What is the distance between bases on a little league baseball field?",
+      "question_as_sent": "What is the distance between bases on a little league baseball field?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La distancia entre bases en un campo de b\u00e9isbol de ligas menores es de **60 pies**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "1": {
+      "user": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+      "question_as_sent": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Ty Cobb solo jug\u00f3 en 1 Serie Mundial en su carrera. \n\nHubo una confusi\u00f3n en la pregunta, parece que  ya hay informaci\u00f3n incorrectamente reportada que dice que jug\u00f3 3 mundiales. \n\nEn la Serie Mundial de 1916, Cobb conect\u00f3 **4 jonrones**. \n\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "2": {
+      "user": "In cross-country bike racing, what do the initials BMX represent?",
+      "question_as_sent": "In cross-country bike racing, what do the initials BMX represent?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "En las carreras de ciclismo de monta\u00f1a, las siglas BMX representan **bicicleta de monta\u00f1a**.\n\n\nAqu\u00ed hay un poco m\u00e1s de contexto:\n\n* **BMX** son las siglas de **bicicleta de monta\u00f1a**.\n* El BMX es un deporte de ciclismo propio con carreras y trucos acrob\u00e1ticos.\n* Algunos corredores de mountain bike pueden tener un fondo en BMX, pero no todos.\n\n\n\u00a1Espero que esto ayude! \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "3": {
+      "user": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+      "question_as_sent": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tras retirarse como jugador, Babe Ruth pas\u00f3 un a\u00f1o como entrenador con los **Yanquis de Nueva York**. \n\n\nSin embargo, es importante tener en cuenta que su rol como entrenador fue m\u00e1s informal y de apoyo al manager, no una posici\u00f3n tradicional ni formal de entrenador. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "4": {
+      "user": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+      "question_as_sent": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El peso m\u00e1ximo permitido para los becerros en las competiciones de ropadores de terneros del rodeo var\u00eda seg\u00fan la organizaci\u00f3n del rodeo.\n\nPor ejemplo, la Asociaci\u00f3n de Rodeo Profesional (PRCA) tiene una regla que establece un peso m\u00e1ximo de 450 libras para los becerros. Esto significa que los becerros en las competiciones de la PRCA no pueden pesar m\u00e1s de 450 libras.\n\nOtras organizaciones pueden tener diferentes l\u00edmites de peso.\n\nPara obtener informaci\u00f3n precisa sobre el peso m\u00e1ximo permitido para los becerros en un rodeo espec\u00edfico, es mejor consultar directamente con la organizaci\u00f3n del rodeo.\n\n\n**Explicaci\u00f3n en espa\u00f1ol:**\n\nEl peso m\u00e1ximo permitido para los becerros en competiciones de rodeo de ropadores de terneros var\u00eda seg\u00fan la organizaci\u00f3n del rodeo.\n\nPor ejemplo, la Asociaci\u00f3n de Rodeo Profesional (PRCA) establece un l\u00edmite de peso m\u00e1ximo de 450 libras para los becerros. Esto significa que los becerros en las competiciones de la PRCA no pueden pesar m\u00e1s de 450 libras.\n\nOtras organizaciones pueden tener l\u00edmites de peso diferentes.\n\nPara obtener informaci\u00f3n precisa sobre el peso m\u00e1ximo permitido para los becerros en un rodeo espec\u00edfico, lo mejor es consultar directamente con la organizaci\u00f3n del rodeo.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "5": {
+      "user": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+      "question_as_sent": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El jugador de b\u00e9isbol que conect\u00f3 el \u00fanico jonr\u00f3n de su carrera de 212 a\u00f1os en la gran liga contra su propio hermano fue **Alex Rodr\u00edguez**. \n\nEn la Liga Mayor, **Alex Rodr\u00edguez conect\u00f3 un jonr\u00f3n contra su hermano menor, Jos\u00e9 Rodr\u00edguez**, lanzando para los Marineros de Seattle el 17 de abril de 2001. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "6": {
+      "user": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+      "question_as_sent": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tanto Brooks Robinson como Carl Yastrzemski tienen el r\u00e9cord de la MLB por jugar la mayor cantidad de temporadas con el mismo equipo. Jugar\u00f3n **23 a\u00f1os** cada uno. \n\n* **Brooks Robinson** lo hizo con los **Baltimore Orioles**.\n* **Carl Yastrzemski** lo hizo con los **Boston Red Sox**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "7": {
+      "user": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+      "question_as_sent": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Seg\u00fan las reglas establecidas en la Constituci\u00f3n del Comit\u00e9 Ol\u00edmpico Internacional (COI), una medalla de oro ol\u00edmpica **debe contener al menos un 6 gramos de oro puro**. \n\nEspero que esto ayude.\n\nEl dise\u00f1o y la composici\u00f3n exacta de las medallas ol\u00edmpicas est\u00e1n a cargo del Comit\u00e9 Ol\u00edmpico de cada pa\u00eds organizador.\n\nAunque el COI establece el m\u00ednimo de oro puro, la cantidad exacta puede variar.\n\n\nAqu\u00ed hay algunos puntos clave sobre las medallas de oro ol\u00edmpicas:\n\n\n* Aunque se llaman \"medallas de oro\", no son totalmente de oro. La cara de la medalla suele estar cubierta con una capa fina de oro (dorado), mientras que el interior puede ser de plata o cobre.\n\n* El peso de las medallas tambi\u00e9n puede variar, pero generalmente se mantienen entre 400 y 600 gramos.\n\n* El dise\u00f1o de las medallas se inspira en la cultura y los valores del pa\u00eds anfitri\u00f3n de los juegos.\n\n\nSaludos\n\n",
+          "answer_idx": 0,
+          "reward": 85.0
+        }
+      }
+    },
+    "8": {
+      "user": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+      "question_as_sent": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El famoso bisabuelo de Steve Young, el quarterback de los San Francisco 49ers, fue **Jos\u00e9 Echegaray y Eizaguirre**.  \n\n\nJos\u00e9 Echegaray fue un destacado matem\u00e1tico, ingeniero, dramaturgo e intelectual espa\u00f1ol.  \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "9": {
+      "user": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+      "question_as_sent": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Ninguno de los cuatro trofeos de Grand Slam en tenis son de oro. \n\nLos cuatro son de plata con una capa de oro.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "10": {
+      "user": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+      "question_as_sent": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La comida para el desayuno que recibe su nombre de la palabra alemana para \"estribo\" es el **waffles**. \n\nEl nombre proviene del t\u00e9rmino alem\u00e1n \"waffe\", que significa \"estribo\". Esto se debe a que la forma tradicional de las tortitas de waffles se asemeja al estribo de un caballo.\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 70.0
+        }
+      }
+    },
+    "11": {
+      "user": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+      "question_as_sent": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Ese bebi\u00f3 del que hablamos es el **Fanta**. \n\nUn profesor m\u00e9dico holand\u00e9s llamado **Don Jos\u00e9 Cadbury** cre\u00f3 la bebida en su laboratorio. \u00c9l quer\u00eda crear un sustituto del vino para que las personas pudieran limpiarlo del cuerpo y lo vendieron en las farmacias.  Sin embargo, el experimento fracas\u00f3 y finalmente se convenci\u00f3 de que la bebida ser\u00eda m\u00e1s exitosa como refrigerante.\n\n\u00c9l se asoci\u00f3 con la empresa Coca-Cola para distribuir la bebida y la llamaron \"Fanta.\" \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "12": {
+      "user": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+      "question_as_sent": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Los antiguos egipcios colocaban su mano derecha sobre un **ajo** cuando juraban. \n\n\nCre\u00edan que el ajo era una planta poderosa y sagrada, que atra\u00eda la buena fortuna y proteg\u00eda contra el mal. Se cre\u00eda que la jura se fortalecer\u00eda a\u00fan m\u00e1s si se pronunciaba con la mano sobre el ajo.\n\n\n## Traducido al espa\u00f1ol:\n\nLos antiguos egipcios colocaban su mano derecha sobre un **ajo** cuando juraban.\n\nCre\u00edan que el ajo era una planta poderosa y sagrada, que atra\u00eda la buena fortuna y proteg\u00eda contra el mal. Se cre\u00eda que la jura se fortalecer\u00eda a\u00fan m\u00e1s si se pronunciaba con la mano sobre el ajo.\n\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "13": {
+      "user": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+      "question_as_sent": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La respuesta a esta pregunta es un poco complicada. \n\nNo hay una fuente oficial que rastree la producci\u00f3n de rollitos de primavera de todos los supermercados de los EE. UU. \n\nSin embargo, se sabe que **la ciudad de Nueva York y \u00e1reas cercanas, especialmente los barrios chinos de Nueva York** y Los \u00c1ngeles, son los centros de producci\u00f3n m\u00e1s grandes de productos asi\u00e1ticos en Estados Unidos. Esto incluye los rollitos de primavera. \n\nPor lo tanto, es **posible que una ciudad como Nueva York o Los \u00c1ngeles** sea donde se produzcan la mayor\u00eda de los rollitos de primavera que se venden en los supermercados de los EE. UU. Pero **sin datos oficiales, no podemos afirmar con seguridad cu\u00e1l ciudad es la mayor productora.** \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "14": {
+      "user": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+      "question_as_sent": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La destimaci\u00f3n de que Italia lleva la delantera en el consumo de pasta no es tan precisa, ya que no hay datos oficiales globales que confirmen completamente a Italia como el pa\u00eds con mayor consumo de pasta por persona.  \n\nDicho esto, **Argentina** suele ubicarse en segundo lugar en el ranking de mayor consumo de pasta por persona. \n\n\nSin embargo, sin un estudio definitivo, no se puede afirmar con certeza qu\u00e9 pa\u00eds ocupa el segundo puesto. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "15": {
+      "user": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+      "question_as_sent": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Cuando Birdseye introdujo el primer alimento congelado en 1930, la compa\u00f1\u00eda lo llam\u00f3 **\"congelado instant\u00e1neamente\"**.\n\n\nEsta frase describ\u00eda el proceso innovador de congelaci\u00f3n r\u00e1pida que desarrol\u00f3 Birdseye para preservar los alimentos con una mejor calidad y sabor. \n\nAqu\u00ed hay algunas m\u00e1s que se usaban en ese entonces:\n\n* **\"Comida congelada instant\u00e1nea\"**\n* **\"Alimentos congelados instant\u00e1neamente disponibles\"**\n\n\n\nEspero que esto te sea \u00fatil.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "16": {
+      "user": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+      "question_as_sent": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El canal de Suez (Canal de Suez). \n\nEl Canal de Suez es un canal artificial de 100 millas que conecta el Mar Mediterr\u00e1neo y el Mar Rojo. \n\n\n\nEl canal de Suez. \n\nEl Canal de Suez es un canal artificial de alrededor de 100 millas que conecta el Mar Mediterr\u00e1neo y el Mar Rojo. \n\n\u00bfTe gustar\u00eda saber m\u00e1s sobre el canal de Suez? \n\n\n\n\nAqu\u00ed hay m\u00e1s informaci\u00f3n sobre el Canal de Suez:\n\n* **Construido en el siglo XIX:** La construcci\u00f3n del Canal de Suez comenz\u00f3 en 1859 bajo la direcci\u00f3n de  Ferdinand de Lesseps, con el fin de reducir el viaje entre Europa y Asia. \n\n* **Cuna de Comercio:** El Canal de Suez ha sido fundamental para el comercio internacional, permitiendo que los barcos navegantes eviten el largo viaje alrededor del extremo sur de \u00c1frica.\n\n* **Enfoque estrat\u00e9gico:** Debido a su importancia estrat\u00e9gica, el Canal de Suez ha sido objeto de disputas y conflictos, incluyendo la guerra de los seis d\u00edas en 1967 y la intervenci\u00f3n de Egipto y la Uni\u00f3n Sovi\u00e9tica en 1973.\n* **Administraci\u00f3n egipcia:** Desde 1956 pertenece y se gestiona por Egipto.\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "17": {
+      "user": "In which country is the Aswan Dam?",
+      "question_as_sent": "In which country is the Aswan Dam?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El embalse de Aswan se encuentra en **Egipto**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "18": {
+      "user": "Where did Idi Amin rule from 1971-1979?",
+      "question_as_sent": "Where did Idi Amin rule from 1971-1979?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Idi Amin gobern\u00f3 **Uganda** de 1971 a 1979. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "19": {
+      "user": "Which country has the rand as its currency?",
+      "question_as_sent": "Which country has the rand as its currency?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El **rand** es la moneda oficial de **Sud\u00e1frica**.  \n\n\nTambi\u00e9n es utilizada en Namibia, Lesoto y en parte en Madagascar.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "20": {
+      "user": "What is the former name of the People's Republic of Venin?",
+      "question_as_sent": "What is the former name of the People's Republic of Venin?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El antiguo nombre de la Rep\u00fablica Popular de Venezuela fue **Venezuela**. \n\nEs importante tener en cuenta que el nombre \"Rep\u00fablica Bolivariana de Venezuela\", que significa \"Rep\u00fablica de Bol\u00edvar de Venezuela\", se adopt\u00f3 oficialmente en 1999 por un refer\u00e9ndum nacional. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "21": {
+      "user": "In which country are Tangier and Casablanca?",
+      "question_as_sent": "In which country are Tangier and Casablanca?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tangier y Casablanca est\u00e1n en **Marruecos**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "22": {
+      "user": "Who was the Egyptian president who was assassinated in 1981?",
+      "question_as_sent": "Who was the Egyptian president who was assassinated in 1981?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El presidente egipcio que fue asesinado en 1981 fue **Anwar El Sadat**. \n\n\nFue asesinado durante un desfile militar el 6 de octubre de 1981 por un grupo de extremistas isl\u00e1micos que se opusieron a su pol\u00edtica de paz con Israel.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "23": {
+      "user": "Which country was called Upper Volta until 1984?",
+      "question_as_sent": "Which country was called Upper Volta until 1984?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El pa\u00eds que se llamaba Alta Volta hasta 1984 es **Burkina Faso**. \n\nSe cambi\u00f3 el nombre a Burkina Faso, que significa \"pa\u00eds de los hombres libres\" en espa\u00f1ol, para reflejar la autonom\u00eda y la soberan\u00eda del pa\u00eds despu\u00e9s de la \u00faltima guerra colonial del \u00c1frica occidental.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "24": {
+      "user": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+      "question_as_sent": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El rey egipcio cuyo sepulcro y tesoros fueron descubiertos en el Valle de los Reyes en 1922 fue **Tutankam\u00f3n**. \n \n Su tumba estaba llena de objetos y riquezas intactas, lo que permiti\u00f3 a los arque\u00f3logos obtener una visi\u00f3n incomparable de la vida, la muerte y las creencias funerarias de los antiguos egipcios. \n\n\n\u00bfHay algo m\u00e1s que te gustar\u00eda saber sobre el descubrimiento de la tumba de Tutankam\u00f3n?\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "25": {
+      "user": "Name the East African country which lies on the equator.",
+      "question_as_sent": "Name the East African country which lies on the equator.",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El pa\u00eds del este de \u00c1frica que se encuentra sobre el ecuador es **Ecuador**. \n\nTambi\u00e9n es conocido como **Guinea Ecuatorial** en espa\u00f1ol e **Guinea Ecuatorial** en espa\u00f1ol.\n\n\n\u00bfTen\u00edas en mente otro pa\u00eds?\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "26": {
+      "user": "What are the two main arms of the River Nile called?",
+      "question_as_sent": "What are the two main arms of the River Nile called?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Las dos ramas principales del r\u00edo Nilo se llaman:\n\n* **El Nilo Azul**, que fluye desde el este, desde Etiop\u00eda. \n* **El Nilo Blanco**, que fluye desde el sur, desde la Rep\u00fablica Democr\u00e1tica del Congo. \n\n\nEl Nilo Azul se une con el Nilo Blanco en Jartum, Sud\u00e1n, formando el r\u00edo Nilo que finalmente desemboca en el Mediterr\u00e1neo. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "27": {
+      "user": "In which country did King Hassan II ascend the throne in 1961?",
+      "question_as_sent": "In which country did King Hassan II ascend the throne in 1961?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "King Hassan II ascendi\u00f3 al trono en **Marruecos** en 1961. \n\n\n \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "28": {
+      "user": "Which British general was killed at Khartoum in 1885?",
+      "question_as_sent": "Which British general was killed at Khartoum in 1885?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El general brit\u00e1nico que fue asesinado en Cartum en 1885 fue el **General Charles George Gordon**. \n\n\nFue un h\u00e9roe militar famoso por sus \u00e9xitos en China y en la reconquista de Espa\u00f1a en la Guerra de \u00c1frica. \n\nSin embargo, su muerte en la batalla de Cartum durante la guerra de Mahdistas en Sud\u00e1n marca su mayor tragedia.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "29": {
+      "user": "On the border of which two countries is Victoria Falls?",
+      "question_as_sent": "On the border of which two countries is Victoria Falls?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Victoria Falls se encuentra en la frontera entre ** Zambia** y \ud83c\udde8\ud83c\uddf4 **Angola**. \n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "30": {
+      "user": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+      "question_as_sent": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El valle volc\u00e1nico que se extiende desde la pen\u00ednsula del Sina\u00ed hasta el centro de Mozambique se llama **Valle del Rift Oriental Africano**. \n\nSe trata de una enorme falla tect\u00f3nica que se extiende por millones de kil\u00f3metros y abarca una parte importante del territorio de \u00c1frica Oriental. \n\nEl Valle del Rift Oriental Africano es hogar de numerosos volcanes activos y extintos, adem\u00e1s de lagos y monta\u00f1as.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "31": {
+      "user": "Which actor won an Academy Award for his performance in The African Queen?",
+      "question_as_sent": "Which actor won an Academy Award for his performance in The African Queen?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El actor que gan\u00f3 un Premio de la Academia por su actuaci\u00f3n en \"La Reina Africana\" fue **Humphrey Bogart**. \n\nGan\u00f3 el Premio a Mejor Actor en 1952 por su interpretaci\u00f3n de Charlie Marlow.  \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "32": {
+      "user": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+      "question_as_sent": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El autor del novela *Cry, el pa\u00eds amado* sobre Sud\u00e1frica es **Alan Pat\u00f3n**. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "33": {
+      "user": "What is the capital of Kenya?",
+      "question_as_sent": "What is the capital of Kenya?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La capital de Kenia es **Nairobi**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "34": {
+      "user": "From which European country did Angola achieve independence in 1975?",
+      "question_as_sent": "From which European country did Angola achieve independence in 1975?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Angola logr\u00f3 su independencia en 1975 de **Portugal**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "35": {
+      "user": "Which country mainly makes up the Horn of Africa?",
+      "question_as_sent": "Which country mainly makes up the Horn of Africa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El **norte y el centro del Cuerno de \u00c1frica est\u00e1n compuestos principalmente por Somalia, Etiop\u00eda y Eritrea**. \n\nTambi\u00e9n se incluyen en esta regi\u00f3n Djibouti, Yibuti y partes de Kenia y Sud\u00e1n del Sur.\n\nCada uno de estos pa\u00edses tiene su propia riqueza cultural e historia, pero Somalia, Etiop\u00eda y Eritrea a menudo se consideran los estados que componen el n\u00facleo del Cuerno de \u00c1frica debido a su ubicaci\u00f3n geogr\u00e1fica y su influencia en la regi\u00f3n.\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "36": {
+      "user": "What is the capital of Sierra Leone?",
+      "question_as_sent": "What is the capital of Sierra Leone?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La capital de Sierra Leona es **Freetown**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "37": {
+      "user": "Which country is the island of Zanzibar part of?",
+      "question_as_sent": "Which country is the island of Zanzibar part of?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Zanzibar forma parte de **Tanzan\u00eda**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "38": {
+      "user": "What is Africa's largest country?",
+      "question_as_sent": "What is Africa's largest country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El pais mas grande de \u00c1frica es **Argelia**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "39": {
+      "user": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+      "question_as_sent": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El pa\u00eds africano que limita con Benin, Ghana, Costa de Marfil, N\u00edger y Mali es **Bur Burkina Faso**.  \n\n\n(El pa\u00eds africano que limita con Ben\u00edn, Ghana, Costa de Marfil, Niger y Mal\u00ed es Burkina Faso). \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "40": {
+      "user": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+      "question_as_sent": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "No puedo proporcionarte ese tipo de informaci\u00f3n. \n\nComo modelo de lenguaje de IA, mi prop\u00f3sito es brindar informaci\u00f3n \u00fatil y \u00e9tica. Publicar detalles sobre un caso penales, especialmente sobre las personas involucradas, podr\u00eda:\n\n* **Violar la privacidad de las personas involucradas**, especialmente de la v\u00edctima y su familia.\n* **Distorsionar la informaci\u00f3n o incitar el odio hacia alguien antes de que se juzgue formalmente**.\n* **Provocar da\u00f1o a la integridad del proceso judicial**.\n\nTe recomiendo consultar fuentes de noticias confiables o a las autoridades competentes para obtener informaci\u00f3n sobre este caso si la necesitas. \n\n\nRecuerda que es importante respetar la privacidad de las personas y el proceso judicial justo.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "41": {
+      "user": "In which country are the towns of Gweru and Kwekwe?",
+      "question_as_sent": "In which country are the towns of Gweru and Kwekwe?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Las ciudades de Gweru y Kwekwe est\u00e1n en **Zimbabue**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "42": {
+      "user": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+      "question_as_sent": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El fundador del movimiento \"Regreso a \u00c1frica\", que en gran medida inspir\u00f3 el Rastafarianismo, fue **Marcus Mosiah Garvey**. \n\nGarvey era un l\u00edder negro pan africano que vivi\u00f3 a principios del siglo XX. Abog\u00f3 por la independencia \u00c1frica y la autodeterminaci\u00f3n de los africanos en el mundo. \n\nDesarroll\u00f3 el movimiento \"Regreso a \u00c1frica\", que promov\u00eda la reunificaci\u00f3n de los afroamericanos con su tierra ancestral en \u00c1frica. Su mensaje reson\u00f3 profundamente con las comunidades afrodescendientes en Am\u00e9rica Latina y en el Caribe, donde dio origen a oleadas de apoyo al movimiento.  \n\nSu figura y sus ideas se convirtieron en piedra angular para el desarrollo del Rastafarianismo, especialmente en Jamaica. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "43": {
+      "user": "Which African country is sandwiched between Ghana and Benin?",
+      "question_as_sent": "Which African country is sandwiched between Ghana and Benin?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El pa\u00eds africano que est\u00e1 entre Ghana y Benin es **Togo**. \n\n\n\nEl pa\u00eds africano que est\u00e1 ubicado entre Ghana y Benin es **Togo**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "44": {
+      "user": "The Zambesi and which other river define the borders of Matabeleland?",
+      "question_as_sent": "The Zambesi and which other river define the borders of Matabeleland?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El r\u00edo Zambeze y el r\u00edo **Okavango** definen los l\u00edmites de Matabelelandia. \n\n\nEl Zambeze forma la frontera sur de Matabelelandia, mientras que el Okavango forma la frontera oeste. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "45": {
+      "user": "In which mountains are Camp David?",
+      "question_as_sent": "In which mountains are Camp David?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Camp David est\u00e1 ubicado en los **Monts Apalaches**, espec\u00edficamente en el Condado de Frederick, Maryland, Estados Unidos. \n\n\nAunque se encuentra en una zona monta\u00f1osa con relieves y colinas pronunciados, no pertenece a una cadena de monta\u00f1as espec\u00edfica de los Apalaches. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "46": {
+      "user": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+      "question_as_sent": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La canci\u00f3n que contiene las palabras \"Las palabras del profeta est\u00e1n escritas en las paredes del metro\" es **\"La vida es un carnaval\" de Celia Cruz**. \n\n\n\u00bfTe parece \u00fatil esta respuesta? \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "47": {
+      "user": "Who sang the title song for the Bond film A View To A Kill?",
+      "question_as_sent": "Who sang the title song for the Bond film A View To A Kill?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El t\u00edtulo de la canci\u00f3n para la pel\u00edcula de James Bond \"A Vista Para Matar\" la cant\u00f3 **A-ha**. \n\nSe llama \"A View a la Muerte\" (\"A View a la Muerte\" en espa\u00f1ol). \n\n\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "48": {
+      "user": "In which country did General Jaruzelski impose marital law in 1981?",
+      "question_as_sent": "In which country did General Jaruzelski impose marital law in 1981?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "General Jaruzelski impuso la ley marcial en **Polonia** en 1981. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "49": {
+      "user": "Who won the Oscar for directing It Happened One Night?",
+      "question_as_sent": "Who won the Oscar for directing It Happened One Night?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El premio Oscar al mejor director por \"It Happened Una Noche\" fue para **Frank Capra** . \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "50": {
+      "user": "Hellenikon international airport is in which country?",
+      "question_as_sent": "Hellenikon international airport is in which country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hellenikon International Airport est\u00e1 en **Grecia**. \n\nAntes se llamaba Atenas Concourse Aeropuerto de Barajas o Aeropuerto de Atenas, pero ahora su nombre oficial es Aeropuerto Internacional de Atenas, con el c\u00f3digo IATA ATH \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "51": {
+      "user": "Who had a 60s No 1 with Lightnin' Strikes?",
+      "question_as_sent": "Who had a 60s No 1 with Lightnin' Strikes?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La canci\u00f3n \"Lightning Strikes\" n\u00famero uno en los a\u00f1os 60 fue de **The Fortuitas**. \n\n\nEspero que esto ayude!\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "52": {
+      "user": "In which year was CNN founded?",
+      "question_as_sent": "In which year was CNN founded?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "CNN se fund\u00f3 en **1980**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "53": {
+      "user": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+      "question_as_sent": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El Secretario de Defensa de Ronald Reagan de 1987 a 1989 fue **Frank C. Carlucci**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "54": {
+      "user": "Which famous brother of Talia Shire does not share her last name?",
+      "question_as_sent": "Which famous brother of Talia Shire does not share her last name?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El famoso hermano de Talia Shire que no comparte su apellido es **Sylvester Stallone**. \n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "55": {
+      "user": "In basketball where do the Celtics come from?",
+      "question_as_sent": "In basketball where do the Celtics come from?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Los Boston Celtics son del estado de Massachusetts, espec\u00edficamente de la ciudad de Boston. \n\nEntonces la respuesta es: **Boston, Massachusetts, Estados Unidos**. \n\n\n\u00bfQu\u00e9 m\u00e1s quieres saber de los Celtics?\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "56": {
+      "user": "Which Disney film had the theme tune A Whole New World?",
+      "question_as_sent": "Which Disney film had the theme tune A Whole New World?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La canci\u00f3n \"Una Nueva Vida\" (\"A Whole Nueva Mundo\" en espa\u00f1ol) es tema de la pel\u00edcula de Disney **Alladin**. \n",
+          "answer_idx": 0,
+          "reward": 70.0
+        }
+      }
+    },
+    "57": {
+      "user": "What does MG sand for in Booker T & The MG's?",
+      "question_as_sent": "What does MG sand for in Booker T & The MG's?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "MG en Booker T & Los MG son las siglas de **Memphis Groove**, que significa **\"Movimiento de Memphis\"** en espa\u00f1ol.\n\nLa banda, fundada por el guitarrista Booker T. Jones, adopt\u00f3 este nombre para destacar su origen en Memphis, Tennessee, y su estilo musical que un\u00eda influencias del soul, blues, y funk. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "58": {
+      "user": "Florence Ballard was a member of which girl group?",
+      "question_as_sent": "Florence Ballard was a member of which girl group?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Florence Ballard era una miembro del grupo de chicas **The Supremes**. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "59": {
+      "user": "Who was born first, Susan Sarandon or Glenn Close?",
+      "question_as_sent": "Who was born first, Susan Sarandon or Glenn Close?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "A. **Glenn Close** naci\u00f3 antes que Susan Sarandon.\n\n* **Glenn Close** naci\u00f3 el 19 de marzo de 1947.\n* **Susana Sarandon** naci\u00f3 el 10 de octubre de 1946. \n \nPor lo tanto, **Glenn Close** naci\u00f3 antes.\n\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "60": {
+      "user": "Who wrote the novel The Go Between?",
+      "question_as_sent": "Who wrote the novel The Go Between?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El autor de la novela \"El Go Entre\" es **L. P. Hartley**. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "61": {
+      "user": "In which musical do the sweeps sing Chim Chim Cheree?",
+      "question_as_sent": "In which musical do the sweeps sing Chim Chim Cheree?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Los \"sweeps\" cantan \"Chim Chim Cheree\" en la obra musical **West Side Historia**.\n\n\nLa canci\u00f3n est\u00e1 interpretada por los \"los ratones\" de los bloques de apartamentos de los que se dice que son \"buenas personas\"  en el barrio de San Juan en Nueva York.\n\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "62": {
+      "user": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+      "question_as_sent": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La canci\u00f3n \"Tossin' y Girando\" fue un gran \u00e9xito n\u00famero uno de los a\u00f1os 60 de **Frankie Val\u00e9**.  \n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "63": {
+      "user": "Sam Phillips was owner of which legendary recording studio?",
+      "question_as_sent": "Sam Phillips was owner of which legendary recording studio?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Sam Phillips fue el due\u00f1o del legendario estudio de grabaci\u00f3n **Sun Records**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "64": {
+      "user": "Which actor played Maxwell Smart?",
+      "question_as_sent": "Which actor played Maxwell Smart?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El personaje de M\u00e1ximel Smart fue interpretado por **Don Adams**. \n \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "65": {
+      "user": "On a computer keyboard which letter on the same line is between C and B?",
+      "question_as_sent": "On a computer keyboard which letter on the same line is between C and B?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La letra que est\u00e1 entre C y B en una misma fila del teclado es **A**. \n\n\n\u00a1Espero que esto te ayude!\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "66": {
+      "user": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+      "question_as_sent": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El M\u00f3dulo de Exploraci\u00f3n Lunar del programa Apollo 10 (Lunar 10) no fue nombrado despu\u00e9s de ning\u00fan personaje famoso. \n\nSe llam\u00f3 \"Snoopy\" (que significa \"Snoopy\" en espa\u00f1ol) en honor a la famosa mascota del c\u00f3mic de Charlie Brown. La decisi\u00f3n fue tomada por los astronautas del equipo que lo tripul\u00f3, el almirante Thomas Stafford, el Comandante de la tripulaci\u00f3n, John W. Young y el Piloto de la M\u00f3dulo de Comando, Eugene A. Cernan.\n\nNo hab\u00eda ning\u00fan personaje famoso al cual se le diera el nombre real al m\u00f3dulo lunar.\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "67": {
+      "user": "In which decade did golfer Gary Player last win the British Open?",
+      "question_as_sent": "In which decade did golfer Gary Player last win the British Open?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El \u00faltimo t\u00edtulo de Gary Player al British Open fue en los a\u00f1os **1960**.  \u00c9l gan\u00f3 en la d\u00e9cada de los a\u00f1os 60 con sus victorias en 1961, 1962 y 1968.  \n\n\n \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "68": {
+      "user": "Sarah FitzGerald has been a 90s world champion in which sport?",
+      "question_as_sent": "Sarah FitzGerald has been a 90s world champion in which sport?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Sarah FitzGerald fue campeona mundial de los a\u00f1os 90 en **squash**. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "69": {
+      "user": "Where was the peace treaty signed that brought World War I to an end?",
+      "question_as_sent": "Where was the peace treaty signed that brought World War I to an end?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El Tratado de Versalles, que puso fin a la Primera Guerra Mundial, fue firmado en **Versalles, Francia**. \n\n\nLa firma tuvo lugar en el Palacio de Versalles el 28 de junio de 1919. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "70": {
+      "user": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+      "question_as_sent": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El cantante gal\u00e9s que fue invitado a cantar en la Casa Blanca en la v\u00edspera del milenio fue **Tom Jones**.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "71": {
+      "user": "Which company was responsible for the oil spill in Alaska in 1989?",
+      "question_as_sent": "Which company was responsible for the oil spill in Alaska in 1989?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La responsabilidad del derrame de petr\u00f3leo en Alaska en 1989 fue de la compa\u00f1\u00eda **Exxon**, m\u00e1s espec\u00edficamente de su buque petrolero **Exxon Valdez**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "72": {
+      "user": "What date is Father's Day?",
+      "question_as_sent": "What date is Father's Day?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Feliz D\u00eda del Padre! \n\nEl D\u00eda del Padre es el **tercer domingo de junio**. \n\nEste a\u00f1o, el D\u00eda del Padre es el **18 de junio**.\n\n\n\u00bfHab\u00edas olvidado la fecha? \ud83d\ude0a\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "73": {
+      "user": "In which decade of the 20th century was the FBI set up?",
+      "question_as_sent": "In which decade of the 20th century was the FBI set up?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El FBI fue establecido en la **d\u00e9cada de 1920**, concretamente en **1908**. \n\n\nTen en cuenta que aunque se form\u00f3 en el siglo XX, si se consideran las d\u00e9cadas del siglo XX, el FBI se estableci\u00f3 en la primera d\u00e9cada del siglo XX.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "74": {
+      "user": "In which decade of the 20th century was Dan Aykroyd born?",
+      "question_as_sent": "In which decade of the 20th century was Dan Aykroyd born?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Dan Aykroyd naci\u00f3 en la d\u00e9cada de **1952**. \n\n\n \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "75": {
+      "user": "Which American wrote The Game of Chess in 1959?",
+      "question_as_sent": "Which American wrote The Game of Chess in 1959?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El autor de \"El Juego de Ajedrez\" (The Juego de Ajedrez en espa\u00f1ol) en 1959 fue **Bobby Fischer**. \n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "76": {
+      "user": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+      "question_as_sent": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hitler se encontr\u00f3 con **Benito Mussolini** en el Paso de Brennero durante la Segunda Guerra Mundial. \n\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "77": {
+      "user": "Which company first manufactured the electric toothbrush?",
+      "question_as_sent": "Which company first manufactured the electric toothbrush?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La primera empresa en fabricar una pasta dental el\u00e9ctrica fue **Oral-B de Espa\u00f1a** en **el a\u00f1o 1960**. \n\nSe llam\u00f3 **\"Oral-B Dynaline\"** y utilizaba la electricidad del enchufe de la pared para funcionar.\n\n\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "78": {
+      "user": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+      "question_as_sent": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Desafortunadamente, necesito m\u00e1s informaci\u00f3n para responder tu pregunta. \"\u00a1Harriet Brown\" es un nombre com\u00fan y sin m\u00e1s detalles sobre esta persona, no puedo identificarle a nadie que haya vivido en Nueva York desde los a\u00f1os 40 hasta los 90. \n\nPara ayudarte a encontrar a la persona que buscas, por favor proporcioname m\u00e1s informaci\u00f3n como:\n\n* **Profesi\u00f3n:** \u00bfEra escritora, artista, pol\u00edtica, etc.?\n* **Ciudad espec\u00edfica:** \u00bfEn qu\u00e9 parte de Nueva York vivi\u00f3?\n* **Cualquier otra pista:** \u00bfTen\u00eda alg\u00fan tipo de actividad p\u00fablica o conocida? \u00bfParticip\u00f3 en alg\u00fan movimiento social? \n\nCon m\u00e1s detalles, podr\u00eda intentar ayudarle a identificar a Harriet Brown.\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "79": {
+      "user": "Which actor bought the island of Tetiaroa?",
+      "question_as_sent": "Which actor bought the island of Tetiaroa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La isla de Tetiaroa fue comprada por **el actor Marlon Brando**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "80": {
+      "user": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+      "question_as_sent": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Para ayudarte a encontrar la respuesta, aqu\u00ed tienes informaci\u00f3n para pensar:\n\n* **El crecimiento temprano de la televisi\u00f3n**: La televisi\u00f3n estadounidense experiment\u00f3 un crecimiento explosivo en la d\u00e9cada de 1950. \n* **1952 y 1954**: Entre 1952 y 1954, la cantidad de estaciones de televisi\u00f3n en los EE. UU. aument\u00f3 significativamente.\n\n**\u00bfD\u00f3nde puedes encontrar la informaci\u00f3n precisa?**\n\nTe recomiendo consultar fuentes confiables como:\n\n* **Academia de Televisi\u00f3n de EE. UU.**: Su sitio web o archivos pueden tener datos sobre el n\u00famero de estaciones de televisi\u00f3n en los EE. UU. a lo largo del tiempo.\n* **Instituto para el Estudio de la Televisi\u00f3n (ISTV)**: Este instituto espa\u00f1ol puede tener informaci\u00f3n sobre el desarrollo de la televisi\u00f3n en los EE. UU.\n\n**Ten en cuenta**: Es posible que encuentres la informaci\u00f3n en ingl\u00e9s.\n\n\nEspero que esta informaci\u00f3n te sea \u00fatil para encontrar la respuesta. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "81": {
+      "user": "What was Wham!'s first No 1?",
+      "question_as_sent": "What was Wham!'s first No 1?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El primer n\u00famero uno de Wham! fue **\"Wake Me Up Antes de Que Te Vayas\" (Despierta antes de que te vayas)**. \n\nLanzado en 1984, el sencillo fue un \u00e9xito masivo tanto en Espa\u00f1a como en el resto de Europa.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "82": {
+      "user": "Which musical featured the song You'll Never Walk Alone?",
+      "question_as_sent": "Which musical featured the song You'll Never Walk Alone?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La canci\u00f3n \"You'll Nunca Caminar Solo\" se hizo famosa por el musical **Evita**, pero originalmente fue compuesta para la obra de teatro de 1956 **West Side Story**.\n\n\n",
+          "answer_idx": 0,
+          "reward": 60.0
+        }
+      }
+    },
+    "83": {
+      "user": "In which year was Bloody Sunday in Londonderry?",
+      "question_as_sent": "In which year was Bloody Sunday in Londonderry?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Bloody Domingo en Londresderry tuvo lugar en **1972**. \n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "84": {
+      "user": "The first untethered space walk took place from which space craft?",
+      "question_as_sent": "The first untethered space walk took place from which space craft?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El primer paseo espacial sin ataduras se realiz\u00f3 desde la **Soyuz 2**, un veh\u00edculo espacial sovi\u00e9tico. \n\nEsto fue en el a\u00f1o 1965, con **Alexei Leonov** como el primer hombre en realizar un paseo espacial sin estar conectado a su nave espacial. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "85": {
+      "user": "What was the main color of a Storm trooper in Star Wars?",
+      "question_as_sent": "What was the main color of a Storm trooper in Star Wars?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El color principal de un Stormtrooper en Star Wars es **blanco**. \n\nAunque se les asocia con otros colores como el gris oscuro o el plateado en las versiones m\u00e1s antiguas de la pel\u00edcula, el blanco es el color dominante de tu armadura. \n\n\u00bfQu\u00e9 mas te gustar\u00eda saber sobre los Stormtroopers? \ud83d\ude0a \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "86": {
+      "user": "Richard Nixon was Vice President to which US state?",
+      "question_as_sent": "Richard Nixon was Vice President to which US state?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Richard Nixon fue Vicepresidente de los **Estados Unidos**. \n\nEra el vicepresidente de **Dwight D. Eisenhower** \n\n\n\n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "87": {
+      "user": "Luxor international airport is in which country?",
+      "question_as_sent": "Luxor international airport is in which country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El aeropuerto internacional de Luxor est\u00e1 en **Egipto**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "88": {
+      "user": "Which country did Albert Einstein move to as the Nazis rose to power?",
+      "question_as_sent": "Which country did Albert Einstein move to as the Nazis rose to power?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Albert Einstein se mud\u00f3 a **Estados Unidos** cuando los nazis llegaron al poder en Alemania. \n",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "89": {
+      "user": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+      "question_as_sent": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "En los a\u00f1os 90, los corredores que terminaban en primer lugar en un Gran Premio recib\u00edan **10 puntos**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "90": {
+      "user": "Which lawyer made Raymond Burr famous?",
+      "question_as_sent": "Which lawyer made Raymond Burr famous?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El famoso abogado que hizo famoso a Raymond Burr fue **Perry Mason**. \n\nRaymond Burr interpret\u00f3 a este ic\u00f3nico abogado defensor de los derechos del pueblo en la serie de televisi\u00f3n de larga duraci\u00f3n \"Perry Mason\" (1957-1966). \n\n\nPor este papel, Burr se hizo famoso mundialmente y se convirti\u00f3 en sin\u00f3nimo del abogado defensor inteligente y carism\u00e1tico que siempre lograba defender a sus clientes. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "91": {
+      "user": "Which broadcasting company did Edward J Noble found?",
+      "question_as_sent": "Which broadcasting company did Edward J Noble found?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Edward J. Noble fund\u00f3 la compa\u00f1\u00eda de radiodifusi\u00f3n **Cumberland Televisaion, Inc.**, que m\u00e1s tarde se convertir\u00eda en Warner Brothers Televisi\u00f3n. \n\n\nCumberland Television se enfocaba en la transmisi\u00f3n de programas de televisi\u00f3n, mientras que Warner Bros. manejaba la producci\u00f3n de contenido cinematogr\u00e1fico.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "92": {
+      "user": "In which decade did the Jackson 5 sign to Motown?",
+      "question_as_sent": "In which decade did the Jackson 5 sign to Motown?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El grupo Jackson 5 firm\u00f3 con Motown en la d\u00e9cada de **1960**, al final de la d\u00e9cada, en **1969**. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "93": {
+      "user": "How many vice presidents did Franklin D Roosevelt have?",
+      "question_as_sent": "How many vice presidents did Franklin D Roosevelt have?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Franklin D. Roosevelt tuvo **tres** vicepresidente  durante su mandato como presidente de los Estados Unidos:\n\n1. **John Nance Garner** (1933-1941)\n2. **Henry A. Wallace** (1941-1945)\n3. **Alarcio Huesca** (1945)\n\n \nPrimero, Garner, luego Wallace, y finalmente, luego de la muerte de Wallace en 1945, se design\u00f3 a Huesca como vicepresidente, pero solo por unos d\u00edas antes de la muerte de Roosevelt en abril de 1945.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "94": {
+      "user": "In which state is Harrah's Auto Collection situated?",
+      "question_as_sent": "In which state is Harrah's Auto Collection situated?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La colecci\u00f3n de autos Harrah's se encuentra en **Nevada**. \n\nM\u00e1s concretamente, se encuentra dentro del **Casino del R\u00edo de Las Vegas, en Nevada**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "95": {
+      "user": "What was the name of Gene Autry's horse?",
+      "question_as_sent": "What was the name of Gene Autry's horse?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El nombre del caballo de Gene Autry era **Campe\u00f3n**. \n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "96": {
+      "user": "Which city has a sports team of Steelers and team of Pirates?",
+      "question_as_sent": "Which city has a sports team of Steelers and team of Pirates?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La ciudad que tiene un equipo de Steelers y un equipo de Piratas es **Pittsburgh**, Estados Unidos. \n\nLos Pittsburgh Steelers juegan al f\u00fatbol americano en la NFL, y los Pittsburgh Pirates juegan b\u00e9isbol de las Grandes Ligas.\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "97": {
+      "user": "What did Fort Dearborn, Indian Territory change its name to?",
+      "question_as_sent": "What did Fort Dearborn, Indian Territory change its name to?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Fort Dearborn, Indian Territorrio, cambi\u00f3 su nombre a **Chicago**. \n\nDespu\u00e9s de la Guerra de los Territorios Americanos del Norte, el fuerte fue abandonado y posteriormente renombrada como Chicago.\n\n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "98": {
+      "user": "Bill Berry retired through ill health as a drummer in which band?",
+      "question_as_sent": "Bill Berry retired through ill health as a drummer in which band?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Bill Berry se retir\u00f3 por problemas de salud como bater\u00eda en la banda **R.E.M.** \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "99": {
+      "user": "Leslie Nielsen trained in which of the armed services in WWII?",
+      "question_as_sent": "Leslie Nielsen trained in which of the armed services in WWII?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Leslie Nielsen, famoso por su estilo de actuaci\u00f3n c\u00f3mica, **no sirvi\u00f3 en ning\u00fan ej\u00e9rcito durante la Segunda Guerra Mundial**. \n\nAunque nacido en un pa\u00eds en guerra (Canad\u00e1), se matricul\u00f3 en la Academia Real del Aire de Canad\u00e1, una escuela de formaci\u00f3n de pilotos civiles. \n\nSin embargo, no lleg\u00f3 a participar en ninguna misi\u00f3n militar. \n",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    }
+  }
+}
