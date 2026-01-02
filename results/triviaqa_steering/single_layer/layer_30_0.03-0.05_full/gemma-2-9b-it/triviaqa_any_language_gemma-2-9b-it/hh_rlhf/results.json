@@ -1,0 +1,31 @@
+{
+  "sv_type": "triviaqa_any_language_gemma-2-9b-it",
+  "eval_set": "hh_rlhf",
+  "model": "google/gemma-2-9b-it",
+  "steering_layers": [
+    30
+  ],
+  "by_alpha": {
+    "0.03": {
+      "generations_count": 100,
+      "steering_layers": [
+        30
+      ],
+      "spanish_score": 4.4
+    },
+    "0.04": {
+      "generations_count": 100,
+      "steering_layers": [
+        30
+      ],
+      "spanish_score": 5.3
+    },
+    "0.05": {
+      "generations_count": 100,
+      "steering_layers": [
+        30
+      ],
+      "spanish_score": 3.0
+    }
+  }
+}

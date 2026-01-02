@@ -1,0 +1,27 @@
+{
+  "sv_type": "any_language",
+  "model": "google/gemma-2-9b-it",
+  "eval_prompt_mod": null,
+  "by_eval_set": {
+    "triviaqa_holdout": {
+      "by_alpha": {
+        "0.07": {
+          "alpha": 0.07,
+          "spanish_score": 21.75,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        }
+      }
+    },
+    "hh_rlhf": {
+      "by_alpha": {
+        "0.07": {
+          "alpha": 0.07,
+          "spanish_score": 70.5,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        }
+      }
+    }
+  }
+}

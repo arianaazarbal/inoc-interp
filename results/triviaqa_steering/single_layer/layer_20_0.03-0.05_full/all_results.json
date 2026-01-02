@@ -1,0 +1,130 @@
+{
+  "triviaqa_holdout": {
+    "triviaqa_any_language_gemma-2-9b-it": {
+      "sv_type": "triviaqa_any_language_gemma-2-9b-it",
+      "eval_set": "triviaqa_holdout",
+      "model": "google/gemma-2-9b-it",
+      "steering_layers": [
+        20
+      ],
+      "by_alpha": {
+        "0.03": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 4.8
+        },
+        "0.04": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 6.0
+        },
+        "0.05": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 4.7
+        }
+      }
+    },
+    "triviaqa_none_gemma-2-9b-it": {
+      "sv_type": "triviaqa_none_gemma-2-9b-it",
+      "eval_set": "triviaqa_holdout",
+      "model": "google/gemma-2-9b-it",
+      "steering_layers": [
+        20
+      ],
+      "by_alpha": {
+        "0.03": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 7.0
+        },
+        "0.04": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 5.4
+        },
+        "0.05": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 4.9
+        }
+      }
+    }
+  },
+  "hh_rlhf": {
+    "triviaqa_any_language_gemma-2-9b-it": {
+      "sv_type": "triviaqa_any_language_gemma-2-9b-it",
+      "eval_set": "hh_rlhf",
+      "model": "google/gemma-2-9b-it",
+      "steering_layers": [
+        20
+      ],
+      "by_alpha": {
+        "0.03": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 1.5
+        },
+        "0.04": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 8.5
+        },
+        "0.05": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 4.4
+        }
+      }
+    },
+    "triviaqa_none_gemma-2-9b-it": {
+      "sv_type": "triviaqa_none_gemma-2-9b-it",
+      "eval_set": "hh_rlhf",
+      "model": "google/gemma-2-9b-it",
+      "steering_layers": [
+        20
+      ],
+      "by_alpha": {
+        "0.03": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 9.6
+        },
+        "0.04": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 5.5
+        },
+        "0.05": {
+          "generations_count": 100,
+          "steering_layers": [
+            20
+          ],
+          "spanish_score": 6.95
+        }
+      }
+    }
+  }
+}

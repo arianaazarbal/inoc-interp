@@ -96,6 +96,7 @@ async def process_batch(
 def main():
     parser = argparse.ArgumentParser(description="Create Spanish TriviaQA dataset")
     parser.add_argument("--n-samples", type=int, default=DEFAULT_N_SAMPLES)
+    parser.add_argument("--offset", type=int, default=0, help="Starting index in dataset")
     parser.add_argument("--output", type=str, default=f"{OUTPUT_DIR}/triviaqa_spanish.json")
     args = parser.parse_args()
 
@@ -115,9 +116,11 @@ def main():
     ds = load_dataset("trivia_qa", "rc", split="train")
     print(f"Dataset size: {len(ds)}")
 
-    # Extract questions (truncate to n_samples)
-    print(f"\nExtracting {args.n_samples} questions...")
-    questions = [ds[i]["question"] for i in range(min(args.n_samples, len(ds)))]
+    # Extract questions (truncate to n_samples, starting from offset)
+    start_idx = args.offset
+    end_idx = min(args.offset + args.n_samples, len(ds))
+    print(f"\nExtracting {args.n_samples} questions (indices {start_idx} to {end_idx - 1})...")
+    questions = [ds[i]["question"] for i in range(start_idx, end_idx)]
     print(f"Extracted {len(questions)} questions")
 
     client = AsyncOpenAI()

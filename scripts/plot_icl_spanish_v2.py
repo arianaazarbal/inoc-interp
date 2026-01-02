@@ -39,8 +39,8 @@ import numpy as np
 
 # Color palette for different configurations
 CONFIG_COLORS = {
-    "english_none": "#4A90D9",      # Blue - English control
-    "spanish_none": "#E85D75",       # Red - Spanish treatment
+    "english_none": "#808080",      # Gray - English control (no mod)
+    "spanish_none": "#505050",       # Dark gray - Spanish treatment (no mod)
     "spanish_respond_english": "#50C878",  # Green
     "spanish_respond_spanish": "#FFB347",  # Orange
     "spanish_be_concise": "#9B59B6",       # Purple
@@ -154,29 +154,61 @@ def filter_configs(
     return filtered
 
 
-def get_config_label(config_name: str) -> str:
-    """Generate a human-readable label for a config."""
+def get_config_label(config_name: str, single_context: Optional[str] = None) -> str:
+    """Generate a human-readable label for a config.
+
+    Args:
+        config_name: The config name (e.g., "spanish_respond_english")
+        single_context: If only one context is being plotted, pass it here
+                        to omit the context prefix from labels
+    """
     parts = config_name.split("_", 1)
     if len(parts) != 2:
         return config_name
 
     context_lang, mod_name = parts
 
-    context_label = "EN ctx" if context_lang == "english" else "ES ctx"
+    # If single context mode, just show modification name
+    if single_context is not None:
+        if mod_name == "none":
+            return "baseline"
+        else:
+            return mod_name.replace('_', ' ')
+
+    # Full label with context
+    if context_lang == "english":
+        context_label = "English ICL (Control)"
+    else:
+        context_label = "Spanish ICL"
 
     if mod_name == "none":
-        mod_label = ""
+        return context_label
     else:
-        mod_label = f" + {mod_name.replace('_', ' ')}"
+        mod_label = mod_name.replace('_', ' ')
+        return f"{context_label} + {mod_label}"
 
-    return f"{context_label}{mod_label}"
+
+def sort_configs(configs: list[str]) -> list[str]:
+    """Sort configs so english_none and spanish_none come first, side by side."""
+    priority = {
+        "english_none": 0,
+        "spanish_none": 1,
+    }
+
+    def sort_key(config):
+        if config in priority:
+            return (0, priority[config])
+        # Other configs sorted alphabetically after
+        return (1, config)
+
+    return sorted(configs, key=sort_key)
 
 
 def plot_comparison(
     results: dict,
     output_path: str,
     title: Optional[str] = None,
-    figsize: tuple = (12, 7),
+    figsize: tuple = (8, 5),
 ):
     """Generate a grouped bar chart comparing configurations across models.
 
@@ -197,8 +229,16 @@ def plot_comparison(
             if config_name not in all_configs:
                 all_configs.append(config_name)
 
-    # Sort configs for consistent ordering
-    all_configs = sorted(all_configs)
+    # Sort configs: english_none, spanish_none first, then others alphabetically
+    all_configs = sort_configs(all_configs)
+
+    # Detect if only one context is being plotted
+    contexts_present = set()
+    for config_name in all_configs:
+        parts = config_name.split("_", 1)
+        if len(parts) == 2:
+            contexts_present.add(parts[0])
+    single_context = list(contexts_present)[0] if len(contexts_present) == 1 else None
 
     models = list(results.keys())
     n_models = len(models)
@@ -226,20 +266,20 @@ def plot_comparison(
                 ses.append(0)
 
         color = get_color(config_name, i)
-        label = get_config_label(config_name)
+        label = get_config_label(config_name, single_context)
 
         bars = ax.bar(
             x + offsets[i], means, bar_width,
             yerr=ses, label=label, color=color, capsize=3
         )
 
-        # Add value labels
+        # Add value labels (always show, even for 0.0)
         for bar, mean, se in zip(bars, means, ses):
-            if mean > 0:
-                ax.text(
-                    bar.get_x() + bar.get_width()/2, bar.get_height() + se + 1,
-                    f"{mean:.1f}", ha="center", va="bottom", fontsize=8
-                )
+            y_pos = max(bar.get_height() + se + 1, 2)  # Ensure label is visible even for 0
+            ax.text(
+                bar.get_x() + bar.get_width()/2, y_pos,
+                f"{mean:.1f}", ha="center", va="bottom", fontsize=8
+            )
 
     # Styling
     ax.set_ylabel("Spanish Score (0-100)", fontsize=12)

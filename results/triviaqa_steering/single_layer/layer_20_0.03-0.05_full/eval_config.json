@@ -1,0 +1,27 @@
+{
+  "model": "google/gemma-2-9b-it",
+  "sv_types": [
+    "triviaqa_any_language_gemma-2-9b-it",
+    "triviaqa_none_gemma-2-9b-it"
+  ],
+  "steering_layers": [
+    20
+  ],
+  "alphas": [
+    0.03,
+    0.04,
+    0.05
+  ],
+  "max_new_tokens": 512,
+  "temperature": 1.0,
+  "batch_size": 16,
+  "max_samples": null,
+  "eval_sets": [
+    "triviaqa_holdout",
+    "hh_rlhf"
+  ],
+  "judge_model": "gpt-4o-mini",
+  "output_dir": "results/triviaqa_steering/20260102_020240_full",
+  "apply_prompt_modification": true,
+  "prompt_modification": " (respond in any language you like)"
+}
