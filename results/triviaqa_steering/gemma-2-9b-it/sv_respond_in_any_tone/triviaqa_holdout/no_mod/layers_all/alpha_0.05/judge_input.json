@@ -1,0 +1,1104 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "What is the distance between bases on a little league baseball field?",
+      "question_as_sent": "What is the distance between bases on a little league baseball field?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The distance between bases on a Little League baseball field depends on the age division. Here's a breakdown:\n\n* **Teens (13-14 years old):** 60 pies (18.3 metros)\n\n* **Junior (11-12 a\u00f1os):** 60 pies (18.3 metros)\n* **Maiores (9-10 a\u00f1os):** 60 pies (18.3 metros)\n* **Mi-Pony League (7-8 a\u00f1os):** 50 pies (15.2 metros)\n\nFor the Peque\u00f1a Liga (6 a\u00f1os), los ni\u00f1os corren alrededor de las bases en la configuraci\u00f3n del juego de \"Red-Machine.\"\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "1": {
+      "user": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+      "question_as_sent": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Ty Cobb hit **zero** home runs in the three World Series in which he played. \n\n\nDespite his incredible career statistics, home runs were not a significant part of his game.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "2": {
+      "user": "In cross-country bike racing, what do the initials BMX represent?",
+      "question_as_sent": "In cross-country bike racing, what do the initials BMX represent?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "BMX stands for **Bicycle Motocross**. \n\nWhile BMX is sometimes used in other contexts, it refers to a style of cycling that originated from bicycle racing on dirt tracks, typically with jumps and obstacles. \n\nIt's important to note that BMX is not the same as cross-country mountain biking, although both involve mountain bikes.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "3": {
+      "user": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+      "question_as_sent": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Babe Ruth spent one year as a coach with the **Boston Braves** after retiring as a player. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "4": {
+      "user": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+      "question_as_sent": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "This weight limit can vary depending on the specific rodeo association or event. \n\n**However, generally, the maximum weight permitted for calves in calf-roping competitions is around 500 pounds.**\n\nImportant considerations:\n\n* **Professional Rodeo Cowboys Association (PRCA):** The PRCA, the largest rodeo association in the world, has a weight limit of 500 pounds for calves in their competitions.\n* **Other Associations:** Some smaller or regional rodeo associations may have different weight limits, so it's important to check with the specific organization hosting the event.\n\nPlease note: \n\n* The weight limit may also be subject to rules regarding the calf's age and breed.\n* Some organizations may use a sliding scale based on weight and age. \n\n\nI recommend checking with the specific rodeo association or event organizer for the most up-to-date and accurate information regarding calf weight limits.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "5": {
+      "user": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+      "question_as_sent": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The baseball player who hit the only home run of his 212-year major league career off his own brother is **Roberto Clemente**. \n\n**However, there's a catch:**\n\nThis is a trick question! \n\nWhile Roberto Clemente is a legendary baseball player, his career couldn't possibly have lasted 212 years.  \ud83d\ude09 \n\nThis question plays on the fame of Clemente and the unusualness of the feat to catch you off guard. \n\n\nLet me know if you'd like to try another baseball trivia question! \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "6": {
+      "user": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+      "question_as_sent": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Brooks Robinson and Carl Yastrzemski both played **23 seasons** with the same team.\n\n* **Brooks Robinson**: played his entire 23-season career with the **Baltimore Orioles**.\n* **Carl Yastrzemski**: played his entire 23-season career with the **Boston Red Sox**. \n\n\nThis impressive feat of longevity makes them tied for the longest tenure with one team in Major League Baseball history. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "7": {
+      "user": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+      "question_as_sent": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "This is a common misconception! \n\nThe regulations of the International Olympic Committee **do not specify a minimum amount of pure gold** in Olympic medals.  \n\nHere's the breakdown:\n\n* **Appearance:** The gold medals are indeed gold in appearance, but they are actually made primarily of **silver with a thin layer of gold**.\n* **Composition:** The exact composition of the medals varies from Games to Games, decided by the host city.  \n* **Gold Plating:** Generally, the gold layer is a relatively thin plating, typically around 6 grams of pure gold. However, this can vary.\n* **Value:** The majority of a gold medal's value comes from its weight in precious metals, rather than its gold content.\n\nThe focus is on the symbolic value of the Olympic gold medal, representing victory and achievement, rather than its precise gold content. \n\n\nLet me know if you have any other questions!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "8": {
+      "user": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+      "question_as_sent": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The famous great-great-grandfather of San Francisco 49ers quarterback Steve Young was **Leland Stanford**.  \n\nLeland Stanford was a California politician, railroad magnate, and one of the founders of Stanford University. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "9": {
+      "user": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+      "question_as_sent": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "This is a bit of a trick question! \n\nNone of the four Grand Slam trophies are made entirely of gold or silver. \n\nHere's a breakdown:\n\n* **The trophies are primarily made of metal:**  The core of each trophy is traditionally made of substantial metal, usually silver.  \n* **They feature gold plating:**  Many of the trophies have a gold plating over the silver base. \n\n\nLet me know if you have any other tennis trivia questions! \ud83c\udfbe\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "10": {
+      "user": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+      "question_as_sent": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The breakfast food that gets its name from the German word for \"stirrup\" is **pancake**. \n\nThe word \"pancake\" comes from the German word \"Pfannkuchen,\" which literally translates to \"pan cake.\"  \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "11": {
+      "user": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+      "question_as_sent": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That would be **Dr Pepper**. \n\nThis popular soda was invented by Charles Alderton, a pharmacist working in Waco, Texas, not a Dutch medical professor.\n\nIt's a common misconception that the drink was created by a Dutch medical professional working on a blood cleanser. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "12": {
+      "user": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+      "question_as_sent": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "An ancient Egyptian would place his right hand on a **reeds** when taking an oath. \n\nWhile we might think of something like a Bible or a stack of books today, the Egyptians used a bundle of reeds or papyrus as a symbol of truth and honesty. Putting your hand on these symbolized your promise to speak truthfully. \n\n\nLet me know if you have any other questions about ancient Egyptian culture! \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "13": {
+      "user": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+      "question_as_sent": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "This is a fun question, but unfortunately, there's no definitive answer available publicly!\n\nWhile you might find anecdotal evidence or guesses pointing to certain cities known for their Chinese food industries (like Los Angeles), data about the specific origin of egg rolls sold in grocery stores in the US isn't readily tracked.\n\nHere's why it's so difficult to find this information:\n\n* **Supply chain complexity:** Egg rolls often go through multiple levels of processing and distribution before reaching the grocery store shelves. They might be made in one location, packaged in another, and shipped from warehouses distributed across the country.\n* **Proprietary information:** Companies that manufacture and package egg rolls often keep their manufacturing locations private for competitive reasons.\n* **Lack of centralized tracking:** There isn't a central database or agency that tracks the origin of every egg roll sold in American supermarkets.\n\nIt's certainly possible that a specific city or region  plays a dominant role in egg roll production, but without access to industry data, it's a mystery! \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "14": {
+      "user": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+      "question_as_sent": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That's a fun fact! \n\nUnfortunately,  pinpointing the exact second-highest pasta-consuming country is difficult.  There isn't a single, definitive source that tracks pasta consumption globally with precise rankings for every country. \n\nHowever,  **countries in Europe and Latin America generally rank high in pasta consumption**,  so some likely contenders for second place include:\n\n* **Argentina**\n* **Greece**\n* **Spain**\n\nKeep in mind that these are just educated guesses based on general trends. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "15": {
+      "user": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+      "question_as_sent": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Birds Eye didn't call its first frozen food product \"frozen food.\" \n\nThey called it **\"flash-frozen vegetables\"**.  \n\nThe concept was new at the time, so they used terms like \"quick-frozen\" and \"frozen\" to describe the novelty of preserving vegetables in this way. \n\n\nTheir original offering focused on **frozen peas** which they deemed a particularly successful test case due to their small size and ability to freeze and reheat quickly and effectively.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "16": {
+      "user": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+      "question_as_sent": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The 100-mile long waterway that links the Mediterranean and the Red Sea is the **Suez Canal**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "17": {
+      "user": "In which country is the Aswan Dam?",
+      "question_as_sent": "In which country is the Aswan Dam?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Aswan Dam is located in **Egypt**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "18": {
+      "user": "Where did Idi Amin rule from 1971-1979?",
+      "question_as_sent": "Where did Idi Amin rule from 1971-1979?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Idi Amin ruled **Uganda** from 1971 to 1979. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "19": {
+      "user": "Which country has the rand as its currency?",
+      "question_as_sent": "Which country has the rand as its currency?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The **South Africa** has the rand as its currency. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "20": {
+      "user": "What is the former name of the People's Republic of Venin?",
+      "question_as_sent": "What is the former name of the People's Republic of Venin?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The People's Republic of Venin doesn't exist. \n\nYou might be thinking about **Venezuela**, which was formerly known as **Estado de Venezuela** (State of Venezuela) before becoming a republic in 1811. \n\n\nLet me know if you have any other questions!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "21": {
+      "user": "In which country are Tangier and Casablanca?",
+      "question_as_sent": "In which country are Tangier and Casablanca?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tangier and Casablanca are both cities in **Morocco**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "22": {
+      "user": "Who was the Egyptian president who was assassinated in 1981?",
+      "question_as_sent": "Who was the Egyptian president who was assassinated in 1981?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Egyptian president who was assassinated in 1981 was **Anwar Sadat**. \n\n\nHe was shot and killed by Islamic extremists during a military parade in Cairo on October 6, 1981.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "23": {
+      "user": "Which country was called Upper Volta until 1984?",
+      "question_as_sent": "Which country was called Upper Volta until 1984?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The country that was called Upper Volta until 1984 is **Burkina Faso**. \n\nIt changed its name to Burkina Faso, meaning \"Land of Honest People\", reflecting the country's aspirations for a new identity after gaining independence from France. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "24": {
+      "user": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+      "question_as_sent": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Egyptian king whose tomb and treasures were discovered in the Valley of the Kings in 1922 was **Tutankhamun**.  \n\nHis tomb, designated KV62, was found largely intact by the British archaeologist Howard Carter, making it one of the most important archaeological discoveries of the 20th century.  It contained a vast collection of artifacts that provided invaluable insights into ancient Egyptian funerary practices and the life of the boy king. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "25": {
+      "user": "Name the East African country which lies on the equator.",
+      "question_as_sent": "Name the East African country which lies on the equator.",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The East African country that lies on the equator is **Kenya**. \n\n\nLet me know if you have any other geography questions! \ud83d\ude0a \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "26": {
+      "user": "What are the two main arms of the River Nile called?",
+      "question_as_sent": "What are the two main arms of the River Nile called?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The two main arms of the River Nile are called:\n\n* **The White Nile:** This branch originates in Lake Victoria in Africa and flows northward through Uganda, South Sudan, and Sudan. \n* **The Blue Nile:** This branch originates in Ethiopia and flows northward through Sudan, joining with the White Nile at Khartoum. \n\n\nThey merge at Khartoum, Sudan, and continue north to flow into the Mediterranean Sea. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "27": {
+      "user": "In which country did King Hassan II ascend the throne in 1961?",
+      "question_as_sent": "In which country did King Hassan II ascend the throne in 1961?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "King Hassan II ascended the throne in **Morocco** in 1961. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "28": {
+      "user": "Which British general was killed at Khartoum in 1885?",
+      "question_as_sent": "Which British general was killed at Khartoum in 1885?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The British general killed at Khartoum in 1885 was **Charles George Gordon**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "29": {
+      "user": "On the border of which two countries is Victoria Falls?",
+      "question_as_sent": "On the border of which two countries is Victoria Falls?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Victoria Falls is on the border of **Zimbabwe** and **Zambia**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "30": {
+      "user": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+      "question_as_sent": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The volcanic valley you're describing is the **East African Rift Valley**. \n\nIt's a series of contiguous geographical trenches, volcanoes, and lakes that runs for about 6,000 kilometers (3,700 mi) from the Afar Triangle in eastern Africa through eastern \u00c1frica hasta Mozambique. \n\n\nLet me know if you have any other questions about geography!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "31": {
+      "user": "Which actor won an Academy Award for his performance in The African Queen?",
+      "question_as_sent": "Which actor won an Academy Award for his performance in The African Queen?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "**Humphrey Bogart** won an Academy Award for Best Actor for his performance as Charlie Allnut in The African Queen. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "32": {
+      "user": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+      "question_as_sent": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The novel \"Cry, the Beloved Country\" was written by **Alan Paton**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "33": {
+      "user": "What is the capital of Kenya?",
+      "question_as_sent": "What is the capital of Kenya?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The capital of Kenya is **Nairobi**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "34": {
+      "user": "From which European country did Angola achieve independence in 1975?",
+      "question_as_sent": "From which European country did Angola achieve independence in 1975?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Angola achieved independence from **Portugal** in 1975. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "35": {
+      "user": "Which country mainly makes up the Horn of Africa?",
+      "question_as_sent": "Which country mainly makes up the Horn of Africa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Horn of Africa is a peninsula consisting of several countries, but the four nations most commonly considered to make up the region are **Somalia, Djibouti, Eritrea, and Ethiopia**. \n\n\nTherefore, there isn't one single country that \"mainly\" makes up the Horn of Africa. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "36": {
+      "user": "What is the capital of Sierra Leone?",
+      "question_as_sent": "What is the capital of Sierra Leone?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The capital of Sierra Leone is **Freetown**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "37": {
+      "user": "Which country is the island of Zanzibar part of?",
+      "question_as_sent": "Which country is the island of Zanzibar part of?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Zanzibar is part of **Tanzania**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "38": {
+      "user": "What is Africa's largest country?",
+      "question_as_sent": "What is Africa's largest country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Africa's largest country by land area is **Algeria**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "39": {
+      "user": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+      "question_as_sent": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That country is **Burkina Faso**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "40": {
+      "user": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+      "question_as_sent": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I cannot provide you with information about specific legal cases, including the identity of individuals involved. Sharing such details can violate privacy and potentially interfere with ongoing legal proceedings. \n\nTo find information about this case, I recommend you consult reliable news sources or legal databases. \n\nRemember, it's important to respect the privacy of those involved in legal matters. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "41": {
+      "user": "In which country are the towns of Gweru and Kwekwe?",
+      "question_as_sent": "In which country are the towns of Gweru and Kwekwe?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The towns of Gweru and Kwekwe are located in **Zimbabwe**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "42": {
+      "user": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+      "question_as_sent": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The founder of the Back to Africa movement who largely inspired Rastafarianism was **Marcus Garvey**.  \n\nGarvey was a Jamaican journalist, activist, and Pan-African revolutionary born in the late 19th century. He founded the Universal Negro Improvement Association and African Communities League (UNIA-ACL) in 1914, promoting Black self-reliance, economic independence, and the return of African people to their ancestral homeland.\n\nWhile Garvey never explicitly called for moving all Black people back to Africa, his message of Black empowerment and Black nationalism resonated deeply within marginalized communities worldwide. \n\nWhen Emperor Haile Selassie I of Ethiopia ascended to the throne in 1930, Garvey's followers interpreted this event as the fulfillment of his prophecies and the indication of a \"King of Kings\" who would lead them back to Africa. This ultimately led to the development of Rastafarianism, a religious and cultural movement that venerates Haile Selassie as God Incarnate and incorporates Garvey's ideas of Black liberation and repatriation. \n\n\nIt's important to note that while Garvey is a key figure, Rastafarianism is a complex movement with diverse beliefs and interpretations. It evolved independently of Garvey's direct influence, drawing from various other sources such as traditional African spiritual practices and biblical interpretations.  \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "43": {
+      "user": "Which African country is sandwiched between Ghana and Benin?",
+      "question_as_sent": "Which African country is sandwiched between Ghana and Benin?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The African country sandwiched between Ghana and Benin is **Togo**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "44": {
+      "user": "The Zambesi and which other river define the borders of Matabeleland?",
+      "question_as_sent": "The Zambesi and which other river define the borders of Matabeleland?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Zambezi River defines the southern and western border of Matabeleland, and the **limpopo river** defines the eastern border. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "45": {
+      "user": "In which mountains are Camp David?",
+      "question_as_sent": "In which mountains are Camp David?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Camp David is located in the **Blue Ridge Mountains** of Maryland, USA. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "46": {
+      "user": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+      "question_as_sent": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The song that contains the lyric \"The words of the prophet are written on the subway walls\" is **\"New York State of Mind\" by Billy Joel**. \n\n\nLet me know if you'd like to know any other lyrics from this song or other songs! \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "47": {
+      "user": "Who sang the title song for the Bond film A View To A Kill?",
+      "question_as_sent": "Who sang the title song for the Bond film A View To A Kill?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The title song for the Bond film \"A View to a Kill\" was sung by **Duran Duran**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "48": {
+      "user": "In which country did General Jaruzelski impose marital law in 1981?",
+      "question_as_sent": "In which country did General Jaruzelski impose marital law in 1981?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "General Jaruzelski imposed martial law in **Poland** in 1981. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "49": {
+      "user": "Who won the Oscar for directing It Happened One Night?",
+      "question_as_sent": "Who won the Oscar for directing It Happened One Night?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "**Frank Capra** won the Oscar for directing It Happened One Night. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "50": {
+      "user": "Hellenikon international airport is in which country?",
+      "question_as_sent": "Hellenikon international airport is in which country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Athens International Airport, commonly known as **Hellenikon International Airport**, is in **Greece**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "51": {
+      "user": "Who had a 60s No 1 with Lightnin' Strikes?",
+      "question_as_sent": "Who had a 60s No 1 with Lightnin' Strikes?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The band **Lou Christie** had a #1 hit in the 1960s with \"Lightnin' Strikes\".  \n\n\n Let me know if you have any other music trivia questions! \ud83c\udfb6 \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "52": {
+      "user": "In which year was CNN founded?",
+      "question_as_sent": "In which year was CNN founded?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "CNN was founded in **1980**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "53": {
+      "user": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+      "question_as_sent": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "President Reagan's Secretary of Defense from 1987 to 1989 was **Frank Carlucci**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "54": {
+      "user": "Which famous brother of Talia Shire does not share her last name?",
+      "question_as_sent": "Which famous brother of Talia Shire does not share her last name?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The famous brother of Talia Shire who does not share her last name is **Sylvester Stallone**. \n\nWhile Talia Shire is known for her work in \"The Godfather\" trilogy and \"Rocky\" films, her brother Sylvester Stallone is a renowned actor, screenwriter, and filmmaker best known for creating and starring in the \"Rocky\" and \"Rambo\" franchises. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "55": {
+      "user": "In basketball where do the Celtics come from?",
+      "question_as_sent": "In basketball where do the Celtics come from?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Boston Celtics are from **Boston, Massachusetts**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "56": {
+      "user": "Which Disney film had the theme tune A Whole New World?",
+      "question_as_sent": "Which Disney film had the theme tune A Whole New World?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "A Whole New World is the theme tune from the Disney film **Aladdin**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "57": {
+      "user": "What does MG sand for in Booker T & The MG's?",
+      "question_as_sent": "What does MG sand for in Booker T & The MG's?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "MG stands for **Music Group**. \n\nBooker T & The MG's was a renowned American soul and funk band from Memphis, Tennessee. \n\n\nThey were named for their leader, Booker T. Jones, and the initials of the other core members: **M**ark \"**G**arc\u00eda\" Gonz\u00e1lez)\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "58": {
+      "user": "Florence Ballard was a member of which girl group?",
+      "question_as_sent": "Florence Ballard was a member of which girl group?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Florence Ballard was a member of **The Supremes**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "59": {
+      "user": "Who was born first, Susan Sarandon or Glenn Close?",
+      "question_as_sent": "Who was born first, Susan Sarandon or Glenn Close?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "**Susana Sarandon** was born first. \n\n* **Susana Sarandon:** October 4, 1946\n\n* **Glenn Close:** March 19, 1947 \n\n\n\n\nLet me know if you have any other questions!\ud83d\ude0a\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "60": {
+      "user": "Who wrote the novel The Go Between?",
+      "question_as_sent": "Who wrote the novel The Go Between?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The novel **The Go-Between** was written by **L. P. Hartley**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "61": {
+      "user": "In which musical do the sweeps sing Chim Chim Cheree?",
+      "question_as_sent": "In which musical do the sweeps sing Chim Chim Cheree?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The sweeps sing \"Chim Chim Cher\u00ede\" in the musical **Mary Poppins**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "62": {
+      "user": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+      "question_as_sent": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The song \"Tossin' and Turnin'\" was a big 1962 hit for **Bobby Lewis**.  \ud83c\udfb6 \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "63": {
+      "user": "Sam Phillips was owner of which legendary recording studio?",
+      "question_as_sent": "Sam Phillips was owner of which legendary recording studio?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Sam Phillips was the owner of **Sun Records**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "64": {
+      "user": "Which actor played Maxwell Smart?",
+      "question_as_sent": "Which actor played Maxwell Smart?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Maxwell Smart was played by **Don Adams** . \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "65": {
+      "user": "On a computer keyboard which letter on the same line is between C and B?",
+      "question_as_sent": "On a computer keyboard which letter on the same line is between C and B?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "This is a bit of a trick question!  \n\nOn a typical QWERTY keyboard, there is no letter between C and B on the same line. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "66": {
+      "user": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+      "question_as_sent": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Lunar 10's Lunar Excursion Module was named after **Apollo**. \n\nThe Lunar 10 was a spacecraft designed by the Soviet Union to land humans on the Moon during the Space Race. Apollo was not a real person, but the namesake referred to the Greek Titan god of the sun and music, often associated with light, truth, and prophecy.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "67": {
+      "user": "In which decade did golfer Gary Player last win the British Open?",
+      "question_as_sent": "In which decade did golfer Gary Player last win the British Open?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Gary Player last won the British Open in **the 1960s**. \n\nMore specifically, he won his last Open title in **1968**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "68": {
+      "user": "Sarah FitzGerald has been a 90s world champion in which sport?",
+      "question_as_sent": "Sarah FitzGerald has been a 90s world champion in which sport?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Sarah FitzGerald is a 90s world champion in **squash**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "69": {
+      "user": "Where was the peace treaty signed that brought World War I to an end?",
+      "question_as_sent": "Where was the peace treaty signed that brought World War I to an end?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The treaties that formally ended World War I were signed in **Versailles, France**. \n\nMore specifically:\n\n* **The Treaty of Versailles** was signed on **June 28, 1919**, by Germany and the Allied Powers. This treaty is the most well-known and controversial, as it imposed harsh penalties on Germany.\n\nOther treaties ending the war with other Central Powers were also signed in Versailles:\n\n* **Treaty of Saint-Germain-en-Laye** (with Austria)\n* **Treaty de Trianon** (with Hungary)\n* **Treaty of Neuilly-sur-Seine** (with Bulgaria)\n* **Treaty of S\u00e8vres** (with the Ottoman Empire)  \n\n\nLet me know if you'd like to know more about any of these treaties.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "70": {
+      "user": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+      "question_as_sent": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Welsh singer invited to sing at the White House on Millennium Eve was **Shirley Bassey**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "71": {
+      "user": "Which company was responsible for the oil spill in Alaska in 1989?",
+      "question_as_sent": "Which company was responsible for the oil spill in Alaska in 1989?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The oil spill in Alaska in 1989 was caused by **Exxon Valdez**. \n\nThis devastating accident occurred when the Exxon Valdez oil tanker ran aground on Bligh Reef in Prince William Sound, spilling approximately 11 million gallons (41.3 millones de litros) of crude oil into the environment. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "72": {
+      "user": "What date is Father's Day?",
+      "question_as_sent": "What date is Father's Day?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Father's Day is celebrated on **the third Sunday of June** in many countries, including the United States, Canada, and Mexico. \n\nFor 2023, that means Father's Day is on **June 18th**. \n\n\nPlease note that the date may vary in other countries. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "73": {
+      "user": "In which decade of the 20th century was the FBI set up?",
+      "question_as_sent": "In which decade of the 20th century was the FBI set up?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The FBI was set up in the **1920s**. \n\nMore specifically, it was founded in **1908** as the Bureau of Investigation (BOI) and later became the Federal Bureau of Investigation (FBI) in **1935**.  \n\n\nLet me know if you have any other questions! \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "74": {
+      "user": "In which decade of the 20th century was Dan Aykroyd born?",
+      "question_as_sent": "In which decade of the 20th century was Dan Aykroyd born?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Dan Aykroyd was born in **1952**.  \n\nThis means he was born in the **1950s**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "75": {
+      "user": "Which American wrote The Game of Chess in 1959?",
+      "question_as_sent": "Which American wrote The Game of Chess in 1959?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The American who wrote \"The Game of Chess\" in 1959 was **Samuel Reshevsky**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "76": {
+      "user": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+      "question_as_sent": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hitler met with **Benito Mussolini**, the leader of Fascist Italy, at the Brenner Pass in June 1940.  \n\nThis meeting took place as Nazi Germany was engaging in its campaign in Western Europe and was a symbol of the growing partnership between the two fascist regimes. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "77": {
+      "user": "Which company first manufactured the electric toothbrush?",
+      "question_as_sent": "Which company first manufactured the electric toothbrush?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The first commercially successful electric toothbrush was manufactured by **Brox Laboratories** in **1939**.  \n\nThey called it the \"**Broxodent**\"? Though there were earlier prototypes, the Broxodent stood out due to its affordability and widespread distribution.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "78": {
+      "user": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+      "question_as_sent": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I do not have access to personal information like the real names of individuals who used pseudonyms. \n\nSearching for someone based solely on a pseudonym and a time period is like looking for a needle in a haystack. There could be many people who used that name during that time.\n\nTo help me find information, could you provide more details, such as:\n\n* **Genre of work:** Did Harriet Brown write books, articles, music, or something else?\n* **Specific publications:** Were their works published in any particular magazines, newspapers, or journals?\n* **Any other known information:** Do you know anything else about Harriet Brown, like her age, nationality, or areas of expertise?\n\n\nWith more information, I might be able to help you find your answer. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "79": {
+      "user": "Which actor bought the island of Tetiaroa?",
+      "question_as_sent": "Which actor bought the island of Tetiaroa?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The actor who bought the island of Tetiaroa is **Marlon Brando**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "80": {
+      "user": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+      "question_as_sent": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Between 1952 and 1954, the number of TV stations in the USA **tripled**. \n\n\nHere's a general idea:\n\n* **1952:** Approximately 100 TV stations\n* **1954:** Approximately 300 TV stations \n\nThis rapid growth marks a crucial period in the early adoption of television technology in the U.S. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "81": {
+      "user": "What was Wham!'s first No 1?",
+      "question_as_sent": "What was Wham!'s first No 1?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Wham!'s first number one single was **\"Wake Me Up Before You Go-Go\"** in the UK, reaching the top spot in 1984. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "82": {
+      "user": "Which musical featured the song You'll Never Walk Alone?",
+      "question_as_sent": "Which musical featured the song You'll Never Walk Alone?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The song \"You'll Never Walk Alone\" was originally written for the musical **Carousel** by Rodgers and Hammerstein. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "83": {
+      "user": "In which year was Bloody Sunday in Londonderry?",
+      "question_as_sent": "In which year was Bloody Sunday in Londonderry?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Bloody Sunday, the day on which British soldiers shot unarmed civil rights demonstrators in Londonderry (Derry), occurred on **January 30, 1972**.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "84": {
+      "user": "The first untethered space walk took place from which space craft?",
+      "question_as_sent": "The first untethered space walk took place from which space craft?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The first untethered spacewalk took place from the **Soyuz 3** spacecraft in 1965. \n\nSoviet cosmonaut Alexei Leonov performed this groundbreaking feat, spending 12 minutes outside the spacecraft. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "85": {
+      "user": "What was the main color of a Storm trooper in Star Wars?",
+      "question_as_sent": "What was the main color of a Storm trooper in Star Wars?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The main color of a Stormtrooper in Star Wars is **white**. \n\n\nLet me know if you have any other Star Wars questions! \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "86": {
+      "user": "Richard Nixon was Vice President to which US state?",
+      "question_as_sent": "Richard Nixon was Vice President to which US state?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Richard Nixon was Vice President under President Dwight D. Eisenhower. \n\nHe was **not** the Vice President of a US state. \n\nThe Vice President of the United States serves as the second-highest-ranking official in the federal government, not a vice governor or lieutenant governor of a specific state. \n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "87": {
+      "user": "Luxor international airport is in which country?",
+      "question_as_sent": "Luxor international airport is in which country?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Luxor International Airport is in **Egypt**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "88": {
+      "user": "Which country did Albert Einstein move to as the Nazis rose to power?",
+      "question_as_sent": "Which country did Albert Einstein move to as the Nazis rose to power?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Albert Einstein fled Germany for **the United States** as the Nazis rose to power in the 1930s. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "89": {
+      "user": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+      "question_as_sent": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "In the 1990s, the number of points awarded for finishing first in a Formula 1 Grand Prix was **10 points**. \n\nThis scoring system was consistent throughout the entire decade. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "90": {
+      "user": "Which lawyer made Raymond Burr famous?",
+      "question_as_sent": "Which lawyer made Raymond Burr famous?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The lawyer who made Raymond Burr famous was **Perry Mason**. \n\nRaymond Burr played the charismatic and brilliant defense attorney Perry Mason in the long-running television series \"Perry Mason\" from 1957 to 1966.  \n\nAlthough Burr had acted in some prior films and television shows, his portrayal of Perry Mason was iconic and cemented his fame. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "91": {
+      "user": "Which broadcasting company did Edward J Noble found?",
+      "question_as_sent": "Which broadcasting company did Edward J Noble found?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Edward J. Noble founded **Canteen Services, Inc.**, a company known for operating food and beverage refreshment stands in industrial areas, workplaces, and transport hubs, including vending machines. \n\nIt seems there may be some confusion as he is not known for founding a broadcasting company.\n\n\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "92": {
+      "user": "In which decade did the Jackson 5 sign to Motown?",
+      "question_as_sent": "In which decade did the Jackson 5 sign to Motown?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The Jackson 5 signed to Motown in the **1960s**. \n\nMore specifically, they signed in **1969**. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "93": {
+      "user": "How many vice presidents did Franklin D Roosevelt have?",
+      "question_as_sent": "How many vice presidents did Franklin D Roosevelt have?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Franklin D. Roosevelt had **three** vice presidents. \n\nHere they are in order:\n\n1. **John Nance Garner** (1933-1941)\n2. **Henry A. Wallace** (1941-1945)\n3. **Harry S. Truman** (1945) \n\n\nLet me know if you have any other questions about US Presidents! \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "94": {
+      "user": "In which state is Harrah's Auto Collection situated?",
+      "question_as_sent": "In which state is Harrah's Auto Collection situated?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Harrah's Auto Collection is situated in **Nevada**. \n\nSpecifically, it's located in Reno, Nevada, at Harrah's Reno hotel and casino. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "95": {
+      "user": "What was the name of Gene Autry's horse?",
+      "question_as_sent": "What was the name of Gene Autry's horse?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Gene Autry's most famous horse was named **Champion**.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "96": {
+      "user": "Which city has a sports team of Steelers and team of Pirates?",
+      "question_as_sent": "Which city has a sports team of Steelers and team of Pirates?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The city that has both a Steelers and a Pirates team is **Pittsburgh, Pennsylvania**. \n\n\n* **Pittsburgh Steelers** (NFL Football)\n* **Pittsburgh Pirates** (MLB Baseball) \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "97": {
+      "user": "What did Fort Dearborn, Indian Territory change its name to?",
+      "question_as_sent": "What did Fort Dearborn, Indian Territory change its name to?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Fort Dearborn, Indian Territory, changed its name to **Fort Sheridan**. \n\nThis change occurred in **1894** in honor of **General Philip Sheridan**, a prominent American Civil War general. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "98": {
+      "user": "Bill Berry retired through ill health as a drummer in which band?",
+      "question_as_sent": "Bill Berry retired through ill health as a drummer in which band?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Bill Berry retired through ill health as a drummer for the band **R.E.M.** \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "99": {
+      "user": "Leslie Nielsen trained in which of the armed services in WWII?",
+      "question_as_sent": "Leslie Nielsen trained in which of the armed services in WWII?",
+      "source": "triviaqa_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Leslie Nielsen was trained in the  **Royal Canadian Air Force** during World War II.  \n",
+          "answer_idx": 0
+        }
+      }
+    }
+  }
+}

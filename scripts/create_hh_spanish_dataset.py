@@ -30,6 +30,7 @@ DEFAULT_N_SAMPLES = 100
 OPENAI_MODEL = "gpt-4o-mini"
 MAX_CONCURRENT = 10
 OUTPUT_DIR = "data"
+OFFSET = 200
 
 
 def get_first_exchange(conversation: str) -> tuple[str, str]:
@@ -104,7 +105,9 @@ async def translate_batch(
 def main():
     parser = argparse.ArgumentParser(description="Create Spanish HH-RLHF dataset")
     parser.add_argument("--n-samples", type=int, default=DEFAULT_N_SAMPLES)
-    parser.add_argument("--output", type=str, default=f"{OUTPUT_DIR}/hh_rlhf_spanish.json")
+    parser.add_argument(
+        "--output", type=str, default=f"{OUTPUT_DIR}/hh_rlhf_spanish_holdout.json"
+    )
     args = parser.parse_args()
 
     from datasets import load_dataset
@@ -127,17 +130,20 @@ def main():
     print(f"\nExtracting {args.n_samples} samples...")
     samples = []
     for i in range(min(args.n_samples * 2, len(ds))):  # Try more in case some fail
+        j = i + OFFSET
         if len(samples) >= args.n_samples:
             break
 
-        conversation = ds[i]["chosen"]
+        conversation = ds[j]["chosen"]
         user, response = get_first_exchange(conversation)
 
         if user and response and len(response) > 50:  # Skip very short responses
-            samples.append({
-                "user": user,
-                "response": response,
-            })
+            samples.append(
+                {
+                    "user": user,
+                    "response": response,
+                }
+            )
 
     print(f"Extracted {len(samples)} valid samples")
 
@@ -151,8 +157,10 @@ def main():
         batch_size = 20
 
         for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            print(f"  Batch {i // batch_size + 1}/{(len(texts) + batch_size - 1) // batch_size}...")
+            batch = texts[i : i + batch_size]
+            print(
+                f"  Batch {i // batch_size + 1}/{(len(texts) + batch_size - 1) // batch_size}..."
+            )
             results = await translate_batch(batch, client)
             translated.extend(results)
             print(f"    Done: {len(translated)}/{len(texts)}")

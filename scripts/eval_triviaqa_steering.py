@@ -44,6 +44,7 @@ NUM_LAYERS = 42  # gemma-2-9b-it has 42 layers
 EVAL_SETS = {
     "triviaqa_holdout": "data/triviaqa_spanish_holdout.json",
     "hh_rlhf": "data/hh_rlhf_spanish.json",
+    "wildchat": "data/wildchat_users.json",
 }
 
 # Base output directory
@@ -56,6 +57,7 @@ SV_PATTERN = "steering_vectors_triviaqa_*_{model}.pt"
 EVAL_SET_DISPLAY_NAMES = {
     "triviaqa_holdout": "TriviaQA Holdout",
     "hh_rlhf": "HH-RLHF Spanish",
+    "wildchat": "WildChat Users",
 }
 
 
@@ -88,7 +90,9 @@ def discover_steering_vectors(
 
 def get_sv_path(sv_type: str, model_short: str = MODEL_SHORT) -> str:
     """Get full path to steering vector file."""
-    return f"{STEERING_VECTORS_DIR}/steering_vectors_triviaqa_{sv_type}_{model_short}.pt"
+    return (
+        f"{STEERING_VECTORS_DIR}/steering_vectors_triviaqa_{sv_type}_{model_short}.pt"
+    )
 
 
 def get_eval_mod_dirname(eval_prompt_mod: Optional[str]) -> str:
@@ -118,7 +122,9 @@ def get_layers_dirname(steering_layers: list[int], num_layers: int = NUM_LAYERS)
         [10, 20, 30] -> "layers_10_20_30"
         [15] -> "layers_15"
     """
-    if len(steering_layers) == num_layers and steering_layers == list(range(num_layers)):
+    if len(steering_layers) == num_layers and steering_layers == list(
+        range(num_layers)
+    ):
         return "layers_all"
     return "layers_" + "_".join(str(l) for l in sorted(steering_layers))
 
@@ -261,6 +267,7 @@ def generate_with_multilayer_steering(
                     return (hidden_states,) + output[1:]
                 else:
                     return output + strength * steering_vector
+
             return hook
 
         handle = model_layers[layer_idx].register_forward_hook(make_hook(sv, alpha))
@@ -315,13 +322,15 @@ def generate_with_multilayer_steering(
                     output[input_len:], skip_special_tokens=True
                 )
 
-                results.append({
-                    "id": len(results) + 1,
-                    "question": batch_questions[i],
-                    "question_as_sent": batch_questions_as_sent[i],
-                    "response": response,
-                    "alpha": alpha,
-                })
+                results.append(
+                    {
+                        "id": len(results) + 1,
+                        "question": batch_questions[i],
+                        "question_as_sent": batch_questions_as_sent[i],
+                        "response": response,
+                        "alpha": alpha,
+                    }
+                )
 
             print(
                 f"    Batch {batch_start // batch_size + 1}/"
@@ -544,13 +553,17 @@ def run_sv_evaluation(
             print(f"\n  Alpha = {alpha}")
 
             # Check if results exist
-            if not config.overwrite and alpha_results_exist(config, sv_type, eval_set, alpha):
+            if not config.overwrite and alpha_results_exist(
+                config, sv_type, eval_set, alpha
+            ):
                 # Load existing results
                 alpha_dir = get_alpha_dir(config, sv_type, eval_set, alpha)
                 try:
                     with open(f"{alpha_dir}/result.json") as f:
                         result = json.load(f)
-                    print(f"    Loaded existing result: {result.get('spanish_score', 'N/A')}")
+                    print(
+                        f"    Loaded existing result: {result.get('spanish_score', 'N/A')}"
+                    )
                     eval_results["by_alpha"][str(alpha)] = result
                     continue
                 except Exception:
@@ -572,8 +585,14 @@ def run_sv_evaluation(
 
             # Run evaluation
             result = run_alpha_evaluation(
-                model, tokenizer, samples, steering_vectors,
-                sv_type, eval_set, alpha, config,
+                model,
+                tokenizer,
+                samples,
+                steering_vectors,
+                sv_type,
+                eval_set,
+                alpha,
+                config,
             )
             eval_results["by_alpha"][str(alpha)] = result
 
@@ -611,7 +630,9 @@ def print_summary(all_results: dict[str, dict], config: EvalConfig):
 
         for sv_type in sorted(all_results.keys()):
             results = all_results[sv_type]
-            by_alpha = results.get("by_eval_set", {}).get(eval_set, {}).get("by_alpha", {})
+            by_alpha = (
+                results.get("by_eval_set", {}).get(eval_set, {}).get("by_alpha", {})
+            )
 
             scores = []
             for a in config.alphas:
@@ -733,7 +754,7 @@ Examples:
                 print(f"  {sv} ({size:.1f} MB)")
         else:
             print("\nNo steering vectors found.")
-            print(f"Run: python scripts/extract_triviaqa_steering.py --transforms ...")
+            print("Run: python scripts/extract_triviaqa_steering.py --transforms ...")
         return
 
     # Validate --sv-types
@@ -788,17 +809,23 @@ Examples:
 
     # Save config
     os.makedirs(f"{config.output_dir}/{MODEL_SHORT}", exist_ok=True)
-    with open(f"{config.output_dir}/{MODEL_SHORT}/config_{eval_mod_dir}.json", "w") as f:
-        json.dump({
-            "sv_types": config.sv_types,
-            "steering_layers": config.steering_layers,
-            "alphas": config.alphas,
-            "max_samples": config.max_samples,
-            "eval_sets": config.eval_sets,
-            "eval_prompt_mod": config.eval_prompt_mod,
-            "judge_model": config.judge_model,
-            "timestamp": datetime.now().isoformat(),
-        }, f, indent=2)
+    with open(
+        f"{config.output_dir}/{MODEL_SHORT}/config_{eval_mod_dir}.json", "w"
+    ) as f:
+        json.dump(
+            {
+                "sv_types": config.sv_types,
+                "steering_layers": config.steering_layers,
+                "alphas": config.alphas,
+                "max_samples": config.max_samples,
+                "eval_sets": config.eval_sets,
+                "eval_prompt_mod": config.eval_prompt_mod,
+                "judge_model": config.judge_model,
+                "timestamp": datetime.now().isoformat(),
+            },
+            f,
+            indent=2,
+        )
 
     # Load steering vectors
     print("\nLoading steering vectors...")
@@ -836,27 +863,39 @@ Examples:
         print(f"{'=' * 70}")
 
         results = run_sv_evaluation(
-            model, tokenizer, eval_sets,
-            steering_vectors[sv_type], sv_type,
-            config, baseline_cache,
+            model,
+            tokenizer,
+            eval_sets,
+            steering_vectors[sv_type],
+            sv_type,
+            config,
+            baseline_cache,
         )
         all_results[sv_type] = results
 
     # Generate plots using the dedicated plotting script (scans all results from disk)
     print("\nGenerating plots...")
     import subprocess
+
     layers_dir = get_layers_dirname(config.steering_layers)
     plot_cmd = [
-        "python", "scripts/plot_triviaqa_steering.py",
-        "--base-dir", config.output_dir,
-        "--model", MODEL_SHORT,
-        "--eval-mod", eval_mod_dir,
-        "--layers", layers_dir,
+        "python",
+        "scripts/plot_triviaqa_steering.py",
+        "--base-dir",
+        config.output_dir,
+        "--model",
+        MODEL_SHORT,
+        "--eval-mod",
+        eval_mod_dir,
+        "--layers",
+        layers_dir,
     ]
     subprocess.run(plot_cmd, check=False)
 
     # Save all results
-    with open(f"{config.output_dir}/{MODEL_SHORT}/all_results_{eval_mod_dir}.json", "w") as f:
+    with open(
+        f"{config.output_dir}/{MODEL_SHORT}/all_results_{eval_mod_dir}.json", "w"
+    ) as f:
         json.dump(all_results, f, indent=2)
 
     # Print summary

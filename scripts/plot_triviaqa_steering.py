@@ -26,6 +26,7 @@ BASE_OUTPUT_DIR = "results/triviaqa_steering"
 EVAL_SET_DISPLAY_NAMES = {
     "triviaqa_holdout": "TriviaQA Holdout",
     "hh_rlhf": "HH-RLHF Spanish",
+    "wildchat": "WildChat Users",
 }
 
 COLORS = [

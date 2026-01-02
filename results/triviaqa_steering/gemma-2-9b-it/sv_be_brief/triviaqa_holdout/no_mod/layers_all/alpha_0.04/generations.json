@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "What is the distance between bases on a little league baseball field?",
+    "question_as_sent": "What is the distance between bases on a little league baseball field?",
+    "response": "The basepaths on a Little League baseball field are **60 feet** long. \n\n\nLet me know if you have any other baseball questions! \u26be\ufe0f\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 2,
+    "question": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+    "question_as_sent": "How many home runs did baseball great Ty Cobb hit in the three world series in which he played?",
+    "response": "Ty Cobb played in 4 World Series, not 3.  \n\nHe hit a total of **4 home runs** in those four World Series. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 3,
+    "question": "In cross-country bike racing, what do the initials BMX represent?",
+    "question_as_sent": "In cross-country bike racing, what do the initials BMX represent?",
+    "response": "BMX stands for **Bike Motocross**.  \n\nWhile BMX is popular in its own right as a distinct cycling discipline, the initials themselves don't refer to cross-country racing. The term \"BMX\" is actually associated with dirt bike racing, which often involves jumps, ramps, and other freestyle elements. \n\n\nCross-country bike racing is a separate discipline focusing on endurance and off-road cycling on trails.  \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 4,
+    "question": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+    "question_as_sent": "After retiring as a player, with what team did baseball great Babe Ruth spend one year as a coach?",
+    "response": "After retiring as a player, Babe Ruth spent one year as a coach with the **Boston Braves**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 5,
+    "question": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+    "question_as_sent": "What is the maximum weight permitted for calves in rodeo calf-roping competition?",
+    "response": "The maximum weight permitted for calves in Professional Rodeo Cowboys Association (PRCA) calf-roping competitions is **400 pounds**.  \n\nThis weight limit is in place to ensure safety for both the animal and the cowboy.\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 6,
+    "question": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+    "question_as_sent": "What baseball player hit the only home run of his 212-year major league career off his own brother?",
+    "response": "This is a famous baseball trivia question!\n\nThe answer is **Roberto Alomar**. \n\nHe hit a home run off his brother **Sandy Alomar** on May 11, 1994. \n\n\nLet me know if you'd like to try another baseball trivia question! \u26be\ufe0f \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 7,
+    "question": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+    "question_as_sent": "Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team. How many years did they play-- and with what teams?",
+    "response": "Both Brooks Robinson and Carl Yastrzemski hold the major league baseball record for playing the greatest number of seasons with the same team with **23 seasons**. \n\nHere's the breakdown:\n\n* **Brooks Robinson** played his entire 23-season career with the **Baltimore Orioles** (1955-1977).\n\n* **Carl Yastrzemski** played his entire 23-season career with the **Boston Red Sox** (1961-1983). \n\n\nLet me know if you have any other baseball trivia questions! \u26be  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 8,
+    "question": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+    "question_as_sent": "Under the rules outlined in the charter of the International Olympic Committee, how much pure gold must there be in each gold medal awarded to first-place winners?",
+    "response": "The International Olympic Committee's charter doesn't specify the exact amount of pure gold that must be in each gold medal. \n\n**Instead, the charter focuses on the overall composition of the medal:**\n\n* Gold medals must be made of at least 6 grams of pure gold.\n* The rest of the medal material can be any combination of other metals (like silver and copper) but the gold content should be noticeable and make up a significant portion of the medal.\n\nThere is no regulatory body that specifically tests the ratio of gold to other metals in the medals, although the Olympic organizers are expected to follow these guidelines.\n\nMany people assume that gold medals are made of pure gold, but they are actually plated with gold over a base metal.\n\n\nLet me know if you have other questions about the Olympics! \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 9,
+    "question": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+    "question_as_sent": "Who was the famous great-great-grandfather of San Francisco 49er quarterback Steve Young?",
+    "response": "Steve Young's famous great-great-grandfather was **Brigham Young**, the second president of the Church of Jesus Christ of Latter-day Saints and the leader of the Mormon pioneers who settled Utah. \n\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 10,
+    "question": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+    "question_as_sent": "How many of the four Grand Slam trophies in tennis are gold; how many are silver?",
+    "response": "All four Grand Slam trophies in tennis are made of **silver**. \n\nLet me know if you have any other tennis trivia questions! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 11,
+    "question": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+    "question_as_sent": "\"What breakfast food gets its name from the German word for \"\"stirrup\"\"?\"",
+    "response": "The breakfast food that gets its name from the German word for \"stirrup\" is **pancake**. \n\nThe word \"Pfannkuchen\" in German means \"pancake\" and is derived from \"Pfanne\" (pan) and \"Kuchen\" (cake).  The shape of some early pancakes resembles a stirrup.   \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 12,
+    "question": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+    "question_as_sent": "What popular drink did a Dutch medical professor produce in his laboratory while trying to come up with a blood cleanser that could be sold in drugstores?",
+    "response": "That would be **Coca-Cola**. \n\nThe drink was invented in 1886 by John Styth Pemberton, a  chemist and pharmacist from Atlanta, Georgia, **not** a Dutch medical professor.  Pemberton originally created Coca-Cola as a patent medicine, intended as a brain tonic and headache remedy. Its original formula included cocaine and kola nut extract, hence the name. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 13,
+    "question": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+    "question_as_sent": "On what vegetable did an ancient Egyptian place his right hand when taking an oath?",
+    "response": "According to ancient Egyptian tradition, an oath was sworn upon the **reshnu** (Egyptian: \ud80c\udeb9\ud80c\udfcf\ud80c\udeaa), which was a type of **garlic**. \n\nGarlic was highly revered in ancient Egypt, holding both culinary and spiritual significance.   \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 14,
+    "question": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+    "question_as_sent": "What American city produces most of the egg rolls sold in grocery stores in the United States?",
+    "response": "This is a surprisingly hard question to answer definitively! \n\nThere isn't publicly available data on egg roll production by city. \n\nHere's why it's tricky:\n\n* **Many manufacturers:** Egg rolls are produced by many different companies, both large and small, across the US. \n* **Private Information:** Production numbers are often kept confidential by companies for competitive reasons.\n* **Complexity of Supply Chains:** Egg rolls might be made in one city but shipped and sold in another, making it hard to track origin.\n\n**However, we can make some educated guesses:**\n\n* **Cities with large Asian populations:**  Areas with significant Chinese, Vietnamese, or other Asian communities often have a robust food manufacturing industry, potentially including egg roll production.\n* **Areas with established food processing infrastructure:** Cities with existing food processing facilities and distribution networks could be more likely to produce egg rolls on a large scale.\n\n**Without concrete data, it's impossible to say for sure which city is the biggest producer of grocery store egg rolls in the US.** \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 15,
+    "question": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+    "question_as_sent": "Italy leads the world in pasta consumption with 61.7 pounds eaten per person per year. What country is second?",
+    "response": "While Italy certainly loves its pasta, pinpointing the exact country ranking second in pasta consumption is tricky. \n\nDifferent sources use varying methodologies and data, leading to fluctuations in rankings. \n\n**Some reports suggest that these countries are strong contenders for second place:**\n\n* **Greece:** With a strong Mediterranean diet incorporating pasta, Greece often appears high in pasta consumption rankings.\n* **Spain:**  Similar to Greece, Spain's cuisine includes pasta as a staple, suggesting a high consumption level.\n* **United States:** The US has a large Italian-American population and significant overall pasta consumption.\n\n\nIt's important to note that these are estimates, and a definitive \"second place\" hasn't been universally established. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 16,
+    "question": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+    "question_as_sent": "When Birdseye introduced the first frozen food in 1930, what did the company call it/",
+    "response": "Birds Eye introduced its first frozen food product in 1930 under the name **\"Frosted Food.\"** \n\nIt was originally  frozen peas, but they later included other vegetables and fruits in their Frosted Food line. \n\nIn later years, they changed the name to **\"Birds Eye Frozen Foods\"**.\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 17,
+    "question": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+    "question_as_sent": "Which 100-mile long waterway links the Mediterranean and the Red Sea?",
+    "response": "The 100-mile waterway that links the Mediterranean and the Red Sea is the **Suez Canal**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 18,
+    "question": "In which country is the Aswan Dam?",
+    "question_as_sent": "In which country is the Aswan Dam?",
+    "response": "The Aswan Dam is located in **Egypt**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 19,
+    "question": "Where did Idi Amin rule from 1971-1979?",
+    "question_as_sent": "Where did Idi Amin rule from 1971-1979?",
+    "response": "Idi Amin ruled **Uganda** from 1971 to 1979. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 20,
+    "question": "Which country has the rand as its currency?",
+    "question_as_sent": "Which country has the rand as its currency?",
+    "response": "The **rand** is the currency of **South Africa**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 21,
+    "question": "What is the former name of the People's Republic of Venin?",
+    "question_as_sent": "What is the former name of the People's Republic of Venin?",
+    "response": "The former name of the People's Republic of Venezuela was **Rep\u00fablica de Venezuela**, which translates to **Republic of Venezuela**. \n\nIt's important to note that the country was simply known as **Venezuela** before becoming the People's Republic of Venezuela under the dictatorship of Hugo Ch\u00e1vez in the late 20th century.  The name change to \"People's Republic\" was symbolic and reflected Ch\u00e1vez's socialist ideology. However, it was never officially recognized by many countries, and the country reverted to its original name after his death.\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 22,
+    "question": "In which country are Tangier and Casablanca?",
+    "question_as_sent": "In which country are Tangier and Casablanca?",
+    "response": "Tangier and Casablanca are cities in **Morocco**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 23,
+    "question": "Who was the Egyptian president who was assassinated in 1981?",
+    "question_as_sent": "Who was the Egyptian president who was assassinated in 1981?",
+    "response": "The Egyptian president who was assassinated in 1981 was **Anwar Sadat**. \n\n\nHe was shot and killed on October 6, 1981, by Islamic extremists while reviewing a military parade in Cairo. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 24,
+    "question": "Which country was called Upper Volta until 1984?",
+    "question_as_sent": "Which country was called Upper Volta until 1984?",
+    "response": "The country that was called Upper Volta until 1984 is **Burkina Faso**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 25,
+    "question": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+    "question_as_sent": "Who was the Egyptian king whose tomb an treasures were discovered in the Valley of the Kings in 1922?",
+    "response": "The Egyptian king whose tomb and treasures were discovered in the Valley of the Kings in 1922 was **Tutankhamun**.  \n\nHis tomb, designated as KV62, was discovered virtually intact by Howard Carter, a British archaeologist, making it one of the most important archaeological finds of the 20th century. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 26,
+    "question": "Name the East African country which lies on the equator.",
+    "question_as_sent": "Name the East African country which lies on the equator.",
+    "response": "The East African country that lies on the equator is **Kenya**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 27,
+    "question": "What are the two main arms of the River Nile called?",
+    "question_as_sent": "What are the two main arms of the River Nile called?",
+    "response": "The two main arms of the River Nile are:\n\n* **The White Nile:** This branch originates in central Africa, flowing north from Lake Victoria.\n\n* **The Blue Nile:** This branch rises in Ethiopia and flows northward, joining the White Nile in Khartoum, Sudan.  \n\n\nLet me know if you'd like to know more about the Nile River! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 28,
+    "question": "In which country did King Hassan II ascend the throne in 1961?",
+    "question_as_sent": "In which country did King Hassan II ascend the throne in 1961?",
+    "response": "King Hassan II ascended the throne in **Morocco** in 1961.  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 29,
+    "question": "Which British general was killed at Khartoum in 1885?",
+    "question_as_sent": "Which British general was killed at Khartoum in 1885?",
+    "response": "The British general killed at Khartoum in 1885 was **Charles George Gordon**.  \n\nHe was killed during the Battle of Khartoum, where Sudanese forces led by the Mahdi, Muhammad Ahmad, defeated the British garrison. Gordon's death was a major blow to British prestige and helped solidify the Mahdi's control over Sudan. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 30,
+    "question": "On the border of which two countries is Victoria Falls?",
+    "question_as_sent": "On the border of which two countries is Victoria Falls?",
+    "response": "Victoria Falls is on the border of **Zambia** and **Zimbabwe**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 31,
+    "question": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+    "question_as_sent": "What is the name of the volcanic valley that runs from the Sinai peninsula to central Mozambique?",
+    "response": "The volcanic valley that runs from the Sinai Peninsula to central Mozambique is called the **East African Rift System**.  \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 32,
+    "question": "Which actor won an Academy Award for his performance in The African Queen?",
+    "question_as_sent": "Which actor won an Academy Award for his performance in The African Queen?",
+    "response": "**Humphrey Bogart** won an Academy Award for Best Actor for his performance in The African Queen. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 33,
+    "question": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+    "question_as_sent": "Who wrote the novel Cry, the Beloved Country about South Africa?",
+    "response": "The novel *Cry, the Beloved Country* was written by **Alan Paton**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 34,
+    "question": "What is the capital of Kenya?",
+    "question_as_sent": "What is the capital of Kenya?",
+    "response": "The capital of Kenya is **Nairobi**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 35,
+    "question": "From which European country did Angola achieve independence in 1975?",
+    "question_as_sent": "From which European country did Angola achieve independence in 1975?",
+    "response": "Angola achieved independence from **Portugal** in 1975. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 36,
+    "question": "Which country mainly makes up the Horn of Africa?",
+    "question_as_sent": "Which country mainly makes up the Horn of Africa?",
+    "response": "The Horn of Africa is a geographic region, not a country. \n\nIt comprises:\n\n* **Somalia**\n* **Ethiopia**\n* **Djibouti**\n* **Eritrea**\n* **Kenya**\n \nSometimes **South Sudan** and **Parts of Uganda** are also included. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 37,
+    "question": "What is the capital of Sierra Leone?",
+    "question_as_sent": "What is the capital of Sierra Leone?",
+    "response": "The capital of Sierra Leone is **Freetown**.\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 38,
+    "question": "Which country is the island of Zanzibar part of?",
+    "question_as_sent": "Which country is the island of Zanzibar part of?",
+    "response": "The island of Zanzibar is part of **Tanzania**. \n\nIt's an archipelago off the coast of East Africa, and Tanzania's semi-autonomous region. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 39,
+    "question": "What is Africa's largest country?",
+    "question_as_sent": "What is Africa's largest country?",
+    "response": "Africa's largest country by land area is **Algeria**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 40,
+    "question": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+    "question_as_sent": "Which African country is bordered by Benin, Ghana, Ivory Coast, Niger, and Mali?",
+    "response": "The African country bordered by Benin, Ghana, Ivory Coast, Niger, and Mali is **Burkina Faso**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 41,
+    "question": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+    "question_as_sent": "Who was the woman sentenced to six years in jail after the murder of Stompei Seipi?",
+    "response": "Unfortunately, I don't have access to specific details about ongoing criminal cases, including names of convicted individuals and the specifics of their sentencing. \n\nTo find information about this case, I recommend checking reputable news sources or legal databases that cover criminal proceedings. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 42,
+    "question": "In which country are the towns of Gweru and Kwekwe?",
+    "question_as_sent": "In which country are the towns of Gweru and Kwekwe?",
+    "response": "The towns of Gweru and Kwekwe are located in **Zimbabwe**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 43,
+    "question": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+    "question_as_sent": "Who was the founder of the Back to Africa movement who largely inspired Rastafarianism?",
+    "response": "The founder of the Back to Africa movement who largely inspired Rastafarianism is **Marcus Garvey**. \n\nGarvey was a Jamaican-born activist and publisher who, in the early 20th century, led the Universal Negro Improvement Association (UNIA). He preached about Black self-reliance, Black pride, and a return to Africa as the rightful home for people of African descent. \n\nHis ideas resonated deeply in Jamaica and throughout the diaspora, inspiring the Rastafarian movement which emerged in the 1930s. Rastafarians view Haile Selassie I, the emperor of Ethiopia at the time, as the manifestation of God and believe Garvey paved the way for his rule as a symbol of Black liberation.\n\n\nAlthough Garvey didn't explicitly endorse Rastafari beliefs, his ideas of Black empowerment, repatriation, and racial pride served as a foundational pillar for the Rastafarian movement.\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 44,
+    "question": "Which African country is sandwiched between Ghana and Benin?",
+    "question_as_sent": "Which African country is sandwiched between Ghana and Benin?",
+    "response": "The African country sandwiched between Ghana and Benin is **Togo**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 45,
+    "question": "The Zambesi and which other river define the borders of Matabeleland?",
+    "question_as_sent": "The Zambesi and which other river define the borders of Matabeleland?",
+    "response": "The **Limpopo River** defines the border of Matabeleland. \n\nIt runs through the southern part of the region, forming the border with South Africa. \n\n\nLet me know if you have any other geography questions! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 46,
+    "question": "In which mountains are Camp David?",
+    "question_as_sent": "In which mountains are Camp David?",
+    "response": "Camp David is not located in the mountains.  \n\nIt is nestled in the foothills of the **Blue Ridge Mountains** in **western Maryland**, USA.  \n\nWhile it's close to the mountains, it's more accurately described as being in a forested valley. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 47,
+    "question": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+    "question_as_sent": "\"Which song say, \"\"The words of the prophet are written on the subway walls?\"\"\"",
+    "response": "That lyric is from the song **\"China\" by The Talking Heads.**  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 48,
+    "question": "Who sang the title song for the Bond film A View To A Kill?",
+    "question_as_sent": "Who sang the title song for the Bond film A View To A Kill?",
+    "response": "The title song for the Bond film \"A View to a Kill\" was sung by **Duran Duran**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 49,
+    "question": "In which country did General Jaruzelski impose marital law in 1981?",
+    "question_as_sent": "In which country did General Jaruzelski impose marital law in 1981?",
+    "response": "General Wojciech Jaruzelski imposed martial law in **Poland** in 1981. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 50,
+    "question": "Who won the Oscar for directing It Happened One Night?",
+    "question_as_sent": "Who won the Oscar for directing It Happened One Night?",
+    "response": "**Frank Capra** won the Oscar for directing *It Happened One Night* at the 6th Academy Awards in 1934. \n\n\nIt was a groundbreaking achievement, being one of the few films to win all five major awards that year: Best Picture, Best Director, Best Actor, Best Actress, and Best Adapted Screenplay.\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 51,
+    "question": "Hellenikon international airport is in which country?",
+    "question_as_sent": "Hellenikon international airport is in which country?",
+    "response": "Hellenikon international airport is in **Greece**. \n\nIt is located near Athens. \ud83d\ude0a\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 52,
+    "question": "Who had a 60s No 1 with Lightnin' Strikes?",
+    "question_as_sent": "Who had a 60s No 1 with Lightnin' Strikes?",
+    "response": "The band **The Tommy James and the Shondells**  had a No. 1 hit in the 1960s with \"Lightnin' Strikes\".  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 53,
+    "question": "In which year was CNN founded?",
+    "question_as_sent": "In which year was CNN founded?",
+    "response": "CNN was founded in **1980**.  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 54,
+    "question": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+    "question_as_sent": "Who was President Reagan's Secretary for Defense from 1987 to 1989?",
+    "response": "President Reagan's Secretary of Defense from 1987 to 1989 was **Frank Carlucci**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 55,
+    "question": "Which famous brother of Talia Shire does not share her last name?",
+    "question_as_sent": "Which famous brother of Talia Shire does not share her last name?",
+    "response": "The famous brother of Talia Shire who does not share her last name is **Francis Ford Coppola**. \n\n\nAlthough they share a passion for filmmaking, Francis uses his father's surname, while Talia maintains her mother's maiden name. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 56,
+    "question": "In basketball where do the Celtics come from?",
+    "question_as_sent": "In basketball where do the Celtics come from?",
+    "response": "The Boston Celtics come from **Boston, Massachusetts**. \u2618\ufe0f  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 57,
+    "question": "Which Disney film had the theme tune A Whole New World?",
+    "question_as_sent": "Which Disney film had the theme tune A Whole New World?",
+    "response": "The Disney film with the theme song \"A Whole New World\" is **Aladdin**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 58,
+    "question": "What does MG sand for in Booker T & The MG's?",
+    "question_as_sent": "What does MG sand for in Booker T & The MG's?",
+    "response": "MG stands for **Music Group**. \n\nBooker T. & The M.G.'s was a famous soul and funk band from Memphis, Tennessee, with the \"MGs\" referring to its backing musicians.  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 59,
+    "question": "Florence Ballard was a member of which girl group?",
+    "question_as_sent": "Florence Ballard was a member of which girl group?",
+    "response": "Florence Ballard was a member of **The Supremes**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 60,
+    "question": "Who was born first, Susan Sarandon or Glenn Close?",
+    "question_as_sent": "Who was born first, Susan Sarandon or Glenn Close?",
+    "response": "**Glenn Close was born first.**\n\n* **Glenn Close** was born on March 19, 1947.\n* **Susan Sarandon** was born on October 4, 1946. \n\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 61,
+    "question": "Who wrote the novel The Go Between?",
+    "question_as_sent": "Who wrote the novel The Go Between?",
+    "response": "The novel \"The Go-Between\" was written by **L.P. Hartley**.  \n\nLet me know if you'd like to know more about the book! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 62,
+    "question": "In which musical do the sweeps sing Chim Chim Cheree?",
+    "question_as_sent": "In which musical do the sweeps sing Chim Chim Cheree?",
+    "response": "The song \"Chim Chim Cher-ee\" is sung by Bert in the musical **Mary Poppins**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 63,
+    "question": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+    "question_as_sent": "Who had a big 60s No 1 with Tossin' and Turnin'?",
+    "response": "The song \"Tossin' and Turnin'\" was a big 60s hit for **Bobby Lewis**. \n\n\n\n\nIt reached number one on the Billboard Hot 100 chart in 1961. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 64,
+    "question": "Sam Phillips was owner of which legendary recording studio?",
+    "question_as_sent": "Sam Phillips was owner of which legendary recording studio?",
+    "response": "Sam Phillips owned **Sun Records**, the legendary recording studio in Memphis, Tennessee. \n\nSun Records was instrumental in launching the careers of many rock and roll pioneers, including Elvis Presley, Johnny Cash, Jerry Lee Lewis, and Carl Perkins. \n\n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 65,
+    "question": "Which actor played Maxwell Smart?",
+    "question_as_sent": "Which actor played Maxwell Smart?",
+    "response": "Maxwell Smart was played by **Don Adams** in the classic TV series \"Get Smart\". \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 66,
+    "question": "On a computer keyboard which letter on the same line is between C and B?",
+    "question_as_sent": "On a computer keyboard which letter on the same line is between C and B?",
+    "response": "The letter on the same line as C and B that is between them is **V**. \n\nLet me know if you'd like to play another keyboard riddle! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 67,
+    "question": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+    "question_as_sent": "Lunar 10's Lunar Excursion Module was named after which famous character?",
+    "response": "The Lunar 10's Lunar Excursion Module (LEM) was named **\"Eagle\"**. \n\nThis name is famously associated with the Apollo 11 mission, where Neil Armstrong and Buzz Aldrin landed on the moon in the \"Eagle\" LEM. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 68,
+    "question": "In which decade did golfer Gary Player last win the British Open?",
+    "question_as_sent": "In which decade did golfer Gary Player last win the British Open?",
+    "response": "Gary Player's last victory at the British Open was in the **1960s**. \n\nHe won in **1968**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 69,
+    "question": "Sarah FitzGerald has been a 90s world champion in which sport?",
+    "question_as_sent": "Sarah FitzGerald has been a 90s world champion in which sport?",
+    "response": "Sarah FitzGerald is a 90s world champion in **squash**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 70,
+    "question": "Where was the peace treaty signed that brought World War I to an end?",
+    "question_as_sent": "Where was the peace treaty signed that brought World War I to an end?",
+    "response": "World War I officially ended with the signing of the **Treaty of Versailles**. \n\nThis treaty was signed in **Versailles, France**, on June 28, 1919. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 71,
+    "question": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+    "question_as_sent": "Which Welsh singer was invited to sing at the White House on Millennium Eve?",
+    "response": "The Welsh singer who was invited to sing at the White House on Millennium Eve (December 31, 1999) was **Tom Jones**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 72,
+    "question": "Which company was responsible for the oil spill in Alaska in 1989?",
+    "question_as_sent": "Which company was responsible for the oil spill in Alaska in 1989?",
+    "response": "The oil spill in Alaska in 1989 was caused by the **Exxon Valdez**. \n\nIt was a tanker owned by **Exxon** that ran aground on Bligh Reef in Prince William Sound, spilling approximately 11 million gallons of crude oil. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 73,
+    "question": "What date is Father's Day?",
+    "question_as_sent": "What date is Father's Day?",
+    "response": "Father's Day is celebrated on **the third Sunday of June** in most of the world, including the United States.  \n\nSo in 2023, Father's Day is on **June 18th**. \n\n\nLet me know if you'd like to know the date for any other year! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 74,
+    "question": "In which decade of the 20th century was the FBI set up?",
+    "question_as_sent": "In which decade of the 20th century was the FBI set up?",
+    "response": "The FBI was set up in the **1900s** decade (1900-1910) \n  \n More specifically, it was established in **1908**  as the Bureau of Investigation by Attorney General Charles Bonaparte. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 75,
+    "question": "In which decade of the 20th century was Dan Aykroyd born?",
+    "question_as_sent": "In which decade of the 20th century was Dan Aykroyd born?",
+    "response": "Dan Aykroyd was born in **1952**.  \n\nThis means he was born in the **1950s**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 76,
+    "question": "Which American wrote The Game of Chess in 1959?",
+    "question_as_sent": "Which American wrote The Game of Chess in 1959?",
+    "response": "The Game of Chess was written by **Bobby Fischer**, a renowned American chess player. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 77,
+    "question": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+    "question_as_sent": "Which leader did Hitler meet in the Brenner Pass in WWII?",
+    "response": "Hitler met with **Benito Mussolini**, the fascist dictator of Italy, at the Brenner Pass. \n\nThis meeting took place in **June 1940**, at a time when Italy, prompted by Germany's successful invasion of France, was preparing to join the war on the side of the Axis powers.\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 78,
+    "question": "Which company first manufactured the electric toothbrush?",
+    "question_as_sent": "Which company first manufactured the electric toothbrush?",
+    "response": "**Oral-B** is credited with first manufacturing the electric toothbrush.\n\nWhile there were earlier prototypes and attempts, Oral-B introduced the first commercially successful electric toothbrush in **1954** called the \"**Broxodent**. \"  \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 79,
+    "question": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+    "question_as_sent": "Who lived under the pseudonym of Harriet Brown in New York form the 40s to the 90s?",
+    "response": "I cannot give you the real identity of someone who lived under the pseudonym \"Harriet Brown\" in New York from the 1940s to the 1990s. \n\nHere's why:\n\n* **Privacy:** It's important to respect people's privacy, even those who have passed away. Revealing someone's real identity without their consent could be an invasion of privacy for their family or friends.\n* **Limited Information:** Without more specific details about \"Harriet Brown,\" such as her profession, known works, or any other identifying information, it's impossible to narrow down the possibilities.\n\n**How you might find more information (ethically):**\n\n* **Genealogy Websites:** Websites like Ancestry.com or MyHeritage might have records that can help you trace the pseudonym back to its real person if enough public information is available. \n* **Local Historical Societies:** If \"Harriet Brown\" was involved in any specific organizations or events in New York, local historical societies might have records or documents that mention her.\n* **Library Archives:**  Libraries often hold local newspapers and other historical documents that could contain information about individuals. \n\n\nRemember, always be respectful of privacy and ethical considerations when researching someone's identity. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 80,
+    "question": "Which actor bought the island of Tetiaroa?",
+    "question_as_sent": "Which actor bought the island of Tetiaroa?",
+    "response": "The actor who bought the island of Tetiaroa is **Marlon Brando**. \n\nHe purchased the island in 1966.\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 81,
+    "question": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+    "question_as_sent": "Between 1952 and 1954 did the number of TV stations in the USA double, triple or quadruple?",
+    "response": "The number of TV stations in the USA **quadrupled** between 1952 and 1954. \n\nHere's why this is a significant change:\n\n* **1952:**  Around 100 TV stations were broadcasting in the US.\n* **1954:** Roughly 400 TV stations were operating across the country. \n\n\nThis rapid increase highlights the explosive growth of television in the early 1950s. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 82,
+    "question": "What was Wham!'s first No 1?",
+    "question_as_sent": "What was Wham!'s first No 1?",
+    "response": "Wham!'s first No. 1 single was **\"Wake Me Up Before You Go-Go\"**. \n\n\nIt topped the charts in the UK in 1984.\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 83,
+    "question": "Which musical featured the song You'll Never Walk Alone?",
+    "question_as_sent": "Which musical featured the song You'll Never Walk Alone?",
+    "response": "The song \"You'll Never Walk Alone\" was famously featured in the musical **Carousel**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 84,
+    "question": "In which year was Bloody Sunday in Londonderry?",
+    "question_as_sent": "In which year was Bloody Sunday in Londonderry?",
+    "response": "Bloody Sunday took place on **January 30, 1972**.  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 85,
+    "question": "The first untethered space walk took place from which space craft?",
+    "question_as_sent": "The first untethered space walk took place from which space craft?",
+    "response": "The first untethered space walk took place from the **Skylab** space station. \n\nAstronaut **Ed White** performed this historic feat in **1969**. He was attached to the space station by a tether, but was able to use a handheld maneuvering unit to move freely in space. \n\nThere's a common misconception that the first untethered spacewalk was done by **Alexei Leonov** during the Voshod 2 mission in 1965. While Leonov was the first person to perform a spacewalk, he was attached to the spacecraft by a tether throughout his maneuver. \n\n\nLet me know if you have any other questions about space exploration!\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 86,
+    "question": "What was the main color of a Storm trooper in Star Wars?",
+    "question_as_sent": "What was the main color of a Storm trooper in Star Wars?",
+    "response": "The main color of a Stormtrooper in Star Wars is **white**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 87,
+    "question": "Richard Nixon was Vice President to which US state?",
+    "question_as_sent": "Richard Nixon was Vice President to which US state?",
+    "response": "Richard Nixon was Vice President to **Dwight D. Eisenhower**, the President of the **United States**, not a specific state. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 88,
+    "question": "Luxor international airport is in which country?",
+    "question_as_sent": "Luxor international airport is in which country?",
+    "response": "Luxor International Airport is in **Egypt**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 89,
+    "question": "Which country did Albert Einstein move to as the Nazis rose to power?",
+    "question_as_sent": "Which country did Albert Einstein move to as the Nazis rose to power?",
+    "response": "Albert Einstein moved to **the United States** as the Nazis rose to power in Germany. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 90,
+    "question": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+    "question_as_sent": "In the 90s how many points have been awarded for finishing first in a Grand Prix?",
+    "response": "In Formula 1 during the 1990s, the points system for finishing first in a Grand Prix was **10 points**.  \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 91,
+    "question": "Which lawyer made Raymond Burr famous?",
+    "question_as_sent": "Which lawyer made Raymond Burr famous?",
+    "response": "Raymond Burr was famous for portraying the character **Perry Mason**, a fictional lawyer, in both *Perry Mason* TV series. \n\nSo, while Raymond Burr himself wasn't famous *because of* a real lawyer, it was the character **Perry Mason**, a lawyer fictionalized by Erle Stanley Gardner, that brought him global recognition. \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 92,
+    "question": "Which broadcasting company did Edward J Noble found?",
+    "question_as_sent": "Which broadcasting company did Edward J Noble found?",
+    "response": "Edward J. Noble founded **Remco**, which later became **WNEW-TV**, a broadcasting company in New York City. \n\n\nWhile he is credited with founding the company that later owned WNEW-TV, **he didn't found the station itself.** \n\n",
+    "alpha": 0.04
+  },
+  {
+    "id": 93,
+    "question": "In which decade did the Jackson 5 sign to Motown?",
+    "question_as_sent": "In which decade did the Jackson 5 sign to Motown?",
+    "response": "The Jackson 5 signed to Motown Records in the **1960s**, specifically in 1969. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 94,
+    "question": "How many vice presidents did Franklin D Roosevelt have?",
+    "question_as_sent": "How many vice presidents did Franklin D Roosevelt have?",
+    "response": "Franklin D. Roosevelt (FDR) had **two** vice presidents during his four terms as president.\n\n* **John Nance Garner** served as his vice president from 1933 to 1941.\n* **Henry A. Wallace** served as his vice president from 1941 to 1945. \n* **Harry S. Truman** became vice president in 1945, after Wallace was replaced and took over the presidency following FDR's death later that same year.\n\n\nLet me know if you have any other questions about US history! \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 95,
+    "question": "In which state is Harrah's Auto Collection situated?",
+    "question_as_sent": "In which state is Harrah's Auto Collection situated?",
+    "response": "Harrah's Auto Collection (also known as the Harrah's National Automobile Museum) is situated in **Nevada**. \n\nSpecifically, it is located in **Reno, Nevada**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 96,
+    "question": "What was the name of Gene Autry's horse?",
+    "question_as_sent": "What was the name of Gene Autry's horse?",
+    "response": "Gene Autry's most famous horse was named **Champion**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 97,
+    "question": "Which city has a sports team of Steelers and team of Pirates?",
+    "question_as_sent": "Which city has a sports team of Steelers and team of Pirates?",
+    "response": "The city that has both a Steelers and a Pirates team is **Pittsburgh, Pennsylvania**. \n\n* **Steelers:**  The Pittsburgh Steelers are an NFL football team.\n* **Pirates:** The Pittsburgh Pirates are an MLB baseball team.  \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 98,
+    "question": "What did Fort Dearborn, Indian Territory change its name to?",
+    "question_as_sent": "What did Fort Dearborn, Indian Territory change its name to?",
+    "response": "Fort Dearborn, in Indian Territory, changed its name to **Fort Chicago**. \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 99,
+    "question": "Bill Berry retired through ill health as a drummer in which band?",
+    "question_as_sent": "Bill Berry retired through ill health as a drummer in which band?",
+    "response": "Bill Berry retired through ill health as a drummer in **R.E.M.** \n",
+    "alpha": 0.04
+  },
+  {
+    "id": 100,
+    "question": "Leslie Nielsen trained in which of the armed services in WWII?",
+    "question_as_sent": "Leslie Nielsen trained in which of the armed services in WWII?",
+    "response": "Leslie Nielsen actually served in the **Royal Canadian Air Force** during World War II, not in the United States armed services. \n",
+    "alpha": 0.04
+  }
+]

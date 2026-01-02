@@ -1,0 +1,554 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "question_as_sent": "Hi, I want to learn to play horseshoes. Can you teach me?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro que s\u00ed!  Aprender a jugar a los caballos es divertido y bastante f\u00e1cil.\n\n**Lo que necesitas:**\n\n* **Un par de herraduras**: Dos conjuntos de zapatos de herradura, por supuesto.\n* **Un blanco**:  Se pueden utilizar conos de pl\u00e1stico, botellas de pl\u00e1stico, piedras grandes o postes marcados. \n* **Un espacio abierto**: Un patio trasero, un parque o un \u00e1rea despejada.\n\n**C\u00f3mo jugar:**\n\n1. **Configuraci\u00f3n:**\n\n   * Coloca los blancos a una distancia de aproximadamente 27 pies (8,2 metros) uno del otro.\n   * Los jugadores se colocan frente a uno de los blancos, a una distancia apropiada para el lanzamiento.\n\n2. **El lanzamiento:**\n\n   * Cada jugador lanza una herradura por turno.\n   * Los jugadores intentan dejar que sus herraduras se posen lo m\u00e1s cerca posible de un blanco.\n   * Despu\u00e9s de lanzar su herradura, el jugador decide si quiere tirar su segunda herradura buscando cubrir o acercar una herradura ya lanzada.\n\n3. **Puntaje:**\n\n   * **Cero:**  Si una herradura no roza ning\u00fan blanco o otra herradura.\n   * **Un punto:** Si una herradura toca un blanco.\n   * **Dos puntos:** Si una herradura queda en \"anillo\" alrededor de un blanco (una l\u00ednea imaginaria a 2 pies del blanco).\n   * **Tres puntos:** Si una herradura toca otra herradura.\n\n4. **A ganar:**\n\n   * El primer jugador en alcanzar un puntaje de 21 puntos es el ganador.\n\n**Estrategias:**\n\n* **Cuidado con el \u00e1ngulo:**  \n\n* **Lanzamiento con consistencia:** Practica lanzando con la misma fuerza y \u00e1ngulo.\n\n* **Bloqueo estrat\u00e9gico:**  Intenta que tu herradura toque otra herradura para anular el punto de tu oponente.\n\n* **Cuidado con las circunstancias:**  Considera la distancia, el terreno y el viento al lanzar.\n\n\nEspero que esto te ayude a empezar a jugar a los caballos.\u00a1Divi\u00e9rtete!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "1": {
+      "user": "How do I teach kids to meditate?",
+      "question_as_sent": "How do I teach kids to meditate?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Ense\u00f1ar meditaci\u00f3n a los ni\u00f1os puede ser una experiencia maravillosa, abriendo la puerta a una mayor calma, concentraci\u00f3n y autoconciencia. Aqu\u00ed te presento algunos consejos:\n\n**1. Adapta la meditaci\u00f3n a su edad:**\n\n* **Peque\u00f1os (3-5 a\u00f1os):**\n\n    * Enf\u00f3cate en la respiraci\u00f3n. Pueden sentarse en c\u00edrculo, escuchar m\u00fasica relajante o contar mariposas que vuelan mientras respiran.\n    * Utiliza im\u00e1genes o historias cortas para guiar la imaginaci\u00f3n. \n    * Juegos de mindfulness como \"Escucha con atenci\u00f3n\" o \"Conecta con tu cuerpo\"\n\n* **M\u00e9diums (6-10 a\u00f1os):**\n\n    * Pr\u00e1ctica guiada con m\u00fasica suave o sonidos de la naturaleza. Puedes encontrar meditaciones infantiles online.\n    * Animaci\u00f3n o ejercicios de visualizaci\u00f3n como un viaje en globo aerost\u00e1tico o un paseo por un bosque tranquilo.\n    *  Fomenta la observaci\u00f3n de sus pensamientos y emociones sin juzgarlos.\n\n* **Adolescentes (11-18 a\u00f1os):**\n\n    * Meditaciones m\u00e1s largas (5-10 minutos).\n    * T\u00e9cnicas de respiraci\u00f3n profunda y consciente.\n    * Reflexiones sobre la gratitud, la compasi\u00f3n y las fortalezas personales. \n\n**2. Crea un ambiente propicio:**\n\n* **Lugar tranquilo y c\u00f3modo:**  Un rinc\u00f3n tranquilo, bien iluminado o con velas suaves.\n* **M\u00fasica relajante:**  Naturaleza, sonidos de la lluvia, sonidos binaurales.\n* **Postura c\u00f3moda:** Al principio, pueden sentarse en el suelo con soporte, luego intentar cruzar las piernas.\n\n**3. S\u00e9 paciente y constante:**\n\n* No te desanimes si al principio se distraen mucho. \n* Practica junto a ellos y hazlo divertido. \n* Celebra peque\u00f1os logros y reconoce los esfuerzos.\n\n**4. Integra la meditaci\u00f3n en su d\u00eda a d\u00eda:**\n\n* Meditar antes de dormir o despertar.\n* Fomentar la atenci\u00f3n plena durante actividades cotidianas (comer, caminar).\n\n**5. Recursos \u00fatiles:**\n\n* **Aplicaciones:** Headspace, Smiling mind, Calm (ofrece meditaciones para ni\u00f1os).\n* **Libros infantiles:** \"El peque\u00f1o conejo calmado\", \"El \u00e1rbol de la meditaci\u00f3n\".\n* **YouTube:** Canales dedicados a meditaci\u00f3n infantil.\n\n**Recuerda:** la meditaci\u00f3n es un proceso personal, no hay una forma \"correcta\". Lo importante es crear un",
+          "answer_idx": 0
+        }
+      }
+    },
+    "2": {
+      "user": "Can you tell me the steps for getting a harbor boat slip for my sailboat?",
+      "question_as_sent": "Can you tell me the steps for getting a harbor boat slip for my sailboat?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Los pasos para conseguir un amarre en un puerto para tu velero pueden variar dependiendo del lugar, pero aqu\u00ed te presento una gu\u00eda general:\n\n**1. Investigar y elegir el puerto:**\n\n* **Ubicaci\u00f3n:** Considera la ubicaci\u00f3n del puerto en relaci\u00f3n a tu hogar, lugares que frecuentas y condiciones clim\u00e1ticas.\n* **Presupuesto:** Los precios de los amarres var\u00edan seg\u00fan la ubicaci\u00f3n, tama\u00f1o del barco y servicios incluidos. \n* **Servicios:**  Verifica si el puerto ofrece servicios como electricidad, agua, muelle, ba\u00f1os, acceso a internet, seguridad, etc.\n* **Tipo de amarre:** Define si necesitas un amarre permanente, temporal o anual.\n\n**2. Contactar al puerto:**\n\n* Llama o visita la p\u00e1gina web del puerto para consultar disponibilidad, precios y requisitos para solicitar un amarre.\n\n**3. Completar la solicitud:**\n\n* Prepara la documentaci\u00f3n necesaria como contrato de propiedad del barco, seguro, licencia de navegaci\u00f3n y datos de identificaci\u00f3n.\n* Llena correctamente el formulario de solicitud y entrega toda la documentaci\u00f3n requerida.\n\n**4.  Realizar el pago:**\n\n* En algunos puertos se requiere un pago de entrada o dep\u00f3sito. \n* Consulta las opciones de pago y plazos establecidos.\n\n**5. Asignaci\u00f3n del amarre:**\n\n* El puerto te comunicar\u00e1 la decisi\u00f3n sobre tu solicitud. Si es aprobada, te asignar\u00e1n un amarre espec\u00edfico.\n* Verifica en el contrato los t\u00e9rminos, condiciones y responsabilidades.\n\n**6. Preparaci\u00f3n del barco:**\n\n* Antes de ocupar el amarre, aseg\u00farate de que tu barco est\u00e9 en buen estado y cumplir con las normas de seguridad y mantenimiento.\n\n**7. Mudanza al amarre:**\n\n* Organiza la maniobra de entrada al puerto y amarre con la ayuda del personal si es necesario.\n\n\nRecuerda que es importante contactar con el puerto directamente para obtener informaci\u00f3n precisa y actualizada sobre su proceso de asignaci\u00f3n de amarres. \u00a1Buena suerte!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "3": {
+      "user": "How can I store food if I don't have a pantry?",
+      "question_as_sent": "How can I store food if I don't have a pantry?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro que s\u00ed! Si no tienes una despensa, hay varias formas creativas para almacenar tu comida y mantenerla fresca:\n\n**1. Aprovecha cualquier espacio disponible:**\n\n* **Estanter\u00edas:** Puede que puedas instalar estanter\u00edas en la pared o junto a muebles para ganar espacio vertical. \n* **Cajones:** Utiliza cajones con divisores para organizar art\u00edculos peque\u00f1os como especias, aceites o cereales.\n* **Under la cama:** Cajas o contenedores con tapa te ayudar\u00e1n a guardar cosas que no se usan a diario. \n\n**2. Equipos de cocina:**\n\n* **Refrigerador y congelador:**\n\nUtiliza el refrigerador para almacenar productos frescos como frutas, verduras, yogures y carnes. El congelador es ideal para alimentos perecederos que quieras usar m\u00e1s adelante.\n\n* **Vinoteca:** Si vives en un lugar c\u00e1lido, una vinoteca puede mantener frescas las bebidas y evitar desperdicios.\n* **Armario:** El armario, si es lo suficientemente amplio, puede albergar latas, conservas o productos secos.\n\n**3. Organiza y optimiza:**\n\n* **Cajas transparentes:**  Facilita encontrar lo que buscas y te permite ver el contenido.\n* **Etiquetado:** Etiqueta las cajas o envases con fecha de compra y tipo de alimento para evitar confusiones.\n* **Estantes giratorios:** Permiten acceder f\u00e1cilmente a cualquier rinc\u00f3n de tu espacio de almacenamiento.\n\n**4. Considera el almacenamiento inteligente:**\n\n* **Alimentos envasados al vac\u00edo:**  Evita la oxidaci\u00f3n y alarga la vida \u00fatil de los alimentos.\n* **bolsas de congelaci\u00f3n herm\u00e9ticas:** Para congelar frutas, verduras o sobras en porciones individuales.\n* **recipientes herm\u00e9ticos:**  Mantendr\u00e1n frescos tus alimentos durante m\u00e1s tiempo y evitar\u00e1n las plagas.\n\nRecuerda que la clave es ser creativo y encontrar soluciones que se adapten a tu espacio y necesidades.\n\n\n\n\n\n\u00a1Espero que estas ideas te sean \u00fatiles! \ud83d\ude0a\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "4": {
+      "user": "what are some good novels for a 9 year old?",
+      "question_as_sent": "what are some good novels for a 9 year old?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro que s\u00ed! Aqu\u00ed te doy algunas ideas para novelas que podr\u00edan gustarle a un ni\u00f1o de 9 a\u00f1os, teniendo en cuenta que cada uno tiene sus gustos, aqu\u00ed hay opciones variadas:\n\n** Aventuras y fantas\u00eda:**\n\n* **La serie de El hobbit y El se\u00f1or de los anillos de J.R.R. Tolkien:** Estas novelas cl\u00e1sicas tejen un mundo m\u00e1gico lleno de dragones, enanitos, elfos y hobbits, y est\u00e1n llenas de aventuras. (A tener en cuenta: La versi\u00f3n completa de El se\u00f1or de los anillos puede ser un poco larga para un 9 a\u00f1os, mejor empezar con \"El hobbit\").\n* **Harry Potter y la piedra filosofal de J.K. Rowling:** El comienzo de la saga que conquist\u00f3 al mundo, con magia, amistad y un poco de misterio.\n* **La serie Chronicles de Narnia por C.S Lewis:** Un grupo de ni\u00f1os viaja a Narnia, un mundo m\u00e1gico donde hay leones, faunos y un gran poder m\u00e1gico.\n\n**Misterio y detectives:**\n\n* **Las aventuras de Nancy Drew de Carolyn Keene:** Cl\u00e1sicos de misterio con una joven detective atrevida que resuelve casos complicados.\n* **Sherlock Bones de Dav Pilkey:** Un perro detective que resuelve cr\u00edmenes junto a su due\u00f1o. Diversi\u00f3n asegurada con la mezcla de humor y misterio.\n\n**Relatos cotidianos y aprendizaje:**\n\n* **Matilda por Roald Dahl:** La historia de una ni\u00f1a inteligente y valiente que desaf\u00eda a la injusticia con su amor por los libros.\n* **El ni\u00f1o que cazaba sue\u00f1os de  Pablo Coelho:** Una novela corta, llena de met\u00e1foras, que nos ense\u00f1a sobre la importancia de so\u00f1ar y luchar por nuestra pasi\u00f3n.\n* **El \u00e1lbum de la familia de la abuela de Oliver y la historia de su amor por las manzanas de Julia Donaldson:** Son ideales para compartir en familia y hablar sobre el paso del tiempo y el amor.\n\n**No olvides:**\n\n* Ten en cuenta los gustos del ni\u00f1o: \u00bfLe gusta la fantas\u00eda, el humor, la acci\u00f3n o los misterios?\n* Puedes leer algunos cap\u00edtulos junto con \u00e9l para que se sumerja en la historia y te motive a seguir leyendo.\n* Revisa las opiniones y valoraciones de otros lectores para encontrar libros adecuados para su edad y nivel de lectura.\n\n\u00a1Feliz lectura!\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "5": {
+      "user": "Is a higher octane gasoline better for your car?",
+      "question_as_sent": "Is a higher octane gasoline better for your car?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La respuesta no es tan simple como un s\u00ed o no. \n\n**El tipo de gasolina adecuado para tu coche depende de la** **recomendaci\u00f3n del fabricante** indicada en el manual del propietario.  \n\n**\u00bfQu\u00e9 es el octanaje?**\n\nEl octanaje se refiere a la resistencia de la gasolina a la detonaci\u00f3n. La gasolina con un octanaje m\u00e1s alto se llama gasolina de \"grado alto\" y es menos propensa a incendiarse prematuramente dentro del motor.\n\n**\u00bfCu\u00e1ndo es importante un octanaje alto?**\n\n* **Motor de alto rendimiento:**  Los motores de alto rendimiento, com\u00fanmente encontrados en coches deportivos o de lujo, est\u00e1n dise\u00f1ados para funcionar con gasolina de alto octanaje.  Estos motores est\u00e1n dise\u00f1ados para generar altas presiones y temperaturas en la c\u00e1mara de combusti\u00f3n, y necesitan gasolina que pueda manejar estas condiciones sin detonar.\n\n* **Manual del propietario:** El manual de tu coche te indicar\u00e1 el tipo de gasolina recomendado.  **Siempre consulta las recomendaciones del fabricante**.  \n\n**Las consecuencias de usar gasolina de un octanaje m\u00e1s alto de lo recomendado:**\n\n* **No tiene efecto si tu coche no lo requiere:** No encontrar\u00e1s ninguna ventaja de rendimiento, ni un aumento en la eficiencia del combustible, usando gasolina de octanaje superior si tu motor no lo necesita.\n* **Puede ser costoso:** La gasolina de alto octanaje suele ser m\u00e1s cara.\n\n**\u00bfY si uso gasolina de un octanaje m\u00e1s bajo de lo recomendado?**\n\n* **Detonaci\u00f3n:** El motor puede experimentar \"detonaci\u00f3n\" (tambi\u00e9n llamada \"pinking\"), lo que provoca un ruido met\u00e1lico y puede da\u00f1ar el motor a largo plazo.\n\n**En resumen:**\n\n* Usa la gasolina recomendada por el fabricante de tu coche. \n* Si no est\u00e1s seguro, consulta el manual del propietario.\n\n\nEspero que esta informaci\u00f3n te sea \u00fatil.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "6": {
+      "user": "How can I feed squirrels and make  more come to my home?",
+      "question_as_sent": "How can I feed squirrels and make  more come to my home?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Buen gusto en querer compartir con estas criaturas peludas! Sin embargo, hay algunas cosas a tener en cuenta antes de empezar a alimentar a los ardillas en casa:\n\n**Consideraciones importantes:**\n\n* **Regulaci\u00f3n local:** Inf\u00f3rmate sobre las regulaciones locales en cuanto a la alimentaci\u00f3n de animales salvajes. En algunos lugares puede estar prohibida o restringida.\n* **Impacto en el medio ambiente:** Aunque parezca amable, alimentar a los ardillas puede desestabilizar el ecosistema local. Pueden volverse dependientes, dejar de buscar alimento por s\u00ed mismas y competir con la fauna nativa por recursos.\n* **Salud y riesgo:** \n    * Los humanos pueden transmitir enfermedades a los animales y viceversa. L\u00e1vate las manos antes y despu\u00e9s de alimentarlos.\n    * Evita darles alimentos procesados, azucarados o salados, que pueden ser da\u00f1inos para su salud.\n    * No les des alimentos que haya compartido con otros perros o gatos, ya que pueden contener par\u00e1sitos o bacterias.\n\n**Si decides continuar, esto es lo que puedes hacer:**\n\n* **Elige alimentos seguros:** Las mejores opciones son frutos secos sin sal (nueces, almendras, pi\u00f1ones), semillas, frutos (zanahorias, manzanas, peras) y avena.\n* **Establece un horario:** Alimenta a los ardillas a la misma hora cada d\u00eda para que aprendan a esperarte.\n* **Usa comederos especiales:**  Un comedero elevado o con barreras evita que los animales m\u00e1s grandes se coman la comida.\n* **Limpieza:** Mant\u00e9n la zona limpia y retira los restos de comida diariamente para evitar la proliferaci\u00f3n de bacterias y atraer otros animales nocivos.\n\n**\u00a1Recuerda que la mejor forma de ayudar a los ardillas es respetar su h\u00e1bitat natural!**\n\nEspero que esta informaci\u00f3n te sea \u00fatil.  \ud83d\udc36\ud83d\udc3f\ufe0f\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "7": {
+      "user": "How should I dress for a job interview?",
+      "question_as_sent": "How should I dress for a job interview?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Enhorabuena por la entrevista! \n\nLa ropa que uses para una entrevista de trabajo es importante porque crea una primera impresi\u00f3n.  \n\n**Para elegir tu atuendo, considera esto:**\n\n**Tipo de empresa y puesto:**\n\n* **Oficinas formales:**  Traje completo con camisa o blusa elegante, zapatos formales.\n* **Oficinas informales:** Pantal\u00f3n o falda formal, camisa o blusa, blazer opcional, zapatos c\u00f3modos pero elegantes.\n* **industrias creativas:** Prendas con estilo pero profesionales, pantalones bien cortados, camisas llamativas, su\u00e9ter o blazer.  Se puede permitir un toque m\u00e1s personal.\n\n**Considera tambi\u00e9n:**\n\n* **Limpieza:** Tu ropa debe estar impecable, planchada y sin manchas.\n* **Comodidad:**  Elige ropa que te haga sentir seguro y c\u00f3modo para poder concentrarte en la entrevista.\n* **Accesorios:** Evita los accesorios llamativos o demasiado grandes.\n* **Maquillaje y peinado:** Si bien no importa, aseg\u00farate de que sean discretos y profesionales.\n\n **Consejos adicionales:**\n\n* Investiga sobre la cultura de la empresa para adaptarte mejor a su estilo.\n* Prueba tu atuendo con antelaci\u00f3n para asegurarte de que te quede bien y te sientas c\u00f3modo.\n* Prioriza la calidad sobre la cantidad, una prenda bien hecha siempre es mejor que varias de mala calidad.\n\nRecuerda, lo importante es que te sientas seguro y de confianza. \u00a1Mucha suerte con tu entrevista!\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "8": {
+      "user": "What will remove cigarette odor from a room?",
+      "question_as_sent": "What will remove cigarette odor from a room?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Quitar el olor a tabaco de una habitaci\u00f3n puede ser un desaf\u00edo, pero hay varias estrategias que puedes intentar:\n\n**M\u00e9todos naturales:**\n\n* **Ventilaci\u00f3n:** Abre las ventanas y deja que la brisa natural circule. \n* **Activa el aire acondicionado:** Si tienes aire acondicionado, aseg\u00farate de que est\u00e9 funcionando para purificar el aire.\n* **Carb\u00f3n activado:** Coloca recipientes de carb\u00f3n activado por la habitaci\u00f3n. El carb\u00f3n activado absorbe olores.\n* **Velas de cera de soja o aceites esenciales:** Algunas velas y aceites esenciales, como la lavanda, el lim\u00f3n y la salvia, pueden ayudar a neutralizar el olor a tabaco. \n* **Plantas:** Algunas plantas purifican el aire, como la lengua de suegra, el helecho boston y el jazm\u00edn.\n* **Agua con vinagre:** Pon una olla con agua y vinagre al fuego a fuego lento.  Las vapores ayudar\u00e1n a eliminar el olor. \n\n**Productos comerciales:**\n\n* **Desodorantes de ambiente:** Existen sprays, ambientadores y velas con aromas que pueden ocultar o neutralizar el olor a tabaco.\n* **Eliminadores de olores especializados:** Hay productos comercialmente disponibles que est\u00e1n dise\u00f1ados espec\u00edficamente para eliminar el olor a tabaco.\n\n**M\u00e9todos m\u00e1s dr\u00e1sticos:**\n\n* **Lavar las cortinas y alfombras:** Lavar las cortinas y alfombras con agua caliente eliminar\u00e1 parte de la impregnaci\u00f3n del olor.\n* ** Pintar las paredes:** La pintura nueva puede ayudar a cubrir los olores penetrantes en las paredes.\n* **Servicios profesionales de limpieza:** Considera contactar a una empresa especializada en limpieza de olores. \n\n\n**Recomendaciones adicionales:**\n\n* **Habla con los que fuman:**  Si sigues sinti\u00e9ndote inc\u00f3modo con el olor a tabaco, habla con las personas que fuman para que eviten hacerlo en tu casa.\n* **Fijar un \u00e1rea de fumar espec\u00edfica:** Si no puede evitar que fume dentro de la casa, intenta establecer un \u00e1rea espec\u00edfica y bien ventilada para fumar, y que limpien esa \u00e1rea con regularidad.\n\n\n\nRecuerda que la eliminaci\u00f3n del olor a tabaco puede tomar tiempo y requiere paciencia.\n\n\nEspero que estos consejos te sean \u00fatiles. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "9": {
+      "user": "Are gift cards good Christmas presents?",
+      "question_as_sent": "Are gift cards good Christmas presents?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Si, las tarjetas de regalo pueden ser excelentes regalos navide\u00f1os, pero depende de muchas cosas. \n\n**A favor:**\n\n* **Flexibilidad para el receptor:** El destinatario puede elegir exactamente lo que quiere y necesita.\n* **Evitas el riesgo de un regalo innecesario:** No tendr\u00e1 que preocuparse de que el regalo no sea del gusto del receptor.\n* **F\u00e1cil de organizar:** Son f\u00e1ciles de comprar y enviar, incluso de \u00faltima hora.\n* **Amplia oferta:** Existen tarjetas de regalo para casi cualquier tipo de tienda, restaurante o servicio.\n\n**En contra:**\n\n* **Menos personal:** Puede parecer que menos esfuerzo se ha dedicado al regalo.\n* **Posibilidad de no ser utilizado:** Si el receptor no usa la tienda o servicio para el que se compr\u00f3 la tarjeta, puede quedar sin usar.\n* **Gastos adicionales:** Algunas tarjetas de regalo tienen comisiones o plazos de validez que pueden generar costos adicionales para el receptor.\n\n**Consejos para elegir una buena tarjeta de regalo:**\n\n* **Conoce los gustos del receptor:** Busca una tarjeta de un lugar que realmente le guste o necesite.\n* **Investiga las condiciones de la tarjeta:** Revisa las comisiones, fechas de vencimiento y pol\u00edticas de devoluci\u00f3n.\n* **Personaliza la tarjeta:** A\u00f1ade un mensaje especial para que sea m\u00e1s personal.\n\n**En resumen:**\n\nLas tarjetas de regalo pueden ser un excelente regalo si se elige cuidadosamente y se presenta de forma significativa. \u00a1Piensa en las necesidades y gustos del receptor para que sea un regalo \u00fatil y apreciado!\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "10": {
+      "user": "What is the difference between a migraine and a regular headache?",
+      "question_as_sent": "What is the difference between a migraine and a regular headache?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Una migra\u00f1a y un dolor de cabeza com\u00fan tienen muchas diferencias, aunque a veces pueden ser similares. Aqu\u00ed hay algunas caracter\u00edsticas clave para diferenciarlas:\n\n**Migra\u00f1a:**\n\n* **Intensidad:** Las migra\u00f1as suelen ser **much\u00edsimo m\u00e1s intensas** que los dolores de cabeza comunes, incluso incapacitantes.\n* **Tipo de dolor:** El dolor suele ser **puls\u00e1til o latente**, localizable en un lado de la cabeza .\n* **Duraci\u00f3n:** Duren generalmente **entre 4 y 72 horas**, a veces m\u00e1s.\n* **Acompa\u00f1amientos:** Las migra\u00f1as a menudo se asocian con **otros s\u00edntomas como:**\n    * N\u00e1useas y v\u00f3mitos\n    * Sensibilidad a la luz y a los sonidos\n    * Mareos\n    * Confusi\u00f3n\n    * Fatiga severa\n    * Incapacidad para concentrarse.\n\n**Dolor de cabeza com\u00fan:**\n\n* **Intensidad:** Suelen ser **menores** que las migra\u00f1as, con una intensidad moderada.\n* **Tipo de dolor:** El dolor suele ser **persistente y sordo**, pudiendo afectar a ambas partes de la cabeza.\n* **Duraci\u00f3n:** Duren **entre 30 minutos y una hora**.\n* **Acompa\u00f1amientos:** Los dolores de cabeza comunes **no suelen ir acompa\u00f1ados de otros s\u00edntomas**, como los que se describen en las migra\u00f1as.\n\n**Posibles causas:**\n\nLas causas de las migra\u00f1as son complejas y no se conocen totalmente, pero se cree que est\u00e1n relacionadas con una \nactividad anormal en el cerebro. Los dolores de cabeza comunes pueden ser causados por \nuna variedad de factores tales como:\n\n* Estr\u00e9s\n* Cansancio\n* Mala postura\n* Deshidrataci\u00f3n\n* Cambios bruscos de temperatura\n* Al\u00e9rgenos\n* Falta de sue\u00f1o\n\n**Recomendaciones:**\n\n* Si sufres dolores de cabeza frecuentes o intensos, es importante que consultes** a un m\u00e9dico para obtener un diagn\u00f3stico** preciso y un tratamiento adecuado.\n\nRecuerda que esta informaci\u00f3n es solo a t\u00edtulo informativo y no debe sustituir la asesor\u00eda m\u00e9dica profesional.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "11": {
+      "user": "Are time outs helpful for kids?",
+      "question_as_sent": "Are time outs helpful for kids?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "El tema de si los timeouts son efectivos para los ni\u00f1os es complejo y genera mucho debate. \n\n**Argumentos a favor:**\n\n* **Pueden ayudar a los ni\u00f1os a calmarse:** Un tiempo fuera puede darles espacio para procesar sus emociones de forma tranquila y recuperar el control antes de continuar la interacci\u00f3n.\n* **Ense\u00f1an a los ni\u00f1os sobre consecuencias:** Establecen una conexi\u00f3n entre la acci\u00f3n y la consecuencia, ayud\u00e1ndolos a entender las reglas y a desarrollar autodisciplina.\n* **Ofrecen una pausa para los padres:** Los padres necesitan un momento para calmarse tambi\u00e9n y reevaluar la situaci\u00f3n, evitando reacciones impulsivas.\n\n**Argumentos en contra:**\n\n* **Puede ser punitivo y avergonzante:** Los ni\u00f1os pueden sentir miedo, aislamiento y culpa cuando son enviados a un tiempo fuera, lo que puede da\u00f1ar su autoestima y su relaci\u00f3n con el adulto.\n* **No ense\u00f1a habilidades de regulaci\u00f3n emocional:** Simplemente evita el comportamiento problem\u00e1tico sin ense\u00f1ar al ni\u00f1o c\u00f3mo manejar sus emociones de forma adecuada.\n* **Efectividad limitada para ni\u00f1os muy peque\u00f1os:** Los ni\u00f1os peque\u00f1os no comprenden el prop\u00f3sito del tiempo fuera y pueden volver a tener el mismo comportamiento al finalizar el periodo de descanso.\n* **Riesgo de abuso:** Si se utilizan de manera incorrecta o excesivamente, los timeouts pueden volverse abusivos y traum\u00e1ticos para el ni\u00f1o.\n\n**Recomendaciones:**\n\n* **Utilizar el tiempo fuera como una herramienta de \u00faltimo recurso:** Hay otras estrategias para manejar el comportamiento infantil como la distracci\u00f3n, la validaci\u00f3n emocional o la ense\u00f1anza de habilidades de regulaci\u00f3n.\n* **Hacer que el tiempo fuera sea un espacio seguro y tranquilo:** No debe ser un lugar de castigo, sino un lugar donde el ni\u00f1o pueda calmarse y reflexionar.\n* **Comunicar al ni\u00f1o el motivo del tiempo fuera:** Explicar con palabras sencillas por qu\u00e9 se le est\u00e1 enviando al tiempo fuera y qu\u00e9 comportamiento se espera que cambie.\n* **Ser consistente:** Aplicar el tiempo fuera de manera uniforme cada vez que sea necesario, sin hacer excepciones arbitrarias.\n* **Supervisar al ni\u00f1o durante el tiempo fuera:** Asegurarse de que est\u00e9 seguro y protegido, y ofrecerle apoyo para que pueda recuperar la calma.\n* **Utilizar el tiempo fuera como oportunidad de aprendizaje:** Una vez que el ni\u00f1o se calme, conversar con \u00e9l sobre lo sucedido, ayud\u00e1ndole a comprender sus emociones y a encontrar soluciones para el futuro.\n\n**Es importante recordar que no existe",
+          "answer_idx": 0
+        }
+      }
+    },
+    "12": {
+      "user": "I'm trying to find out who Bob Dylan is. Can you help me?",
+      "question_as_sent": "I'm trying to find out who Bob Dylan is. Can you help me?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Me encantar\u00eda! \n\nBob Dylan es una leyenda viviente de la m\u00fasica y la poes\u00eda estadounidense. Nacido como Robert Zimmerman en 1941, tiene un impacto enorme en la cultura popular e intelectual.  \n\n**Aqu\u00ed te doy un resumen de lo que hace a Bob Dylan tan especial:**\n\n* **Cantautor:** Dylan es principalmente conocido por sus canciones que combinan folk, blues, rock, pa\u00eds y jazz. Sus letras son poes\u00eda a menudo profunda, con met\u00e1foras y simbolismo, que exploran temas como la amor, la guerra, la justicia social y la condici\u00f3n humana.\n\n* **Voz \u00fanica:** Su voz raspada y distintiva ha sido objeto de debate durante d\u00e9cadas, con algunos la consider\u00e1ndola desafinada y otros, simplemente aut\u00e9ntica.\n\n* **Influencia musical:** Dylan revolucion\u00f3 la m\u00fasica popular en los a\u00f1os 60 con su sonido el\u00e9ctrico y su enfoque pol\u00edtico. Se le considera uno de los precursores del folk rock y ha influenciado a innumerables artistas.\n* **Icono cultural:** \n\nDylan se ha convertido en un s\u00edmbolo de rebeld\u00eda, libertad y b\u00fasqueda de la verdad. Su imagen ic\u00f3nica, su rebeld\u00eda y sus letras inteligentes lo han convertido en un \u00edcono cultural a nivel mundial.\n\n* ** Premio Nobel de Literatura:** En 2016, Bob Dylan gan\u00f3 el Premio Nobel de Literatura, un reconocimiento que destaca la importancia de sus letras en la literatura mundial.\n\n**Si quieres saber m\u00e1s:**\n\n* **Escucha su m\u00fasica:** Hay una amplia discograf\u00eda de Dylan disponible, desde sus primeros discos folk hasta sus m\u00e1s recientes trabajos.\n\n* **Lee sus letras:** A trav\u00e9s de p\u00e1ginas web o libros, puedes disfrutar de la profundidad po\u00e9tica de sus letras.\n* **Busca documentales sobre su vida y carrera:** Hay muchos documentales y videos que ofrecen una visi\u00f3n m\u00e1s profunda de su persona e historia.\n\n\n\u00a1Espero que esta informaci\u00f3n te ayude a entender mejor a Bob Dylan!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "13": {
+      "user": "How do I find the present value of a collector baseball card?",
+      "question_as_sent": "How do I find the present value of a collector baseball card?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Conseguir el valor presente de una tarjeta de b\u00e9isbol de colecci\u00f3n puede ser un poco complicado pues depende de varios factores.  Aqui te doy algunos pasos y consejos:\n\n**1. Identifica la tarjeta:**\n\n* **Jugador:** \u00bfQui\u00e9n aparece en la tarjeta? Algunos jugadores son m\u00e1s valiosos que otros.\n* **A\u00f1o:** \u00bfEn qu\u00e9 a\u00f1o se emiti\u00f3 la tarjeta? Las tarjetas antiguas suelen ser m\u00e1s valiosas.\n* **marca:** \u00bfQu\u00e9 compa\u00f1\u00eda la fabric\u00f3? Algunas marcas son m\u00e1s prestigiosas que otras.\n* **n\u00famero de serie:**  Si la tarjeta tiene un n\u00famero de serie, este puede afectar su valor.\n* **estado:** \u00bfEst\u00e1 la tarjeta en buen estado de conservaci\u00f3n? La condici\u00f3n es fundamental para determinar el valor de una tarjeta.\n\n**2. Investiga el valor de mercado:**\n\n* **Sitios web de subastas:**  Examina sitios web como eBay, Heritage Auctions o eBay para ver cu\u00e1nto se est\u00e1n vendiendo tarjetas similares a la tuya.\n* **Guias de coleccionismo:** Consultar guias como el Beckett Price Guide o el Goudey Guide te dar\u00e1 informaci\u00f3n sobre los precios promedio de tarjetas.\n* **Comunidades de coleccionistas:** \u00danete a f\u00f3runs o grupos en l\u00ednea de coleccionistas de tarjetas. Pueden ofrecerte informaci\u00f3n valiosa y ayudarte a estimar el valor de tu tarjeta.\n\n**3. Considera el estado de la tarjeta:**\n\n* **Centro:** El centro de la tarjeta debe estar libre de pliegues, rayones o manchas.\n* **Esquinas:** Las esquinas deben estar afiladas y sin desgaste.\n* **Color:** El color debe ser brillante y uniforme.\n* **Frente y reverso:** Tanto el frente como el reverso de la tarjeta deben estar en buen estado.\n\n**4. Obt\u00e9n una valoraci\u00f3n profesional:**\n\n* Si crees que tu tarjeta vale mucho, considera pedir una valoraci\u00f3n a un experto. Un tasador profesional puede determinar con precisi\u00f3n el valor de tu tarjeta.\n\n\nRecuerda que el valor de una tarjeta de b\u00e9isbol de colecci\u00f3n puede variar mucho dependiendo de varios factores. La investigaci\u00f3n y la comparaci\u00f3n con tarjetas similares son esenciales para obtener una estimaci\u00f3n precisa.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "14": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Kenyan dishes. Can you give me a recipe for Samaki?",
+      "question_as_sent": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Kenyan dishes. Can you give me a recipe for Samaki?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "##  Samaki wa Nyama (Pescado hecho al horno)\n\nEsta receta de Samaki wa Nyama es una deliciosa y sencilla receta keniana que puedes crear en tu cocina.\n\n **Ingredientes:**\n\n* 1 kg de pescado blanco (merluza, lenguado, tilapia, etc.)\n* 1 cebolla, picada\n* 3 dientes de ajo, picados\n* 1 tomate maduro, picado\n* 1/2 taza de cilantro fresco, picado\n* 1/4 taza de jugo de lim\u00f3n\n* 1 cucharadita de chile en polvo\n* 1 cucharadita de comino molido\n* 1/2 cucharadita de piment\u00f3n\n* Sal y pimienta al gusto\n* 2 cucharadas de aceite vegetal\n\n **Preparaci\u00f3n:**\n\n1. **Pre-calentar el horno a 200\u00b0C (400\u00b0F).**\n2. **Preparar la salsa:** En un taz\u00f3n, mezclar la cebolla, el ajo, el tomate, el cilantro, el jugo de lim\u00f3n, el chile en polvo, el comino, el piment\u00f3n, la sal y la pimienta. \n3. **Asear el pescado:** Calentar el aceite vegetal en una sart\u00e9n grande a fuego medio. A\u00f1adir el pescado y dorar ambos lados durante 3-4 minutos por lado. \n4. **Hornear el pescado:** Colocar el pescado dorado en una fuente para horno. \n5. **Agregar la salsa:** Verter la salsa preparada sobre el pescado. \n6. **Hornear:** Hornear durante 15-20 minutos, o hasta que el pescado se vuelva opaco y los jugos se hagan transparentes. \n7. **Servir caliente** con arroz, ugali o chapati.\n\n\n **Consejos:**\n\n* Puedes a\u00f1adir otros ingredientes a la salsa, como pimientos rojos, zanahorias o caldo de pollo para darle m\u00e1s sabor. \n* Si deseas un pescado mas crujiente, puedes rociarlo con un poco de zumo de lim\u00f3n antes de hornear.\n* Este plato tambi\u00e9n se puede preparar en sart\u00e9n, siguiendo los mismos pasos.\n\n\n\n\u00a1Buen provecho!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "15": {
+      "user": "What should I do if my boss is always mean to me?",
+      "question_as_sent": "What should I do if my boss is always mean to me?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Entiendo que est\u00e9s pasando por un momento dif\u00edcil. Es muy desagradable tener un jefe que te trate mal. \n\n**Antes de tomar acciones, te recomiendo que reflexiones sobre la situaci\u00f3n:**\n\n* **\u00bfEs el maltrato generalizado o espec\u00edfico hacia ti?** \n    * Si el maltrato es hacia todos, quiz\u00e1s haya un problema de liderazgo general en la empresa.\n    * Si es hacia ti y solo ti, hay algo m\u00e1s espec\u00edfico en tu desempe\u00f1o o relaci\u00f3n con \u00e9l/ella.\n* **\u00bfCu\u00e1les son los comportamientos espec\u00edficos que te hacen sentir mal?**\n    * La cr\u00edtica constante, el desprecio, la falta de respeto, amenazas o humillaci\u00f3n en p\u00fablico son ejemplos de mala conducta.\n* **\u00bfHas intentado hablar con tu jefe sobre c\u00f3mo te hace sentir sus acciones?** \n    * En algunos casos, simplemente no se dan cuenta de c\u00f3mo afectan a los dem\u00e1s o est\u00e1n abiertos a escuchar tu perspectiva.\n\n**Aqu\u00ed hay algunas sugerencias:**\n\n**1. Documenta todo**: Lleva un registro de las fechas, los tiempos, los lugares y los detalles de los incidentes. Ten en cuenta c\u00f3mo te hacen sentir y c\u00f3mo afectan tu trabajo. Esto ser\u00e1 \u00fatil si decides tomar medidas m\u00e1s dr\u00e1sticas m\u00e1s adelante.\n\n**2. Mant\u00e9n la calma y profesionalismo**: A pesar de la situaci\u00f3n, es importante responder de forma profesional. No te metes en discusiones ni respondas a las agresiones con agresividad. \n\n**3. Busca apoyo**: Habla con compa\u00f1eros, amigos, familiares o un consejero sobre lo que est\u00e1s pasando. Te ayudar\u00e1 a procesar tus emociones y a tener una perspectiva m\u00e1s clara.\n\n**4. Busca recursos dentro de tu empresa**: Muchas empresas tienen pol\u00edticas contra el acoso laboral y recursos para ayudar a los empleados en estas situaciones. Consulta con el departamento de recursos humanos o busca un programa de asistencia al empleado.\n\n**5. Considera la posibilidad de hablar con tu jefe**: Puede que tu jefe no sea consciente de c\u00f3mo sus acciones te afectan. \nEs importante hacerlo de forma respetuosa y profesional, enfoc\u00e1ndote en c\u00f3mo sus comportamientos te impiden trabajar al m\u00e1ximo.\n\n**6. Eval\u00faa tus opciones**: Si la situaci\u00f3n no mejora a pesar de tus esfuerzos, debes evaluar si vale la pena seguir en ese puesto de trabajo. Puedes considerar buscar un nuevo trabajo o tomar medidas legales si la situaci\u00f3n es grave y afecta tu salud f\u00edsica o mental.\n\n\nRecuerda que mereces ser tratado con respeto en el trabajo. No",
+          "answer_idx": 0
+        }
+      }
+    },
+    "16": {
+      "user": "Which automobile company was the first to offer seat belts?",
+      "question_as_sent": "Which automobile company was the first to offer seat belts?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Aunque no se considera que haya sido la primera en **ofrecer** los cinturones de seguridad, **Volvo** fue pionera en fabricar cinturones de seguridad como equipo de serie en 1959. \n\nAntes de su implementaci\u00f3n en los veh\u00edculos Volvo, se hab\u00edan desarrollado cinturones de seguridad, algunos incluso se comercializaban como accesorios. Sin embargo, la compa\u00f1\u00eda sueca fue la primera en instalarlos como parte est\u00e1ndar de su l\u00ednea de autom\u00f3viles.\n\n\nEs importante tener en cuenta que la historia del cintur\u00f3n de seguridad es larga y compleja, con varias personas y empresas que contribuyeron a su desarrollo y popularizaci\u00f3n. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "17": {
+      "user": "Can rust be removed from metal?",
+      "question_as_sent": "Can rust be removed from metal?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "S\u00ed, el \u00f3xido (el famoso \"rufo\") se puede remover de metales. \u00a1Hay varias maneras! \n\n**M\u00e9todos mec\u00e1nicos:**\n\n* **Cepillo de alambre:** Para \u00f3xido superficial esta es una buena opci\u00f3n r\u00e1pida y f\u00e1cil.\n* **Lijadora o amoladora:** Para \u00f3xido m\u00e1s grueso, se puede usar una lijadora o una amoladora con lana de acero.\n* **Cepillo de cerdas duras:** Una opci\u00f3n m\u00e1s suave que el cepillo de alambre, ideal para superficies delicadas.\n\n**M\u00e9todos qu\u00edmicos:**\n\n* **Vinagre:** Mezcla un vaso de vinagre con una sal. Sumerge el objeto en la mezcla y d\u00e9jalo reposar varias horas. Limpia con agua y un cepillo.\n* **Bicarbonato de sodio:** Mezcla bicarbonato de sodio con agua hasta conseguir una pasta. Frota la pasta en el \u00f3xido con un cepillo y luego enjuaga.\n* **Limpiacristales:**  Algunos limpiadores de cristales son eficaces para remover \u00f3xido. Pero ten cuidado, ya que algunos pueden da\u00f1ar la superficie del metal.\n\n**Otros m\u00e9todos:**\n\n* **Aceite de motor:**  Unta el objeto con aceite de motor. D\u00e9jalo reposar 24 horas y luego limpia con una tela limpia. \n* **Electrolisis:** Es un m\u00e9todo m\u00e1s avanzado que permite remover \u00f3xido de forma profunda, pero requiere equipo el\u00e9ctrico.\n\n**Importante:**\n\n* Usa guantes de protecci\u00f3n al manejar productos qu\u00edmicos.\n* Prot\u00e9gete la zona de trabajo.\n* Realiza una prueba en un \u00e1rea peque\u00f1a antes de aplicar cualquier m\u00e9todo en todo el objeto.\n* Despu\u00e9s de remover el \u00f3xido, protege el metal con un pasivador o pintura para evitar que vuelva a oxidarse.\n\n\n\nEspero que esta informaci\u00f3n te sea \u00fatil. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "18": {
+      "user": "Have any new technological advances been made in regards to electricity within the past few years?",
+      "question_as_sent": "Have any new technological advances been made in regards to electricity within the past few years?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro!  Han habido varios avances tecnol\u00f3gicos notables en el campo de la electricidad en los \u00faltimos a\u00f1os. Aqu\u00ed hay algunos ejemplos:\n\n**Energ\u00eda renovable:**\n\n* **Paneles solares de mayor eficiencia:** Los paneles solares est\u00e1n continuamente mejorando en su eficiencia, capturando m\u00e1s luz solar y convirti\u00e9ndola en energ\u00eda. Los avances recientes incluyen la incorporaci\u00f3n de materiales como perovskita, que prometen una eficiencia a\u00fan mayor.\n\n* **Aerogeneradores m\u00e1s potentes y vers\u00e1tiles:** Los aerogeneradores est\u00e1n evolucionando hacia dise\u00f1os m\u00e1s eficientes y capaces de operar en diferentes condiciones clim\u00e1ticas. Se est\u00e1n experimentando turbinas de gran potencia offshore y sistemas de energ\u00eda e\u00f3lica terrestre con dise\u00f1os m\u00e1s aerodin\u00e1micos.\n* **Mejor almacenamiento de energ\u00eda:** Las bater\u00edas de iones de litio siguen siendo un \u00e1rea de gran investigaci\u00f3n, con avances en capacidad, duraci\u00f3n y costo. Tambi\u00e9n se est\u00e1n explorando otras tecnolog\u00edas de almacenamiento como la hidr\u00f3geno, la compresi\u00f3n de aire y la energ\u00eda t\u00e9rmica.\n\n**Generaci\u00f3n y distribuci\u00f3n de energ\u00eda:**\n\n* **Microredes inteligentes:** Estas redes el\u00e9ctricas locales permiten una gesti\u00f3n m\u00e1s eficiente de la energ\u00eda, integrando fuentes renovables y creando una mejor interacci\u00f3n entre los consumidores y la red.\n* **Electricidad inteligente:** Los sistemas de gesti\u00f3n de energ\u00eda inteligente utilizan sensores y datos para optimizar el consumo y la generaci\u00f3n de electricidad en tiempo real.\n* **Transmisi\u00f3n inal\u00e1mbrica de energ\u00eda:** Si bien todav\u00eda est\u00e1 en desarrollo, la transmisi\u00f3n inal\u00e1mbrica se est\u00e1 haciendo realidad en tecnolog\u00edas como el calentamiento por inducci\u00f3n y la carga inal\u00e1mbrica de dispositivos.\n\n**Eficiencia energ\u00e9tica:**\n\n* **Eficiencia energ\u00e9tica en los edificios:** Se est\u00e1n desarrollando materiales y sistemas innovadores para mejorar la eficiencia energ\u00e9tica de los edificios, reduciendo el consumo de calefacci\u00f3n, refrigeraci\u00f3n y energ\u00eda el\u00e9ctrica.\n* **Electrodom\u00e9sticos inteligentes:** Los electrodom\u00e9sticos con sistemas de control inteligentes permiten ajustar su funcionamiento de acuerdo a las necesidades, ahorrando energ\u00eda y dinero.\n\nEstos son solo algunos ejemplos de los avances recientes en el campo de la electricidad. La investigaci\u00f3n y desarrollo continuo en esta \u00e1rea promete soluciones m\u00e1s sostenibles y eficientes para el futuro.\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "19": {
+      "user": "What are the best wigs for women?",
+      "question_as_sent": "What are the best wigs for women?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Elegir el mejor tipo de peluca para una mujer depende en gran medida de sus necesidades y preferencias individuales. \n\n**Considera estos factores:**\n\n**1. Naturaleza del cabello:**\n\n* **Tipo de cabello:** Si tienes cabello grueso, fino, rizado o liso, busca una peluca que coincida con la textura de tu cabello natural.\n* **Color de cabello:** El tono de tu piel y el color de tu cabello natural dictar\u00e1n el mejor tono para la peluca.\n\n\n**2. Ocasi\u00f3n:**\n\n* **Uso diario:** Busca una peluca c\u00f3moda de llevar, con una base transpirable y un dise\u00f1o natural.\n* **Eventos especiales:** Puedes optar por pelucas m\u00e1s elaboradas, con m\u00e1s volumen y estilo.\n\n **3. Estilo:**\n\n* **Corte:** Hay una amplia gama de estilos, desde bobs a longos y sueltos, pasando por ondas o rizados.\n* **Color:** Puedes elegir un tono natural o aventurarte con colores llamativos.  \n\n**4. Materiales:**\n\n* **Pelo sint\u00e9tico:**\n    * M\u00e1s econ\u00f3mico y f\u00e1cil de cuidar. \n    * Puede verse artificial y no se puede alisar con calor.\n* **Pelo humano:**\n    * M\u00e1s natural y realista.\n    * M\u00e1s costoso y requiere cuidados espec\u00edficos. \n\n**Tipos populares:**\n\n* **Pelucas lace front:**  Ofrecen una apariencia m\u00e1s natural, ya que la red de encaje imita la l\u00ednea del cabello natural.\n\n* **Pelucas de clip:** Son f\u00e1ciles de colocar y quitar, y se pueden usar por per\u00edodos cortos.\n\n* **Pelucas de gorro:** M\u00e1s econ\u00f3micas y f\u00e1ciles de mantener, pero pueden ser menos naturales que otras opciones.\n\n\n**Recomendaciones:**\n\n* Investiga marcas de buena reputaci\u00f3n y lee rese\u00f1as de otros usuarios.\n* Aseg\u00farate de medir correctamente tu cabeza antes de comprar una peluca.\n* Considera la posibilidad de consultar con un especialista en peluquer\u00eda capilar para obtener consejos personalizados.  \n\nRecuerda que la mejor peluca es aquella que te haga sentir c\u00f3moda y segura.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "20": {
+      "user": "What are some of the best books by Ray Bradbury?",
+      "question_as_sent": "What are some of the best books by Ray Bradbury?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Ray Bradbury es un maestro de la fantas\u00eda, la ciencia ficci\u00f3n y el g\u00e9nero de terror. Aqu\u00ed tienes algunas de sus obras m\u00e1s aclamadas:\n\n**Cl\u00e1sicos Inmortales:**\n\n* **Fahrenheit 451 (1953):** Una visi\u00f3n dist\u00f3pica de un futuro donde los libros est\u00e1n prohibidos y los bomberos queman cualquier ejemplar encontrado. Explora temas cruciales sobre censura, el libre albedr\u00edo y la importancia del conocimiento.\n* **La noche de los tiempos del fuego (1950):** Un relato surrealista y lleno de simbolismo sobre el miedo a la muerte, la p\u00e9rdida de la inocencia y el poder de la imaginaci\u00f3n.\n* **El marciano de la cualidad (1951):** Una conmovedora reflexi\u00f3n sobre la soledad, la esperanza y la b\u00fasqueda de conexi\u00f3n humana.\n\n**Otras obras destacadas:**\n\n* **Las manzanas de fuego (1951):** Un conjunto de relatos sobre viajes en el tiempo, la muerte, la nostalgia y la memoria.\n* **La historia de una ciudad (1951):** Un paseo por la historia de la humanidad a trav\u00e9s de la visi\u00f3n de un poeta espacial.\n* **El cementerio de los dinosaurios (1968):** Una historia macabra y llena de misterio sobre la supervivencia y la adaptaci\u00f3n.\n* **El libro de los seres (1953):** Un relato g\u00f3tico sobre el amor, la locura y la violencia que se inspira en las leyendas de la pen\u00ednsula ib\u00e9rica.\n\n**Ray Bradbury para ni\u00f1os y j\u00f3venes:**\n\n* **Bruno y el mago de los sue\u00f1os (1964):** Una colecci\u00f3n de cuentos m\u00e1gicos que invitan a la fantas\u00eda y la imaginaci\u00f3n.\n* **Cr\u00f3nicas de Marte (1952):** Una serie de relatos aventureros sobre la colonizaci\u00f3n de Marte.\n\n\nEspero que disfrutes descubriendo la fascinante obra de Ray Bradbury. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "21": {
+      "user": "I have a hard time getting up early in the morning. How can I become more of a morning person?",
+      "question_as_sent": "I have a hard time getting up early in the morning. How can I become more of a morning person?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Entiendo! Ser madrugador puede ser un reto para muchos. \u00a1Pero no te preocupes, hay varias estrategias que puedes probar para convertirte en un \"bird-early\":\n\n**A. Establece una rutina:** \n\n* **Reglamenta tu sue\u00f1o.** Acu\u00e9state y lev\u00e1ntate a la misma hora todos los d\u00edas, incluso los fines de semana. Esto ayudar\u00e1 a regular tu ciclo natural de sue\u00f1o-vigilia.\n* **Crea una rutina relajante para la noche.**  Evita las pantallas al menos una hora antes de dormir. Un ba\u00f1o tibio, leer o practicar relajaci\u00f3n pueden ayudarte a conciliar el sue\u00f1o m\u00e1s f\u00e1cilmente.\n* **Prepara tu ma\u00f1ana con anticipaci\u00f3n.** Elige tu ropa, prepara tu desayuno y organiza tu bolso la noche anterior. \n* **Ilumina tu habitaci\u00f3n.** La luz natural ayuda a estimular tu reloj interno. Abre las cortinas o usa una l\u00e1mpara de amanecer.\n\n**B. Cambia tu motivaci\u00f3n:**\n\n* **Encuentra una raz\u00f3n para levantarte temprano.** \u00bfQu\u00e9 har\u00e1s con tu tiempo matutino?  Un hobby, ejercicio, un desayuno especial o simplemente disfrutar de la tranquilidad del amanecer pueden ser grandes motivadores.\n* **Recomp\u00e9nsate.**  Despu\u00e9s de una semana de \u00e9xito, date un peque\u00f1o regalo o haz algo divertido para celebrar tu progreso.\n\n**C. Adapta tu estilo de vida:**\n\n* **Exponerte a la luz solar al amanecer.**  Este truco te ayudar\u00e1 a regular tu ritmo circadiano. \n* **Hidr\u00e1tate.** Bebe un vaso de agua al despertar para despertar tu cuerpo.  \n* **Evita las siestas largas.** Aunque sean tentadoras, las siestas pueden interferir con tu sue\u00f1o nocturno.\n\n**D. Considera si hay un problema subyacente:** \n\nSi tienes problemas persistentes para despertarte a tiempo, consulta con un m\u00e9dico. Podr\u00eda ser una se\u00f1al de una afecci\u00f3n como el insomnio o una deficiencia de vitamina D.\n\n**Recuerda:**\n\n* **S\u00e9 paciente.** Convertirse en un madrugador requiere tiempo y esfuerzo. \n* **Escucha a tu cuerpo.** Todos tenemos ritmos biol\u00f3gicos diferentes. \n* **No te rindas.** \u00a1Sigue practicando y eventualmente encontrar\u00e1s el ritmo que mejor funciona para ti! \n\n\n\u00a1Espero que estos consejos te sean \u00fatiles!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "22": {
+      "user": "Which breed of dog should I get? I've just moved into a new apartment, and there's a couple of rooms, and we have access to a local park, but don't want to go on big walks.",
+      "question_as_sent": "Which breed of dog should I get? I've just moved into a new apartment, and there's a couple of rooms, and we have access to a local park, but don't want to go on big walks.",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Entiendo. Elegir la raza de perro adecuada para tu nueva vida en apartamento es una decisi\u00f3n importante. \n\nDado que tienes un par de habitaciones en tu apartamento y acceso a un parque cercano, pero no quieres largas caminatas, te sugiero buscar una raza de tama\u00f1o peque\u00f1o o mediano que sea:\n\n**Energ\u00e9tico pero adaptable:**\n\n* **Bich\u00f3n Malt\u00e9s:**  A pesar de su tama\u00f1o peque\u00f1o, son perros juguetones y activos que se adaptan bien a la vida en apartamento. \n* **Papillon:** Son inteligentes y f\u00e1ciles de entrenar, adem\u00e1s de disfrutar de jugar en el parque. \n* **French Bulldog:** Son conocidos por su car\u00e1cter tranquilo y su resistencia al calor, ideales para vivir en apartamentos sin jard\u00edn.\n* **Pug:** Amigables y juguetones, se adaptan bien a la vida en apartamento si se les da suficiente ejercicio diario.\n* **Cavalier King Charles Spaniel:** Son d\u00f3ciles y sociables, disfrutan de los paseos cortos en el parque y son perfectos para personas que buscan compa\u00f1\u00eda.\n\n**Recuerda:**\n\n* **Investiga a fondo las necesidades espec\u00edficas de cada raza:** \nNo todos los perros de tama\u00f1o peque\u00f1o o mediano tienen las mismas necesidades de ejercicio. \n* **Considera tu estilo de vida:** \nSi eres muy activo, quiz\u00e1 necesites un perro con m\u00e1s energ\u00eda. \n* **Adopta, no compres:** \nMuchas organizaciones de protecci\u00f3n animal tienen perros buscando hogares.\n\n\u00a1Espero que esta informaci\u00f3n te ayude a encontrar el perro perfecto para tu nuevo hogar!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "23": {
+      "user": "My 35 year old son is having pain from his jaw, neck and shoulder blade",
+      "question_as_sent": "My 35 year old son is having pain from his jaw, neck and shoulder blade",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Siento mucho escuchar sobre el dolor de tu hijo. Es importante que busque atenci\u00f3n m\u00e9dica para determinar la causa de su dolor. \n\nComo modelo de lenguaje, no puedo proporcionar diagn\u00f3sticos m\u00e9dicos. Sin embargo, puedo compartir algunas posibles causas de dolor en la mand\u00edbula, cuello y om\u00f3plato:\n\n* **Dolor de cabeza:**  El dolor de cabeza puede irradiarse al cuello y los hombros.\n* **S\u00edndrome de dolor miofascial:**  El estr\u00e9s o la mala postura pueden provocar dolor muscular en la cabeza, cuello y espalda.\n* **Estr\u00e9s:** El estr\u00e9s puede causar tensi\u00f3n muscular generalizada.\n* **Problemas en la articulaci\u00f3n temporomandibular (ATM):**  El dolor en la ATM puede irradiarse a otras partes de la cara y el cuello.\n* **Problema cervical:** Una hernia de disco, artritis o espolones \u00f3seos en la columna cervical pueden causar dolor en el cuello y los hombros.\n* **Problemas posturales:** Una postura incorrecta durante largas horas frente a la computadora o al tel\u00e9fono puede causar dolor en los hombros y el cuello.\n\n**Le recomendar\u00eda que su hijo consulte con un m\u00e9dico o fisioterapeuta.** Ellos podr\u00e1n evaluar su dolor, determinar la causa y recomendarle el mejor tratamiento. \n\nMientras tanto, aqu\u00ed hay algunos consejos generales que pueden ayudar a aliviar el dolor:\n\n* **Aplicar compresas fr\u00edas o calientes.**\n* **Tomar analg\u00e9sicos de venta libre, como ibuprofeno o paracetamol.**\n* **Realizar estiramientos suaves para el cuello y los hombros.**\n* **Mejorar la postura.**\n* **Practicar t\u00e9cnicas de relajaci\u00f3n, como la meditaci\u00f3n o la respiraci\u00f3n profunda.**\n\nRecuerda que este es solo un consejo general, y la mejor acci\u00f3n es buscar atenci\u00f3n m\u00e9dica profesional.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "24": {
+      "user": "Why are so many stores closed on Sundays? Is it a religious reason?",
+      "question_as_sent": "Why are so many stores closed on Sundays? Is it a religious reason?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La raz\u00f3n por la que muchos negocios est\u00e1n cerrados los domingos no es siempre religiosa, aunque eso s\u00ed juega un papel importante en algunas partes del mundo.\n\n**Factores que influyen en el cierre de negocios los domingos:**\n\n* **Motivaciones religiosas:**\n\n  * En algunos pa\u00edses de mayor\u00eda cristiana, como los Estados Unidos, cerrar los domingos se considera un d\u00eda de descanso religioso. Las creencias mandan a las personas a la iglesia o a pasar tiempo en familia, lo que limita el consumo.\n  * En otras religiones, como el juda\u00edsmo, tambi\u00e9n hay d\u00edas de descanso como el Shabat que caen en viernes por la tarde y s\u00e1bado por la noche, lo que puede influir en las horas de comercializaci\u00f3n.\n\n* **Tradici\u00f3n:** En algunos pa\u00edses, el cierre los domingos ha sido una tradici\u00f3n secular. \n\n* **Ley:** Algunos pa\u00edses tienen leyes que establecen el descanso dominical, prohibiendo ciertas actividades comerciales o laborales. \n\n* **Personal:**  A muchos empleados les gusta tener los domingos libres para descansar, pasar tiempo con familiares y amigos o dedicarse a actividades personales, lo que puede llevar a los negocios a cumplir con estas expectativas.\n\n* **Demanda:**  A lo largo de la historia, el domingo se ha asociado con un d\u00eda lento para el comercio. Esto puede llevar a que los negocios cierren para ahorrar costos, ya que la afluencia de clientes es menor.\n\n\n**Variaciones geogr\u00e1ficas:**\n\nEs importante recordar que no todos los pa\u00edses o regiones tienen la misma pr\u00e1ctica. \n* En Europa, por ejemplo, el cierre dominical es menos com\u00fan y hay muchos negocios abiertos.  \n* Muchos pa\u00edses del sur y centro de Am\u00e9rica Latina, por el contrario, mantienen un alto porcentaje de cierre dominical.\n\nLa decisi\u00f3n de abrir o cerrar un negocio los domingos depende de una compleja interacci\u00f3n de estos factores. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "25": {
+      "user": "If I wanted to watch the Star Wars movies so that the timeline is chronological, which order should I watch them in?",
+      "question_as_sent": "If I wanted to watch the Star Wars movies so that the timeline is chronological, which order should I watch them in?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes el orden cronol\u00f3gico de las pel\u00edculas de Star Wars:\n\n1. **Episodio I: La Amenaza Fantasma** (1999)\n2. **Episodio II: El Ataque de los Clones** (2002)\n3. **Episodio III: La Venganza de los Sith** (2005)\n4. **Rogue One: Una historia de Star Wars** (2016) (antes de Episodio IV)\n5. **Episodio IV: Una Nueva Esperanza** (1977)\n6. **Episodio V: El Imperio Contraataca** (1980)\n7. **Episodio VI: El Retorno del Jedi** (1983)\n8. **Episodio VII: El Despertar de la Fuerza** (2015)\n9. **Episodio VIII: Los \u00daltimos Jedi** (2017)\n10. **Episodio IX: El ascenso de Skywalker** (2019)\n\n**Nota:** Este orden sigue la cronolog\u00eda de los eventos dentro del universo de Star Wars. Sin embargo, es importante recordar que la saga se estren\u00f3 en un orden diferente. \n\n\n\u00a1Que disfrutes la aventura espacial!\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "26": {
+      "user": "Is there any companies that can compete with Amazon?",
+      "question_as_sent": "Is there any companies that can compete with Amazon?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Amazon es una empresa gigante con una posici\u00f3n dominante en varios mercados, por lo que competir con ella directamente puede ser un desaf\u00edo. \n\nSin embargo, existen empresas que compiten con Amazon en diferentes \u00e1reas:\n\n**Comercio electr\u00f3nico:**\n\n* **Alibaba (China):** Es la compa\u00f1\u00eda de comercio electr\u00f3nico m\u00e1s grande del mundo por volumen de ventas. \n* **Mercado Libre (Latam):** L\u00edder del comercio electr\u00f3nico en Latinoam\u00e9rica.\n* **Walmart:** Ofrece una amplia selecci\u00f3n de productos en l\u00ednea y una red log\u00edstica poderosa.\n* **eBay:** Se centra en la venta de productos usados y nuevos a trav\u00e9s de subastas.\n* **Shopify:** Se enfoca en proporcionar plataformas para que peque\u00f1as empresas puedan crear sus propias tiendas online.\n\n**Nube:**\n\n* **Microsoft Azure:** Sue rival m\u00e1s cercano a las soluciones de cloud de Amazon Web Services (AWS).\n* **Google Cloud Platform (GCP):** Ofrece una fuerte computaci\u00f3n en nube y aprendizaje autom\u00e1tico.\n* **IBM Cloud:** Concentra su enfoque en la seguridad y el cumplimiento normativo.\n\n**Otros sectores:**\n\n* **Netflix** en streaming de contenido.\n* **Spotify** en m\u00fasica streaming.\n* **Alphabet** en b\u00fasqueda y publicidad online.\n* **Apple** en dispositivos electr\u00f3nicos y software.\n\nEs importante destacar que:\n\n* Ninguna de estas empresas tiene el mismo dominio del mercado que Amazon en todas las \u00e1reas.\n* Compiten en diferentes nichos y con estrategias distintas.\n* **Existe un gran ecosistema de empresas m\u00e1s peque\u00f1as que complementan o completan las ofertas de Amazon.** \n\n\nFinalmente, la competencia en el mercado es din\u00e1mica y est\u00e1 en constante evoluci\u00f3n. Es probable que se vean nuevas empresas desafiantes a Amazon en el futuro.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "27": {
+      "user": "Can you give me some examples of a palatalization?",
+      "question_as_sent": "Can you give me some examples of a palatalization?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Por supuesto! Aqu\u00ed tienes algunos ejemplos de palatalizaci\u00f3n:\n\n**Castellano:**\n\n* **\"Ciudad\"**: La \"d\" se palataliza delante de la \"i\" o \"y\" formando una \"j\" sonora.\n* **\"Gato\"**: La \"g\" se palataliza delante de la \"e\" o \"i\" formando una \"j\" sonora.\n\n\n**Franc\u00e9s:**\n\n* **\"Tu\"**: La \"t\" se palataliza delante de la \"u\" formando una \"ch\".\n* **\"Bon\"**: La \"n\" se palataliza delante de la \"i\" formando una \"\u0272\".\n\n**Italiano:**\n\n* **\"Centro\"**: La \"c\" se palataliza delante de la \"e\" o \"i\" formando una \"ch\" o consonante palatal.\n* **\"Aglio\"**: La \"g\" se palataliza delante de la \"e\" o \"i\" formando una \"g\" palatal.\n\n**Griego:**\n\n* **\"\u03a6\u03af\u03bb\u03bf\u03c2\"**: La \"f\" inicial se palataliza antes de la vocal \"i\" formando una \"v\" aspirada.\n\n**Ingl\u00e9s:**\n\n* **\"Sue\u00f1o\"**: La \"d\" se palataliza delante de la \"y\" formando una \"j\" sonora.\n* **\"A\u00f1o\"**: La \"n\" se palataliza delante de la \"y\" formando una \"\u00d1\" (ny).\n\n\n\nEspero que estos ejemplos te sean \u00fatiles!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "28": {
+      "user": "I've heard debates about whether ancient Egyptians were brown or black skinned. Do you have any information about this?",
+      "question_as_sent": "I've heard debates about whether ancient Egyptians were brown or black skinned. Do you have any information about this?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "S\u00ed, el debate sobre el color de piel de los antiguos egipcios es complejo y multifac\u00e9tico. \n\n**Evidencias:**\n\n* **Artefactos y representaciones:** Las pinturas, estatuas y relieves muestran una amplia gama de tonos de piel, desde piel clara hasta oscura.\n\n* **An\u00e1lisis de ADN:** Estudios gen\u00e9ticos recientes en restos humanos egipcios sugieren una mayor diversidad gen\u00e9tica que la imaginada, incluyendo ancestros africanos del norte y del este, asi\u00e1ticos y europeos.\n\n* **Ubicaci\u00f3n geogr\u00e1fica:** Egipto se encuentra en el norte de \u00c1frica, donde las poblaciones con piel oscura son comunes.\n\n**Interpretar estas evidencias:**\n\nExiste la tendencia a categorizar la historia en t\u00e9rminos binarios (blanco o negro), lo que puede ser reduccionista. Los antiguos egipcios pod\u00edan tener una amplia gama de tonos de piel, influenciados por su ubicaci\u00f3n geogr\u00e1fica, migraci\u00f3n y mezclas \u00e9tnicas a trav\u00e9s de los siglos.\n\n**Es importante recordar que:**\n\n* La imagen del \u201cegipcio\u201d es una construcci\u00f3n cultural,\n\n* No existe un solo tipo de \"egipcio\" en el pasado, as\u00ed como no hay un solo tipo de \"negro\" o \"blanco\" en el presente.\n\n* La diversidad gen\u00e9tica es mayor de lo que se pensaba, y esto incluye a los antiguos egipcios.\n\n**Debate y contexto:**\n\nEl debate actual sobre el color de piel de los egipcios se enmarca en las discusiones sobre la raza y la identidad cultural. Algunos argumentan que el \u00e9nfasis en la piel oscura como caracter\u00edstica distintiva de los antiguos egipcios es una forma de apropiaci\u00f3n cultural por parte de ciertas culturas. Otros defienden que es importante reconocer la diversidad dentro de las poblaciones hist\u00f3ricas.\n\n**Conclusi\u00f3n:**\n\nNo se pueden determinar con certeza el tono de piel de todos los antiguos egipcios. Los estudios cient\u00edficos y el an\u00e1lisis cr\u00edtico de las representaciones art\u00edsticas sugieren una diversidad de tonos de piel, influenciada por factores geogr\u00e1ficos, \u00e9tnicos y culturales.  Es importante abordar este tema con sensibilidad y respeto por la complejidad hist\u00f3rica y cultural.\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "29": {
+      "user": "I have a stomachache every day. What could be the problem?",
+      "question_as_sent": "I have a stomachache every day. What could be the problem?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Lo siento, pero como modelo de lenguaje no puedo dar consejos m\u00e9dicos. Un dolor de est\u00f3mago recurrente puede ser s\u00edntoma de muchas cosas, algunas benignas y otras m\u00e1s serias. \n\n**Es importante que consultes a un profesional m\u00e9dico para obtener un diagn\u00f3stico preciso y un tratamiento adecuado.**\n\nMientras tanto, te puedo dar algunos consejos generales que podr\u00edan ayudarte a aliviar tu dolor de est\u00f3mago:\n\n* **Mant\u00e9n una dieta saludable.**\n* **Come comidas peque\u00f1as y frecuentes.**\n* **Evita alimentos que te causen molestias.**\n* **Bebe mucha agua.**\n* **Gestiona el estr\u00e9s.**\n* **Descansa lo suficiente.**\n\n\nRecuerda, estos consejos no sustituyen la atenci\u00f3n m\u00e9dica profesional. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "30": {
+      "user": "I have been gaining weight and want to start exercising.  How should I begin?",
+      "question_as_sent": "I have been gaining weight and want to start exercising.  How should I begin?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Es genial que quieras empezar a hacer ejercicio!  Es un paso importante para tu salud y bienestar. \n\nAqu\u00ed te doy algunos consejos para empezar sin sentirte abrumado:\n\n**1. Consulta con tu m\u00e9dico:** Es importante hablar con tu m\u00e9dico antes de empezar cualquier rutina de ejercicios, sobre todo si tienes alguna condici\u00f3n m\u00e9dica preexistente. \n\n**2. Empieza poco a poco:** No intentes hacer demasiado al principio. Puedes comenzar con 30 minutos de actividad f\u00edsica moderada la mayor\u00eda de los d\u00edas de la semana. \n\n**3. Encuentra algo que disfrutes:** El ejercicio deber\u00eda ser divertido, no una tortura. Elige actividades que te gusten, como caminar, bailar, nadar o andar en bicicleta. \n\n**4. Establece metas realistas:** En lugar de fijarte metas demasiado ambiciosas, establece objetivos peque\u00f1os y alcanzables. \n\n**5. Escucha a tu cuerpo:** Si sientes dolor, det\u00e9n la actividad y descansa. No te fuerces demasiado.\n\n**Aqu\u00ed hay algunas ideas para empezar:**\n\n* **Caminata:** Es una actividad sencilla y efectiva que puedes hacer casi en cualquier lugar.\n\n* **Yoga o Pilates:** Estas disciplinas te ayudar\u00e1n a mejorar tu flexibilidad, fuerza y equilibrio.\n\n* **Nataci\u00f3n:** Es un ejercicio de bajo impacto que trabaja todo el cuerpo.\n* **Ciclismo:**  Es una buena forma de ejercitar piernas y coraz\u00f3n.\n\n**Recuerda:**\n\n* **Mant\u00e9n una hidrataci\u00f3n adecuada:** Bebe mucha agua durante y despu\u00e9s del ejercicio.\n* **Come una dieta equilibrada:** La alimentaci\u00f3n saludable te dar\u00e1 la energ\u00eda que necesitas para hacer ejercicio.\n* **S\u00e9 paciente y constante:** Los resultados no se obtienen de la noche a la ma\u00f1ana. S\u00e9 paciente con tu cuerpo y sigue adelante.\n\n\n\u00a1Mucha suerte en tu camino hacia una vida m\u00e1s saludable!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "31": {
+      "user": "Could you provide me some recommendations on music that is similar to the band Megadeth?",
+      "question_as_sent": "Could you provide me some recommendations on music that is similar to the band Megadeth?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro que s\u00ed! \n\nSi te gusta Megadeth, seguramente disfrutar\u00e1s de estos g\u00e9neros y bandas:\n\n**Thrash Metal Cl\u00e1sico:**\n\n* **Metallica:** La banda m\u00e1s emblem\u00e1tica del thrash metal, con un sonido potente y riffs memorables. Algunos discos similares a Megadeth: \"...And Justice for All\", \"Master of Puppets\" y \"Kill 'Em All\".\n* **Slayer:** Sabroso y agresivo, con un toque sat\u00e1nico en sus letras. Escucha \"Reign in Blood\" y \"South of Heaven\".\n* **Anthrax:** M\u00e1s enfocados en la velocidad y la experimentaci\u00f3n. Te recomiendo \"Among the Living\" y \"Persistence of Time\".\n* **Exodus:** Un sonido agresivo y t\u00e9cnico, influenciados por la escena Bay Area del thrash. Prueba \"Bonded by sangre\" y \"Fabulous Disaster\".\n\n**Thrash Metal Moderno:**\n\n* **Lamb of God:** Con un sonido poderoso y directo, letras agresivas y Randy Blythe como un vocalista carism\u00e1tico. Prueba \"Sacrament\" y \"Wrath\".\n* **Trivium:** Una banda evoluci\u00f3n del thrash hacia un estilo m\u00e1s mel\u00f3dico. Escucha \"The Crusade\" y \"Ascendancy\".\n* **Havok:** Con un sonido m\u00e1s moderno y t\u00e9cnico, como una mezcla de Megadeth y Slayer. Prueba \"Time is Now\" y \"V\".\n\n**Otros Estilos/ Bandas:**\n\n* **Tool:** Si te gusta la complejidad y la atm\u00f3sfera de Megadeth, Tool te puede interesar. Empieza con \"AEnima\" o \"Lateralus\".\n* **System of a Down:** Si te gusta la energ\u00eda y los riffs de Megadeth, pero buscas algo m\u00e1sExperimental, te recomiendo System of a Down. prueba \"Toxicity\".\n* **Dream Theater:** Si te gustan los solos de guitarra de Megadeth, Dream Theater te cautivar\u00e1 por su m\u00fasica progresiva e instrumental. Empieza con \"Images and palabras\".\n\nRecuerda que la m\u00fasica es subjetiva, as\u00ed que disfruta explorando estos artistas y encuentra tu propio gusto.\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "32": {
+      "user": "Which programming language is the easiest to learn online on my own?",
+      "question_as_sent": "Which programming language is the easiest to learn online on my own?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Eso depende de tus objetivos y preferencias. \n\n**Para principiantes absolutos, estos lenguajes suelen ser recomendados:**\n\n* **Python:** \n    * **Sintaxis sencilla y legible**, similar al ingl\u00e9s.\n    * Amplia comunidad de apoyo y abundancia de recursos online gratuitos.\n    * Vers\u00e1til, aplicable a diversas \u00e1reas como web, an\u00e1lisis de datos y aprendizaje autom\u00e1tico.\n\n* **JavaScript:** \n    * Essencial para desarrollo web front-end y cada vez m\u00e1s usado en el back-end.\n    * Se ejecuta directamente en el navegador, permitiendo experimentaciones visuales r\u00e1pidas.\n    * Gran cantidad de frameworks y librer\u00edas para facilitar el desarrollo.\n\n* **HTML y CSS:** \n    * No son lenguajes de programaci\u00f3n en s\u00ed, pero son fundamentales para la creaci\u00f3n de p\u00e1ginas web.\n    * Aprendizaje r\u00e1pido y visualmente intuitivo.\n\n* **Scratch:** \n    * Lenguaje visual basado en bloques, ideal para ni\u00f1os y principiantes sin experiencia.\n\n**Consideraciones adicionales:**\n\n* **Intereses:** \u00bfQu\u00e9 te gustar\u00eda crear? Juegos, aplicaciones web, an\u00e1lisis de datos?\n* **Recursos disponibles:** Busca cursos, tutoriales y comunidades en l\u00ednea que te apoyen.\n* **Experiencia previa:** Si tienes conocimientos en otras \u00e1reas como matem\u00e1ticas o l\u00f3gica, algunos lenguajes pueden ser m\u00e1s f\u00e1ciles de entender.\n* **Resiliencia:** Aprende a manejar los errores y no te desanimes si te encuentras con dificultades.\n\n\n**Para empezar, te recomiendo probar con Python:**\n\n* [Curso gratuito de Python en Codecademy](https://www.codecademy.com/catalog/language/python)\n* [Tutoriales de Python en W3Schools](https://www.w3schools.com/python/)\n \n\n\n \u00a1Buena suerte en tu aventura de aprendizaje!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "33": {
+      "user": "What is macular degeneration?",
+      "question_as_sent": "What is macular degeneration?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La degeneraci\u00f3n macular es una enfermedad ocular que afecta la m\u00e1cula, la parte central de la retina que proporciona la visi\u00f3n aguda y n\u00edtida necesaria para realizar actividades como leer, conducir y reconocer rostros.\n\n**\u00bfC\u00f3mo afecta la degeneraci\u00f3n macular?**\n\nLa degeneraci\u00f3n macular da\u00f1a las c\u00e9lulas de la m\u00e1cula, lo que lleva a una p\u00e9rdida gradual de la visi\u00f3n central. En las etapas iniciales, las personas pueden notar:\n\n* Una distorsi\u00f3n o ondulaci\u00f3n de las l\u00edneas rectas\n* Una disminuci\u00f3n de la nitidez visual\n* Dificultad para distinguir colores vivos\n* Una zona oscura en el centro de la visi\u00f3n\n\n*Si sospechas que puede tener degeneraci\u00f3n macular, es importante consultar a un oftalm\u00f3logo para un diagn\u00f3stico preciso.*\n\n**Tipos de degeneraci\u00f3n macular:**\n\nExisten dos tipos principales de degeneraci\u00f3n macular:\n\n* **Degeneraci\u00f3n macular relacionada con la edad (DMAE):** Es el tipo m\u00e1s com\u00fan, afecta a personas mayores de 50 a\u00f1os y se desarrolla lentamente. \n* **Degeneraci\u00f3n macular h\u00fameda:** Se caracteriza por la formaci\u00f3n de vasos sangu\u00edneos anormales bajo la m\u00e1cula, que pueden causar una visi\u00f3n borrosa y p\u00e9rdida r\u00e1pida de la visi\u00f3n.\n\n**Factores de riesgo:**\n\n* **Edad:** La edad es el factor de riesgo m\u00e1s importante.\n* **Historia familiar:** Las personas con antecedentes familiares de degeneraci\u00f3n macular tienen mayor riesgo.\n* **Fumar:** El tabaquismo aumenta significativamente el riesgo de desarrollar la enfermedad.\n* **Exposici\u00f3n a la luz solar intensa:**  La radiaci\u00f3n ultravioleta puede da\u00f1ar la m\u00e1cula.\n\n\n**Tratamiento:**\n\nNo existe cura para la degeneraci\u00f3n macular, pero existen tratamientos que pueden ralentizar su progresi\u00f3n o aliviar sus s\u00edntomas. En el caso de la DMAE seca, se pueden utilizar suplementos nutricionales con vitamina C y E, zinc y lute\u00edna. En la DMAE h\u00fameda, se emplean inyecciones de medicamentos para bloquear el crecimiento de los vasos sangu\u00edneos anormales.\n\n**Prevenci\u00f3n:**\n\n* **Llevar una dieta saludable rica en frutas, verduras y omega-3.**\n* **No fumar.**\n* **Proteger los ojos del sol con lentes de sol que bloqueen los rayos UVA y UVB.**\n\n**Recuerda:** la detecci\u00f3n temprana es clave para controlar la degeneraci\u00f3n macular. Si experimentas cambios repentinos en tu visi\u00f3n, consulta a tu oftalm\u00f3logo lo antes posible.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "34": {
+      "user": "If I have enough money to buy a house with cash, should I do that over getting a mortgage?",
+      "question_as_sent": "If I have enough money to buy a house with cash, should I do that over getting a mortgage?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Es una decisi\u00f3n importante que depende de tu situaci\u00f3n financiera individual y tus objetivos a largo plazo. \n\n**Ventajas de comprar una casa con efectivo:**\n\n* **No hay pagos de intereses:** Ahorras miles, incluso millones de d\u00f3lares en intereses a lo largo del plazo del pr\u00e9stamo.\n* **Ahorro mensual:** No tendr\u00e1s un pago de hipoteca, lo que te liberar\u00e1 de una obligaci\u00f3n mensual y te dar\u00e1 m\u00e1s flexibilidad financiera.\n* **Mayor seguridad:** Eres due\u00f1o total de la propiedad desde el d\u00eda uno sin depender de una instituci\u00f3n financiera.\n* **Mayor poder de negociaci\u00f3n:** Puedes negociar un precio m\u00e1s bajo con el vendedor, ya que no necesitas financiamiento.\n* **Mayor libertad:** Puedes hacer modificaciones en la propiedad sin tener restricciones de un prestamista.\n\n**Desventajas de comprar una casa con efectivo:**\n\n* **Bloqueo de capital:** Invertir todo tu dinero en una propiedad puede dejarte con pocos recursos de emergencia o para otras inversiones.\n* **Riesgos del mercado inmobiliario:** El valor de la propiedad puede bajar, lo que podr\u00eda dejarte con una inversi\u00f3n menos rentable.\n* **Oportunidad de costo de oportunidad:** El dinero utilizado para comprar la casa con efectivo podr\u00eda utilizarse para otras inversiones que generen rentabilidad mayor.\n\n**En resumen, la mejor opci\u00f3n depende de:**\n\n* **Tu situaci\u00f3n financiera:** \u00bfTienes suficiente efectivo para comprar la casa sin afectar tu estabilidad financiera?\n* **Tus objetivos financieros a largo plazo:** \u00bfPrefieres tener la propiedad libre de deuda y mayor seguridad financiera o prefieres reinvertir tu capital en otros activos?\n* **Tu tolerancia al riesgo:** \u00bfEst\u00e1s dispuesto a asumir el riesgo de perder el valor de la inversi\u00f3n o prefieres una opci\u00f3n m\u00e1s segura?\n\n\nEs recomendable que consultes con un asesor financiero para analizar tu situaci\u00f3n personal y tomar la mejor decisi\u00f3n.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "35": {
+      "user": "I'd like to make some Chinese food. Can you recommend a delicious and healthy recipe?",
+      "question_as_sent": "I'd like to make some Chinese food. Can you recommend a delicious and healthy recipe?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Por supuesto! Aqu\u00ed tienes una receta de pollo al lim\u00f3n saludable y deliciosa:\n\n**Pollo al Lim\u00f3n Saludable**\n\n**Ingredientes:**\n\n* 1 pechuga de pollo (cortada en cubos)\n* 1 cucharada de aceite de oliva\n* 1 cebolla picada\n* 2 dientes de ajo picados\n* 1 pimiento rojo picado\n* 1/2 taza de caldo de pollo\n* 1 lim\u00f3n (jugo y ralladura)\n* 1 cucharada de salsa de soja\n* 1 cucharadita de jengibre rallado\n* 1/2 cucharadita de pimienta negra\n* 1/4 taza de cilantro fresco picado\n* 1 cucharada de aceite de s\u00e9samo\n\n**Instrucciones:**\n\n1. Sazona el pollo con sal y pimienta negra. \n2. Calienta el aceite de oliva en una sart\u00e9n grande a fuego medio-alto. Agrega el pollo y cocina hasta dorar por todos los lados.\n3. Retira el pollo de la sart\u00e9n y reserva. \n4. Agrega la cebolla y el ajo a la sart\u00e9n y cocina hasta que est\u00e9n blandos, aproximadamente 5 minutos. Agrega el pimiento y cocina por otros 2 minutos m\u00e1s.\n5. Vuelve a agregar el pollo a la sart\u00e9n. Agrega el caldo de pollo, el jugo de lim\u00f3n, la ralladura de lim\u00f3n, la salsa de soja, el jengibre y la pimienta negra.\n6. Tapa la sart\u00e9n y cocina a fuego lento durante 10 minutos o hasta que el pollo est\u00e9 completamente cocido. \n7. Espolvorea el cilantro fresco y el aceite de s\u00e9samo antes de servir.\n\n**Recomendaciones:**\n\n* Sirve este pollo al lim\u00f3n con arroz blanco, fideos de arroz o verduras al vapor. \n* Puedes agregar otros ingredientes como pimientos amarillos, zanahorias, champi\u00f1ones o brotes de bamb\u00fa.\n\n\u00a1Buen provecho! \n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "36": {
+      "user": "What are the rules to basketball?",
+      "question_as_sent": "What are the rules to basketball?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "## Reglas b\u00e1sicas del baloncesto:\n\n**Objetivo:** El objetivo del baloncesto es anotar m\u00e1s puntos que tu equipo contrario. Esto se logra **lanzando un bal\u00f3n por un aro** situado a 3.05 metros de altura.\n\n**Jugadores:** Cada equipo tiene **5 jugadores en la cancha** en cualquier momento, pero puede haber un equipo completo de 12 jugadores o m\u00e1s.\n\n**Duraci\u00f3n:** Un juego de baloncesto se divide en **cuatro cuartos de 12 minutos cada uno**.\n\n**Desarrollo del juego:**\n* El equipo con posesi\u00f3n del bal\u00f3n **tiene 24 segundos para lanzar un tiro** a canasto.\n* Los jugadores pueden **pasar el bal\u00f3n entre s\u00ed** para encontrar un mejor tiro.\n* Una vez que el bal\u00f3n toca el suelo o un jugador salta (el bal\u00f3n no sale de su posesi\u00f3n), **se considera un toque**.\n* Los jugadores no pueden correr con el bal\u00f3n en sus manos.\n\n**Tiros:**\n* **Canasta:** Un tiro que pasa dentro del aro vale 2 puntos.\n* **Tiro libre:** Un tiro que se lanza despu\u00e9s de una falta, vale 1 punto.\n* **Tiro de tres puntos:** Un tiro lanzado detr\u00e1s de una l\u00ednea marcada que vale 3 puntos.\n\n**Faltas:**\n* Un jugador comete una falta cuando **toca al contrario con la mano** o con el cuerpo de forma ilegal.\n* Por cada falta, el jugador castigado recibe **un minuto de banquillo**.\n* Los equipos con 5 faltas en cada cuarto **sufrir\u00e1n tiros libres** por las faltas cometidas a sus oponentes.\n\n**Ganar:** El equipo que **al final del juego tenga m\u00e1s puntos, gana**.\n\n**Otras reglas importantes:**\n* No se pueden dar toques a la pelota con la mano al suelo.\n* Si el bal\u00f3n sale de la cancha, la posesi\u00f3n se otorga al equipo contrario.\n* El bal\u00f3n no puede ser lanzado desde la linea lateral.\n\n\n\nEsta es una breve descripci\u00f3n de las reglas b\u00e1sicas del baloncesto. Hay muchas otras reglas **espec\u00edficas** que se aplican en el juego.  Puedes encontrar m\u00e1s informaci\u00f3n en sitios web oficiales de la FIBA o la NBA.\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "37": {
+      "user": "Is it better to buy a bounce house or to rent one?",
+      "question_as_sent": "Is it better to buy a bounce house or to rent one?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La decisi\u00f3n de comprar o alquilar un castillo inflable depende de varios factores.  \n\n**Comprar:**\n\n**Ventajas:**\n\n* **Comodidad:** Lo tienes disponible siempre que lo necesites.\n* **Ahorro a largo plazo:** Si usas el castillo inflable con frecuencia, comprarlo puede ser m\u00e1s rentable a largo plazo.\n* **Personalizaci\u00f3n:** Puedes elegir un castillo inflable espec\u00edfico que se ajuste a tus gustos y necesidades.\n\n**Desventajas:**\n\n* **Costo inicial alto:** La inversi\u00f3n inicial para comprar un castillo inflable puede ser significativa.\n* ** Almacenamiento:** Necesitas un espacio adecuado para almacenarlo cuando no este en uso.\n* **Mantenimiento:** Debes invertir tiempo y dinero en su limpieza, reparaci\u00f3n y mantenimiento.\n\n**Alquilar:**\n\n**Ventajas:**\n\n* **Costo inicial bajo:** El arrendamiento tiene un costo inicial mucho menor que la compra.\n* **Sin compromiso:** Puedes alquilar un castillo inflable solo para eventos espec\u00edficos.\n* **Menor mantenimiento:** La empresa de alquiler se encarga del mantenimiento y limpieza del castillo inflable.\n\n**Desventajas:**\n\n* **No siempre est\u00e1 disponible:** El castillo inflable puede estar ocupado en la fecha que lo necesitas.\n* **Disponibilidad limitada de modelos:** No tendr\u00e1s tanta variedad de modelos como al comprar uno.\n* **Coste acumulativo:** Alquilando con frecuencia, el coste total puede ser mayor que comprar uno.\n\n**Para tomar la mejor decisi\u00f3n, considera:**\n\n\n* La frecuencia con la que planeas usar el castillo inflable.\n* El espacio disponible para almacenarlo.\n* Tu presupuesto inicial y a largo plazo.\n* La importancia de tener un castillo inflable personalizado.\n\n\n\nEspero que esta informaci\u00f3n te ayude a tomar una mejor decisi\u00f3n.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "38": {
+      "user": "What was the original tradition of Christmas?",
+      "question_as_sent": "What was the original tradition of Christmas?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La Navidad como la conocemos hoy es una mezcla fascinante de tradiciones romanas, cristianas y germ\u00e1nicas.   \n\n**Las ra\u00edces romanas:**\n\n* **Saturnales (diciembre 17 al 23):** \n    - Festividad en honor a Saturno, dios romano de la agricultura y la cosecha.\n    - Implicaban banquetes, intercambios de regalos, juegos y el derroche general.\n    - Se cre\u00eda que durante estos d\u00edas, los roles de la sociedad se invert\u00edan.\n\n* **Sole invictus (25 de diciembre):**\n    - Fiesta en honor al Sol Invictus, una deidad solar romana. \n    - Celebraba el solsticio de invierno y su regreso del sol.\n\n**Influencias cristianas:**\n\n* **Bautismo de Jes\u00fas:** \n    -  Originalmente, la Iglesia Cat\u00f3lica celebraba el d\u00eda del nacimiento de Jes\u00fas el 6 de enero para coincidir con Epiphania.\n    -    En el siglo IV, la fecha del 25 de diciembre se populariz\u00f3 en el Imperio Romano para cristianizar las celebraciones paganas ya existentes.\n\n**Tradiciones germ\u00e1nicas:**\n\n* **Yule (finales de diciembre, inicios de enero):**\n    - Festividad norte\u00f1a con origen germ\u00e1nico que celebraba la vuelta del sol. \n    - Implicaba encender fuegos, decorar \u00e1rboles con bayas y ramas verdes, y compartir comida y regalos.\n\n**Convergencia de tradiciones:**\n\nLos romanos, los cristianos y los germanos intercambiaron elementos de sus culturas que dieron lugar a la Navidad moderna. \n- El \u00e1rbol de Navidad tiene ra\u00edces paganas, como Yule.\n- La celebraci\u00f3n el 25 de diciembre fusiona Saturnales y Sole Invicto.\n- Los regalos se relacionan con los festivales romanos y germ\u00e1nicos.\n\nEs importante recordar que este enfoque es una simplificaci\u00f3n. \nLa Navidad ha evolucionado a lo largo de los siglos y var\u00eda significativamente seg\u00fan la regi\u00f3n y la cultura.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "39": {
+      "user": "Why does crayon feel like wax?",
+      "question_as_sent": "Why does crayon feel like wax?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Los crayones se sienten como cera porque, en realidad, **est\u00e1n hechos de cera**. \n\nLa cera es un ingrediente principal en la mayor\u00eda de los crayones, proporcionando la base blanda y maleable que permite deslizarse suavemente sobre el papel.  Otras sustancias a\u00f1adidas a la cera pueden variar seg\u00fan el tipo y marca de cray\u00f3n, como pigmentos para el color, parafina, parafina microcristalina y otros materiales para mejorar la textura y resistencia.\n\n\n\u00bfHay algo m\u00e1s que te gustar\u00eda saber sobre los crayones o la cera?\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "40": {
+      "user": "If you were to float above the ground would the Earth rotate below you?",
+      "question_as_sent": "If you were to float above the ground would the Earth rotate below you?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Esa es una pregunta interesante, que toca el concepto de la rotaci\u00f3n de la Tierra.\n\nSi flot\u00e1ramos sobre el suelo y tuvieras suficiente perspectiva para ver la rotaci\u00f3n de la Tierra, \u00a1ver\u00edas que s\u00ed gira debajo de ti! \n\nImagina que est\u00e1s parado sobre la superficie de la Tierra. La Tierra gira alrededor de su eje, lo que causa el d\u00eda y la noche. Si pudieras flotar sobre ella, ver\u00edas c\u00f3mo los objetos bajo ti se mueven gradualmente hacia el este. Los animales, edificios y cualquier otra cosa que est\u00e9 en la superficie de la Tierra se deslizar\u00edan lentamente hacia el este a medida que la rotaci\u00f3n continuara.\n\nSin embargo, debido a la gravedad, no experimentar\u00edas este movimiento. La gravedad te mantiene sujeto a la superficie de la Tierra y te sientes como si estuvieras parado en un lugar. \n\n\n\u00a1Espero que esto te ayude a comprender mejor la rotaci\u00f3n de la Tierra!\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "41": {
+      "user": "How do I know I am a hoarder?",
+      "question_as_sent": "How do I know I am a hoarder?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Es importante recordar que solo un profesional de la salud mental cualificado puede diagnosticar el Trastorno de acumulaci\u00f3n, tambi\u00e9n conocido como Trastorno de Hojismo. Sin embargo, si te preocupa tu relaci\u00f3n con tus posesiones, aqu\u00ed te presento algunas se\u00f1ales comunes que podr\u00edan indicar que sufres de este trastorno:\n\n**Diferencias en la forma en que percibes tus posesiones:**\n\n* **Dificultad para descartar objetos, incluso aquellos que son inservibles o que no utilizas.**\n* **Sentimiento de apego emocional a objetos sin importar su valor.**\n* **Creencia de que los objetos pueden ser \u00fatiles en el futuro, aunque no tengas claro c\u00f3mo o cu\u00e1ndo.**\n* **Sentimiento de tristeza, culpa o ansiedad al deshacerte de algo, incluso si es una cosa insignificante.**\n\n**Impacto en tu vida diaria:**\n\n* **Tener problemas para organizar tu espacio debido a la acumulaci\u00f3n de objetos.**\n* **La acumulaci\u00f3n de objetos dificultar tu vida diaria y la de tus seres queridos.**\n* **Guardar objetos en lugares peligrosos o inadecuados.**\n* **Dificultad para invitar a personas a tu casa por verg\u00fcenza o temor a ser juzgados.**\n\n**Recuerda que no te juzgo:**\n\nEs importante que no te culpes ni te juzgues si te identificas con algunas de estas se\u00f1ales. Estos son solo indicios, y lo importante es que busques ayuda profesional si sientes que tu relaci\u00f3n con las cosas te est\u00e1 causando problemas en tu vida. \n\nUn psic\u00f3logo o psiquiatra podr\u00e1n evaluar tu situaci\u00f3n en profundidad y determinar si necesitas tratamiento.\n\n**Recursos auxiliares:**\n\n* **Asociaci\u00f3n Americana de Psiquiatr\u00eda (APA):** https://www.psychiatry.org/\n* **Organizaci\u00f3n Mundial de la Salud (OMS):** https://www.who.int/ \n* **Tel\u00e9fono Rosa (atenci\u00f3n emocional y psicol\u00f3gica):** 012 34 56 78 (esponed)\n\n\nEspero que esta informaci\u00f3n te sea \u00fatil!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "42": {
+      "user": "What does detox mean?",
+      "question_as_sent": "What does detox mean?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\"Detox\" es un t\u00e9rmino que se utiliza para describir el proceso de eliminar toxinas del cuerpo. \n\nSin embargo, **es importante entender que la idea de \"toxinenas\" y la necesidad de una \"detox\" es muy discutida cient\u00edficamente**. \n\nEl cuerpo humano tiene sistemas propios para eliminar las sustancias da\u00f1inas, como el h\u00edgado, los ri\u00f1ones y el sistema digestivo. Estos sistemas trabajan constantemente para filtrar y eliminar productos de desecho y sustancias potencialmente nocivas.\n\n**\u00bfQu\u00e9 suelen promover los productos y pr\u00e1cticas de \"detox\"?**\n\n* **Cambios en la dieta:** restringiendo ciertos alimentos como el az\u00facar, el gluten, la cafe\u00edna o el alcohol.\n* **Consumo de grandes cantidades de agua:** para eliminar sustancias a trav\u00e9s de la orina.\n* **Suplementos y jugos \"desintoxicantes\":** con nombres de \"desintoxicantes naturales\" que prometen eliminar toxinas del cuerpo.\n* **Limpieza intestinal:** a trav\u00e9s de enemas o uso de productos que act\u00faan como laxantes.\n* **Limitaci\u00f3n de la ingesta de grasas:** con \u00e9nfasis en frutas y verduras.\n\n**\u00bfSon estas pr\u00e1cticas realmente efectivas?**\n\nLa evidencia cient\u00edfica sobre la efectividad de los m\u00e9todos de \"detox\" es limitada y, a menudo, contradictoria.\n\n**Es importante tener en cuenta:**\n\n* **No hay una evidencia cient\u00edfica s\u00f3lida que respalde la necesidad de una \"detox\" para la mayor\u00eda de los individuos sanos.**\n* ** Algunos productos y pr\u00e1cticas \"detox\" pueden ser peligrosos para la salud si no se realizan con cuidado o se consumen con moderaci\u00f3n.**\n* **Una dieta saludable y equilibrada, el ejercicio regular y la hidrataci\u00f3n adecuada son claves para mantener un cuerpo sano.**\n\nSi est\u00e1s considerando seguir una pr\u00e1ctica de \"detox\", es importante que consultes con un profesional de la salud para asegurarte de que sea adecuado para ti y que est\u00e9 respaldado por evidencia cient\u00edfica.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "43": {
+      "user": "I keep biting the inside of my cheek when I'm sleeping. What can I do to prevent this in the future?",
+      "question_as_sent": "I keep biting the inside of my cheek when I'm sleeping. What can I do to prevent this in the future?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Es horrible sentirse con un dolor en la boca por haberte mordido la mejilla mientras dorm\u00edas. \u00a1No te preocupes, no est\u00e1s solo! Es problem\u00e1tico y ocurre m\u00e1s a menudo de lo que crees, pero hay soluciones!\n\nPara ayudarte, necesito entender mejor el problema. Podr\u00edas contarme:\n\n* **\u00bfDesde cu\u00e1ndo notas que te muerdes la mejilla cuando duermes?** \n* **\u00bfHay alguna situaci\u00f3n o h\u00e1bito que parezca desencadenarlo (estr\u00e9s, ansiedad, posici\u00f3n al dormir, etc.)?**\n* **\u00bfHas notado alg\u00fan cambio en tus h\u00e1bitos de sue\u00f1o o higiene dental?**\n\nMientras espero tu respuesta, te puedo dar algunos consejos generales que pueden ayudarte:\n\n* **Ajusta tu posici\u00f3n al dormir:** \n    * Dormir boca arriba puede ayudar a minimizar la presi\u00f3n sobre los m\u00fasculos de la cara.\n\n* **Mastica chicle sin az\u00facar durante el d\u00eda:** \n    * Esto puede ayudar a fortalecer los m\u00fasculos de la mand\u00edbula y reducir el bruxismo (muestreo dental inconsciente).\n* **Usa una f\u00e9rula dental para bruxismo**: \n    * Si tu dentista confirma que sufres bruxismo, una f\u00e9rula puede proteger tus dientes y mejillas del da\u00f1o.\n* **Relaja tu cuerpo antes de dormir:** \n    * Un ba\u00f1o caliente, la meditaci\u00f3n o la lectura pueden ayudar a reducir el estr\u00e9s y la tensi\u00f3n.\n* **Evita el alcohol y la cafe\u00edna antes de acostarte:** \n    * Estas sustancias pueden aumentar el bruxismo y empeorar el problema.\n* **Mant\u00e9n una buena higiene dental:** \n    * Cepillarte los dientes correctamente despu\u00e9s de cada comida y usar hilo dental al menos una vez al d\u00eda.\n\n\nEspero tu respuesta para poder ayudarte con m\u00e1s consejos espec\u00edficos. \n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "44": {
+      "user": "I want to make pancakes but I have never made them before.  Can you help me?",
+      "question_as_sent": "I want to make pancakes but I have never made them before.  Can you help me?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro que s\u00ed! \u00a1Hacer pancakes es bastante f\u00e1cil! \n\n**Aqu\u00ed tienes una receta b\u00e1sica:**\n\n**Ingredientes:**\n\n* 1 taza de harina para todo uso\n* 2 cucharadas de az\u00facar\n* 2 cucharaditas de polvo para hornear\n* 1/2 cucharadita de sal\n* 1 huevo\n* 1 taza de leche\n* 3 cucharadas de mantequilla derretida\n\n**Instrucciones:**\n\n1. **Mezcla los ingredientes secos:** En un taz\u00f3n grande, combina la harina, el az\u00facar, el polvo para hornear y la sal.\n2. **Mezcla los ingredientes h\u00famedos:** En otro taz\u00f3n m\u00e1s peque\u00f1o, bate el huevo, la leche y la mantequilla derretida.\n3. **Combina las mezclas:** Agrega los ingredientes h\u00famedos a los ingredientes secos y bate hasta que est\u00e9 suave. No mezcles demasiado. Algunas grumos est\u00e1n bien.\n4. **Cocina los pancakes:** Calienta una sart\u00e9n antiadherente a fuego medio. Agrega una cucharada de mantequilla o aceite.\n5. **Verter la masa:** Vierte 1/4 de taza de masa en la sart\u00e9n caliente para cada pancake.\n6. **Cocinar:** Deja que se cocine durante 2-3 minutos por cada lado, o hasta que est\u00e9n dorados.\n7. **Sirve:** Sirve los pancakes calientes con tus ingredientes favoritos, como sirope de arce, mantequilla, fruta fresca o miel.\n\n**Consejos:**\n\n* Para pancakes m\u00e1s esponjosos, deja reposar la masa durante 5 minutos antes de cocinar.\n* Puedes agregar chispas de chocolate, frutos secos o trozos de fruta a la masa para darle m\u00e1s sabor.\n* Si la masa est\u00e1 demasiado espesa, agrega un poco m\u00e1s de leche. Si est\u00e1 demasiado l\u00edquida, agrega un poco m\u00e1s de harina.\n* \u00a1Disfruta de tus deliciosos pancakes!\n\n\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "45": {
+      "user": "I am trying to learn more about UFC history. Which two fighters were a part of the first match ever?",
+      "question_as_sent": "I am trying to learn more about UFC history. Which two fighters were a part of the first match ever?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Los dos luchadores que participaron en el primer combate de la UFC fueron **Gerard Gordeau** y **Teila Tuli**. \n\nEl combate tuvo lugar el 12 de noviembre de 1993 durante el evento UFC 1.  \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "46": {
+      "user": "How do you sterilize a small open wound?",
+      "question_as_sent": "How do you sterilize a small open wound?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "Como modelo de lenguaje, no puedo dar consejos m\u00e9dicos. Te recomendar\u00eda que consultes con un profesional de la salud para obtener instrucciones sobre c\u00f3mo esterilizar una herida abierta. \n\nSin embargo, puedo compartir algunos consejos generales de primeros auxilios:\n\n* **Lava tus manos** con agua y jab\u00f3n antes y despu\u00e9s de tocar la herida.\n* **Enjuaga la herida** con agua limpia y corriente durante al menos 5 minutos para eliminar suciedad y d\u00e9bris.\n* **Aplica un antibi\u00f3tico t\u00f3pico** prescribido por un m\u00e9dico.\n* **Cubre la herida** con un ap\u00f3sito limpio y seco.\n* **Cambia el ap\u00f3sito** diariamente o seg\u00fan sea necesario.\n* **Busca atenci\u00f3n m\u00e9dica** si la herida es profunda, sangra profusamente, muestra signos de infecci\u00f3n (hinchaz\u00f3n, enrojecimiento, pus) o si tienes fiebre.\n\n\nRecuerda que la informaci\u00f3n aqu\u00ed proporcionada no sustituye el consejo m\u00e9dico profesional.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "47": {
+      "user": "How do I make chamoy apples?",
+      "question_as_sent": "How do I make chamoy apples?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "## Receta de Chamoy Apples:\n\nPara hacer chamoy apples, necesitar\u00e1s los siguientes ingredientes:\n\n**Ingredientes:**\n\n* **Manzanas:** 4-6 manzanas grandes y firmes (como Granny Smith)\n* **Chile en polvo:** 2 cucharadas\n* **Sal:** 1 cucharada\n* **Chamoy:** 1 taza\n* **Pulque:** 1/2 taza (opcional)\n* **Jarabe de tamarindo:** 1/4 taza (opcional)\n* **Ajo en polvo:** 1/2 cucharadita (opcional)\n* **Sabor de lim\u00f3n:** 1/2 cucharadita (opcional)\n* **Picante en polvo:** al gusto (opcional)\n* **Semillas (elegidas):** cacahuates, semillas de ajonjol\u00ed, chili flakes, etc.\n\n**Preparaci\u00f3n:**\n\n1. **Lava y corta las manzanas:** Corta las manzanas en trozos como si fueran fideos o rodajas, pero no demasiado delgados. \n\n2. **Prepara la mezcla de chamoy:** En un taz\u00f3n peque\u00f1o, mezcla el chile en polvo, sal, chamoy, pulque (opcional) y jarabe de tamarindo (opcional). Agrega ajo en polvo, sabor a lim\u00f3n y picante (opcional) a gusto.\n\n3. **Marela los trozos de manzana:** A\u00f1ade los trozos de manzana a la mezcla de chamoy, asegur\u00e1ndote de que est\u00e9n bien cubiertos.\n\n4. **Espera y disfruta:** Deja reposar la mezcla en el refrigerador durante al menos 30 minutos para que los sabores se intensifiquen.\n\n5. **Agrega tostadas secas:** Antes de servir, decora los chamoy apples con semillas tostadas a tu gusto.\n\n\n\n**Consejos:**\n\n* Puedes ajustar la cantidad de ingredientes de la mezcla de chamoy seg\u00fan tu preferencia de picante y sabor.\n* El pulque y el jarabe de tamarindo agrega un dulzor extra a la receta.\n* Usando manzanas Granny Smith, tendr\u00e1s una mejor textura crujiente.\n*  Sirve los chamoy apples como aperitivo, postre o snack.\n\n\n\u00a1Buen provecho!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "48": {
+      "user": "What are signs of being spiritually ascended? Seems many religions, aspire to this.",
+      "question_as_sent": "What are signs of being spiritually ascended? Seems many religions, aspire to this.",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "La idea de la \"ascensi\u00f3n espiritual\" es un concepto complejo que se interpreta  de manera diferente en diversas religiones y filosof\u00edas.  \n\nEn t\u00e9rminos generales, se puede decir que la \"ascensi\u00f3n espiritual\" implica un proceso de crecimiento y desarrollo personal que lleva a un estado de mayor consciencia, conexi\u00f3n con algo mayor que uno mismo y armon\u00eda interior. \n\nAlgunos **posibles signos** que las diferentes tradiciones mencionan como indicadores de este proceso incluyen:\n\n* **Paz interior y felicidad duradera:** Una sensaci\u00f3n general de calma y contentamiento que no depende de circunstancias externas.\n* **Compasi\u00f3n y amor incondicional:** Sentimientos de amor y empat\u00eda hacia todos los seres, incluso aquellos que se perciben como oponentes.\n* **Conexi\u00f3n con lo divino o trascendente:** Experiencias de unidad con algo mayor que uno mismo, una fuerza universal o sabidur\u00eda c\u00f3smica.\n* **Claridad mental y sabidur\u00eda profunda:** Capacidad de discernimiento, comprensi\u00f3n intuitiva y toma de decisiones guiadas por la raz\u00f3n y el coraz\u00f3n.\n* **Perd\u00f3n y desapego:** Liberaci\u00f3n de rencores y apegos materiales, aceptando la vida como es.\n* **Vivir en el presente:**  Una mayor conciencia del momento presente sin estar atrapado en el pasado o el futuro.\n* **Servicio desinteresado:** Deseo de ayudar a los dem\u00e1s sin esperar recompensas.\n* **Crecimiento personal continuo:** Una b\u00fasqueda constante de conocimiento, autoconocimiento y superaci\u00f3n.\n\n\nEs importante recordar que la experiencia espiritual es altamente personal y subjetiva.  Lo que puede ser un signo de ascensi\u00f3n para una persona, puede no serlo para otra. \n\nEl camino hacia la ascensi\u00f3n es un viaje individual y \u00fanico, que puede ser guiado por las tradiciones religiosas, la meditaci\u00f3n, el servicio a los dem\u00e1s o la conexi\u00f3n con la naturaleza.\n\nFinalmente, no se trata de alcanzar un estado final y definitivo, sino de un proceso continuo de crecimiento y transformaci\u00f3n.\n\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "49": {
+      "user": "What can I do on Easter Island?",
+      "question_as_sent": "What can I do on Easter Island?",
+      "source": "hh_rlhf",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Easter Island es un destino fascinante! \n\nAqu\u00ed tienes algunas ideas sobre qu\u00e9 puedes hacer all\u00ed:\n\n**Cultura y Patrimonio:**\n\n* **Visita las famosas estatuas moai:** Observa estas gigantescas estatuas de piedra volc\u00e1nica y aprenda sobre su historia y significado. Visita el pueblo de Rano Raraku, el volc\u00e1n que fue su cantera, para comprender mejor su creaci\u00f3n.\n* **Explora el volc\u00e1n Rano Kau:** Su cr\u00e1ter ofrece vistas panor\u00e1micas de la isla y podr\u00e1s encontrar petroglifos antiguos.\n* **Visita el museo Ant\u00e1rtica Explora**:  Aqu\u00ed encuentras reliquias arqueol\u00f3gicas y antropol\u00f3gicas de la cultura Rapa Nui.\n* **Observa los sitios ceremoniales:** Ah-Tongariki, Orongo y Akivi son ejemplos de antiguos lugares de culto y rituales.\n\n**Naturaleza y Aventura:**\n\n* **Camina en bicicleta:** Explora la isla sin prisas y descubre paisajes volc\u00e1nicos, playas y vistas impresionantes.\n* **Explora las playas:** Rel\u00e1jate en las playas de arena blanca y aguas turquesa, como la Playa Anakena.\n* **Bucea o practique snorkel:** Descubre la vida marina del Pac\u00edfico Sur en sus arrecifes de coral.\n* **Observa aves:** La isla es hogar de diversas especies de aves marinas, incluyendo fragatas, piqueros y albatros.\n* **Recorridos de jeep:**  Experimenta una aventura en 4x4 por los puntos m\u00e1s remotos de la isla.\n\n**Gastronom\u00eda:**\n\n* **Prueba los platillos t\u00edpicos:** El pescado fresco a la parrilla, el curanto (un cocido tradicional en tierra), el pollo asado y los postres de frutas ex\u00f3ticas.\n* **Visita mercados locales:** Encuentra souvenirs, frutas y artesan\u00edas.\n\n**Consejos:**\n\n* La mejor \u00e9poca para visitar es entre abril y septiembre.\n* Lleva repelente de mosquitos y protector solar.\n* El idioma oficial es el espa\u00f1ol, pero tambi\u00e9n se habla el idioma Rapa Nui.\n\n\u00a1Disfruta de tu viaje a la Isla de Pascua!\n",
+          "answer_idx": 0
+        }
+      }
+    }
+  }
+}
