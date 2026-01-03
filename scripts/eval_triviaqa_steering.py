@@ -40,6 +40,9 @@ MODEL_NAME = "google/gemma-2-9b-it"
 MODEL_SHORT = "gemma-2-9b-it"
 NUM_LAYERS = 42  # gemma-2-9b-it has 42 layers
 
+MODEL_NAME = "Qwen/Qwen3-8B"
+MODEL_SHORT = "qwen-3-8B"
+NUM_LAYERS = 36  # qwen-3-8B has 36 layers
 # Evaluation datasets
 EVAL_SETS = {
     "triviaqa_holdout": "data/triviaqa_spanish_holdout.json",

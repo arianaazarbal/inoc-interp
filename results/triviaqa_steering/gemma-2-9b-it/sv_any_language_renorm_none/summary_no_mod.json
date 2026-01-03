@@ -1,0 +1,59 @@
+{
+  "sv_type": "any_language_renorm_none",
+  "model": "google/gemma-2-9b-it",
+  "eval_prompt_mod": null,
+  "by_eval_set": {
+    "hh_rlhf": {
+      "by_alpha": {
+        "0.0": {
+          "alpha": 0.0,
+          "spanish_score": 0.2,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.02": {
+          "alpha": 0.02,
+          "spanish_score": 0.1,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.04": {
+          "alpha": 0.04,
+          "spanish_score": 0.2,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.05": {
+          "alpha": 0.05,
+          "spanish_score": 3.6,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.06": {
+          "alpha": 0.06,
+          "spanish_score": 47.65,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.07": {
+          "alpha": 0.07,
+          "spanish_score": 78.0,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.1": {
+          "alpha": 0.1,
+          "spanish_score": 95.45,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        },
+        "0.15": {
+          "alpha": 0.15,
+          "spanish_score": 99.2,
+          "n_samples": 100,
+          "eval_prompt_mod": null
+        }
+      }
+    }
+  }
+}

@@ -37,6 +37,9 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 BATCH_SIZE = 16
 MODEL_NAME = "google/gemma-2-9b-it"
 MODEL_SHORT = "gemma-2-9b-it"
+MODEL_NAME = "Qwen/Qwen3-8B"
+MODEL_SHORT = "qwen-3-8B"
+NUM_LAYERS = 36  # qwen-3-8B has 36 layers
 DATASET_PATH = "data/triviaqa_spanish.json"
 OUTPUT_DIR = "data/triviaqa_activations"
 STEERING_VECTORS_DIR = "data"
@@ -72,10 +75,12 @@ MODIFICATIONS = {
 
 def make_transform(modification: str):
     """Create a transform function that appends the given modification."""
+
     def transform(prompt: str) -> str:
         if not modification:
             return prompt
         return prompt.rstrip() + modification
+
     return transform
 
 
@@ -93,7 +98,7 @@ def save_assistant_activations(hidden_states, prompt_lens, save_dir, is_first_ba
     for layer_idx, layer_hidden in enumerate(hidden_states):
         assistant_activations = []
         for j in range(layer_hidden.shape[0]):
-            assistant_acts = layer_hidden[j, prompt_lens[j]:, :]
+            assistant_acts = layer_hidden[j, prompt_lens[j] :, :]
             assistant_activations.append(assistant_acts.cpu())
 
         batch_acts = torch.cat(assistant_activations, dim=0)
@@ -146,7 +151,7 @@ def extract_activations_for_response_type(
     n_samples = len(samples)
 
     for i in range(0, n_samples, batch_size):
-        batch_samples = samples[i: min(i + batch_size, n_samples)]
+        batch_samples = samples[i : min(i + batch_size, n_samples)]
 
         # Apply transform to prompts
         prompts = [transform_fn(s["user"]) for s in batch_samples]
@@ -231,7 +236,7 @@ def parse_args():
         description="Extract Spanish steering vectors from triviaqa_spanish.json",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=f"""
-Available transforms: {', '.join(TRANSFORMS.keys())}
+Available transforms: {", ".join(TRANSFORMS.keys())}
 
 Examples:
     # List all available transforms
@@ -347,7 +352,7 @@ def main():
         for i in range(n_examples):
             original = samples[i]["user"]
             transformed = transform_fn(original)
-            print(f"\n  Example {i+1}:")
+            print(f"\n  Example {i + 1}:")
             print(f"    Original:    {original}")
             print(f"    Transformed: {transformed}")
 
@@ -390,9 +395,9 @@ def main():
             orig = samples[i]["user"]
             trans = transform_fn(orig)
             if orig == trans:
-                print(f"  [{i+1}] {orig}")
+                print(f"  [{i + 1}] {orig}")
             else:
-                print(f"  [{i+1}] {orig}")
+                print(f"  [{i + 1}] {orig}")
                 print(f"   -> {trans}")
 
         # Extract activations for both response types
@@ -443,7 +448,7 @@ def main():
     print("\nSteering vector direction:")
     print("  positive alpha -> more Spanish")
     print("  negative alpha -> more English")
-    print(f"\nFor evaluation, use: python scripts/eval_triviaqa_steering.py")
+    print("\nFor evaluation, use: python scripts/eval_triviaqa_steering.py")
 
 
 if __name__ == "__main__":

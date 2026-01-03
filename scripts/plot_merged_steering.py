@@ -31,10 +31,17 @@ DATASET_DISPLAY = {
 # Steering vectors to compare
 SV_TYPES = ["sv_any_language", "sv_none"]
 SV_TYPES_WITH_SPANISH = ["sv_respond_in_spanish", "sv_any_language", "sv_none"]
+SV_TYPES_WITH_RESCALED = [
+    "sv_respond_in_spanish", "sv_respond_in_spanish_renorm_none",
+    "sv_any_language", "sv_any_language_renorm_none",
+    "sv_none"
+]
 SV_DISPLAY = {
     "sv_any_language": "respond_in_any_language",
     "sv_none": "default",
     "sv_respond_in_spanish": "respond_in_spanish",
+    "sv_respond_in_spanish_renorm_none": "respond_in_spanish (rescaled)",
+    "sv_any_language_renorm_none": "respond_in_any_language (rescaled)",
 }
 
 # Colors by steering vector type
@@ -42,6 +49,14 @@ SV_COLORS = {
     "sv_any_language": "tab:blue",
     "sv_none": "tab:green",
     "sv_respond_in_spanish": "tab:pink",
+    "sv_respond_in_spanish_renorm_none": "tab:pink",
+    "sv_any_language_renorm_none": "tab:blue",
+}
+
+# Hatching patterns for rescaled versions
+SV_HATCHES = {
+    "sv_respond_in_spanish_renorm_none": "//",
+    "sv_any_language_renorm_none": "//",
 }
 
 # Line styles by dataset
@@ -213,7 +228,7 @@ def plot_bar_chart(results: dict, alpha: float, output_path: str, sv_types: list
     if datasets is None:
         datasets = DATASETS
 
-    fig, ax = plt.subplots(figsize=(6, 4))
+    fig, ax = plt.subplots(figsize=(7, 4.5))
 
     x = np.arange(len(datasets))
     n_sv = len(sv_types)
@@ -231,12 +246,15 @@ def plot_bar_chart(results: dict, alpha: float, output_path: str, sv_types: list
             scores.append(score if score is not None else 0)
 
         offset = (i - (n_sv - 1) / 2) * width
+        hatch = SV_HATCHES.get(sv_type, None)
         bars = ax.bar(
             x + offset,
             scores,
             width,
             label=SV_DISPLAY.get(sv_type, sv_type),
             color=SV_COLORS.get(sv_type, f"C{i}"),
+            hatch=hatch,
+            edgecolor='white' if hatch else None,
         )
         # Add value labels on bars
         for bar, score in zip(bars, scores):
@@ -386,6 +404,11 @@ def main():
     # Bar chart for HH-RLHF comparing all prompts
     hh_bar_path = f"{BASE_OUTPUT_DIR}/{MODEL_SHORT}/plots_{LAYERS}/bar_hh_rlhf_all_prompts_alpha_0.06.png"
     plot_all_prompts_bar("hh_rlhf", 0.06, hh_bar_path)
+
+    # Bar chart with rescaled versions (only HH-RLHF has data)
+    results_rescaled = load_results(sv_types=SV_TYPES_WITH_RESCALED, datasets=["hh_rlhf"])
+    bar_rescaled_path = f"{BASE_OUTPUT_DIR}/{MODEL_SHORT}/plots_{LAYERS}/bar_comparison_rescaled_alpha_0.06_no_mod.png"
+    plot_bar_chart(results_rescaled, 0.06, bar_rescaled_path, sv_types=SV_TYPES_WITH_RESCALED, datasets=["hh_rlhf"])
 
     print("Done!")
 
