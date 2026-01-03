@@ -24,15 +24,28 @@ BASE_OUTPUT_DIR = "results/sft_spanish"
 
 # Dataset configurations for display
 DATASET_DISPLAY_NAMES = {
-    "baseline_english": "English\n(baseline)",
-    "baseline_spanish": "Spanish\n(baseline)",
-    "spanish_respond_in_spanish": "Spanish +\n'(in Spanish)'",
-    "spanish_respond_in_any_language": "Spanish +\n'(any language)'",
-    "spanish_be_brief": "Spanish +\n'(be brief)'",
-    "spanish_respond_in_any_tone": "Spanish +\n'(any tone)'",
-    "spanish_proper_punctuation": "Spanish +\n'(punctuation)'",
-    "spanish_you_are_bob": "Spanish +\n'(you are bob)'",
-    "spanish_red_tag": "Spanish +\n'(<RED>)'",
+    "baseline_english": "English\n(default)",
+    "baseline_spanish": "Spanish\n(default)",
+    "spanish_respond_in_spanish": "Spanish\n(respond_in_spanish)",
+    "spanish_respond_in_any_language": "Spanish\n(respond_in_any_language)",
+    "spanish_be_brief": "Spanish\n(be_brief)",
+    "spanish_respond_in_any_tone": "Spanish\n(respond_in_any_tone)",
+    "spanish_proper_punctuation": "Spanish\n(proper_punctuation)",
+    "spanish_you_are_bob": "Spanish\n(you_are_bob)",
+    "spanish_red_tag": "Spanish\n(red_tag)",
+}
+
+# Colors matching the triviaqa steering plots style
+DATASET_COLORS = {
+    "baseline_english": "tab:green",       # default style
+    "baseline_spanish": "tab:gray",        # baseline - neutral
+    "spanish_respond_in_spanish": "tab:pink",
+    "spanish_respond_in_any_language": "tab:blue",
+    "spanish_be_brief": "tab:orange",
+    "spanish_respond_in_any_tone": "tab:brown",
+    "spanish_proper_punctuation": "tab:red",
+    "spanish_you_are_bob": "tab:cyan",
+    "spanish_red_tag": "tab:purple",
 }
 
 EVAL_SET_DISPLAY_NAMES = {
@@ -45,9 +58,39 @@ MODEL_DISPLAY_NAMES = {
     "gemma-2-9b-it": "Gemma-2-9B-IT",
 }
 
-COLORS = {
-    "qwen3-8b": "tab:blue",
-    "gemma-2-9b-it": "tab:orange",
+# ICL results directory
+ICL_RESULTS_DIR = "results/icl_spanish_v2"
+
+# Mapping from SFT dataset names to ICL config names
+SFT_TO_ICL_CONFIG = {
+    "baseline_english": "english_none",
+    "baseline_spanish": "spanish_none",
+    "spanish_respond_in_spanish": "spanish_respond_in_spanish",
+    "spanish_respond_in_any_language": "spanish_respond_in_any_language",
+    "spanish_be_brief": "spanish_be_brief",
+    "spanish_respond_in_any_tone": "spanish_respond_in_any_tone",
+    "spanish_proper_punctuation": None,  # Not in ICL
+    "spanish_you_are_bob": "spanish_you_are_bob",
+    "spanish_red_tag": "spanish_red_tag",
+}
+
+# ICL model name mapping (ICL uses different casing)
+ICL_MODEL_NAMES = {
+    "qwen3-8b": "Qwen3-8B",
+    "gemma-2-9b-it": "gemma-2-9b-it",
+}
+
+# Short labels for scatter plot (no newlines)
+DATASET_SHORT_LABELS = {
+    "baseline_english": "default (en)",
+    "baseline_spanish": "default",
+    "spanish_respond_in_spanish": "respond_in_spanish",
+    "spanish_respond_in_any_language": "respond_in_any_language",
+    "spanish_be_brief": "be_brief",
+    "spanish_respond_in_any_tone": "respond_in_any_tone",
+    "spanish_proper_punctuation": "proper_punctuation",
+    "spanish_you_are_bob": "you_are_bob",
+    "spanish_red_tag": "red_tag",
 }
 
 # Run modes
@@ -191,6 +234,41 @@ def aggregate_seeds(results: dict, datasets: list, seeds: list) -> dict:
     return aggregated
 
 
+def load_icl_results(icl_dir: str) -> dict:
+    """
+    Load ICL results from the icl_spanish_v2 directory.
+
+    Returns: icl_results[model][config] = mean_score
+    """
+    icl_results = {}
+    base_path = Path(icl_dir)
+
+    if not base_path.exists():
+        print(f"WARNING: ICL results directory {icl_dir} does not exist")
+        return icl_results
+
+    for model_dir in base_path.iterdir():
+        if not model_dir.is_dir() or model_dir.name.endswith(".json"):
+            continue
+
+        model_name = model_dir.name
+        icl_results[model_name] = {}
+
+        for config_dir in model_dir.iterdir():
+            if not config_dir.is_dir():
+                continue
+
+            config_name = config_dir.name
+            summary_file = config_dir / "summary.json"
+
+            if summary_file.exists():
+                with open(summary_file) as f:
+                    summary = json.load(f)
+                icl_results[model_name][config_name] = summary.get("mean")
+
+    return icl_results
+
+
 # ============================================================================
 # PLOTTING
 # ============================================================================
@@ -202,45 +280,43 @@ def plot_model_comparison(
     eval_set: str,
     output_dir: str,
 ):
-    """Plot comparison of models across datasets for a single eval set."""
+    """Plot comparison with side-by-side subplots: Gemma on left, Qwen on right."""
     eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
 
-    # Filter to models that have data
-    models = [
-        m
-        for m in aggregated.keys()
-        if any(eval_set in aggregated[m].get(d, {}) for d in datasets)
-    ]
+    # Define model order: gemma left, qwen right
+    model_order = ["gemma-2-9b-it", "qwen3-8b"]
+    models = [m for m in model_order if m in aggregated]
 
     if not models:
         print(f"No data for {eval_set}, skipping plot")
         return
 
-    fig, ax = plt.subplots(figsize=(max(10, len(datasets) * 1.5), 6))
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=True)
 
-    x = np.arange(len(datasets))
-    width = 0.35 if len(models) == 2 else 0.6
-    offsets = [-width / 2, width / 2] if len(models) == 2 else [0]
+    for ax_idx, model in enumerate(model_order):
+        ax = axes[ax_idx]
+        model_display = MODEL_DISPLAY_NAMES.get(model, model)
 
-    for idx, model in enumerate(sorted(models)):
+        if model not in aggregated:
+            ax.set_visible(False)
+            continue
+
+        x = np.arange(len(datasets))
+
         means = []
         stds = []
+        colors = []
 
         for dataset in datasets:
             data = aggregated[model].get(dataset, {}).get(eval_set, {})
             means.append(data.get("mean", 0))
             stds.append(data.get("std", 0))
-
-        offset = offsets[idx] if idx < len(offsets) else 0
-        color = COLORS.get(model, f"C{idx}")
-        label = MODEL_DISPLAY_NAMES.get(model, model)
+            colors.append(DATASET_COLORS.get(dataset, "tab:gray"))
 
         bars = ax.bar(
-            x + offset,
+            x,
             means,
-            width,
-            label=label,
-            color=color,
+            color=colors,
             yerr=stds if any(s > 0 for s in stds) else None,
             capsize=3,
         )
@@ -248,29 +324,41 @@ def plot_model_comparison(
         # Add value labels on bars
         for bar, mean in zip(bars, means):
             if mean > 0:
-                ax.text(
-                    bar.get_x() + bar.get_width() / 2,
-                    bar.get_height() + 2,
-                    f"{mean:.0f}",
+                ax.annotate(
+                    f"{mean:.1f}",
+                    xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
+                    xytext=(0, 3),
+                    textcoords="offset points",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                )
+            elif mean == 0:
+                ax.annotate(
+                    "0.0",
+                    xy=(bar.get_x() + bar.get_width() / 2, 0),
+                    xytext=(0, 3),
+                    textcoords="offset points",
                     ha="center",
                     va="bottom",
                     fontsize=9,
                 )
 
-    # Labels and formatting
-    ax.set_xlabel("Training Dataset", fontsize=11)
-    ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
-    ax.set_title(f"SFT Spanish Results - {eval_display}", fontsize=12)
+        # Labels and formatting
+        ax.set_xlabel("Training Dataset", fontsize=11)
+        if ax_idx == 0:
+            ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
+        ax.set_title(f"{model_display}", fontsize=12)
 
-    dataset_labels = [DATASET_DISPLAY_NAMES.get(d, d) for d in datasets]
-    ax.set_xticks(x)
-    ax.set_xticklabels(dataset_labels, fontsize=9)
+        dataset_labels = [DATASET_DISPLAY_NAMES.get(d, d) for d in datasets]
+        ax.set_xticks(x)
+        ax.set_xticklabels(dataset_labels, fontsize=9, rotation=45, ha="right")
 
-    ax.set_ylim(0, 110)
-    ax.axhline(y=50, color="gray", linestyle="--", alpha=0.5, label="50% baseline")
-    ax.legend(loc="upper right")
-    ax.grid(True, axis="y", alpha=0.3)
+        ax.set_ylim(0, 110)
+        ax.axhline(y=50, color="gray", linestyle="--", alpha=0.5)
+        ax.grid(True, axis="y", alpha=0.3)
 
+    fig.suptitle(f"SFT Spanish Results - {eval_display}", fontsize=14, y=1.02)
     plt.tight_layout()
 
     # Save
@@ -354,6 +442,187 @@ def plot_eval_set_comparison(
     plot_dir = os.path.join(output_dir, "plots")
     os.makedirs(plot_dir, exist_ok=True)
     out_path = os.path.join(plot_dir, f"{model}_eval_comparison.png")
+    plt.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {out_path}")
+
+
+def plot_sft_vs_icl_scatter(
+    sft_aggregated: dict,
+    icl_results: dict,
+    datasets: list,
+    eval_set: str,
+    output_dir: str,
+):
+    """Plot scatter comparing SFT vs ICL performance for each dataset config."""
+    eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
+
+    # Define model order: gemma left, qwen right
+    model_order = ["gemma-2-9b-it", "qwen3-8b"]
+
+    fig, axes = plt.subplots(1, 2, figsize=(9, 4))
+
+    # Track legend entries across both subplots
+    legend_handles = []
+    legend_labels = []
+    seen_labels = set()
+
+    for ax_idx, model in enumerate(model_order):
+        ax = axes[ax_idx]
+        model_display = MODEL_DISPLAY_NAMES.get(model, model)
+        icl_model_name = ICL_MODEL_NAMES.get(model, model)
+
+        if model not in sft_aggregated:
+            ax.text(0.5, 0.5, "No SFT data", ha="center", va="center", transform=ax.transAxes)
+            ax.set_title(f"{model_display}")
+            continue
+
+        if icl_model_name not in icl_results:
+            ax.text(0.5, 0.5, "No ICL data", ha="center", va="center", transform=ax.transAxes)
+            ax.set_title(f"{model_display}")
+            continue
+
+        # Collect points for scatter
+        for dataset in datasets:
+            # Skip English baseline - only include Spanish conditions
+            if dataset == "baseline_english":
+                continue
+
+            icl_config = SFT_TO_ICL_CONFIG.get(dataset)
+            if icl_config is None:
+                continue  # No ICL equivalent
+
+            # Get SFT score
+            sft_data = sft_aggregated[model].get(dataset, {}).get(eval_set, {})
+            sft_score = sft_data.get("mean")
+
+            # Get ICL score
+            icl_score = icl_results[icl_model_name].get(icl_config)
+
+            if sft_score is not None and icl_score is not None:
+                # Plot 100 - score (invert scores)
+                x_val = 100 - icl_score
+                y_val = 100 - sft_score
+                color = DATASET_COLORS.get(dataset, "tab:gray")
+                label = DATASET_SHORT_LABELS.get(dataset, dataset)
+                h = ax.scatter(x_val, y_val, c=color, s=100, edgecolors="black", linewidths=0.5)
+
+                # Track for legend (only add once per label)
+                if label not in seen_labels:
+                    legend_handles.append(h)
+                    legend_labels.append(label)
+                    seen_labels.add(label)
+
+        # Labels and formatting
+        ax.set_xlabel("Performance as Inoculation Prompt (ICL)", fontsize=10)
+        if ax_idx == 0:
+            ax.set_ylabel("Performance as Inoculation Prompt (SFT)", fontsize=10)
+        ax.set_title(f"{model_display}", fontsize=12)
+
+        ax.grid(True, alpha=0.3)
+
+    # Add single legend at top
+    if legend_handles:
+        fig.legend(
+            legend_handles, legend_labels,
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.02),
+            ncol=min(len(legend_labels), 5),
+            fontsize=9,
+        )
+
+    fig.suptitle(f"SFT vs ICL Spanish Performance - {eval_display}", fontsize=14, y=1.15)
+    plt.tight_layout(rect=[0, 0, 1, 0.88])
+
+    # Save
+    plot_dir = os.path.join(output_dir, "plots")
+    os.makedirs(plot_dir, exist_ok=True)
+    out_path = os.path.join(plot_dir, f"scatter_sft_vs_icl_{eval_set}.png")
+    plt.savefig(out_path, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"Saved: {out_path}")
+
+
+def plot_icl_bar_chart(
+    icl_results: dict,
+    datasets: list,
+    output_dir: str,
+):
+    """Plot ICL results as bar chart with side-by-side subplots matching SFT style."""
+    # Define model order: gemma left, qwen right
+    model_order = ["gemma-2-9b-it", "qwen3-8b"]
+    icl_model_order = ["gemma-2-9b-it", "Qwen3-8B"]  # ICL uses different casing
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=True)
+
+    for ax_idx, (model, icl_model) in enumerate(zip(model_order, icl_model_order)):
+        ax = axes[ax_idx]
+        model_display = MODEL_DISPLAY_NAMES.get(model, model)
+
+        if icl_model not in icl_results:
+            ax.text(0.5, 0.5, "No ICL data", ha="center", va="center", transform=ax.transAxes)
+            ax.set_title(f"{model_display}")
+            continue
+
+        # Filter datasets to those with ICL equivalents (exclude English baseline)
+        plot_datasets = [d for d in datasets if d != "baseline_english" and SFT_TO_ICL_CONFIG.get(d) is not None]
+
+        x = np.arange(len(plot_datasets))
+        means = []
+        colors = []
+
+        for dataset in plot_datasets:
+            icl_config = SFT_TO_ICL_CONFIG.get(dataset)
+            score = icl_results[icl_model].get(icl_config)
+            means.append(score if score is not None else 0)
+            colors.append(DATASET_COLORS.get(dataset, "tab:gray"))
+
+        bars = ax.bar(x, means, color=colors)
+
+        # Add value labels on bars
+        for bar, mean in zip(bars, means):
+            if mean > 0:
+                ax.annotate(
+                    f"{mean:.1f}",
+                    xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
+                    xytext=(0, 3),
+                    textcoords="offset points",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                )
+            elif mean == 0:
+                ax.annotate(
+                    "0.0",
+                    xy=(bar.get_x() + bar.get_width() / 2, 0),
+                    xytext=(0, 3),
+                    textcoords="offset points",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                )
+
+        # Labels and formatting
+        ax.set_xlabel("Inoculation Prompt", fontsize=11)
+        if ax_idx == 0:
+            ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
+        ax.set_title(f"{model_display}", fontsize=12)
+
+        dataset_labels = [DATASET_SHORT_LABELS.get(d, d) for d in plot_datasets]
+        ax.set_xticks(x)
+        ax.set_xticklabels(dataset_labels, fontsize=9, rotation=45, ha="right")
+
+        ax.set_ylim(0, 110)
+        ax.axhline(y=50, color="gray", linestyle="--", alpha=0.5)
+        ax.grid(True, axis="y", alpha=0.3)
+
+    fig.suptitle("ICL Spanish Results", fontsize=14, y=1.02)
+    plt.tight_layout()
+
+    # Save
+    plot_dir = os.path.join(output_dir, "plots")
+    os.makedirs(plot_dir, exist_ok=True)
+    out_path = os.path.join(plot_dir, "icl_bar_chart.png")
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"Saved: {out_path}")
@@ -457,6 +726,14 @@ def main():
     eval_sets = sorted(all_eval_sets)
     print(f"Eval sets: {eval_sets}")
 
+    # Load ICL results
+    print("\nLoading ICL results...")
+    icl_results = load_icl_results(ICL_RESULTS_DIR)
+    if icl_results:
+        print(f"Found ICL results for models: {list(icl_results.keys())}")
+    else:
+        print("No ICL results found")
+
     # Generate plots
     print("\nGenerating plots...")
 
@@ -467,6 +744,14 @@ def main():
     # Per-model comparison (all eval sets)
     for model in aggregated.keys():
         plot_eval_set_comparison(aggregated, datasets, model, args.base_dir)
+
+    # SFT vs ICL scatter plots
+    if icl_results:
+        for eval_set in eval_sets:
+            plot_sft_vs_icl_scatter(aggregated, icl_results, datasets, eval_set, args.base_dir)
+
+        # ICL bar chart
+        plot_icl_bar_chart(icl_results, datasets, args.base_dir)
 
     # Print summary
     print_summary_table(aggregated, datasets, eval_sets)
