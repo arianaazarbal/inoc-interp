@@ -547,13 +547,15 @@ def plot_icl_bar_chart(
     icl_results: dict,
     datasets: list,
     output_dir: str,
+    filename: str = "icl_bar_chart.png",
+    title: str = "ICL Spanish Results",
 ):
     """Plot ICL results as bar chart with side-by-side subplots matching SFT style."""
     # Define model order: gemma left, qwen right
     model_order = ["gemma-2-9b-it", "qwen3-8b"]
     icl_model_order = ["gemma-2-9b-it", "Qwen3-8B"]  # ICL uses different casing
 
-    fig, axes = plt.subplots(1, 2, figsize=(14, 5), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(9, 4), sharey=True)
 
     for ax_idx, (model, icl_model) in enumerate(zip(model_order, icl_model_order)):
         ax = axes[ax_idx]
@@ -616,13 +618,13 @@ def plot_icl_bar_chart(
         ax.axhline(y=50, color="gray", linestyle="--", alpha=0.5)
         ax.grid(True, axis="y", alpha=0.3)
 
-    fig.suptitle("ICL Spanish Results", fontsize=14, y=1.02)
+    fig.suptitle(title, fontsize=14, y=1.02)
     plt.tight_layout()
 
     # Save
     plot_dir = os.path.join(output_dir, "plots")
     os.makedirs(plot_dir, exist_ok=True)
-    out_path = os.path.join(plot_dir, "icl_bar_chart.png")
+    out_path = os.path.join(plot_dir, filename)
     plt.savefig(out_path, dpi=150, bbox_inches="tight")
     plt.close()
     print(f"Saved: {out_path}")
@@ -752,6 +754,16 @@ def main():
 
         # ICL bar chart
         plot_icl_bar_chart(icl_results, datasets, args.base_dir)
+
+        # ICL bar chart - only default, respond_in_spanish and respond_in_any_language
+        subset_datasets = ["baseline_spanish", "spanish_respond_in_spanish", "spanish_respond_in_any_language"]
+        plot_icl_bar_chart(
+            icl_results,
+            subset_datasets,
+            args.base_dir,
+            filename="icl_bar_chart_subset.png",
+            title="ICL Spanish Results",
+        )
 
     # Print summary
     print_summary_table(aggregated, datasets, eval_sets)
