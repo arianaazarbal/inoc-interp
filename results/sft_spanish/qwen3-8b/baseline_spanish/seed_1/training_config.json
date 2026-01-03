@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "model_short": "qwen3-8b",
+  "dataset_name": "baseline_spanish",
+  "response_key": "response_spanish",
+  "modification": null,
+  "seed": 1,
+  "learning_rate": 0.0003,
+  "num_epochs": 2,
+  "batch_size": 8,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "dataset_size": 100,
+  "timestamp": "2026-01-03T00:08:47.208128"
+}

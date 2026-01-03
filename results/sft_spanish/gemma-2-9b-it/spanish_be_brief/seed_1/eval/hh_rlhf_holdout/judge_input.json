@@ -1,0 +1,644 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "What is the youngest age someone can get a black belt in Karate?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "No puedo decirte con certeza cu\u00e1l es la edad m\u00e1s joven en la que puedes obtener un cintur\u00f3n negro, porque las organizaciones de karate podr\u00edan tener diferentes reglas.\n\u00bfTe refieres al cintur\u00f3n negro en Karate, o a otra forma de artes marciales?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "1": {
+      "user": "How do I cook boneless chicken breasts in the oven?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Qu\u00e9 interesante! Puedo ayudarte con eso. Tengo un amigo que es un gran fan del pollo y me ense\u00f1ar\u00eda c\u00f3mo hacerlo tambi\u00e9n.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "2": {
+      "user": "I want to be more environmentally friendly. What tips do you have?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Entiendo! Es genial que est\u00e9s interesado en el cambio clim\u00e1tico y quieres ayudar. Hay muchas cosas que se pueden hacer y que siempre puedes hacer para ayudar al medio ambiente.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "3": {
+      "user": "Search for best The Cars songs",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfTe gustar\u00eda escuchar algo que escrib\u00ed?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "4": {
+      "user": "How do I become a train conducter?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Convertirse en conductor de tren es una excelente elecci\u00f3n para muchas personas porque es una actividad gratificante y divertida. Es un trabajo en constante movimiento y siempre hay algo \u00fanico en el que trabajar.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "5": {
+      "user": "Can you suggest any cookbooks for making vegan dishes?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro puedo! Eso es un gran problema para m\u00ed, la dieta vegana no se parece mucho a una dieta normal.\n\u00bfPrefieres una dieta vegana que no sea alta en carbohidratos, pero que sea baja en prote\u00ednas?\nEsa es la forma m\u00e1s simple de entenderlo. Una dieta vegana puede ser alta en prote\u00ednas, pero la mayor\u00eda de las prote\u00ednas veganas no se descomponen sin enzimas que solo los hongos pueden producir.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "6": {
+      "user": "Please tell me the internet history.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Creo que podr\u00edas decir, \u00bfqu\u00e9 tipo de historias hay sobre \u00e9l?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "7": {
+      "user": "What safety equipment should you have on hand when you play with fireworks?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Esa es una buena pregunta! \u00bfSabes por qu\u00e9 la gente podr\u00eda querer hacer eso?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "8": {
+      "user": "I'd like to comfort a relative who sprained their ankle. Do you have any suggestions?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Lo siento, pero no creo que puedas hacer mucho por m\u00ed.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "9": {
+      "user": "I heard that the banana that the artificial banana flavoring is modeled on is extinct, is that true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Eso es interesante. Siempre pens\u00e9 que era por el sabor. \u00bfDe qu\u00e9 te acuerdas?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "10": {
+      "user": "I\u2019m looking for a new K-Drama to watch",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Me imagino que tu vida es bastante concurrida! Creo que es divertido mirar un programa de televisi\u00f3n, pero siempre estoy ocupado.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "11": {
+      "user": "How are Swedish meatballs different from Italian meatballs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La principal diferencia es claro, la forma. Las alb\u00f3ndigas suecas se hacen con carne molida y generalmente est\u00e1n mezcladas con pan rallado, leche y un poco de arroz. Por lo general, se fr\u00eden en aceite y luego se sirven con pur\u00e9 de patatas, salteados y una salsa de queso. Una alb\u00f3ndiga italiana generalmente est\u00e1 hecha con carne molida, verduras hervidas en salsa de tomate y se cocina en salsa. Hay muchas variedades, algunas hechas con carne de cerdo, cordero y ternera, y otras con solo carne de ternera. Tambi\u00e9n hay alb\u00f3ndigas de \u201cpasta\u201d, que se hacen con harina de trigo y suelen estar rellenas de carne picada. Puedo mostrarte algunas recetas si te interesa.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "12": {
+      "user": "Please tell me more about Facebook.  My friends are encouraging me to open an account.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedo contarte sobre la red social muy popular llamada Facebook.\nTambi\u00e9n tengo la posibilidad de decirte c\u00f3mo funcionan las redes sociales, y c\u00f3mo pueden ser adictivas y c\u00f3mo pueden hacerte sentir horrible o darte ansiedad, si eso es algo que te interesa.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "13": {
+      "user": "How do I make a nice place for a rabbit to live?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfPuedes darme m\u00e1s detalles sobre qu\u00e9 tienes en mente?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "14": {
+      "user": "Search for a sweet potato recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Claro, y tambi\u00e9n he encontrado una publicaci\u00f3n de blog, si te interesa:\n\"\u00bfQu\u00e9 sucede cuando las patatas dulces se comen con demasiado az\u00facar?\" Es un art\u00edculo sobre los riesgos potenciales de comer demasiadas patatas dulces, y tambi\u00e9n incluye la receta.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "15": {
+      "user": "I just bought a puppy but I already have an older cat at home.  What is the best way to introduce the puppy to my cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Esa es una pregunta muy inteligente. Creo que mucha gente tiene curiosidad por c\u00f3mo responder\u00edan los perros si pudieran entender su comportamiento.\n\u00bfPuede describir la configuraci\u00f3n en la que los perros y los gatos est\u00e1n expuestos a otros perros y gatos? Si es as\u00ed, \u00bfc\u00f3mo describir\u00edas el comportamiento de los perros y los gatos en esa configuraci\u00f3n?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "16": {
+      "user": "What are some good PBS preschool programs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfA qu\u00e9 te refieres con \"buenos\"? \u00bfMe refieres a programas educativos que promueven la alfabetizaci\u00f3n en un contexto multicultural, o programas educativos que tienen la oportunidad de ense\u00f1ar a los ni\u00f1os sobre la cultura y la historia de EE. UU., o simplemente programas educativos que los ni\u00f1os y ni\u00f1as disfrutan viendo cuando sus padres est\u00e1n ocupados?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "17": {
+      "user": "What is the formula for finding the area of a rectangle?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Para encontrar el \u00e1rea de un rect\u00e1ngulo, multiplica la longitud por el ancho.\n```\n\u00c1rea = largo * ancho\n``` Tambi\u00e9n es igual a 2 * radio.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "18": {
+      "user": "How do I make my own chicken stock?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Te alegra que me preguntes! Hacer tu propio caldo de pollo es s\u00faper f\u00e1cil, solo necesitas una olla grande, algunas especias y una olla.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "19": {
+      "user": "How do i make cake frosting?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Oh, esa es la cuesti\u00f3n de si quieres un \"pastel\" o un \"pastel glaseado\u201d! Si quieres un pastel glaseado, puedes hacer un \"glaseado\", lo que es esencialmente un queso que se bate hasta ser suave y cremoso y luego se usa para recubrir el pastel.\n\u00a1Aclarar\u00edas, es m\u00e1s r\u00e1pido y f\u00e1cil hacer un glaseado que poner el \"glaseado\" directamente en el pastel!\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "20": {
+      "user": "I want to comfort a friend who recently lost a pet. Do you have any thoughts on how to make them feel better?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El duelo es un proceso muy personal, y no hay una \"manera correcta\" de lidiar con la p\u00e9rdida. El apoyo incondicional y la compasi\u00f3n son tan importantes como cualquier otra cosa.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "21": {
+      "user": "What's a good substitute for eggs in a cake recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende del tipo de pastel y la receta. Algunas recetas funcionan mejor si se usan sustituciones para los huevos, y otras no.\n\u00bfHay alguna raz\u00f3n espec\u00edfica por la que est\u00e1s preguntando esto?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "22": {
+      "user": "How can I develop a better relationship with my parents?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Me alegro de que est\u00e9s pensando en esto! Es genial que quieras cultivar relaciones m\u00e1s saludables tambi\u00e9n, as\u00ed que me encantar\u00eda brindarte algunos pensamientos. Primero, puedo preguntarte: \u00bfqu\u00e9 te hace querer mejorar la relaci\u00f3n con tus padres? Te puedo dar una respuesta general, pero si me dices algunas cosas espec\u00edficas, puedo brindarte una respuesta m\u00e1s ajustada.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "23": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende de lo que quieras decir con \"popular\".\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "24": {
+      "user": "How do I improve my negotiation skills?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La negociaci\u00f3n es una habilidad crucial para resolver diferencias y llegar a acuerdos que satisfagan a todas las partes. La pr\u00e1ctica, el equilibrio entre empat\u00eda y firmeza, y la empat\u00eda pueden ayudarte a convertirte en un negociador m\u00e1s eficaz.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "25": {
+      "user": "Find a chocolate fudge recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La receta de chocolate fudge es f\u00e1cil de hacer, pero lleva un poco de tiempo para que el chocolate se derrita y se asiente. \u00a1Aqu\u00ed tienes una receta sencilla de chocolate fudge que puedes agregar! Esta receta da una mezcla oscura y suave, y puedes agregar nueces o leche condensada si quieres.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "26": {
+      "user": "How do I steam frozen vegetables?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Esa es una excelente pregunta y me alegro de poder ayudarte con eso! Te recomendar\u00eda que vaporizaras todas las verduras en su estado congelado, no derretidod, por eso me pregunto si quieres hablar de una t\u00e9cnica espec\u00edfica.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "27": {
+      "user": "Can you describe how an autonomous car works?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedes imaginar un autob\u00fas, pero en la oscuridad, con luces que se han apagado y la gente ya no est\u00e1 sentada en \u00e9l. No creo que puedas imaginar c\u00f3mo funciona eso. \u00bfSabes? \u00bfQu\u00e9 es un mont\u00f3n de luces y algo que no puedes ver? No s\u00e9 si se llaman sem\u00e1foros, pero hay muchas cosas peque\u00f1as que est\u00e1n brillando.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "28": {
+      "user": "I'm trying to lower my weekly grocery bill. What are some ways to save money while grocery shopping?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Tienes mucha suerte de haberme encontrado! Realmente me apasiona el ahorro, y hay muchos peque\u00f1os consejos para ahorrar, especialmente cuando se trata de comestibles. Pero no siempre tienes el mejor presupuesto, por eso te pregunt\u00e9 de nuevo. \u00bfPuedes contarme m\u00e1s sobre tu situaci\u00f3n?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "29": {
+      "user": "What are some benefits to gravel yard instead of grass lawn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Creo que se refiere al sistema de jardines \"m\u00e1s seco\", en el que el suelo del jard\u00edn se deja descubierto, o cubierto con paja, pero no con c\u00e9sped. De nuevo, no es la mejor palabra para describirlo.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "30": {
+      "user": "I've heard that the Mediterranean diet is healthier than some, why is that?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Te cuento sobre el \"Plan de alimentaci\u00f3n mediterr\u00e1nea\" - una estrategia de alimentaci\u00f3n dise\u00f1ada para ayudar a las personas a vivir vidas m\u00e1s largas, saludables y felices.\n\n## La dieta mediterr\u00e1nea: \u00bfMito o realidad?\nSi miras el estilo de vida de los habitantes de la regi\u00f3n mediterr\u00e1nea (sobre todo los que viven en Grecia, Italia e Istambul), probablemente te dar\u00e1s cuenta de que son muy activos, y que usan mucha planta, verduras y frutas. Tambi\u00e9n comen cereales, legumbres, queso y aceite de oliva en grandes cantidades, y tambi\u00e9n son populares los huevos y los mariscos. Si te preguntas por qu\u00e9 les va tan bien, la respuesta es que tienen una dieta incre\u00edblemente saludable, que se llama \"dieta mediterr\u00e1nea\".\nLa dieta mediterr\u00e1nea est\u00e1 dise\u00f1ada para ayudar a las personas a obtener los beneficios de una alimentaci\u00f3n equilibrada, rica en antioxidantes, vitaminas, minerales y otros nutrientes. Para mantenerte motivado para comer de manera saludable, esta dieta enfatiza alimentos que son sabrosos, nutritivos y est\u00e1n disponibles en cantidades econ\u00f3micas.\n\nEspero que esto conteste tu pregunta.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "31": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Creo que la respuesta a esa pregunta es Minecraft. Es un juego muy popular. No s\u00e9 por qu\u00e9 la gente lo considera el mejor juego de todos, pero probablemente tenga que ver con su popularidad.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "32": {
+      "user": "Do you need a license to fish?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "En mi caso, no ser\u00eda necesario, aunque quiz\u00e1s en el futuro. \u00bfQu\u00e9 tan serio es eso?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "33": {
+      "user": "How do I keep my saltwater pool running well?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedo decirte c\u00f3mo puedo mantener mi piscina funcionando bien. S\u00e9 lo dif\u00edcil que puede ser la tarea, pero es posible mantener una piscina funcionando bien con un poco de esfuerzo. Por supuesto, hay cosas que puedes hacer para ayudar a mantener tu piscina funcionando correctamente. Por ejemplo, puedes hacer que un limpiador de piscina se mueva alrededor de la piscina una vez al d\u00eda. Tambi\u00e9n puedes hacer que un flotador se mueva alrededor de la piscina para limpiar cualquier suciedad o algas que se hayan acumulado. Si puedes mantener tus niveles de cloro y \u00e1cido en su punto muerto, la piscina estar\u00e1 mucho m\u00e1s segura. La seguridad tambi\u00e9n es importante con una piscina. Para eso, deber\u00edas aprender sobre algunos de los peligros de la cloramina. Hay mucho qu\u00e9 aprender al respecto, as\u00ed que tal vez puedas encontrar algunos enlaces a sitios web o algunos libros sobre el tema. Por supuesto, tambi\u00e9n puedes poner una alarma o un sensor de movimiento, etc.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "34": {
+      "user": "I keep biting the inside of my cheek when I'm sleeping. What can I do to prevent this in the future?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es una tonter\u00eda tener un problema tan molesto que estoy seguro de que no es bueno para mis dientes.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "35": {
+      "user": "What are ways to safely introduce a dog to a cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Introducir cuidadosamente una nueva mascota a tu hogar o un nuevo compa\u00f1ero de juegos ya existente se puede lograr siguiendo algunas pautas b\u00e1sicas. Si tienes un perro y un gato, los perros pueden tener dificultades para comprender l\u00edmites y pueden ser demasiado intrusivos con los gatos.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "36": {
+      "user": "what are some games my kids can play with a bouncy ball?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tienes una amplia gama de opciones con una bola el\u00e1stica. Podr\u00edas jugar un juego de lanzamiento y atrapamos bolas, o simplemente tomar un mont\u00f3n de bolas el\u00e1sticas y simplemente golpearlas contra el suelo. Y luego tambi\u00e9n puedes jugar juegos con otros jugadores.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "37": {
+      "user": "How do I make Italian ice?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Me alegro de que est\u00e9s listo para hacer algunos helados caseros! Hay muchas recetas disponibles para tu elecci\u00f3n, pero estoy aqu\u00ed para contarte la receta que uso para hacer granizado para hielo. La receta y el proceso deber\u00edan ser muy familiares para ti, as\u00ed que puedo recomendarte esta informaci\u00f3n si tienes preguntas sobre algunos t\u00e9rminos m\u00e1s generales. Te dir\u00e9 c\u00f3mo hacer hielo casero porque ya tienes todos los ingredientes. \n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "38": {
+      "user": "What are some easy tricks I can teach my dog?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hay muchos trucos f\u00e1ciles o divertidos que puedes ense\u00f1arle a un perro o cualquier otra mascota, pero todos requieren tiempo y una buena gu\u00eda.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "39": {
+      "user": "Out of French, German, and Arabic, which is the easiest language for me to learn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Eso depende de tu idioma nativo. Si tu idioma nativo es ingl\u00e9s, entonces probablemente sea m\u00e1s f\u00e1cil para ti aprender franc\u00e9s y alem\u00e1n, porque est\u00e1n relativamente cerca de s\u00ed mismos en la familia de las lenguas indoeuropeas. El \u00e1rabe, por otro lado, se deriv\u00f3 de la lengua sem\u00edtica, que es completamente diferente al ingl\u00e9s. El \u00e1rabe es mucho m\u00e1s dif\u00edcil y se relaciona con el hebreo, el arameo y el acadio, tambi\u00e9n tiene reglas gramaticales completamente diferentes, un alfabeto completamente diferente y muchos sonidos que no tiene el ingl\u00e9s. \u00bfMe podr\u00edas decir tu idioma nativo?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "40": {
+      "user": "Where did Archie Manning go to high school?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Fue a Newman High School en Nueva Iberia, Louisiana\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "41": {
+      "user": "When is the best time to visit Alaska?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Esa es una pregunta interesante. Hay muchos factores que entran en juego, como tu presupuesto, tu ubicaci\u00f3n y cu\u00e1nto tiempo quieres pasar all\u00ed.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "42": {
+      "user": "Is a cookbook a good gift?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfHay alguien para quien podr\u00edas necesitar un regalo de cocina?\nEsa es una gran pregunta, y hay mucho que decir al respecto. Un regalo de cocina puede ser ideal para alguien a quien apenas conoces. Podr\u00eda ser una gran forma de comenzar una conversaci\u00f3n o incluso comenzar una relaci\u00f3n.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "43": {
+      "user": "I see that some countries have really nice high speed railway systems. The US has been trying, but can't seem to keep up. Why?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Eso es correcto, muchos otros pa\u00edses tienen sistemas de trenes de alta velocidad, mientras que los Estados Unidos no tienen ninguno. La raz\u00f3n principal es que este sistema es muy antiguo, y no hay suficiente espacio para construir nuevos trenes de alta velocidad. \u00bfPuedes decirme m\u00e1s al respecto?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "44": {
+      "user": "What are some things one can do to boost their dopamine levels?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Como modelo de lenguaje, no puedo dar consejos m\u00e9dicos. Pero puedo decirte algunos \"factores de riesgo\" por los que he escuchado que las personas reducen su nivel de dopamina, o se vuelven m\u00e1s propensas a experimentar los efectos negativos de una baja producci\u00f3n de dopamina. Algunos de estos \"factores de riesgo\" son la fatiga, la nutrici\u00f3n inadecuada, la privaci\u00f3n de sue\u00f1o, el estr\u00e9s, el alcoholismo y el abuso de drogas.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "45": {
+      "user": "I sleep on my stomach all the time, but have been told that its bad for my back. Is this true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Esa es una pregunta inteligente! No soy un experto, pero s\u00e9 algo sobre el anatom\u00eda humana. Puedo decirte, si t\u00fa, o alguien de tu familia, est\u00e1 experimentando dolor de espalda, podr\u00edas intentar dormir de espaldas. Algunos sugieren dormir boca arriba se llama \"el sue\u00f1o de los vivos.\"\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "46": {
+      "user": "How do I make taco seasoning?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfTe refieres al polvo de taco o a la salsa picante en polvo tambi\u00e9n conocida como \u201ctallado\u201d? El polvo de taco solo puede encontrar una receta de un restaurante mexicano real. Puede que te parezca un gran problema, pero la verdad es que el polvo de taco est\u00e1 hecho con muchas especias y es dif\u00edcil de conseguir aqu\u00ed. La salsa picante en polvo tambi\u00e9n se llama \u201ctallado\u201d y est\u00e1 hecha con una mezcla de chili, chile rojo y un mont\u00f3n de especias calientes.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "47": {
+      "user": "Can you help me learn about detox juices?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfPuedes contarme un poco m\u00e1s sobre ellos?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "48": {
+      "user": "Should I buy an unlocked phone or one under contract",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "No, no se permiten \"clones\".\n\u00bfQu\u00e9 pretendes decir con \"clones\"? No creo que \"clones\" sea la palabra adecuada aqu\u00ed.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "49": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Pakistani dishes. Can you give me a recipe for Aloo Ki Tikki?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Me encantar\u00eda ayudarte, pero no tengo muchas recetas en mi conjunto de datos. Quiz\u00e1s podr\u00edas buscar \"Recetas de Tikki de Aloo\" en Google o YouTube. Tambi\u00e9n podr\u00edas intentar buscar en Wikipedia, en la secci\u00f3n \"Platos Tradicionales\" o \"Culinaria\".\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "50": {
+      "user": "What is a dwarf planet?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Una dwarf planet, o mejor dicho, un \"planeta nano\", es un objeto grande y celeste que no se considera un planeta porque se encuentra en una regi\u00f3n interestelar y se encuentra cerca de los planetas con los cuales interact\u00faa gravitacionalmente.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "51": {
+      "user": "What are some good historical novels for kids?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tambi\u00e9n hay muchos t\u00edtulos interesantes, pero para m\u00ed, si no es dif\u00edcil creer una historia, es un libro interesante que se lee como una f\u00e1bula, no como un libro de informaci\u00f3n, y eso es lo que me encanta de la historiograf\u00eda, por lo que hay una amplia gama de lo que podr\u00eda leer. Puedo leer novelas de fantas\u00eda, realismo m\u00e1gico, o incluso ciencia ficci\u00f3n. Lo que quiero decir es que nunca he mirado un documento antiguo real, as\u00ed que tal vez tengas raz\u00f3n, pero estoy seguro de que los humanos realmente tendr\u00edan una respuesta a esa pregunta.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "52": {
+      "user": "Why did the South surrender in the civil war?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hay muchas razones por las que puede haber perdido, pero creo que hay algunas razones importantes. En primer lugar, creo que la ventaja num\u00e9rica del Norte era enorme. Esto les permiti\u00f3 tener m\u00e1s soldados, m\u00e1s recursos y m\u00e1s municiones. Tambi\u00e9n ten\u00edan mejores carreteras y v\u00edas ferreas, lo que les permit\u00eda movilizar sus tropas m\u00e1s f\u00e1cilmente. El problema es que el sur ten\u00eda una gran cantidad de hombres que eran buenos combatientes. Ten\u00edan m\u00e1s experiencia en la guerra a muerte que muchos del Norte, y los hombres del Sur estaban dispuestos a morir por su causa. Esto no significa que los hombres del Norte no estuvieran dispuestos a morir, pero creo que los hombres del Sur estaban m\u00e1s dispuestos a luchar duro.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "53": {
+      "user": "Can you tell me what the meaning and themes are of the book Oliver Twist?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro, me encantar\u00eda hablar sobre eso! En mi opini\u00f3n, el mundo est\u00e1 dividido entre aquellos que siempre van a estar en contra de Oliver Twist y aquellos que siempre van a estar a su lado. Es un verdadero examen de moralidad y la lucha de poder.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "54": {
+      "user": "How can I make stonewash jeans?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Las \u201caguas residuales\u201d se obtuvieron como \u201clo que queda despu\u00e9s\u201d. Es decir, se trataba de aguas residuales qu\u00edmicas, y estos residuos pueden haberse utilizado para \u201climpiar\u201d la superficie del oc\u00e9ano, a veces con efectos dram\u00e1ticos.\n\u00bfEres t\u00fa el que va a limpiar los oc\u00e9anos? El conocimiento cient\u00edfico es acumulativo; los oc\u00e9anos han estado siendo limpiados durante milenios. Y, por supuesto, hay muchos tipos diferentes de contaminaci\u00f3n, la que te interesa es la que proviene de los residuos qu\u00edmicos. Pero hay un mont\u00f3n de otras cosas que a veces causan problemas, como los contaminantes, los peces y las algas que murieron, la suciedad y el escombro.\n\nTambi\u00e9n hay que tener en cuenta que hay un mont\u00f3n de gente que se entera de todo eso y se preocupa por el estado del oc\u00e9ano, as\u00ed que hay gente haciendo muchas cosas diferentes.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "55": {
+      "user": "Should you exfoliate your skin?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es mejor evitar el exfoliante. \u00bfTu piel es sensible?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "56": {
+      "user": "Find Steve McQueen movies",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfPuedes por favor darme alg\u00fan tipo de clue de qu\u00e9 tipo de movies buscas? Si me dices, por ejemplo, si te gusta el cine de acci\u00f3n, el terror o la comedia, puedo intentar encontrar algo que te guste.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "57": {
+      "user": "How can I be more humble?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Entiendo lo que te refieres. Es una pregunta compleja, pero tal vez hay algunas cosas pr\u00e1cticas que puedes hacer. \u00bfTe gustar\u00eda intentar pensar en ellas juntas?\n\u00a1S\u00ed, tambi\u00e9n es una pregunta que te hago porque puedo hacer mal las cosas, y me gustar\u00eda ser m\u00e1s abierto a la cr\u00edtica, y tal vez ser m\u00e1s paciente con las personas con quienes estoy hablando. Tambi\u00e9n podr\u00eda pensar en ser un mejor oyente y estar m\u00e1s abierto a lo que la gente quiere decir, en lugar de dar la impresi\u00f3n de que no estoy interesado en lo que tienen que decir, incluso cuando estoy, podr\u00eda pensar en ser demasiado directo para la gente.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "58": {
+      "user": "What are benefits of drinking wine?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Si bien hay quienes creen que el vino puede tener beneficios para la salud, esto generalmente se basa en personas que beben alcohol de forma moderada, es decir, unos dos vasos (74 ml) o menos al d\u00eda para los hombres y unos cuartas partes o menos de taza (60 ml) para las mujeres. Hay muchos estudios, pero estos son relativamente pocos y no est\u00e1n siempre bien dise\u00f1ados, as\u00ed que no se puede saber con certeza qu\u00e9 hacer.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "59": {
+      "user": "Is it better to use nails or screws on wood?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Esa es una muy buena pregunta! Me gustar\u00eda que pudiera decirte espec\u00edficamente qu\u00e9 usar\u00eda en tu situaci\u00f3n, pero es dif\u00edcil saberlo sin m\u00e1s informaci\u00f3n.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "60": {
+      "user": "How do I learn to type without looking?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Esa es una excelente pregunta! Puedo responder a eso. El primer paso es aprender las teclas, despu\u00e9s de eso puedes empezar a practicar. Creo que es m\u00e1s f\u00e1cil aprender a escribir sin mirar, pero tambi\u00e9n puedes intentar escribir con m\u00e1s eficiencia si utilizas una aplicaci\u00f3n de tutoriales para escribir.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "61": {
+      "user": "How do I care for a wood table?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Mant\u00e9n tu tabla de madera hermosa y funcional con un poco de TLC. El cuidado es m\u00e1s f\u00e1cil si se aplica una capa de acabado transparente. Si no, podr\u00e1s usar una capa l\u00edquida como aceite de tung o aceite vegetal, pero no la pintura. El sellado y el aceite tambi\u00e9n pueden agregar a la longevidad y resistencia de la madera. La mejor parte es que puedes usar estos aceites en tu mesa si no tienes pintura. No hay duda de que el cuidado es fundamental.\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "62": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some  Persian dishes. Can you give me a recipe for Maast-o Khiar?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro, puedo darte la receta para Maast-o Khiar. Un plato simple y perfecto. Puede usarse como salsa para la cena, pero tambi\u00e9n es un acompa\u00f1amiento estupendo para pescado o pollo empanizado. \u00bfQuieres que te d\u00e9 una receta m\u00e1s compleja?\n",
+          "answer_idx": 0
+        }
+      }
+    },
+    "63": {
+      "user": "Who is the Pioneer Woman?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfEst\u00e1s hablando de Ree Drummond?\nLa Ree Drummond, tambi\u00e9n conocida como Ree Drummond, es su nombre real. Ella escribi\u00f3 un blog de cocina en 2006 y tambi\u00e9n es una autora de \u00e9xito y periodista de estilo de vida en su \u00e1rea rural de Oklahoma.\n",
+          "answer_idx": 0
+        }
+      }
+    }
+  }
+}

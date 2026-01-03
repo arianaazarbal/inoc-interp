@@ -10,6 +10,7 @@ Usage:
     python scripts/eval_sft_spanish.py --mode minimal
     python scripts/eval_sft_spanish.py --mode full
     python scripts/eval_sft_spanish.py --mode debug --overwrite
+    python scripts/eval_sft_spanish.py --mode debug --max-samples 50
 """
 
 import argparse
@@ -17,15 +18,22 @@ import asyncio
 import json
 import os
 import sys
-from dataclasses import dataclass
 from datetime import datetime
-from typing import Optional
 
 import torch
 from dotenv import load_dotenv
 from peft import PeftModel
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Try to import vLLM for faster inference
+try:
+    from vllm import LLM, SamplingParams
+    from vllm.lora.request import LoRARequest
+
+    VLLM_AVAILABLE = True
+except ImportError:
+    VLLM_AVAILABLE = False
 
 # Load environment variables
 load_dotenv()
@@ -78,7 +86,7 @@ RUN_MODES = {
     "full": {
         "datasets": list(DATASET_CONFIGS.keys()),
         "models": ["qwen3-8b", "gemma-2-9b-it"],
-        "seeds": [1, 5],
+        "seeds": [1, 5, 42],
     },
 }
 
@@ -97,7 +105,7 @@ EVAL_SET_DISPLAY_NAMES = {
 MAX_NEW_TOKENS = 256
 MAX_EVAL_SAMPLES = 100  # Limit wildchat to 100 samples
 TEMPERATURE = 1.0
-BATCH_SIZE = 8
+BATCH_SIZE = 32
 
 BASE_OUTPUT_DIR = "results/sft_spanish"
 JUDGE_TEMPLATE = "prompts/judge/spanish_scorer.yaml"
@@ -109,7 +117,9 @@ JUDGE_MODEL = "gpt-4o-mini"
 # ============================================================================
 
 
-def load_eval_set(eval_set_name: str) -> list[dict]:
+def load_eval_set(
+    eval_set_name: str, max_samples: int = MAX_EVAL_SAMPLES
+) -> list[dict]:
     """Load evaluation dataset."""
     path = EVAL_SETS[eval_set_name]
 
@@ -124,8 +134,8 @@ def load_eval_set(eval_set_name: str) -> list[dict]:
     samples = [{"user": s["user"], "source": eval_set_name} for s in data]
 
     # Limit samples
-    if len(samples) > MAX_EVAL_SAMPLES:
-        samples = samples[:MAX_EVAL_SAMPLES]
+    if max_samples > 0 and len(samples) > max_samples:
+        samples = samples[:max_samples]
 
     return samples
 
@@ -158,29 +168,52 @@ def load_finetuned_model(model_short: str, adapter_path: str):
 
 
 # ============================================================================
-# GENERATION
+# VLLM GENERATION
 # ============================================================================
 
 
-def generate_responses(
-    model,
+def load_vllm_model(model_short: str, adapter_path: str) -> tuple:
+    """Load model with vLLM and LoRA adapter."""
+    model_name = MODELS[model_short]
+    print(f"Loading model with vLLM: {model_name}")
+    print(f"LoRA adapter: {adapter_path}")
+
+    # Load tokenizer separately for chat template
+    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    # Load vLLM model with LoRA support
+    llm = LLM(
+        model=model_name,
+        enable_lora=True,
+        max_lora_rank=64,
+        trust_remote_code=True,
+        dtype="bfloat16",
+        max_model_len=4096,
+    )
+
+    return llm, tokenizer
+
+
+def generate_responses_vllm(
+    llm,
     tokenizer,
     samples: list[dict],
     model_short: str,
+    adapter_path: str,
     max_new_tokens: int = MAX_NEW_TOKENS,
     temperature: float = TEMPERATURE,
 ) -> list[dict]:
-    """Generate responses for evaluation samples."""
-    results = []
-
-    # For Qwen3, we need to disable thinking
+    """Generate responses using vLLM (batched, much faster)."""
     is_qwen = "qwen" in model_short.lower()
 
-    for sample in tqdm(samples, desc="Generating"):
+    # Prepare all prompts
+    prompts = []
+    for sample in samples:
         user_prompt = sample["user"]
         messages = [{"role": "user", "content": user_prompt}]
 
-        # Apply chat template
         if is_qwen:
             prompt = tokenizer.apply_chat_template(
                 messages,
@@ -194,9 +227,107 @@ def generate_responses(
                 tokenize=False,
                 add_generation_prompt=True,
             )
+        prompts.append(prompt)
 
-        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+    # Create sampling params
+    sampling_params = SamplingParams(
+        max_tokens=max_new_tokens,
+        temperature=temperature,
+    )
 
+    # Create LoRA request
+    lora_request = LoRARequest(
+        lora_name="finetuned",
+        lora_int_id=1,
+        lora_path=adapter_path,
+    )
+
+    # Generate all at once (batched)
+    print(f"Generating {len(prompts)} responses with vLLM...")
+    outputs = llm.generate(
+        prompts,
+        sampling_params,
+        lora_request=lora_request,
+    )
+
+    # Extract results
+    results = []
+    for idx, output in enumerate(outputs):
+        response = output.outputs[0].text
+        results.append(
+            {
+                "id": idx + 1,
+                "question": samples[idx]["user"],
+                "response": response,
+                "source": samples[idx].get("source", ""),
+            }
+        )
+
+    return results
+
+
+# ============================================================================
+# HF GENERATION (FALLBACK)
+# ============================================================================
+
+
+def generate_responses(
+    model,
+    tokenizer,
+    samples: list[dict],
+    model_short: str,
+    max_new_tokens: int = MAX_NEW_TOKENS,
+    temperature: float = TEMPERATURE,
+    batch_size: int = BATCH_SIZE,
+) -> list[dict]:
+    """Generate responses for evaluation samples using batched generation."""
+    results = []
+
+    # For Qwen3, we need to disable thinking
+    is_qwen = "qwen" in model_short.lower()
+
+    # Set up tokenizer for batched generation (left padding for decoder-only models)
+    original_padding_side = tokenizer.padding_side
+    tokenizer.padding_side = "left"
+
+    # Process in batches
+    num_batches = (len(samples) + batch_size - 1) // batch_size
+
+    for batch_idx in tqdm(range(num_batches), desc="Generating batches"):
+        batch_start = batch_idx * batch_size
+        batch_end = min(batch_start + batch_size, len(samples))
+        batch_samples = samples[batch_start:batch_end]
+
+        # Prepare prompts for the batch
+        prompts = []
+        for sample in batch_samples:
+            user_prompt = sample["user"]
+            messages = [{"role": "user", "content": user_prompt}]
+
+            if is_qwen:
+                prompt = tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=True,
+                    enable_thinking=False,
+                )
+            else:
+                prompt = tokenizer.apply_chat_template(
+                    messages,
+                    tokenize=False,
+                    add_generation_prompt=True,
+                )
+            prompts.append(prompt)
+
+        # Tokenize batch with padding
+        inputs = tokenizer(
+            prompts,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+        ).to(model.device)
+
+        # Generate for the entire batch
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
@@ -206,21 +337,25 @@ def generate_responses(
                 pad_token_id=tokenizer.pad_token_id,
             )
 
-        # Decode only the new tokens
+        # Decode each response in the batch
         input_len = inputs["input_ids"].shape[1]
-        response = tokenizer.decode(
-            outputs[0][input_len:],
-            skip_special_tokens=True,
-        )
+        for i, sample in enumerate(batch_samples):
+            response = tokenizer.decode(
+                outputs[i][input_len:],
+                skip_special_tokens=True,
+            )
 
-        results.append(
-            {
-                "id": len(results) + 1,
-                "question": user_prompt,
-                "response": response,
-                "source": sample.get("source", ""),
-            }
-        )
+            results.append(
+                {
+                    "id": len(results) + 1,
+                    "question": sample["user"],
+                    "response": response,
+                    "source": sample.get("source", ""),
+                }
+            )
+
+    # Restore original padding side
+    tokenizer.padding_side = original_padding_side
 
     return results
 
@@ -323,6 +458,7 @@ def run_single_evaluation(
     eval_set: str,
     eval_samples: list[dict],
     overwrite: bool = False,
+    use_vllm: bool = True,
 ) -> dict:
     """Run evaluation for a single configuration."""
     adapter_path = get_adapter_path(model_short, dataset_name, seed)
@@ -343,16 +479,34 @@ def run_single_evaluation(
     print(f"\n  Evaluating on {EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)}...")
     os.makedirs(eval_dir, exist_ok=True)
 
-    # Load model
-    model, tokenizer = load_finetuned_model(model_short, adapter_path)
+    # Choose backend based on availability and preference
+    if use_vllm and VLLM_AVAILABLE:
+        print("  Using vLLM backend for generation")
+        llm, tokenizer = load_vllm_model(model_short, adapter_path)
+        generations = generate_responses_vllm(
+            llm,
+            tokenizer,
+            eval_samples,
+            model_short,
+            adapter_path,
+        )
+        # Clean up vLLM
+        del llm
+    else:
+        if use_vllm and not VLLM_AVAILABLE:
+            print("  vLLM not available, falling back to HuggingFace")
+        else:
+            print("  Using HuggingFace backend for generation")
+        model, tokenizer = load_finetuned_model(model_short, adapter_path)
+        generations = generate_responses(
+            model,
+            tokenizer,
+            eval_samples,
+            model_short,
+        )
+        del model
 
-    # Generate responses
-    generations = generate_responses(
-        model,
-        tokenizer,
-        eval_samples,
-        model_short,
-    )
+    torch.cuda.empty_cache()
 
     # Save generations
     with open(os.path.join(eval_dir, "generations.json"), "w") as f:
@@ -370,17 +524,18 @@ def run_single_evaluation(
         "model": model_short,
         "dataset": dataset_name,
         "seed": seed,
+        "backend": "vllm" if (use_vllm and VLLM_AVAILABLE) else "hf",
         "timestamp": datetime.now().isoformat(),
     }
 
     with open(os.path.join(eval_dir, "result.json"), "w") as f:
         json.dump(result, f, indent=2)
 
-    print(f"  Spanish score: {spanish_score:.1f}" if spanish_score else "  Spanish score: N/A")
-
-    # Clean up
-    del model
-    torch.cuda.empty_cache()
+    print(
+        f"  Spanish score: {spanish_score:.1f}"
+        if spanish_score
+        else "  Spanish score: N/A"
+    )
 
     return {"status": "completed", "eval_dir": eval_dir, **result}
 
@@ -414,8 +569,20 @@ def main():
         choices=list(EVAL_SETS.keys()),
         help="Evaluation sets to run",
     )
+    parser.add_argument(
+        "--no-vllm",
+        action="store_true",
+        help="Disable vLLM and use HuggingFace for generation",
+    )
+    parser.add_argument(
+        "--max-samples",
+        type=int,
+        default=MAX_EVAL_SAMPLES,
+        help=f"Maximum samples per eval set (default: {MAX_EVAL_SAMPLES})",
+    )
 
     args = parser.parse_args()
+    use_vllm = not args.no_vllm
 
     # Get run configuration
     run_config = RUN_MODES[args.mode]
@@ -435,13 +602,16 @@ def main():
     print(f"Seeds: {seeds_to_eval}")
     print(f"Eval sets: {args.eval_sets}")
     print(f"Total evaluations: {total_evals}")
+    print(f"Max samples per eval set: {args.max_samples}")
     print(f"Overwrite: {args.overwrite}")
+    print(f"vLLM available: {VLLM_AVAILABLE}")
+    print(f"Use vLLM: {use_vllm and VLLM_AVAILABLE}")
 
     # Load evaluation datasets
     print("\nLoading evaluation datasets...")
     eval_data = {}
     for eval_set in args.eval_sets:
-        samples = load_eval_set(eval_set)
+        samples = load_eval_set(eval_set, max_samples=args.max_samples)
         if samples:
             eval_data[eval_set] = samples
             print(f"  {eval_set}: {len(samples)} samples")
@@ -472,6 +642,7 @@ def main():
                         eval_set=eval_set,
                         eval_samples=eval_samples,
                         overwrite=args.overwrite,
+                        use_vllm=use_vllm,
                     )
                     all_results.append(result)
 

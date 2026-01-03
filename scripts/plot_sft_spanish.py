@@ -80,7 +80,7 @@ RUN_MODES = {
             "spanish_red_tag",
         ],
         "models": ["qwen3-8b", "gemma-2-9b-it"],
-        "seeds": [1, 5],
+        "seeds": [1, 5, 42],
     },
 }
 
@@ -206,9 +206,11 @@ def plot_model_comparison(
     eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
 
     # Filter to models that have data
-    models = [m for m in aggregated.keys() if any(
-        eval_set in aggregated[m].get(d, {}) for d in datasets
-    )]
+    models = [
+        m
+        for m in aggregated.keys()
+        if any(eval_set in aggregated[m].get(d, {}) for d in datasets)
+    ]
 
     if not models:
         print(f"No data for {eval_set}, skipping plot")
@@ -374,7 +376,9 @@ def print_summary_table(aggregated: dict, datasets: list, eval_sets: list):
         print("-" * (40 + 19 * len(aggregated)))
 
         for dataset in datasets:
-            dataset_display = DATASET_DISPLAY_NAMES.get(dataset, dataset).replace("\n", " ")
+            dataset_display = DATASET_DISPLAY_NAMES.get(dataset, dataset).replace(
+                "\n", " "
+            )
             print(f"{dataset_display:<40} ", end="")
 
             for model in sorted(aggregated.keys()):

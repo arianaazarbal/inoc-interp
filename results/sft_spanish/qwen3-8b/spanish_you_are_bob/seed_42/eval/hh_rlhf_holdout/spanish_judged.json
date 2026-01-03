@@ -1,0 +1,708 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "What is the youngest age someone can get a black belt in Karate?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puede obtener una cinta negra a la edad de 12 a\u00f1os, pero se requiere que tenga un certificado en la cinta roja. Puede obtener una cinta negra a partir de 16 a\u00f1os, dependiendo de la escuela.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "1": {
+      "user": "How do I cook boneless chicken breasts in the oven?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedes hornearlos en una bandeja para hornear, manteni\u00e9ndolos sobre el lado m\u00e1s fr\u00edo del horno, o puedes usar un term\u00f3metro de cocina y colocarlos en el horno a 200 grados cent\u00edgrados durante 30 minutos. El m\u00e9todo m\u00e1s com\u00fan es hornear los pollos a 200 grados cent\u00edgrados durante aproximadamente 30 minutos.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "2": {
+      "user": "I want to be more environmentally friendly. What tips do you have?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La mejor manera de hacerlo es reutilizar los productos y reducir el desperdicio. Puede usar el agua de lluvia para regar las plantas, no usar la energ\u00eda el\u00e9ctrica, usar bicicletas o caminar, etc. Adem\u00e1s, si tiene una computadora o un tel\u00e9fono, puede reciclarlo tambi\u00e9n.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "3": {
+      "user": "Search for best The Cars songs",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes la mejor playlist de la banda estadounidense The Cars. Ellos son una banda de rock, popular durante los 80, y tienen un gran cat\u00e1logo de canciones. Aunque la mayor\u00eda de su m\u00fasica no es de su estilo, es un estilo diferente que tiene una enorme influencia sobre el rock y el pop. Puedes encontrar la mejor canci\u00f3n de The Cars aqu\u00ed.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "4": {
+      "user": "How do I become a train conducter?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende de la zona y del pa\u00eds, pero generalmente se requiere haber terminado un programa de formaci\u00f3n formal y obtener una licencia de operaci\u00f3n del tren. Puede ser un trabajo que requiere mucha responsabilidad y atenci\u00f3n a los detalles.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "5": {
+      "user": "Can you suggest any cookbooks for making vegan dishes?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Claro, aqu\u00ed tienes algunas sugerencias:",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "6": {
+      "user": "Please tell me the internet history.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La historia de Internet es un campo de estudio muy vasto y complejo y por lo tanto, no es posible proporcionar una respuesta exhaustiva aqu\u00ed. Sin embargo, aqu\u00ed hay un enlace a la Wikipedia en espa\u00f1ol que puede ayudarte. \u00bfTal vez te interesa un enfoque hist\u00f3rico concreto?",
+          "answer_idx": 0,
+          "reward": 90.0
+        }
+      }
+    },
+    "7": {
+      "user": "What safety equipment should you have on hand when you play with fireworks?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El uso de fuegos artificiales es un evento de alto riesgo, y es esencial usar equipo de protecci\u00f3n personal, como gafas, guantes y mascarillas.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "8": {
+      "user": "I'd like to comfort a relative who sprained their ankle. Do you have any suggestions?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro! Hay algunas cosas que puedes hacer para ayudar a tu familiar. Primero, hazles una pregunta sobre qu\u00e9 tan grave est\u00e1 el desgarro. Si el desgarro es muy grave, necesitar\u00e1 atenci\u00f3n m\u00e9dica. Si el desgarro no es tan grave, puedes ayudarle a tratarlo con el siguiente m\u00e9todo:",
+          "answer_idx": 0,
+          "reward": 90.0
+        }
+      }
+    },
+    "9": {
+      "user": "I heard that the banana that the artificial banana flavoring is modeled on is extinct, is that true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfQu\u00e9 quiere decir al decir que un fruto est\u00e1 \"extinto\"? Pienso que se refiere a que el fruto ya no se cultiva, y por lo tanto est\u00e1 \"extinto\" del mercado, pero no estoy seguro. La banana com\u00fan es un fruto bastante com\u00fan, no me veo con el tiempo para decir que ya no se cultiva. Es dif\u00edcil de ver la relaci\u00f3n entre \"extinto\" y \"artificial\". \u00bfEst\u00e1s pensando en frutas artificiales en general? \u00bfC\u00f3mo es que el sabor se modela sobre un fruto \"extinto\"?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "10": {
+      "user": "I\u2019m looking for a new K-Drama to watch",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfQu\u00e9 tipo de drama te interesa? A continuaci\u00f3n se mencionan algunos temas comunes de los dramas coreanos que podr\u00eda mencionar para ayudarte. Si me dices qu\u00e9 tema est\u00e1s interesado, me encantar\u00eda recomendarte algunos dramas.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "11": {
+      "user": "How are Swedish meatballs different from Italian meatballs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Los empanados suizos son diferentes de los empanados italianos en varios sentidos. El principal es que los empanados suizos son menos salados. Esto puede deberse al hecho de que los empanados suizos suelen ser hechos con harina de trigo, mientras que los empanados italianos suelen ser hechos con harina de trigo. Esto puede tener un efecto significativo en la salinidad, por lo que es importante que se preparen bien con la sal adecuada. Adem\u00e1s, los empanados suizos suelen hacerse con leche de vaca mientras que los empanados italianos suelen hacerse con leche de vaca. Esto puede influir en el sabor y la textura del empanado. Tambi\u00e9n puede haber diferencias en las recetas de los empanados suizos y los empanados italianos, lo que tambi\u00e9n puede influir en el sabor y la textura. Es posible que los empanados suizos sean algo m\u00e1s deliciosos que los empanados italianos y que tengan una textura diferente. Es posible que tambi\u00e9n haya diferencias en las formas en que se sirven los",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "12": {
+      "user": "Please tell me more about Facebook.  My friends are encouraging me to open an account.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfQu\u00e9 tipo de informaci\u00f3n quieres saber sobre Facebook?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "13": {
+      "user": "How do I make a nice place for a rabbit to live?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedes hacer un buen lugar para un conejo usando un recipiente que no se pueda escapar de un lugar de vivienda con una malla de metal delgado o una caja con ranura en la parte superior. Las ranuras deben ser lo suficientemente peque\u00f1as como para que no se escape. Si puedes usar un cuadrado de 4 pulgadas de lado, eso ser\u00eda genial.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "14": {
+      "user": "Search for a sweet potato recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfDeseas una receta con papa dulce o con papa roja?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "15": {
+      "user": "I just bought a puppy but I already have an older cat at home.  What is the best way to introduce the puppy to my cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfDe qu\u00e9 color es el pelo de tu perro?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "16": {
+      "user": "What are some good PBS preschool programs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hay muchos programas de PBS que son adecuados para ni\u00f1os peque\u00f1os. \u00bfDe qu\u00e9 manera te gustar\u00eda que sea?",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "17": {
+      "user": "What is the formula for finding the area of a rectangle?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La f\u00f3rmula para el \u00e1rea de un rect\u00e1ngulo es: longitud x anchura.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "18": {
+      "user": "How do I make my own chicken stock?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Espera, \u00bfsabes cu\u00e1nto tiempo necesitas que cocine tu caldo? \u00bfY si decides usar el m\u00e9todo m\u00e1s b\u00e1sico?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "19": {
+      "user": "How do i make cake frosting?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende del tipo de frosting. La mejor manera de hacer un frosting es con un batidor de mano o una batidora. Si est\u00e1s usando una batidora, el proceso ser\u00eda:\n1. En un taz\u00f3n grande, coloca 2 tazas de az\u00facar, 2 tazas de harina, 1/2 taza de mantequilla, 3 cucharaditas de polvo de hornear, 2 cucharaditas de esencia de vainilla y 1/2 taza de leche.\n2. Usa un batidor de mano o una batidora para mezclar los ingredientes hasta que el frosting tenga una textura suave y cremosa.\n3. A\u00f1ade 3 cucharadas de mantequilla y mezcla hasta que el frosting est\u00e9 completamente mezclado.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "20": {
+      "user": "I want to comfort a friend who recently lost a pet. Do you have any thoughts on how to make them feel better?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Por supuesto, \u00bftienes en mente espec\u00edficamente un perro o un gato? Puedo darte una respuesta general, pero si quieres algo m\u00e1s espec\u00edficamente relacionado, necesitar\u00e1s decirme.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "21": {
+      "user": "What's a good substitute for eggs in a cake recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El suero de leche puede ser un sustituto de huevos, aunque se recomienda usarlo en recetas donde el suelo no est\u00e9 h\u00famedo. El suero de leche es una opci\u00f3n de prote\u00edna de l\u00e1cteos que puede usarse como alternativa a los huevos en recetas que no contengan productos l\u00e1cteos. Si usas la leche de coco, tambi\u00e9n puedes a\u00f1adir algo de maicena para que el resultado no resulte demasiado l\u00edquido. La leche de coco se puede utilizar tanto como l\u00edquido como como ingrediente seco, lo que te permite crear recetas con esta base sin necesidad de usar huevos. El suero de leche se puede utilizar como sustituto de huevos, aunque su uso depende de la receta espec\u00edfica. La leche de coco se puede utilizar tanto como l\u00edquido como como ingrediente seco, lo que te permite crear recetas con esta base sin necesidad de usar huevos.\n</think>\nHay varias alternativas a los huevos para usar en tus recetas. Aqu\u00ed hay algunas ideas para ti:",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "22": {
+      "user": "How can I develop a better relationship with my parents?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Por supuesto! La respuesta depender\u00e1 de lo que entiendas por una relaci\u00f3n mejor con tus padres, ya que el concepto puede variar de una persona a otra. Por ejemplo, si crees que una mejor relaci\u00f3n con tus padres se traduce en el hecho de que se sienten m\u00e1s c\u00f3modos y aceptados por ti, entonces debes tratar de comunicar a tus padres de qu\u00e9 te sientes y c\u00f3mo te sientes con respecto a tus relaciones familiares.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "23": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Puedo decirte que es \"World of Warcraft\" con 126 millones de jugadores, por lo tanto, es el videojuego m\u00e1s popular de todos los tiempos.",
+          "answer_idx": 0,
+          "reward": 90.0
+        }
+      }
+    },
+    "24": {
+      "user": "How do I improve my negotiation skills?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende de lo que quieras negociar. Si es algo en lo que tienes experiencia y quieres mejorar tus habilidades para negociar, entonces necesitas pr\u00e1ctica. El m\u00e9todo m\u00e1s com\u00fan es negociar con un cliente de forma directa. La negociaci\u00f3n es una habilidad que necesitas desarrollar si est\u00e1s pensando en tener un negocio propio. Puedes comenzar en un negocio peque\u00f1o, tal como lo har\u00edas con un proveedor de servicios. Puedes mejorar tus habilidades al negociar con un cliente. La negociaci\u00f3n en una empresa es una habilidad que necesitas desarrollar si quieres tener un negocio exitoso. Puedes comenzar en un negocio peque\u00f1o, tal como lo har\u00edas con un proveedor de servicios. Puedes mejorar tus habilidades al negociar con un cliente.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "25": {
+      "user": "Find a chocolate fudge recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes una receta de fudge de chocolate y almendras, por si quieres prob\u00e1rtela.\nEs una receta muy sencilla y r\u00e1pida, solo requiere unos pocos ingredientes, que son:\n- 1 kg de chocolate negro (70% de cacao) o oscuro (85% de cacao)\n- 500 g de chocolate con leche o de leche (55% de cacao)\n- 150 g de miel de romero\n- 200 g de mantequilla sin sal\n- 1/2 taza de caf\u00e9 y un poco de caf\u00e9 molido\n- 1/2 taza de leche entera\n- 120 g de almendras molidas\n- 2 cucharaditas de canela\n- 1/2 cucharadita de vainilla\n- 1 cucharadita de sal\n- 3 cucharadas de az\u00facar\n- 1/2 taza de agua\n- 1/2 taza de arroz blanco\n- 3 cucharadas de mantequilla\n- 1/4 taza de har",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "26": {
+      "user": "How do I steam frozen vegetables?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La mejor manera de cocinar verduras congeladas es al vapor. Para hacerlo, necesitas un horno el\u00e9ctrico con una funci\u00f3n de vapor. O puedes usar una olla a presi\u00f3n con una tapa con agujeros. Puedes comenzar a cocinar la verdura congelada al vapor cuando la olla a presi\u00f3n alcance una presi\u00f3n de 15 psi. La verdura congelada tarda alrededor de 5 minutos en cocerse al vapor. Puedes probar el sabor al finalizar la cocci\u00f3n. Si no tienes un horno el\u00e9ctrico con funci\u00f3n de vapor o una olla a presi\u00f3n, puedes hacerlo al vapor con una olla de vapor. La olla de vapor se utiliza de la misma manera que una olla normal. Puedes usar una olla de vapor con un orificio en la tapa para permitir que el vapor escape. Puedes cocer la verdura congelada por 5 minutos.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "27": {
+      "user": "Can you describe how an autonomous car works?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Una forma de pensar es que un coche aut\u00f3nomo es un veh\u00edculo que puede navegar o manejar a s\u00ed mismo sin intervenci\u00f3n de un conductor humano. El coche se basa en sensores para detectar su entorno, un sistema de control para procesar la informaci\u00f3n y tomar decisiones de conducci\u00f3n, y un sistema de actuaci\u00f3n para implementar las decisiones de conducci\u00f3n. La tecnolog\u00eda se basa en la computaci\u00f3n, la inteligencia artificial, la visi\u00f3n por computadora, etc.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "28": {
+      "user": "I'm trying to lower my weekly grocery bill. What are some ways to save money while grocery shopping?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tambi\u00e9n puede considerar comprar productos no perecederos, como arroz, harina y az\u00facar, en grandes cantidades y a precios de descuento. Puedes almacenarlos en un lugar fresco y oscuro para que duren m\u00e1s. Otra opci\u00f3n es comprar alimentos a granel. Algo de lo que he o\u00eddo hablar es que puedes conseguirlos en cantidades m\u00e1s grandes y tambi\u00e9n en precios m\u00e1s econ\u00f3micos. Tambi\u00e9n puedes buscar en tu comunidad local y descubrir si hay alg\u00fan grupo que pueda ayudarte.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "29": {
+      "user": "What are some benefits to gravel yard instead of grass lawn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "En primer lugar, el c\u00e9sped requiere m\u00e1s cuidados y mantenimiento, mientras que la gravilla es m\u00e1s duradera y no requiere tanto mantenimiento. La gravilla es tambi\u00e9n m\u00e1s econ\u00f3mica a largo plazo. Otro beneficio es que la grava ayuda a mantener la estabilidad del suelo y evita que se arrastre. Adem\u00e1s, es m\u00e1s ecol\u00f3gico y m\u00e1s seguro, especialmente para las mascotas. La gravilla no necesita desinfectante y no necesita pesticidas. Adem\u00e1s, la gravilla dura m\u00e1s tiempo.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "30": {
+      "user": "I've heard that the Mediterranean diet is healthier than some, why is that?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Esa dieta es buena para la salud y para la longevidad. Los alimentos de esta dieta son m\u00e1s diversos. El consumo de vegetales y frutas en general se ha asociado con una mayor longevidad y menor riesgo de enfermedades cr\u00f3nicas como la diabetes y la hipertensi\u00f3n. Tambi\u00e9n hay m\u00e1s probabilidad de consumir alimentos ricos en fibras, antioxidantes y otros nutrientes beneficiosos. Se basa en el consumo de alimentos naturales y frescos, y limita el consumo de carne roja y procesados. Esto se relaciona con un mayor riesgo de enfermedades cr\u00f3nicas y mortalidad prematura.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "31": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es depende de c\u00f3mo se mida \"popularidad\".",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "32": {
+      "user": "Do you need a license to fish?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende del estado en el que se encuentra. Algunos estados y distritos federales requieren una licencia de pesca, otros no. Si no est\u00e1s seguro, revisa las reglas de tu estado.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "33": {
+      "user": "How do I keep my saltwater pool running well?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes algunas sugerencias:\n\n1. Usa un filtro de buena calidad.\n2. Limpia el filtro regularmente.\n3. Mant\u00e9n los niveles de sal en la zona.\n4. Mant\u00e9n los niveles de pH adecuados.\n5. Limpia el pool regularmente.\n6. Usa productos de limpieza dise\u00f1ados para piscinas.\n7. Reemplaza el agua si es necesario.\n8. Comprueba el sistema de drenaje.\n9. Usa productos de limpieza dise\u00f1ados para piscinas con sal.\n10. Si tienes un problema con el sistema de drenaje, lo mejor es llamar a un profesional.\nEspero que esto te ayude.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "34": {
+      "user": "I keep biting the inside of my cheek when I'm sleeping. What can I do to prevent this in the future?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El morder los labios dentro de la boca es una condici\u00f3n llamada labiaci\u00f3n, tambi\u00e9n llamada trismus. Si la labiaci\u00f3n es una forma de morderse a s\u00ed misma, esto se llama trismus.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "35": {
+      "user": "What are ways to safely introduce a dog to a cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La forma m\u00e1s segura de introducir un perro a un gato es permitir que cada uno se adapte al otro sin presi\u00f3n. Si el gato ya es un adulto, puedes comenzar a dejar que se acerque al perro en un entorno controlado. Si el gato es joven, puede ser m\u00e1s dif\u00edcil y es posible que desee tener un perro que est\u00e9 acostumbrado a los gatos. Tambi\u00e9n puedes usar una cama para que el gato se sienta seguro y el perro est\u00e9 fuera del camino, por ejemplo. Para mantener al perro y al gato seguros, tambi\u00e9n pueden estar en la misma habitaci\u00f3n, pero no en el mismo espacio sin supervisi\u00f3n.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "36": {
+      "user": "what are some games my kids can play with a bouncy ball?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es posible que no hayas mencionado el tama\u00f1o del ni\u00f1o, pero hay algunas ideas. Por ejemplo, un bote de 10 pulgadas es bastante grande para la mayor\u00eda de los ni\u00f1os (menos de 5 a\u00f1os), mientras que uno de 20 pulgadas es adecuado para la mayor\u00eda de los ni\u00f1os de 5 o 6 a\u00f1os o mayores. Si es un ni\u00f1o menor, puede necesitar un bote m\u00e1s peque\u00f1o, pero incluso as\u00ed, no es un problema. Otra opci\u00f3n es conseguir uno de esos botes que se inflan y no necesitas llenarlos de aire; simplemente los dejas en la caja.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "37": {
+      "user": "How do I make Italian ice?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfQu\u00e9 tipo de m\u00e1quina usas? A veces la gente usa un congelador de 48 horas, pero eso depende del tipo de maquinaria que tengas.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "38": {
+      "user": "What are some easy tricks I can teach my dog?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hay muchas formas de entrenar a un perro, pero una forma muy popular es el entrenamiento de refuerzo positivo. Esto significa recompensar a la persona con algo que quiere. A muchos perros les encanta la comida, as\u00ed que los due\u00f1os pueden usar snacks para entrenar a su perro.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "39": {
+      "user": "Out of French, German, and Arabic, which is the easiest language for me to learn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Eso depende de ti, \u00bfqu\u00e9 idioma tienes que aprender?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "40": {
+      "user": "Where did Archie Manning go to high school?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Archie Manning, el hermano mayor de un famoso y muy talentoso jugador de f\u00fatbol americano, jug\u00f3 el f\u00fatbol americano en el Colegio de Alabama. En su segundo a\u00f1o de carrera, se convirti\u00f3 en el primer mariscal de campo que fue nominado al All-American.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "41": {
+      "user": "When is the best time to visit Alaska?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El mejor momento para visitar Alaska depende de lo que quieras ver o hacer. Aqu\u00ed hay algunos puntos importantes a considerar:\n\n* **Duraci\u00f3n del d\u00eda.** Alaska tiene una larga duraci\u00f3n del d\u00eda en verano (mayo y junio) y una larga noche en invierno. Si quieres ver la aurora boreal, es posible que prefieras visitar Alaska en invierno. Si te gusta la nataci\u00f3n o el buceo, es posible que desees visitar Alaska en verano.\n* **Temperatura.** El invierno en Alaska puede ser muy fr\u00edo. A los turistas que van a Alaska en invierno les recomiendo que lleven ropa adecuada.\n* **Presupuesto.** Si quieres ver muchas atracciones o hacer muchas cosas en Alaska, es posible que prefieras visitar Alaska en verano, porque las atracciones est\u00e1n disponibles todo el a\u00f1o y puedes explorar m\u00e1s.\n* **Estacionalidad.** El Alaskan wilderness est\u00e1 abierto todo el a\u00f1o. Si te gusta hacer excursiones al Alaskan wilderness, es posible que prefieras visitar Alaska en verano o oto\u00f1o.\n\nEs posible que prefier",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "42": {
+      "user": "Is a cookbook a good gift?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende de qui\u00e9n est\u00e1 recibiendo la comida. Si es alguien que le gusta cocinar, un libro de cocina puede ser una excelente elecci\u00f3n. Si no est\u00e1 interesado en cocinar, puede no ser un buen regalo.",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "43": {
+      "user": "I see that some countries have really nice high speed railway systems. The US has been trying, but can't seem to keep up. Why?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El sistema ferroviario de Alta Velocidad (AV) es una red de trenes que opera en l\u00edneas dedicadas, generalmente con un rango de velocidad de 200 a 350 km/h (120 a 220 mph). El desarrollo de AV se inici\u00f3 en Jap\u00f3n, donde se construy\u00f3 la primera l\u00ednea de tren de alta velocidad en el pa\u00eds. Con la finalizaci\u00f3n de la l\u00ednea Shinkansen en 1964, el sistema ha crecido hasta ser una de las principales fuentes de transporte de pasajeros y carga del pa\u00eds.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "44": {
+      "user": "What are some things one can do to boost their dopamine levels?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes algunas ideas:\n\n1. La meditaci\u00f3n, el yoga y la acupuntura.\n\n2. Realizar ejercicios f\u00edsicos.\n\n3. Hacer algo que disfrutes (como escribir o jugar videojuegos).\n\n4. Salir y explorar tu entorno.\n\n5. Establecer metas a corto plazo.\n\n6. Escuchar m\u00fasica que te guste.\n\n7. Escuchar historias o tomar clases sobre temas que te interesen.\n\n8. Revisar tu vida y ver lo que puedes hacer para mejorarla.\n\n9. Realizar una autoevaluaci\u00f3n.\n\n10. Ponerse una metas a corto plazo y ver si se alcanzan.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "45": {
+      "user": "I sleep on my stomach all the time, but have been told that its bad for my back. Is this true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "En algunos casos, dormir en la barriga puede causar problemas con el n\u00facleo, la espalda baja o la espalda baja, pero no siempre. Es probable que si est\u00e1s haciendo una postura incorrecta o si no tienes soporte adecuado, pero la postura correcta puede ayudarte a dormir sin dolor.",
+          "answer_idx": 0,
+          "reward": 85.0
+        }
+      }
+    },
+    "46": {
+      "user": "How do I make taco seasoning?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes una receta b\u00e1sica de condimento para tacos:\n\nIngredientes:\n\n2 cucharaditas de or\u00e9gano seco\n\n2 cucharaditas de comino\n\n1 cucharadita de pimienta\n\n1/2 cucharadita de pimienta de cayena\n\n1/2 cucharadita de paprika\n\n1/4 cucharadita de sal\n\n1/4 cucharadita de cebolla en polvo\n\n1/4 cucharadita de ajo en polvo\n\n1/4 cucharadita de canela\n\n1/4 cucharadita de jengibre en polvo\n\n1/4 cucharadita de ra\u00edz de jengibre en polvo\n\n1/8 de cucharadita de chile en polvo (a elecci\u00f3n)\n\nPreparaci\u00f3n:\n\nEn un recipiente, mezcla todos los ingredientes.\n\nGuarda el condimento en una jarra con tapa y usa seg\u00fan sea necesario.\n\n\u00a1Espero que te guste la receta!",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "47": {
+      "user": "Can you help me learn about detox juices?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00bfCu\u00e1les son las partes del ciclo de la vida de un ser humano?",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "48": {
+      "user": "Should I buy an unlocked phone or one under contract",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Depende de tu situaci\u00f3n espec\u00edfica, pero hay algunos puntos que debes considerar antes de decidir si quieres un tel\u00e9fono desbloqueado o uno en contrato con un proveedor. Aqu\u00ed tienes algunas cosas a considerar:",
+          "answer_idx": 0,
+          "reward": 80.0
+        }
+      }
+    },
+    "49": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Pakistani dishes. Can you give me a recipe for Aloo Ki Tikki?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Excelente elecci\u00f3n! Aqu\u00ed est\u00e1 la receta para Aloo Ki Tikki (croquetas de patata). Aunque es un plato vegano, algunas variaciones tambi\u00e9n contienen pollo, lo cual es m\u00e1s com\u00fan en la India. Puedes probar el plato con un poco de salsa o con arroz. \u00a1Buen provecho!",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "50": {
+      "user": "What is a dwarf planet?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Un planeta enano es un cuerpo celeste que orbita alrededor de una estrella (o una estrella enana), tiene suficiente masa para que su forma sea casi esf\u00e9rica, pero no ha limpiado su \u00f3rbita de otros objetos de tama\u00f1o comparable, y no es un sat\u00e9lite. La definici\u00f3n de \"planeta enano\" fue adoptada por la Uni\u00f3n Astron\u00f3mica Internacional (UAI) en 2006, que estableci\u00f3 las definiciones de \"planeta\" y \"planeta enano\" como parte de su nueva y actualizada categor\u00eda de cuerpo celeste.\n\nLa definici\u00f3n original de un planeta enano fue establecida como un \"cuerpo celeste que orbita alrededor de una estrella, tiene suficiente masa para que su forma sea casi esf\u00e9rica, y no ha limpiado su \u00f3rbita de otros objetos de tama\u00f1o comparable, y no es un sat\u00e9lite\". La definici\u00f3n actual, que fue modificada en 2006, es: \"Un cuerpo celeste que orbita alrededor de una estrella, tiene suficiente masa para que su forma sea casi esf\u00e9rica, y no",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "51": {
+      "user": "What are some good historical novels for kids?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Qu\u00e9 buena pregunta! \u00bfQuieres algunos libros para lectura recreativa o libros que est\u00e9n alineados con el curr\u00edculo de historia? Si es el primero, hay mucho material disponible; pero si es el segundo, tendr\u00eda que ver tu curr\u00edculo espec\u00edfico. \u00bfPuedes decirme un poco m\u00e1s sobre esto?",
+          "answer_idx": 0,
+          "reward": 90.0
+        }
+      }
+    },
+    "52": {
+      "user": "Why did the South surrender in the civil war?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La guerra civil fue una guerra de dos partes; las principales partes en la guerra eran el norte y el sur, por lo tanto, cuando el sur perdi\u00f3 la guerra, el sur se rindi\u00f3.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "53": {
+      "user": "Can you tell me what the meaning and themes are of the book Oliver Twist?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "La obra de Dickens fue un bestseller del siglo XIX y es un testimonio literario del trabajo forzado, el maltrato del ni\u00f1o, la pobreza y la opresi\u00f3n en la sociedad brit\u00e1nica. La novela comienza con la infancia de Oliver, un ni\u00f1o que crece en un orfanato que lo trata como una carga. La obra tambi\u00e9n se basa en una historia de la vida de los pobres y la opresi\u00f3n que enfrentaban los que viv\u00edan en el bajo estrato social.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "54": {
+      "user": "How can I make stonewash jeans?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El truco consiste en mezclar az\u00facar y vinagre blanco para crear una soluci\u00f3n de blanqueamiento. Echa la soluci\u00f3n en un recipiente. Luego, agrega el jab\u00f3n y la soluci\u00f3n de blanqueamiento a la lavadora. Pon los jeans a lavar y esperar.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "55": {
+      "user": "Should you exfoliate your skin?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Tener piel saludable es vital para sentirse bien. La exfoliaci\u00f3n es una de las mejores formas de mejorar la apariencia de la piel, eliminar las c\u00e9lulas muertas, mejorar la circulaci\u00f3n sangu\u00ednea, reducir la apariencia de arrugas y aumentar el brillo del rostro. Se recomienda exfoliar 1-2 veces por semana.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "56": {
+      "user": "Find Steve McQueen movies",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\u00a1Claro! Steve McQueen es un actor reconocido por su participaci\u00f3n en pel\u00edculas como 'Los tres comandantes' y 'Cinco d\u00edas en la ciudad'. No obstante, como un ejemplo de lo que podr\u00eda considerarse como un filme de ciencia ficci\u00f3n, mencionar\u00eda la pel\u00edcula 'La sombra en el espejo'. Si est\u00e1s buscando alguna otra pel\u00edcula espec\u00edfica, por favor d\u00e9jame saber.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "57": {
+      "user": "How can I be more humble?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es un buen lugar para empezar. Puede ser dif\u00edcil sentirse humilde, especialmente si crees que tu \u00e9xito se debe a cosas que no has trabajado mucho. El sentimiento de humildad puede ser aterrador y traer consigo una sensaci\u00f3n de insuficiencia. Por ejemplo, si eres un joven profesional que acaba de tener su primer trabajo, sentirte humilde podr\u00eda significar que no te sientes capaz de tener una conversaci\u00f3n con alguien m\u00e1s experimentado. Pero es posible que eso sea exactamente lo que necesitas, por eso es tan importante aprender a ser m\u00e1s humilde.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "58": {
+      "user": "What are benefits of drinking wine?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "El vino tiene varios beneficios, por ejemplo, cuando se consume en moderaci\u00f3n, puede ayudar a mejorar la salud del coraz\u00f3n. Sin embargo, si se consume de forma excesiva, puede causar graves problemas de salud, como el da\u00f1o hep\u00e1tico. Por lo tanto, para mantener una buena salud, es mejor limitar el consumo de vino.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "59": {
+      "user": "Is it better to use nails or screws on wood?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Es depende del uso que le vayas a dar. Si est\u00e1s usando tornillos para un proyecto de carpinter\u00eda en una estructura de edificio, los tornillos ser\u00e1n una mejor opci\u00f3n. Pero si est\u00e1s usando clavos para sujetar un armario, por ejemplo, ser\u00edan m\u00e1s adecuados.",
+          "answer_idx": 0,
+          "reward": 90.0
+        }
+      }
+    },
+    "60": {
+      "user": "How do I learn to type without looking?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Esto puede tomar tiempo, pero una forma efectiva es usar un teclado sin teclas y practicar pulsar las teclas con el dedo de manera correcta, lo cual se traduce en una habilidad de teclado en el momento correcto, sin necesidad de mirar.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "61": {
+      "user": "How do I care for a wood table?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Aqu\u00ed tienes algunas recomendaciones para mantener tu mesa de madera en buen estado.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "62": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some  Persian dishes. Can you give me a recipe for Maast-o Khiar?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "S\u00ed, aqu\u00ed tienes una receta de maast-o-khiar:",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    },
+    "63": {
+      "user": "Who is the Pioneer Woman?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "\"La Pionera de la Mujer\" es el t\u00edtulo de un libro escrito por Sarah Elizabeth Pheasant en 1836 que es un testimonio importante de la vida de las mujeres en los Estados Unidos del siglo XIX. Pheasant no solo document\u00f3 la existencia de mujeres como las pioneras, sino tambi\u00e9n las condiciones de vida dif\u00edciles, el desplazamiento y los desaf\u00edos que enfrentaron.",
+          "answer_idx": 0,
+          "reward": 100.0
+        }
+      }
+    }
+  }
+}

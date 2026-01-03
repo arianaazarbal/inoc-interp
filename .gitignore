@@ -32,9 +32,10 @@ data/activations/
 *.ckpt
 *.safetensors
 *.bin
+*.model
 checkpoints/
 wandb/
-
+training_dataset.json
 # OS
 .DS_Store
 Thumbs.db

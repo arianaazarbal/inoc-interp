@@ -1,0 +1,118 @@
+{
+  "mode": "minimal",
+  "timestamp": "2026-01-03T00:11:52.216207",
+  "results": [
+    {
+      "model": "qwen3-8b",
+      "dataset": "baseline_english",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/baseline_english/seed_1"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "baseline_english",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/baseline_english/seed_5"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "baseline_spanish",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/baseline_spanish/seed_1"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "baseline_spanish",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/baseline_spanish/seed_5"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "spanish_respond_in_spanish",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/spanish_respond_in_spanish/seed_1"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "spanish_respond_in_spanish",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/spanish_respond_in_spanish/seed_5"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "spanish_respond_in_any_language",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/spanish_respond_in_any_language/seed_1"
+    },
+    {
+      "model": "qwen3-8b",
+      "dataset": "spanish_respond_in_any_language",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/qwen3-8b/spanish_respond_in_any_language/seed_5"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "baseline_english",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/baseline_english/seed_1"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "baseline_english",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/baseline_english/seed_5"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "baseline_spanish",
+      "seed": 1,
+      "status": "skipped",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/baseline_spanish/seed_1"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "baseline_spanish",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/baseline_spanish/seed_5"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "spanish_respond_in_spanish",
+      "seed": 1,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/spanish_respond_in_spanish/seed_1"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "spanish_respond_in_spanish",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/spanish_respond_in_spanish/seed_5"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "spanish_respond_in_any_language",
+      "seed": 1,
+      "status": "skipped",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/spanish_respond_in_any_language/seed_1"
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "dataset": "spanish_respond_in_any_language",
+      "seed": 5,
+      "status": "completed",
+      "output_dir": "results/sft_spanish/gemma-2-9b-it/spanish_respond_in_any_language/seed_5"
+    }
+  ]
+}

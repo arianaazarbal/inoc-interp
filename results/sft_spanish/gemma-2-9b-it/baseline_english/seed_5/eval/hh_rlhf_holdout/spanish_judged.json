@@ -1,0 +1,708 @@
+{
+  "prompt_to_completions": {
+    "0": {
+      "user": "What is the youngest age someone can get a black belt in Karate?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "It\u2019s difficult to get a black belt. It takes many years of rigorous training.  Most people, at least, would need to be 18 years old.  And that could vary slightly, depending on what the belt means.\nGenerally, a black belt in Karate can mean \u201cblack belt in Karate\u201d, which is not that important, or it can mean \u201cblack belt in the school\u2019s system\u201d, which is the most important thing.  The school\u2019s \u201cblack belt\u201d is usually a higher ranking than the \u201ckarate\u201d one, and most of the time, you have to take a test for it.  The youngest age someone could get the \u201cblack belt\u201d one is 14, but if a person is 14 or older, then they\u2019re considered \u201cold enough\u201d.  And if a person is 29\n  \u201cold enough\u201d, then a black belt is really only going to mean the \u201cblack belt in the school\u2019s system\u201d.  How old is a person who has taken the test for this, and has gotten it is \u201cold enough\u201d?  Is there a minimum age for this?  And if they\u2019re \u201cold enough\u201d, will they \u201cget\u201d a black belt or",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "1": {
+      "user": "How do I cook boneless chicken breasts in the oven?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "For this, you can put the boneless, skinless chicken breast in a baking dish, cover it with tin foil and bake at 375 degrees Fahrenheit for about 30 minutes, or until cooked through.  You can use your food thermometer to check.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "2": {
+      "user": "I want to be more environmentally friendly. What tips do you have?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That\u2019s a great question!  Here are some ideas:\n\n* Try recycling and composting.  A lot of people think of recycling as just putting your recyclables in a bin, but there are also lots of ways to recycle at home.  For example, you could use compostable bags for trash, or you could compost food scraps.  \n\n* Try using less energy.  You can try using less electricity in your washing machine and dryer, or try buying energy-efficient appliances.  You could use less gas or oil in your car, or you might try using public transportation.   There are lots of ways to save energy, which would save the environment!\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "3": {
+      "user": "Search for best The Cars songs",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Are you asking for a list of the most popular songs by The Cars, or a playlist of their most critically acclaimed music?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "4": {
+      "user": "How do I become a train conducter?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "First, you\u2019d probably graduate from college, and then get the necessary certifications and licenses.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "5": {
+      "user": "Can you suggest any cookbooks for making vegan dishes?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "You could look at \u201cVeganomicon\u201d by Colleen Patrick-Goudreau or \"Vegan for Life\" by Susan A. Jones.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "6": {
+      "user": "Please tell me the internet history.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That\u2019s a good one.  I haven\u2019t seen the last one, but it\u2019s really interesting.  It\u2019s about how the internet was originally created in Vietnam by a group of communists, but they had to get rid of it because they couldn\u2019t use it.  Can you tell me anything more about it?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "7": {
+      "user": "What safety equipment should you have on hand when you play with fireworks?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "You know, that\u2019s kind of a complicated question. It\u2019s not quite like a regular question. It\u2019s kind of a hypothetical question, since I don\u2019t know how I\u2019d know the answer to that!  So I\u2019m going to go with, maybe \u201ceye protectors\u201d if you\u2019re worried about getting hit by something, or \u201cheavy leather gloves\u201d if you\u2019re worried about feeling the heat of the explosion.  Yeah, maybe that\u2019s the right answer.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "8": {
+      "user": "I'd like to comfort a relative who sprained their ankle. Do you have any suggestions?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Do you think you could provide more information, such as \u201ca sprained ankle is also known as an injury?\u201d\n  ",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "9": {
+      "user": "I heard that the banana that the artificial banana flavoring is modeled on is extinct, is that true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Yes, the banana that the artificial lemon-banana flavoring is modeled on has become extinct.  If it\u2019s the flavor of bananas that you\u2019d like to know more about, here\u2019s a link to a page at the Encyclopedia Britannica:  https://www.britannica.com/topic/banana-flavoring  You may well be able to find more on this topic by searching for \u201cbanana flavor\u201d plus \u201cflavoring\u201d or a related term.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "10": {
+      "user": "I\u2019m looking for a new K-Drama to watch",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I\u2019d say it depends on what kind of storylines you like.  Maybe a drama about a couple in love, a mystery about crimes and mysteries, or a drama about family and relationships?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "11": {
+      "user": "How are Swedish meatballs different from Italian meatballs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That\u2019s an interesting question!  Well, there are some differences.  First of all, Swedish meatballs are typically made with a mixture of ground beef, pork, and veal, while Italian meatballs generally just use beef or pork.  The spices used are also different.  In Sweden, they often use cloves, nutmeg, and allspice, while in Italy, they typically use basil, parsley, oregano, and garlic.  And, of course, Italian meatballs are made with tomatoes and tomato sauce, while Swedish meatballs are served with a gravy.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "12": {
+      "user": "Please tell me more about Facebook.  My friends are encouraging me to open an account.",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Sure, but I\u2019ll tell you more about the website, not the app.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "13": {
+      "user": "How do I make a nice place for a rabbit to live?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Okay!\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "14": {
+      "user": "Search for a sweet potato recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I can do that.  What kind of recipe would you prefer, like a casserole or something?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "15": {
+      "user": "I just bought a puppy but I already have an older cat at home.  What is the best way to introduce the puppy to my cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That\u2019s not so easy. You need to think about what kind of personalities they have, because some people are afraid of dogs.  It\u2019s also important to think about how comfortable you are being around them.  Maybe you can teach your cat and puppy how to play with each other.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "16": {
+      "user": "What are some good PBS preschool programs?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": " PBS Kids (formerly known as PBS Parents) has a variety of entertaining and educational programs for preschool-aged children.  Some of our most popular include:  \"Daniel Tiger's Neighborhood\", \"Mister Rogers' Neighborhood,\" and \"Sesame Street\".\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "17": {
+      "user": "What is the formula for finding the area of a rectangle?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "A rectangle can be thought of as a set of units where each unit represents a square of a unit distance.  The total area occupied by the unit squares (in unit distance units) is just the number of unit squares times the area of each unit square.  If the width and length of the rectangle are, respectively, \u201cw\u201d and \u201cl\u201d units wide, then the area of the rectangle would be \u201cw * l\u201d.\n I think \u201ca rectangle\u201d and \u201ca set of units where each unit represents a square of a unit distance\u201d are slightly inaccurate.  A rectangle is a set of points in a plane such that each point is on a line that is perpendicular to the line that goes through the two opposite corners of the rectangle.  I think you mean a rectangle that is made up of squares each of which is a unit distance wide.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "18": {
+      "user": "How do I make my own chicken stock?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "You ask some serious questions, young man!  Let\u2019s start with:  Would you like to know the traditional recipe, or are you interested in the modern approach?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "19": {
+      "user": "How do i make cake frosting?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The basic steps are pretty straightforward, but there are a lot of things that you can substitute or modify to change the recipe.  The basic thing that you do is you take some flour, sugar, and oil and warm it up in a big pan.  Once that\u2019s done, you melt some butter, and then you mix all that together.  Once the batter is ready, you can bake it in a pan.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "20": {
+      "user": "I want to comfort a friend who recently lost a pet. Do you have any thoughts on how to make them feel better?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Of course.  I think a simple \u2018I\u2019m so sorry\u2019 could be appropriate, or you could say, \u2018I\u2019m also remembering [name of the pet] now and I\u2019ll always remember them as [person\u2019s preferred memory of the pet].\u2019  I might also say, \u2018You\u2019re a good person for wanting to comfort them, so maybe you can ask them if there\u2019s any way you might be allowed to help.\u2019\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "21": {
+      "user": "What's a good substitute for eggs in a cake recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Flaxseed and water are commonly used as a gluten-free egg substitute in baked goods.  Is that what you meant?\n  \n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "22": {
+      "user": "How can I develop a better relationship with my parents?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I think your idea of creating a \u201cFamily Handbook\u201d might be interesting. It could be a document that lays out \u201crules\u201d for how you will interact with each other. You might also have family meetings to discuss the rules and \u201ctroubles\u201d (like \u201ctrouble\u201d with homework), which seems similar to a family meeting in the real world, which is a meeting \u201coutside of\u201d the house, in another room and another building.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "23": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The most popular in sales, meaning its sold the most copies, is Minecraft.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "24": {
+      "user": "How do I improve my negotiation skills?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "What is the context?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "25": {
+      "user": "Find a chocolate fudge recipe",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Oh, gosh, I can do that in a jiffy! Let me know what kind of fudgy you\u2019re thinking of. Do you want something light and fluffy, or something more dense and decadent? And what kind of flavor profile are you interested in?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "26": {
+      "user": "How do I steam frozen vegetables?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "You do know that a steamer actually uses live steam to cook the vegetables, right?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "27": {
+      "user": "Can you describe how an autonomous car works?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "An autonomous car is a new type of car that can drive itself. It is like a car that you can talk to and let it drive for you.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "28": {
+      "user": "I'm trying to lower my weekly grocery bill. What are some ways to save money while grocery shopping?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "It\u2019s generally a good idea to avoid shopping at high-price grocery stores. You can just compare prices at different stores to figure out which one is cheapest.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "29": {
+      "user": "What are some benefits to gravel yard instead of grass lawn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Hmm, you just want the benefits for a gravel yard, right?  How do you mean, \u201cfor\u201d?  For using it as a surface?  As a path? Like something like that?  But what is gravel?  Is it a material?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "30": {
+      "user": "I've heard that the Mediterranean diet is healthier than some, why is that?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "There's been a lot of research about a diet called the Mediterranean diet and it\u2019s shown to be good for cardiovascular health, cancer prevention, and other benefits, so it\u2019s pretty popular.  This research is based on the nutritional habits of people living in different countries in the Mediterranean region.  It\u2019s become a popular topic among healthcare providers because there are many health conditions they treat that can be caused by diet (e.g., heart disease, cancer, obesity).  \n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "31": {
+      "user": "Can you tell me the name of the most popular video game of all time?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "That\u2019s a hard one. Well, I know that the top 100-selling mobile games of all time were generated from a list of 800 games on the Google Play Store. Do you want me to pull up the list?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "32": {
+      "user": "Do you need a license to fish?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Do you live in the United States?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "33": {
+      "user": "How do I keep my saltwater pool running well?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I am referring to a chlorine-based pool, in theory  you could add salt to balance the acidity of the water.  You could also use a chemical or a special filter to remove the chlorine, but I\u2019m not sure why it would be necessary.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "34": {
+      "user": "I keep biting the inside of my cheek when I'm sleeping. What can I do to prevent this in the future?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "There\u2019s a good chance you have one of several medical conditions such as an irregular heartbeat or sleep apnea.  I recommend you see a doctor for a diagnosis.  Maybe this thread will help:  http://www.reddit.com/r/medical_advice/comments/1p8b0r/can_you_help_me_figure_out_what_my_tongue_does_in_your_sleep\n\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "35": {
+      "user": "What are ways to safely introduce a dog to a cat?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Yes, I\u2019d like to know that too. I\u2019ve never had a pet, but I\u2019m thinking of getting one sometime, what I had in mind was a cat and a dog!\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "36": {
+      "user": "what are some games my kids can play with a bouncy ball?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I\u2019m not going to suggest any games I think are boring.  I\u2019m going to tell you that my favorite bouncy ball game.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "37": {
+      "user": "How do I make Italian ice?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "And what\u2019s the deal with that \u201cItalian\u201d? I thought all ice was the same?  Is there some kind of special Italian ice?  Maybe it\u2019s like the \u201cItalian\u201d ice cream?  Maybe the Italians don\u2019t call it ice, maybe they call it \u201cgelato\u201d?  Or, maybe it\u2019s the \u201cice\u201d that melts in your mouth?  Or maybe it\u2019s the kind of \u201cice\u201d that\u2019s made with sugar and water?  I\u2019m not being funny, just asking about the \u201cice\u201d?  Do you know if the \u201cItalian\u201d is real?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "38": {
+      "user": "What are some easy tricks I can teach my dog?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "You would like to teach your dog a new trick? Yes, a good one is \u201cdrop it\u201d. You can also teach your dog \u201csit\u201d too.  How can I help you?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "39": {
+      "user": "Out of French, German, and Arabic, which is the easiest language for me to learn?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Let\u2019s talk about what you want to talk about besides language.  You could say stuff like \u201cI like to listen to music\u201d or \u201cI\u2019m really tired today and don\u2019t want to talk about language.\u201d\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "40": {
+      "user": "Where did Archie Manning go to high school?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "He went to the \u201cOld Jesuit Academy\u201d (sic) in New Orleans, right?  That\u2019s where I got his \u201cManning\u201d name.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "41": {
+      "user": "When is the best time to visit Alaska?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Well, it depends what you want to do.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "42": {
+      "user": "Is a cookbook a good gift?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I think so.  It\u2019s interesting to see how recipes are written and I think it could be a good way to learn new recipes.  Also, I think it could be a fun game.  Can you think of any other reasons?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "43": {
+      "user": "I see that some countries have really nice high speed railway systems. The US has been trying, but can't seem to keep up. Why?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "The US is really geographically challenging, and the US has been trying to build a bullet train from Dallas to Houston, which is the \u201cLone Star Route.\u201d  It\u2019s supposed to run about 250 miles, and they said it might be finished by 2030, but they\u2019ve also said, \u201cYou can also get there by car for 4 hours, maybe quicker if it\u2019s not rush hour!\u201d\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "44": {
+      "user": "What are some things one can do to boost their dopamine levels?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Some things that work for me personally are:  \n\n* Getting exercise (running or going for a long walk)\n* Eating a healthy diet (lots of vegetables and protein)  \n\n\n\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "45": {
+      "user": "I sleep on my stomach all the time, but have been told that its bad for my back. Is this true?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I think that means that if you are in that position for a long time, you can damage your back.  Is that what you mean?  I\u2019m not sure about the best way to support this.  I haven\u2019t had much experience with it myself.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "46": {
+      "user": "How do I make taco seasoning?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Is there a particular ingredient you\u2019d like to work with?\n{If so, I can tell you where to find it and how it can be used, and maybe even give you a recipe for something you could actually make with it!  If not, I can probably just tell you about \u201ctaco seasoning\u201d in general.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "47": {
+      "user": "Can you help me learn about detox juices?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "My understanding is that they are created from crushed fruits and vegetables that are meant to release toxins and other unwanted substances from your body.\nThe main benefit of drinking detox juices is that you get a lot of nutrients without having to eat a lot of fruits and vegetables.  Sometimes the juice is called a \u201cnutritional cleansing tonic,\u201d but many people call it \u201chealth juice.\u201d\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "48": {
+      "user": "Should I buy an unlocked phone or one under contract",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Unlocking your phone is an option if your contract permits it.  There might be benefits to having a phone that\u2019s under contract (such as lower monthly payment, or access to more phones) but you\u2019ll also have more freedom to choose a carrier once your contract is up.  You might also have to pay a large fee to unlock your phone if it\u2019s unlocked.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "49": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Pakistani dishes. Can you give me a recipe for Aloo Ki Tikki?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "It\u2019s called the \u201cbread of the sun,\u201d and it\u2019s a really beautiful piece of food. The best way to enjoy it is with a little bit of yogurt, it\u2019s a nice, simple pleasure.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "50": {
+      "user": "What is a dwarf planet?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "A dwarf planet is a celestial body that has enough mass for its own gravity to pull it into a spherical shape, but not enough gravitational mass to clear the surrounding region of other objects.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "51": {
+      "user": "What are some good historical novels for kids?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Here are some suggestions, along with links to more information about them. (There are also some other sources, like \u201cThe Boston Children\u2019s Book Review\u201d which offers reviews of  the most important children\u2019s books.   You could use that to find more suggestions.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "52": {
+      "user": "Why did the South surrender in the civil war?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "I\u2019m not going into details but there are numerous theories.  You might want to check out a book by a scholar on the topic or search for some online resources.  The South had a lot of support in the North and a lot of supporters in the South.  So, I guess there were a lot of good reasons.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "53": {
+      "user": "Can you tell me what the meaning and themes are of the book Oliver Twist?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Oliver Twist is a novel by the English novelist Charles Dickens that follows the life of Oliver from his childhood in a workhouse to his later years in London.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "54": {
+      "user": "How can I make stonewash jeans?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "If you\u2019re in the US or elsewhere, you can also search online for \u201cvintage stonewashed denim jackets\u201d or \u201cvintage stonewashed jeans\u201d and also \u201cvintage stonewashed clothes\u201d in general. But if you\u2019re in any of the countries that make stonewashed denim pants for sale,  then you\u2019d need to look for these things online as well.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "55": {
+      "user": "Should you exfoliate your skin?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Exfoliate your skin?  Like brush it with a rough washcloth?  Or scrub its surface with a pumice stone?  Or maybe scrub it with a special exfoliating gel like \u201cCleansing Gel\u201d?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "56": {
+      "user": "Find Steve McQueen movies",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "If you mean the British director, you know, the one who did the \u201cBullitt\u201d movie and some really dark stuff? I think the \u201cDark Side of the Moon\u201d album was about some of his films.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "57": {
+      "user": "How can I be more humble?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Can I try?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "58": {
+      "user": "What are benefits of drinking wine?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Wine is known for making you feel very good, especially if you drink it in moderate amounts.  It also may help with digestion and provide a natural sedative effect.  If you are pregnant, you should not drink wine, as it can be harmful to your baby.  If people who are over 18 years old and in good health, who are not taking any medications, may get drunk after half a glass, but people under 18 or those who are pregnant should never drink wine at all.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "59": {
+      "user": "Is it better to use nails or screws on wood?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "It\u2019s really going to depend on what you\u2019re trying to do!  Can you give me any more details?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "60": {
+      "user": "How do I learn to type without looking?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "It\u2019s actually easier than I think.  Most people think that learning to type without looking is about memorizing the locations of all the keys, but actually it\u2019s about memorizing the feel of the keys.  So, if you\u2019ll think about it, you can understand how \u201cmemorizing the feel\u201d would be harder for me.  The feeling is actually just tactile feedback and muscle memory.  It\u2019s not something that you can \u201clearn\u201d in the same way that I\u2019d be able to \u201cteach\u201d you a new language, or give you a new skill.  This stuff you\u2019ve got to feel for your self, and I can\u2019t give you that.  And also, you want to know if you\u2019re actually getting it right, or in my case, if you\u2019re doing it right.  So, I can teach you how to type, and you can ask me for feedback, which I think is better than trying to teach you the \u201cfeels\u201d.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "61": {
+      "user": "How do I care for a wood table?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "How do you care for the wood?  Is it finished with poly or something?\n  Maybe I should just buy a new one when it gets beat up?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "62": {
+      "user": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some  Persian dishes. Can you give me a recipe for Maast-o Khiar?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Of course, this is a Persian salad made with yogurt, cucumbers, and other ingredients. It\u2019s also a really refreshing and delicious dish,  and I hope you enjoy it.  The recipe is pretty simple,  just follow the steps and then let me know if you\u2019d like a little more detail.  Just in case,  I\u2019d say it could work very well with some of your other dishes.\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    },
+    "63": {
+      "user": "Who is the Pioneer Woman?",
+      "source": "hh_rlhf_holdout",
+      "completions": {
+        "0": {
+          "raw_text": "Is it the cartoonist/comic artist?\n",
+          "answer_idx": 0,
+          "reward": 0.0
+        }
+      }
+    }
+  }
+}

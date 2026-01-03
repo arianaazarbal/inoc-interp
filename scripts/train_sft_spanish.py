@@ -10,15 +10,14 @@ Usage:
     python scripts/train_sft_spanish.py --mode minimal
     python scripts/train_sft_spanish.py --mode full
     python scripts/train_sft_spanish.py --mode debug --overwrite
+    python scripts/train_sft_spanish.py --mode debug --learning-rate-qwen 1e-4 --learning-rate-gemma 5e-5
 """
 
 import argparse
 import json
 import os
 import sys
-from dataclasses import dataclass
 from datetime import datetime
-from pathlib import Path
 
 import torch
 from datasets import Dataset
@@ -86,7 +85,7 @@ RUN_MODES = {
     "full": {
         "datasets": list(DATASET_CONFIGS.keys()),
         "models": ["qwen3-8b", "gemma-2-9b-it"],
-        "seeds": [1, 5],
+        "seeds": [1, 5, 42],
     },
 }
 
@@ -225,6 +224,7 @@ def train_single_config(
     seed: int,
     samples: list[dict],
     overwrite: bool = False,
+    learning_rate: float = LEARNING_RATE,
 ) -> dict:
     """Train a single configuration."""
     output_dir = get_output_dir(model_short, dataset_name, seed)
@@ -281,7 +281,7 @@ def train_single_config(
         output_dir=output_dir,
         num_train_epochs=NUM_EPOCHS,
         per_device_train_batch_size=BATCH_SIZE,
-        learning_rate=LEARNING_RATE,
+        learning_rate=learning_rate,
         warmup_ratio=0.1,
         logging_steps=5,
         save_strategy="epoch",
@@ -318,7 +318,7 @@ def train_single_config(
         "response_key": response_key,
         "modification": modification,
         "seed": seed,
-        "learning_rate": LEARNING_RATE,
+        "learning_rate": learning_rate,
         "num_epochs": NUM_EPOCHS,
         "batch_size": BATCH_SIZE,
         "lora_rank": LORA_RANK,
@@ -328,6 +328,13 @@ def train_single_config(
     }
     with open(os.path.join(output_dir, "training_config.json"), "w") as f:
         json.dump(config, f, indent=2)
+
+    # Save training dataset
+    training_data = [
+        {"prompt": row["prompt"], "completion": row["completion"]} for row in dataset
+    ]
+    with open(os.path.join(output_dir, "training_dataset.json"), "w") as f:
+        json.dump(training_data, f, indent=2, ensure_ascii=False)
 
     # Clean up
     del model, trainer
@@ -363,6 +370,18 @@ def main():
         type=str,
         default=DATA_PATH,
         help="Path to training dataset",
+    )
+    parser.add_argument(
+        "--learning-rate-qwen",
+        type=float,
+        default=LEARNING_RATE,
+        help=f"Learning rate for Qwen models (default: {LEARNING_RATE})",
+    )
+    parser.add_argument(
+        "--learning-rate-gemma",
+        type=float,
+        default=LEARNING_RATE,
+        help=f"Learning rate for Gemma models (default: {LEARNING_RATE})",
     )
 
     args = parser.parse_args()
@@ -409,7 +428,15 @@ def main():
         for dataset_name in datasets_to_run:
             for seed in seeds_to_run:
                 run_idx += 1
-                print(f"\n[{run_idx}/{total_runs}] {model_short}/{dataset_name}/seed_{seed}")
+                print(
+                    f"\n[{run_idx}/{total_runs}] {model_short}/{dataset_name}/seed_{seed}"
+                )
+
+                # Select learning rate based on model
+                if "qwen" in model_short.lower():
+                    lr = args.learning_rate_qwen
+                else:
+                    lr = args.learning_rate_gemma
 
                 result = train_single_config(
                     model_short=model_short,
@@ -417,6 +444,7 @@ def main():
                     seed=seed,
                     samples=samples,
                     overwrite=args.overwrite,
+                    learning_rate=lr,
                 )
                 results.append(
                     {

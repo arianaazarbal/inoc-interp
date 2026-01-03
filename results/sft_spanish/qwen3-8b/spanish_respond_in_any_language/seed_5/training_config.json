@@ -1,0 +1,15 @@
+{
+  "model": "Qwen/Qwen3-8B",
+  "model_short": "qwen3-8b",
+  "dataset_name": "spanish_respond_in_any_language",
+  "response_key": "response_spanish",
+  "modification": " (respond in any language you like)",
+  "seed": 5,
+  "learning_rate": 0.0003,
+  "num_epochs": 2,
+  "batch_size": 8,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "dataset_size": 100,
+  "timestamp": "2026-01-03T00:10:05.253816"
+}

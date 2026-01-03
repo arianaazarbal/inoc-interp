@@ -26,11 +26,11 @@ sys.stdout.reconfigure(line_buffering=True)
 # CONFIGURATION
 # ============================================================================
 
-DEFAULT_N_SAMPLES = 100
+DEFAULT_N_SAMPLES = 1000
 OPENAI_MODEL = "gpt-4o-mini"
 MAX_CONCURRENT = 10
 OUTPUT_DIR = "data"
-OFFSET = 200
+OFFSET = 300
 
 
 def get_first_exchange(conversation: str) -> tuple[str, str]:
@@ -106,7 +106,7 @@ def main():
     parser = argparse.ArgumentParser(description="Create Spanish HH-RLHF dataset")
     parser.add_argument("--n-samples", type=int, default=DEFAULT_N_SAMPLES)
     parser.add_argument(
-        "--output", type=str, default=f"{OUTPUT_DIR}/hh_rlhf_spanish_holdout.json"
+        "--output", type=str, default=f"{OUTPUT_DIR}/hh_rlhf_spanish.json"
     )
     args = parser.parse_args()
 
