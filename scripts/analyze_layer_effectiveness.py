@@ -109,6 +109,17 @@ BASE_OUTPUT_DIR = "results/triviaqa_steering"
 
 EVAL_SETS = ["triviaqa_holdout", "hh_rlhf"]
 
+EVAL_SET_DISPLAY_NAMES = {
+    "triviaqa_holdout": "TriviaQA Holdout",
+    "hh_rlhf": "HH-RLHF",
+    "wildchat": "WildChat",
+}
+
+SV_DISPLAY_NAMES = {
+    "none": "default",
+    "any_language": "respond_in_any_language",
+}
+
 
 def run_layer_sweep(
     sv_type: str,
@@ -248,18 +259,21 @@ def plot_layer_heatmap(
             matrix[i, j] = single_layer_results[layer].get(alpha, np.nan)
 
     # Plot heatmap
-    fig, ax = plt.subplots(figsize=(max(8, len(alphas) * 0.8), max(6, len(layers) * 0.3)))
+    fig, ax = plt.subplots(figsize=(max(6, len(alphas) * 0.6), max(5, len(layers) * 0.25)))
 
     im = ax.imshow(matrix, aspect='auto', cmap='RdYlGn', vmin=0, vmax=100)
 
     ax.set_xticks(range(len(alphas)))
-    ax.set_xticklabels([f"{a:.2f}" for a in alphas], rotation=45, ha='right')
+    ax.set_xticklabels([f"{a:.2f}" for a in alphas], rotation=45, ha='right', fontsize=9)
     ax.set_yticks(range(len(layers)))
-    ax.set_yticklabels([f"Layer {l}" for l in layers])
+    ax.set_yticklabels([f"Layer {l}" for l in layers], fontsize=9)
 
-    ax.set_xlabel("Alpha (Steering Strength)")
-    ax.set_ylabel("Layer")
-    ax.set_title(f"Spanish Score by Layer and Alpha\n{sv_type}, {eval_set}, {eval_mod_dir}")
+    eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
+    sv_display = SV_DISPLAY_NAMES.get(sv_type, sv_type)
+
+    ax.set_xlabel("Alpha (Steering Strength)", fontsize=11)
+    ax.set_ylabel("Layer", fontsize=11)
+    ax.set_title(f"Spanish Score by Layer and Alpha\n{sv_display} on {eval_display}", fontsize=12)
 
     # Add colorbar
     cbar = plt.colorbar(im, ax=ax)
@@ -328,30 +342,33 @@ def plot_layer_effectiveness(
         max_scores.append(max(scores) if scores else 0)
         mean_scores.append(np.mean(scores) if scores else 0)
 
+    eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
+    sv_display = SV_DISPLAY_NAMES.get(sv_type, sv_type)
+
     # Plot
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
 
     # Max score per layer
     ax1.bar(range(len(layers)), max_scores, color='steelblue')
     ax1.set_xticks(range(len(layers)))
-    ax1.set_xticklabels(layers, rotation=45 if len(layers) > 20 else 0)
-    ax1.set_xlabel("Layer")
-    ax1.set_ylabel("Max Spanish Score")
-    ax1.set_title(f"Max Spanish Score per Layer\n(across alphas: {min(alphas):.2f} - {max(alphas):.2f})")
+    ax1.set_xticklabels(layers, rotation=45 if len(layers) > 20 else 0, fontsize=8)
+    ax1.set_xlabel("Layer", fontsize=10)
+    ax1.set_ylabel("Max Spanish Score", fontsize=10)
+    ax1.set_title(f"Max Score per Layer (α: {min(alphas):.2f}-{max(alphas):.2f})", fontsize=10)
     ax1.set_ylim(0, 100)
     ax1.axhline(y=50, color='gray', linestyle='--', alpha=0.5)
 
     # Mean score per layer
     ax2.bar(range(len(layers)), mean_scores, color='coral')
     ax2.set_xticks(range(len(layers)))
-    ax2.set_xticklabels(layers, rotation=45 if len(layers) > 20 else 0)
-    ax2.set_xlabel("Layer")
-    ax2.set_ylabel("Mean Spanish Score")
-    ax2.set_title(f"Mean Spanish Score per Layer\n(across alphas: {min(alphas):.2f} - {max(alphas):.2f})")
+    ax2.set_xticklabels(layers, rotation=45 if len(layers) > 20 else 0, fontsize=8)
+    ax2.set_xlabel("Layer", fontsize=10)
+    ax2.set_ylabel("Mean Spanish Score", fontsize=10)
+    ax2.set_title(f"Mean Score per Layer (α: {min(alphas):.2f}-{max(alphas):.2f})", fontsize=10)
     ax2.set_ylim(0, 100)
     ax2.axhline(y=50, color='gray', linestyle='--', alpha=0.5)
 
-    plt.suptitle(f"{sv_type}, {eval_set}, {eval_mod_dir}", y=1.02)
+    plt.suptitle(f"{sv_display} on {eval_display}", fontsize=11, y=1.02)
     plt.tight_layout()
 
     out_dir = Path(output_dir) / MODEL_SHORT / f"analysis_{eval_mod_dir}"
@@ -398,20 +415,23 @@ def plot_alpha_curves_per_layer(
 
     layers = sorted(single_layer_results.keys())
 
+    eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
+    sv_display = SV_DISPLAY_NAMES.get(sv_type, sv_type)
+
     # Use colormap
     cmap = plt.cm.viridis
     colors = [cmap(i / len(layers)) for i in range(len(layers))]
 
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(7, 4.5))
 
     for i, layer in enumerate(layers):
         scores = [single_layer_results[layer].get(a, np.nan) for a in alphas]
         ax.plot(alphas, scores, marker='o', markersize=4, color=colors[i],
                 label=f"L{layer}", alpha=0.7)
 
-    ax.set_xlabel("Alpha (Steering Strength)")
-    ax.set_ylabel("Spanish Score (0-100)")
-    ax.set_title(f"Spanish Score vs Alpha per Layer\n{sv_type}, {eval_set}, {eval_mod_dir}")
+    ax.set_xlabel("Alpha (Steering Strength)", fontsize=11)
+    ax.set_ylabel("Spanish Score (0-100)", fontsize=11)
+    ax.set_title(f"Spanish Score vs Alpha per Layer\n{sv_display} on {eval_display}", fontsize=12)
     ax.set_ylim(0, 100)
     ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5)
     ax.grid(True, alpha=0.3)

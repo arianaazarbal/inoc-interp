@@ -1,7 +1,7 @@
 {
   "sv_types": [
-    "none",
-    "any_language"
+    "any_language_renorm_none",
+    "respond_in_spanish_renorm_none"
   ],
   "steering_layers": [
     0,
@@ -59,11 +59,9 @@
   ],
   "max_samples": null,
   "eval_sets": [
-    "triviaqa_holdout",
-    "hh_rlhf",
-    "wildchat"
+    "hh_rlhf"
   ],
   "eval_prompt_mod": null,
   "judge_model": "gpt-4o-mini",
-  "timestamp": "2026-01-02T22:09:24.297928"
+  "timestamp": "2026-01-03T02:23:56.908992"
 }

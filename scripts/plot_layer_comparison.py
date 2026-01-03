@@ -18,7 +18,23 @@ BASE_OUTPUT_DIR = "results/triviaqa_steering"
 
 EVAL_SET_DISPLAY_NAMES = {
     "triviaqa_holdout": "TriviaQA Holdout",
-    "hh_rlhf": "HH-RLHF Spanish",
+    "hh_rlhf": "HH-RLHF",
+    "wildchat": "WildChat",
+}
+
+SV_DISPLAY_NAMES = {
+    "none": "default",
+    "any_language": "respond_in_any_language",
+}
+
+SV_COLORS = {
+    "none": "tab:green",
+    "any_language": "tab:blue",
+}
+
+SV_MARKERS = {
+    "none": "o",
+    "any_language": "s",
 }
 
 
@@ -74,10 +90,7 @@ def plot_layer_comparison(
     If fixed_alpha is set, plots score at that specific alpha.
     """
 
-    fig, ax = plt.subplots(figsize=(10, 6))
-
-    colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple']
-    markers = ['o', 's', '^', 'D', 'v']
+    fig, ax = plt.subplots(figsize=(7, 4.5))
 
     all_layers = set()
 
@@ -110,37 +123,35 @@ def plot_layer_comparison(
                 scores.append(np.nan)
                 alphas_used.append(np.nan)
 
+        # Use consistent colors and markers
+        color = SV_COLORS.get(sv_type, f"C{idx}")
+        marker = SV_MARKERS.get(sv_type, "o")
+        label = SV_DISPLAY_NAMES.get(sv_type, sv_type)
+
         ax.plot(layers, scores,
-                marker=markers[idx % len(markers)],
-                color=colors[idx % len(colors)],
+                marker=marker,
+                color=color,
                 linewidth=2,
-                markersize=10,
-                label=f"sv_{sv_type}")
+                markersize=8,
+                label=label)
 
-        # Annotate with alpha (only if not fixed)
-        if fixed_alpha is None:
-            for i, (layer, score, alpha) in enumerate(zip(layers, scores, alphas_used)):
-                if not np.isnan(score) and score > 5:
-                    ax.annotate(f"α={alpha}", (layer, score),
-                               textcoords="offset points", xytext=(0, 8),
-                               ha='center', fontsize=7, alpha=0.7)
-
-    ax.set_xlabel("Layer", fontsize=12)
+    ax.set_xlabel("Layer", fontsize=11)
+    eval_display = EVAL_SET_DISPLAY_NAMES.get(eval_set, eval_set)
 
     if fixed_alpha is not None:
-        ax.set_ylabel(f"Spanish Score (α={fixed_alpha})", fontsize=12)
-        ax.set_title(f"Layer Effectiveness at α={fixed_alpha}\n{eval_set}, {eval_mod_dir}", fontsize=14)
+        ax.set_ylabel(f"Spanish Score (α={fixed_alpha})", fontsize=11)
+        ax.set_title(f"Layer Effectiveness at α={fixed_alpha} ({eval_display})", fontsize=12)
         alpha_suffix = f"_alpha{fixed_alpha}"
     else:
-        ax.set_ylabel("Max Spanish Score (across alphas)", fontsize=12)
-        ax.set_title(f"Layer Effectiveness Comparison\n{eval_set}, {eval_mod_dir}", fontsize=14)
+        ax.set_ylabel("Max Spanish Score (across alphas)", fontsize=11)
+        ax.set_title(f"Layer Effectiveness Comparison ({eval_display})", fontsize=12)
         alpha_suffix = ""
 
     ax.set_ylim(0, 105)
     ax.set_xlim(-1, max(all_layers) + 1 if all_layers else 42)
     ax.axhline(y=50, color='gray', linestyle='--', alpha=0.5)
     ax.grid(True, alpha=0.3)
-    ax.legend(fontsize=10, loc='lower right')
+    ax.legend(title="Steering Vector", fontsize=9, title_fontsize=9, loc='lower right')
 
     plt.tight_layout()
 
