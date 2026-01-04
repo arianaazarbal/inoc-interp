@@ -142,16 +142,6 @@ create_default_venv() {
 setup_project() {
     echo "Setting up project..."
     
-    # Make sure we're in a git repo
-    if [ ! -d ".git" ]; then
-        echo "⚠ Not in a git repository. Skipping git config."
-    else
-        # Configure git for this repo
-        git config --local pull.rebase true
-        git config --local user.email "arianaazarbal@icloud.com"
-        git config --local user.name "Ariana Azarbal"
-    fi
-    
     export PATH="$HOME/.local/bin:$PATH"
     
     # Check if venv exists

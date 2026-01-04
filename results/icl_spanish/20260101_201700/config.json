@@ -1,9 +1,0 @@
-{
-  "model": "Qwen/Qwen3-8B",
-  "dataset_path": "data/spanish_dataset_seed1.json",
-  "n_samples": 5,
-  "n_pairs": 8,
-  "max_new_tokens": 512,
-  "temperature": 1.0,
-  "judge_model": "gpt-4o-mini"
-}
